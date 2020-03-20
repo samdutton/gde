@@ -1,0 +1,4169 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.498 --> 00:00:03.331
+(energetic music)
+
+00:00:05.957 --> 00:00:09.730
+(audience applauding)
+
+00:00:09.730 --> 00:00:11.840
+- Hey, hello, it is really nice to be here
+
+00:00:11.840 --> 00:00:13.390
+in Amsterdam again.
+
+00:00:13.390 --> 00:00:17.250
+So yeah, as Tab said, I've
+kind of been doing things
+
+00:00:17.250 --> 00:00:19.920
+on the web for a very long time.
+
+00:00:19.920 --> 00:00:21.620
+I do all kinds of things,
+it's very hard for me
+
+00:00:21.620 --> 00:00:23.410
+to tell conferences exactly
+what they should put
+
+00:00:23.410 --> 00:00:25.583
+on my badge as my kind of job.
+
+00:00:26.425 --> 00:00:28.650
+I do lots of things, let's say importantly
+
+00:00:28.650 --> 00:00:30.890
+I am the W3C representative for Fronteers,
+
+00:00:30.890 --> 00:00:31.770
+I've been asked to mention
+
+00:00:31.770 --> 00:00:33.180
+that we have a meetup this evening
+
+00:00:33.180 --> 00:00:34.100
+which you can come along to,
+
+00:00:34.100 --> 00:00:35.430
+I'll be speaking at that as well,
+
+00:00:35.430 --> 00:00:38.630
+because I like to speak
+about CSS twice in one day.
+
+00:00:38.630 --> 00:00:41.023
+So do come along though,
+it should be good fun.
+
+00:00:42.090 --> 00:00:43.930
+So really for this talk though,
+
+00:00:43.930 --> 00:00:46.310
+I've been really teaching CSS for as long
+
+00:00:46.310 --> 00:00:50.790
+as I've been writing CSS and
+that's kind of about 20 years.
+
+00:00:50.790 --> 00:00:52.120
+I've written an awful lot of books
+
+00:00:52.120 --> 00:00:54.500
+and articles and so on.
+
+00:00:54.500 --> 00:00:58.287
+And one of those books
+was titled, not by me, as,
+
+00:00:58.287 --> 00:01:01.150
+"Everything You Know About CSS is Wrong".
+
+00:01:01.150 --> 00:01:03.620
+And it was a ridiculous title.
+
+00:01:03.620 --> 00:01:07.623
+But maybe today I could
+almost justify using that.
+
+00:01:09.610 --> 00:01:12.380
+Because I've taught CSS and CSS for layout
+
+00:01:12.380 --> 00:01:15.470
+in pretty much the same
+way everybody else has.
+
+00:01:15.470 --> 00:01:18.200
+This is a block thing,
+this is an inline thing.
+
+00:01:18.200 --> 00:01:20.770
+You can change the things
+between block and inline.
+
+00:01:20.770 --> 00:01:23.720
+Hey, this is the box
+model, it's very important.
+
+00:01:23.720 --> 00:01:26.170
+But it's also a bit weird.
+
+00:01:26.170 --> 00:01:28.440
+And then we do this stuff
+with widths and floats
+
+00:01:28.440 --> 00:01:31.473
+to try and make something
+that looks like a grid.
+
+00:01:33.710 --> 00:01:36.510
+And over the past few
+years I've been writing
+
+00:01:36.510 --> 00:01:38.290
+and speaking about our new layout methods.
+
+00:01:38.290 --> 00:01:40.940
+I've been talking about Flexbox and Grid
+
+00:01:40.940 --> 00:01:42.910
+and I'm constantly reordering my material,
+
+00:01:42.910 --> 00:01:45.800
+often kind of on the fly in
+front of people in workshops
+
+00:01:45.800 --> 00:01:49.410
+as I kind of hear questions
+that don't quite make sense
+
+00:01:49.410 --> 00:01:51.240
+and I realize that
+people haven't quite got
+
+00:01:51.240 --> 00:01:52.503
+what we're teaching.
+
+00:01:53.720 --> 00:01:56.170
+And it's become apparent to
+me that the way that we have
+
+00:01:56.170 --> 00:02:00.010
+taught CSS doesn't really
+work with the new systems
+
+00:02:00.010 --> 00:02:01.630
+that we're creating.
+
+00:02:01.630 --> 00:02:05.223
+It's not giving people the
+ability to master new layout.
+
+00:02:06.290 --> 00:02:08.290
+And more than that, more
+importantly than that,
+
+00:02:08.290 --> 00:02:10.320
+I think that our continued
+teaching and talking
+
+00:02:10.320 --> 00:02:14.160
+about CSS as if it's some
+kind of weird, quirky thing
+
+00:02:14.160 --> 00:02:17.740
+encourages people to not take
+it seriously as a language.
+
+00:02:17.740 --> 00:02:20.900
+And to do all they can to
+kind of avoid using features
+
+00:02:20.900 --> 00:02:22.933
+that are part of the language.
+
+00:02:24.670 --> 00:02:27.440
+So in this talk, I'm going
+to describe CSS Layout
+
+00:02:27.440 --> 00:02:32.010
+as a system in a way that I
+believe we need to set it out.
+
+00:02:32.010 --> 00:02:34.650
+How we need to set out our
+store when we talk to people
+
+00:02:34.650 --> 00:02:36.950
+about CSS Layout.
+
+00:02:36.950 --> 00:02:39.230
+And I'm doing this not to teach you CSS,
+
+00:02:39.230 --> 00:02:41.050
+'cause I'm pretty sure that
+most of you in this room
+
+00:02:41.050 --> 00:02:43.640
+know a lot of this stuff, but to show you
+
+00:02:43.640 --> 00:02:46.290
+how to talk about CSS to your teams,
+
+00:02:46.290 --> 00:02:48.240
+or when you're writing
+articles or teaching people
+
+00:02:48.240 --> 00:02:49.650
+or answering questions on Twitter,
+
+00:02:49.650 --> 00:02:51.270
+'cause I think a lot of us are teaching,
+
+00:02:51.270 --> 00:02:54.920
+even if we wouldn't
+call ourselves teachers.
+
+00:02:54.920 --> 00:02:56.830
+Because I believe that
+if we want this language
+
+00:02:56.830 --> 00:02:58.890
+to be seen as a real language,
+
+00:02:58.890 --> 00:03:01.030
+as something important and elegant,
+
+00:03:01.030 --> 00:03:03.750
+and to be seen in the same
+light as other things,
+
+00:03:03.750 --> 00:03:05.640
+we really have to start talking about it
+
+00:03:05.640 --> 00:03:09.223
+in that way, in the way that
+we want it to be treated.
+
+00:03:12.000 --> 00:03:13.980
+Other languages, when we
+approach them with beginners,
+
+00:03:13.980 --> 00:03:16.710
+if we've got a complete
+beginner to programming,
+
+00:03:16.710 --> 00:03:18.910
+we begin with the important
+constructs of working
+
+00:03:18.910 --> 00:03:19.940
+with those languages.
+
+00:03:19.940 --> 00:03:22.450
+So you know, if you're
+teaching someone JavaScript,
+
+00:03:22.450 --> 00:03:24.570
+you're going to teach them
+variables, basic math,
+
+00:03:24.570 --> 00:03:27.120
+string handling, conditional logic.
+
+00:03:27.120 --> 00:03:29.140
+You do all of that
+before you start saying,
+
+00:03:29.140 --> 00:03:31.490
+well, hack around with this website.
+
+00:03:31.490 --> 00:03:33.820
+With CSS what we do is we
+teach a couple of things,
+
+00:03:33.820 --> 00:03:34.750
+and then we just start getting people
+
+00:03:34.750 --> 00:03:38.730
+to poke things around and
+hope that it sort of works.
+
+00:03:38.730 --> 00:03:40.470
+They're not giving them
+a best way to start
+
+00:03:40.470 --> 00:03:42.460
+on a good footing, and it's no wonder then
+
+00:03:42.460 --> 00:03:45.070
+that people become reliant on frameworks
+
+00:03:45.070 --> 00:03:46.350
+often going to Stack Overflow
+
+00:03:46.350 --> 00:03:48.850
+and just copying and pasting
+the nearest thing they see.
+
+00:03:48.850 --> 00:03:51.560
+And asking questions, even a
+very long way down the line
+
+00:03:51.560 --> 00:03:53.750
+of them working with CSS
+that make you realize
+
+00:03:53.750 --> 00:03:55.710
+that they don't actually understand
+
+00:03:55.710 --> 00:03:58.660
+what is going on in the language
+when they're doing things.
+
+00:04:00.640 --> 00:04:02.410
+So this is really my
+attempt to kind of try
+
+00:04:02.410 --> 00:04:06.200
+and create a robust footing for layout.
+
+00:04:06.200 --> 00:04:08.330
+And you'll notice here that
+I've not actually mentioned
+
+00:04:08.330 --> 00:04:11.870
+sort of Grid and Flexbox
+as independent things.
+
+00:04:11.870 --> 00:04:13.390
+Because I think that by treating them
+
+00:04:13.390 --> 00:04:16.260
+as independent things, we're
+adding to this strange idea
+
+00:04:16.260 --> 00:04:18.650
+that when you pick
+between Grid and Flexbox,
+
+00:04:18.650 --> 00:04:21.343
+it's like choosing between
+Bootstrap and Foundation.
+
+00:04:22.310 --> 00:04:24.980
+Instead, we need to find the fundamentals
+
+00:04:24.980 --> 00:04:26.980
+and teach the fundamentals.
+
+00:04:26.980 --> 00:04:28.690
+And while you're doing
+that, you can introduce
+
+00:04:28.690 --> 00:04:30.800
+an awful lot of Grid and
+Flexbox along the way,
+
+00:04:30.800 --> 00:04:33.350
+because that's how we can
+demonstrate these things.
+
+00:04:34.340 --> 00:04:36.810
+But once people understand the underlying
+
+00:04:36.810 --> 00:04:38.970
+fundamental parts of the system,
+
+00:04:38.970 --> 00:04:41.330
+the things that tie together
+the headline features
+
+00:04:41.330 --> 00:04:44.710
+of Flexbox and Grid, a
+lot of the rest is really
+
+00:04:44.710 --> 00:04:46.823
+just learning syntax.
+
+00:04:50.020 --> 00:04:52.470
+So CSS has a system for layout.
+
+00:04:52.470 --> 00:04:54.750
+It's how we allow webpages
+and web applications
+
+00:04:54.750 --> 00:04:57.590
+and the main layout methods all belong
+
+00:04:57.590 --> 00:04:59.580
+to the display property.
+
+00:04:59.580 --> 00:05:02.950
+They're essentially
+just a value of display.
+
+00:05:02.950 --> 00:05:06.170
+If you want to do layout,
+you are changing the value
+
+00:05:06.170 --> 00:05:09.350
+of display, so that's really
+the best place to start.
+
+00:05:09.350 --> 00:05:10.403
+What is display?
+
+00:05:13.900 --> 00:05:17.330
+And everything starts on
+the web with Normal Flow,
+
+00:05:17.330 --> 00:05:19.130
+with block and inline layout.
+
+00:05:19.130 --> 00:05:21.410
+We're always returning to that.
+
+00:05:21.410 --> 00:05:24.220
+And we need to understand
+this is the default state
+
+00:05:24.220 --> 00:05:26.810
+of layout, the state to which we return
+
+00:05:26.810 --> 00:05:29.153
+if we don't do anything else.
+
+00:05:30.150 --> 00:05:33.410
+Items that participate in
+the block formatting context.
+
+00:05:33.410 --> 00:05:36.097
+We often talk about this
+as kind of being no layout,
+
+00:05:36.097 --> 00:05:38.760
+but it's layout, it's
+block and inline layout.
+
+00:05:38.760 --> 00:05:42.330
+Each box is a block
+thing or an inline thing.
+
+00:05:42.330 --> 00:05:44.570
+And if you write some
+HTML and just open it up
+
+00:05:44.570 --> 00:05:47.410
+in a web browser, there
+it is, your HTML document
+
+00:05:47.410 --> 00:05:49.110
+defining a block formatting context,
+
+00:05:49.110 --> 00:05:52.040
+and the items inside participating in it.
+
+00:05:52.040 --> 00:05:53.467
+The block things do what block things do,
+
+00:05:53.467 --> 00:05:55.760
+and the inline things do
+what inline things do.
+
+00:05:55.760 --> 00:05:59.010
+And we have some readable content,
+
+00:05:59.010 --> 00:06:01.340
+because CSS is doing
+some work for us there,
+
+00:06:01.340 --> 00:06:03.320
+by way of the browser's
+inbuilt style sheet,
+
+00:06:03.320 --> 00:06:05.373
+before we actually write any CSS.
+
+00:06:07.031 --> 00:06:08.490
+And I think it's pretty important for us
+
+00:06:08.490 --> 00:06:10.480
+to understand Normal Flow in this way,
+
+00:06:10.480 --> 00:06:12.060
+as actually a layout method.
+
+00:06:12.060 --> 00:06:14.870
+And it's important for
+us to teach it this way.
+
+00:06:14.870 --> 00:06:16.310
+Because right out of the gate,
+
+00:06:16.310 --> 00:06:18.230
+CSS is doing this stuff for us.
+
+00:06:18.230 --> 00:06:19.690
+We don't need to define the way
+
+00:06:19.690 --> 00:06:22.680
+that every single HTML element looks.
+
+00:06:22.680 --> 00:06:23.610
+We don't have to worry
+
+00:06:23.610 --> 00:06:26.150
+about things overlapping on our page.
+
+00:06:26.150 --> 00:06:28.040
+CSS is doing that for us.
+
+00:06:28.040 --> 00:06:30.530
+How fortunate are we to
+have this amazing framework
+
+00:06:30.530 --> 00:06:34.740
+that gives us this great
+starting point for our designs?
+
+00:06:34.740 --> 00:06:36.470
+And it's very important that we work
+
+00:06:36.470 --> 00:06:38.950
+with it, not against it.
+
+00:06:38.950 --> 00:06:42.160
+If we strip everything away
+with a heavy handed reset
+
+00:06:42.160 --> 00:06:45.560
+style sheet, then we're losing
+something really useful,
+
+00:06:45.560 --> 00:06:46.840
+something which is actually doing a bunch
+
+00:06:46.840 --> 00:06:48.210
+of our work for us.
+
+00:06:48.210 --> 00:06:50.633
+We have to end up putting
+everything back in.
+
+00:06:53.570 --> 00:06:56.595
+So once we understand
+that we've got layout,
+
+00:06:56.595 --> 00:06:57.740
+and our items are participating
+
+00:06:57.740 --> 00:07:00.580
+in the block format in
+context, we better understand
+
+00:07:00.580 --> 00:07:03.300
+what it is to change the value of display,
+
+00:07:03.300 --> 00:07:05.710
+to create a different kind of layout.
+
+00:07:05.710 --> 00:07:07.390
+My items here are displaying one
+
+00:07:07.390 --> 00:07:10.183
+below the other as block items.
+
+00:07:12.550 --> 00:07:16.760
+If I change the value of display
+on their container to flex,
+
+00:07:16.760 --> 00:07:19.480
+the items now display
+alongside each other.
+
+00:07:19.480 --> 00:07:21.490
+They're now flex items.
+
+00:07:21.490 --> 00:07:22.470
+They're not participating in
+
+00:07:22.470 --> 00:07:23.940
+that block's formatting context,
+
+00:07:23.940 --> 00:07:25.070
+they're doing their own thing,
+
+00:07:25.070 --> 00:07:27.020
+they're in a flex formatting context.
+
+00:07:27.020 --> 00:07:29.800
+And that comes with some initial values
+
+00:07:29.800 --> 00:07:31.710
+of the various flex properties.
+
+00:07:31.710 --> 00:07:34.550
+So our things here are displaying in a row
+
+00:07:34.550 --> 00:07:37.820
+by default because
+that's the initial value.
+
+00:07:37.820 --> 00:07:40.640
+They're not stretching,
+they're all aligned to start,
+
+00:07:40.640 --> 00:07:42.830
+they're not stretching on the main axis.
+
+00:07:42.830 --> 00:07:44.840
+So that's kind of the basic values
+
+00:07:44.840 --> 00:07:46.233
+of those flex items.
+
+00:07:47.670 --> 00:07:49.730
+Now if I change the value to grid,
+
+00:07:49.730 --> 00:07:52.600
+the items now participate in
+a grid formatting context.
+
+00:07:52.600 --> 00:07:54.690
+Now by default when you create a grid,
+
+00:07:54.690 --> 00:07:57.740
+you end up with a one column grid,
+
+00:07:57.740 --> 00:07:59.266
+so then we just get a single column grid,
+
+00:07:59.266 --> 00:08:00.730
+actually doesn't look very different.
+
+00:08:00.730 --> 00:08:04.000
+And so we need to add
+some column or row tracks
+
+00:08:04.000 --> 00:08:06.140
+to make something happen,
+so here I've added
+
+00:08:06.140 --> 00:08:09.963
+three column tracks and so
+I get a three column grid.
+
+00:08:12.640 --> 00:08:14.750
+But whether we say display grid
+
+00:08:14.750 --> 00:08:17.680
+or whether we say display flex,
+
+00:08:17.680 --> 00:08:20.110
+we're only doing that on that element.
+
+00:08:20.110 --> 00:08:22.810
+It becomes the grid container
+or the flex container,
+
+00:08:22.810 --> 00:08:26.480
+and its children become
+grid or flex items.
+
+00:08:26.480 --> 00:08:30.593
+Their children go right
+back to doing flow layout.
+
+00:08:31.992 --> 00:08:33.650
+And we can see that if
+I add some more content
+
+00:08:33.650 --> 00:08:36.720
+to one of my grid items, a
+header and two paragraphs,
+
+00:08:36.720 --> 00:08:38.770
+they go right back to flow layout.
+
+00:08:38.770 --> 00:08:41.150
+And so it goes all the way down
+
+00:08:41.150 --> 00:08:43.220
+through the structure of your site.
+
+00:08:43.220 --> 00:08:45.250
+You can stay with that flow layout,
+
+00:08:45.250 --> 00:08:46.990
+the block formatting
+context, or you can switch
+
+00:08:46.990 --> 00:08:48.680
+to other formatting context.
+
+00:08:48.680 --> 00:08:51.180
+Inside that, you're going
+to return to flow layout
+
+00:08:51.180 --> 00:08:52.750
+unless you make that decision again
+
+00:08:52.750 --> 00:08:55.030
+and change the value of display.
+
+00:08:55.030 --> 00:08:58.230
+One box at a time all the way down.
+
+00:08:58.230 --> 00:09:00.300
+And once we're thinking like this,
+
+00:09:00.300 --> 00:09:03.800
+it becomes much easier
+to switch layout methods.
+
+00:09:03.800 --> 00:09:06.420
+If your flex display
+isn't kind of working out
+
+00:09:06.420 --> 00:09:08.990
+how you want it to, oh
+well let's try grid,
+
+00:09:08.990 --> 00:09:10.870
+let's try display grid
+and add some columns
+
+00:09:10.870 --> 00:09:12.580
+and have a look at that instead.
+
+00:09:12.580 --> 00:09:13.900
+Does that pattern work better?
+
+00:09:13.900 --> 00:09:15.150
+Does this work better for the thing
+
+00:09:15.150 --> 00:09:17.020
+that I'm trying to layout?
+
+00:09:17.020 --> 00:09:19.640
+We're not seeing Grid
+and Flexbox as these two
+
+00:09:19.640 --> 00:09:22.390
+different competing layout methods.
+
+00:09:22.390 --> 00:09:23.820
+They're just values of display
+
+00:09:23.820 --> 00:09:25.930
+and we use the one that
+works best for the type
+
+00:09:25.930 --> 00:09:29.803
+of content we're trying to lay
+out at this particular time.
+
+00:09:32.565 --> 00:09:35.560
+And it's within display
+that we see this refactoring
+
+00:09:35.560 --> 00:09:37.530
+of CSS in large.
+
+00:09:37.530 --> 00:09:40.940
+The display specification
+now details two values
+
+00:09:40.940 --> 00:09:43.290
+for display, not one.
+
+00:09:43.290 --> 00:09:45.380
+We're used to saying
+things like display grid,
+
+00:09:45.380 --> 00:09:47.080
+display flex, with one value.
+
+00:09:47.080 --> 00:09:50.073
+The specification actually
+breaks this down into two.
+
+00:09:51.150 --> 00:09:54.360
+So we have an outer display
+type and an inner display type.
+
+00:09:54.360 --> 00:09:57.320
+The outer display type
+is always block or inline
+
+00:09:57.320 --> 00:09:58.940
+and the inner display type is the one
+
+00:09:58.940 --> 00:10:02.210
+that the children use which
+might be block or inline layout,
+
+00:10:02.210 --> 00:10:03.360
+it might be grid or flex.
+
+00:10:03.360 --> 00:10:06.520
+It might be something else yet undefined.
+
+00:10:06.520 --> 00:10:09.100
+So when we say display
+grid, we're really saying
+
+00:10:09.100 --> 00:10:11.240
+display block grid.
+
+00:10:11.240 --> 00:10:13.840
+The outer box of this element is a block,
+
+00:10:13.840 --> 00:10:16.770
+the children of this box are grid items.
+
+00:10:16.770 --> 00:10:19.440
+Or if we say display
+flex, we're really saying
+
+00:10:19.440 --> 00:10:23.460
+display block flex, create
+me a block level box
+
+00:10:23.460 --> 00:10:24.903
+with flex children.
+
+00:10:26.950 --> 00:10:29.730
+We have what is now termed
+in the specification,
+
+00:10:29.730 --> 00:10:32.730
+if you look at the specification,
+what are they called?
+
+00:10:32.730 --> 00:10:34.180
+Legacy values of display,
+
+00:10:34.180 --> 00:10:36.900
+which things like
+inline-grid and inline-flex,
+
+00:10:36.900 --> 00:10:38.870
+with a little hyphen in there.
+
+00:10:38.870 --> 00:10:41.780
+Now they would end up in our
+two value world as display
+
+00:10:41.780 --> 00:10:45.430
+inline-flex and inline-grid.
+
+00:10:45.430 --> 00:10:46.950
+This currently just in the specification.
+
+00:10:46.950 --> 00:10:49.820
+I believe that Firefox have
+started to implement this,
+
+00:10:49.820 --> 00:10:52.830
+but at the moment you can't
+actually use these two values
+
+00:10:52.830 --> 00:10:54.300
+of display on the web.
+
+00:10:54.300 --> 00:10:55.590
+But I think they're very interesting
+
+00:10:55.590 --> 00:10:58.380
+in terms of how we think about display,
+
+00:10:58.380 --> 00:11:00.150
+how we think about the effect
+
+00:11:00.150 --> 00:11:03.493
+that changing display has on our content.
+
+00:11:04.540 --> 00:11:07.150
+So we think about our outer display type.
+
+00:11:07.150 --> 00:11:09.910
+That's how does that box
+behave in the layout?
+
+00:11:09.910 --> 00:11:12.190
+Is it a block box, is it an inline box?
+
+00:11:12.190 --> 00:11:14.890
+That's gonna make a
+difference to how it behaves
+
+00:11:14.890 --> 00:11:16.300
+amongst all of the other boxes
+
+00:11:16.300 --> 00:11:17.693
+that are in our layout.
+
+00:11:18.620 --> 00:11:21.170
+And then we have this inner display type.
+
+00:11:21.170 --> 00:11:24.090
+The formatting context
+of the direct children.
+
+00:11:24.090 --> 00:11:27.093
+And that might be grid
+or flex or what have you.
+
+00:11:30.060 --> 00:11:31.060
+But then there are things
+
+00:11:31.060 --> 00:11:33.460
+that behave a little bit differently
+
+00:11:33.460 --> 00:11:35.160
+to the things that are part of display.
+
+00:11:35.160 --> 00:11:38.670
+We have things which break out of flow.
+
+00:11:38.670 --> 00:11:39.730
+They break the chain.
+
+00:11:39.730 --> 00:11:41.167
+We can remove an element from flow
+
+00:11:41.167 --> 00:11:43.580
+and it stops doing this nice thing
+
+00:11:43.580 --> 00:11:44.413
+where we don't have to worry
+
+00:11:44.413 --> 00:11:48.310
+about things overlapping
+and hiding your content.
+
+00:11:48.310 --> 00:11:50.210
+Now the most obvious way to remove an item
+
+00:11:50.210 --> 00:11:52.170
+from normal flow, and
+the one that if you asked
+
+00:11:52.170 --> 00:11:54.420
+a bunch of web developers how
+to take an item out of flow,
+
+00:11:54.420 --> 00:11:58.390
+they would probably tell you
+that it is to use position.
+
+00:11:58.390 --> 00:12:00.180
+To set something to position absolute.
+
+00:12:00.180 --> 00:12:04.543
+That will very obviously
+take it out of Normal Flow.
+
+00:12:05.800 --> 00:12:09.260
+So we say position absolute,
+and use the offset values
+
+00:12:09.260 --> 00:12:11.230
+and we take the item out of flow
+
+00:12:11.230 --> 00:12:12.283
+and position it.
+
+00:12:13.260 --> 00:12:15.880
+Now as I mentioned at
+the start, by default CSS
+
+00:12:15.880 --> 00:12:17.570
+does not overlap your content.
+
+00:12:17.570 --> 00:12:19.170
+So you can put some stuff on a page.
+
+00:12:19.170 --> 00:12:20.210
+You don't have to worry that things
+
+00:12:20.210 --> 00:12:22.020
+are gonna get hidden by other things.
+
+00:12:22.020 --> 00:12:24.580
+But the minute you start
+to use positioning,
+
+00:12:24.580 --> 00:12:27.280
+you're basically saying hey,
+I am taking control here.
+
+00:12:27.280 --> 00:12:29.160
+I wanna take this thing
+and I am gonna dump it
+
+00:12:29.160 --> 00:12:31.560
+on top of my content and
+that's absolutely fine.
+
+00:12:31.560 --> 00:12:33.430
+I'm gonna deal with the overlaps.
+
+00:12:33.430 --> 00:12:35.040
+So you've kinda taken control back
+
+00:12:35.040 --> 00:12:37.170
+the minute you start to
+take things out of flow.
+
+00:12:37.170 --> 00:12:39.830
+It's your responsibility
+to make sure that your user
+
+00:12:39.830 --> 00:12:42.113
+can now read the rest of the content.
+
+00:12:44.150 --> 00:12:45.910
+And then there are floats.
+
+00:12:45.910 --> 00:12:48.210
+Which perhaps if you
+aren't someone who spends
+
+00:12:48.210 --> 00:12:51.430
+your life reading CSS specs,
+they might not really seem
+
+00:12:51.430 --> 00:12:53.910
+to be an out of flow thing,
+
+00:12:53.910 --> 00:12:55.760
+because they appear in the
+document pretty much where
+
+00:12:55.760 --> 00:12:57.203
+you expect them to appear.
+
+00:12:58.050 --> 00:13:01.120
+The text wraps around, but the
+thing doesn't get lifted up
+
+00:13:01.120 --> 00:13:04.460
+and dumped somewhere else,
+it doesn't overlap things.
+
+00:13:04.460 --> 00:13:05.303
+Or do they?
+
+00:13:06.580 --> 00:13:08.860
+If you've ever added a
+background color to content
+
+00:13:08.860 --> 00:13:11.743
+wrapping a float, you see
+they actually are out of flow.
+
+00:13:12.700 --> 00:13:15.250
+It's the line boxes of the
+content that become shortened
+
+00:13:15.250 --> 00:13:16.890
+in order to wrap round the thing,
+
+00:13:16.890 --> 00:13:19.330
+but the actual box is taken out of flow.
+
+00:13:19.330 --> 00:13:21.480
+There's no space for it, and
+so the thing that follows it
+
+00:13:21.480 --> 00:13:24.090
+just comes up behind
+and its background color
+
+00:13:25.160 --> 00:13:28.200
+is shown behind the floated item.
+
+00:13:28.200 --> 00:13:31.943
+So again, we've got this
+overlapping thing going on.
+
+00:13:34.460 --> 00:13:37.110
+And so here we can go back
+and have another little look
+
+00:13:37.110 --> 00:13:41.483
+at the display specification
+and to the value of flow-root.
+
+00:13:42.680 --> 00:13:46.960
+Our page establishes an initial
+block formatting context.
+
+00:13:46.960 --> 00:13:49.890
+Sometimes written as a BFC if
+you're reading specifications.
+
+00:13:49.890 --> 00:13:51.500
+And that has some features
+
+00:13:51.500 --> 00:13:55.080
+Floats can't poke out of the
+bottom of that container.
+
+00:13:55.080 --> 00:13:57.780
+If this was the case, if they
+could poke out the bottom,
+
+00:13:57.780 --> 00:14:00.250
+then a float could end
+up essentially ending up
+
+00:14:00.250 --> 00:14:03.240
+outside of the viewport, if it was taller
+
+00:14:03.240 --> 00:14:05.690
+than the content, so we
+know that doesn't happen.
+
+00:14:07.724 --> 00:14:10.450
+And sometimes it might
+be useful to create a new
+
+00:14:10.450 --> 00:14:12.870
+block formatting context
+in the middle of our layout
+
+00:14:12.870 --> 00:14:15.490
+to say hey, this box
+here, everything needs
+
+00:14:15.490 --> 00:14:17.990
+to stay inside it, the
+floats, the margins,
+
+00:14:17.990 --> 00:14:20.230
+everything else should be
+contained inside this box,
+
+00:14:20.230 --> 00:14:22.223
+they shouldn't be getting out.
+
+00:14:23.690 --> 00:14:25.790
+And that's what display flow-root does.
+
+00:14:25.790 --> 00:14:28.370
+It creates a new block formatting context
+
+00:14:28.370 --> 00:14:29.310
+just like the page.
+
+00:14:29.310 --> 00:14:33.330
+It contains everything inside
+it, contains the floats.
+
+00:14:33.330 --> 00:14:35.370
+Now this actually is exactly
+what you've been doing
+
+00:14:35.370 --> 00:14:39.180
+if you've ever used the overflow
+property to contain floats.
+
+00:14:39.180 --> 00:14:41.320
+Because when you use
+overflow you get a new block
+
+00:14:41.320 --> 00:14:43.590
+formatting context,
+because you're gonna maybe
+
+00:14:43.590 --> 00:14:45.240
+have scroll bars and you need everything
+
+00:14:45.240 --> 00:14:47.530
+to be inside that box when
+you have your scroll bars.
+
+00:14:47.530 --> 00:14:49.290
+You can't have things poking out of it.
+
+00:14:49.290 --> 00:14:52.600
+So when you use overflow you
+create a new block formatting
+
+00:14:52.600 --> 00:14:53.790
+context everything stays in.
+
+00:14:53.790 --> 00:14:55.020
+That's been a little bit of a hack
+
+00:14:55.020 --> 00:14:57.850
+to do this kind of float
+containing behavior,
+
+00:14:57.850 --> 00:15:01.510
+with the occasional poor
+effect of clipping your shadows
+
+00:15:01.510 --> 00:15:02.650
+or ending up with scroll bars
+
+00:15:02.650 --> 00:15:04.970
+where you weren't wanting scroll bars.
+
+00:15:04.970 --> 00:15:06.860
+And also it being a little bit mysterious
+
+00:15:06.860 --> 00:15:07.850
+in your style sheet.
+
+00:15:07.850 --> 00:15:10.570
+Did the original developer
+really want scroll bars?
+
+00:15:10.570 --> 00:15:13.680
+Or were they trying to do
+this containing floats thing?
+
+00:15:13.680 --> 00:15:16.270
+And so now we have this
+value of display flow-root
+
+00:15:16.270 --> 00:15:18.380
+that let's you just say, hey, right here,
+
+00:15:18.380 --> 00:15:19.890
+new block formatting context.
+
+00:15:19.890 --> 00:15:22.800
+Let's start over with a new
+block formatting context,
+
+00:15:22.800 --> 00:15:26.223
+everything should stay inside this box.
+
+00:15:30.570 --> 00:15:33.283
+And then, I want to talk
+about writing modes.
+
+00:15:34.230 --> 00:15:38.070
+Because when Flexbox and
+Grid landed in our browsers,
+
+00:15:38.070 --> 00:15:41.290
+they did so in a way
+that quietly introduced
+
+00:15:41.290 --> 00:15:44.370
+a kind of agnostic writing
+mode way of working
+
+00:15:44.370 --> 00:15:46.290
+with the document.
+
+00:15:46.290 --> 00:15:48.860
+Everything that came
+before Flexbox and Grid
+
+00:15:48.860 --> 00:15:51.980
+related to the physical
+dimensions of the screen.
+
+00:15:51.980 --> 00:15:54.360
+So we talked about top right, bottom left
+
+00:15:54.360 --> 00:15:57.000
+for pretty much everything in CSS.
+
+00:15:57.000 --> 00:16:00.023
+We talk about horizontal
+and vertical x and y.
+
+00:16:01.300 --> 00:16:03.850
+And when Flexbox and then Grid came along,
+
+00:16:03.850 --> 00:16:07.170
+we were asking people to
+think about start and end,
+
+00:16:07.170 --> 00:16:09.860
+and the block and inline dimensions.
+
+00:16:09.860 --> 00:16:13.023
+And this line numbering which
+is related to writing mode.
+
+00:16:13.890 --> 00:16:15.400
+And this was quite puzzling to people.
+
+00:16:15.400 --> 00:16:17.317
+They're like, "Well why
+can't I just say left?
+
+00:16:17.317 --> 00:16:20.367
+"Because that's what I've
+always been doing in my designs.
+
+00:16:20.367 --> 00:16:24.200
+"Everything works according
+to the screen dimensions."
+
+00:16:24.200 --> 00:16:27.180
+And so these sort of concepts
+that are in writing modes
+
+00:16:27.180 --> 00:16:30.170
+are critical to our
+understanding of layout today.
+
+00:16:30.170 --> 00:16:31.560
+So before we do anything else,
+
+00:16:31.560 --> 00:16:34.040
+before we go do anything
+more complicated with layout,
+
+00:16:34.040 --> 00:16:36.320
+we need to understand writing modes.
+
+00:16:36.320 --> 00:16:38.450
+We need to make sure that we
+understand which way is block
+
+00:16:38.450 --> 00:16:39.903
+and which way is inline.
+
+00:16:42.040 --> 00:16:44.000
+So the block dimension is the direction
+
+00:16:44.000 --> 00:16:46.050
+in which blocks are
+displayed down the page.
+
+00:16:46.050 --> 00:16:48.440
+So in English, that's
+language written horizontally,
+
+00:16:48.440 --> 00:16:51.900
+blocks are displayed vertically,
+so one on top of the other.
+
+00:16:51.900 --> 00:16:53.990
+And the inline dimension is the dimension
+
+00:16:53.990 --> 00:16:55.910
+along which our words run in a sentence,
+
+00:16:55.910 --> 00:16:58.070
+so in English that's left
+to right horizontally.
+
+00:16:58.070 --> 00:17:00.460
+In Arabic that would be right to left.
+
+00:17:00.460 --> 00:17:02.450
+And these things relate
+to our understanding
+
+00:17:02.450 --> 00:17:04.080
+of block and inline layout.
+
+00:17:04.080 --> 00:17:06.800
+Because inline boxes all
+line up next to each other
+
+00:17:06.800 --> 00:17:08.893
+in the inline direction.
+
+00:17:10.540 --> 00:17:12.410
+So if we use a vertical writing mode,
+
+00:17:12.410 --> 00:17:15.650
+now the block dimension
+is running horizontally,
+
+00:17:15.650 --> 00:17:17.923
+and the inline, vertically.
+
+00:17:20.210 --> 00:17:21.340
+So if you've been asked to think
+
+00:17:21.340 --> 00:17:24.720
+about start in the block
+dimension or line one in grid,
+
+00:17:24.720 --> 00:17:26.670
+then this is the line at
+which blocks would start.
+
+00:17:26.670 --> 00:17:29.230
+So in English that's
+at the top of the page.
+
+00:17:29.230 --> 00:17:32.060
+In a vertical RL, that
+would be on the right.
+
+00:17:32.060 --> 00:17:34.870
+That's your block start
+where the blocks end,
+
+00:17:34.870 --> 00:17:36.163
+that's block end.
+
+00:17:37.350 --> 00:17:38.580
+And if you need to think about start
+
+00:17:38.580 --> 00:17:40.530
+in the inline direction
+or line one in grid,
+
+00:17:40.530 --> 00:17:42.940
+that's where a sentence
+begins in the writing mode
+
+00:17:42.940 --> 00:17:45.700
+that you're currently using,
+or that the element is using.
+
+00:17:45.700 --> 00:17:48.973
+So on the left for English,
+on the right for Arabic.
+
+00:17:49.930 --> 00:17:51.500
+So this is inline start.
+
+00:17:51.500 --> 00:17:54.643
+And where your sentences
+end, well that is inline end.
+
+00:17:57.190 --> 00:18:00.140
+And so here we find this
+tension between the fact
+
+00:18:00.140 --> 00:18:02.460
+that our new layout methods
+are pretty much agnostic,
+
+00:18:02.460 --> 00:18:04.110
+it doesn't matter which
+way up your grid is.
+
+00:18:04.110 --> 00:18:06.563
+Doesn't matter which way
+up your flex items are.
+
+00:18:07.520 --> 00:18:09.560
+And they refer to block and inline.
+
+00:18:09.560 --> 00:18:12.140
+Everything else is still
+tied to physical dimensions.
+
+00:18:12.140 --> 00:18:14.820
+You set your margins, you do
+it on top right, bottom left.
+
+00:18:14.820 --> 00:18:16.563
+You float things left.
+
+00:18:18.710 --> 00:18:20.640
+And as you try and build
+something using a vertical
+
+00:18:20.640 --> 00:18:22.350
+writing mode, now that might
+be because you're working
+
+00:18:22.350 --> 00:18:24.030
+in a language that is set that way,
+
+00:18:24.030 --> 00:18:25.730
+but probably more likely for most of us
+
+00:18:25.730 --> 00:18:27.800
+is because we want to
+do something creative
+
+00:18:27.800 --> 00:18:29.440
+and we thought well if we tip something
+
+00:18:29.440 --> 00:18:30.970
+on its side that's gonna be pretty cool
+
+00:18:30.970 --> 00:18:32.130
+and we can play around with it.
+
+00:18:32.130 --> 00:18:33.750
+Now when you start doing that,
+
+00:18:33.750 --> 00:18:37.620
+this conflict becomes very apparent.
+
+00:18:37.620 --> 00:18:39.930
+So we should be able
+to build a grid layout,
+
+00:18:39.930 --> 00:18:41.200
+as I've got a grid layout here.
+
+00:18:41.200 --> 00:18:43.650
+And I've got one of
+the items there is just
+
+00:18:43.650 --> 00:18:45.060
+in horizontal writing mode
+
+00:18:45.060 --> 00:18:47.010
+and I've given it a width and a height.
+
+00:18:47.850 --> 00:18:50.350
+Now if we changed it to
+a vertical writing mode,
+
+00:18:50.350 --> 00:18:53.380
+the actual grid layout
+works absolutely fine,
+
+00:18:53.380 --> 00:18:55.620
+but you can see that the
+dimensions are still tied
+
+00:18:55.620 --> 00:18:58.410
+to physical dimensions
+because a width is a width.
+
+00:18:58.410 --> 00:19:01.440
+It doesn't matter which
+writing mode you're in.
+
+00:19:01.440 --> 00:19:04.270
+So they don't relate to
+the logical dimensions
+
+00:19:04.270 --> 00:19:05.440
+of block or inline.
+
+00:19:05.440 --> 00:19:07.590
+They're not related to
+the flow of content.
+
+00:19:09.130 --> 00:19:11.640
+And so to solve this
+problem we have a whole new
+
+00:19:11.640 --> 00:19:16.030
+CSS specification, logical
+properties and values.
+
+00:19:16.030 --> 00:19:19.010
+It's essentially a series of mappings
+
+00:19:19.010 --> 00:19:21.110
+saying hey, this is this
+in the physical world,
+
+00:19:21.110 --> 00:19:24.377
+so in the logical flow
+relative world, it is this.
+
+00:19:24.377 --> 00:19:26.990
+There are a huge number of these mappings,
+
+00:19:26.990 --> 00:19:29.300
+I know because I documented it for MDN
+
+00:19:29.300 --> 00:19:31.660
+so I created an awful
+lot of pages for each
+
+00:19:31.660 --> 00:19:34.400
+of these different properties and values.
+
+00:19:34.400 --> 00:19:36.080
+So we've got one for
+pretty much everything
+
+00:19:36.080 --> 00:19:41.060
+that is a physical sort of
+property or value in CSS.
+
+00:19:41.060 --> 00:19:42.530
+So with the example I just showed you,
+
+00:19:42.530 --> 00:19:46.050
+instead of using width and
+height we could use inline size
+
+00:19:46.050 --> 00:19:49.510
+and block size, which
+then means when we tip
+
+00:19:49.510 --> 00:19:52.540
+our grid over it stays
+with the same dimensions
+
+00:19:52.540 --> 00:19:55.840
+relative to the flow of the content.
+
+00:19:55.840 --> 00:19:57.460
+So our gridded component now can work
+
+00:19:57.460 --> 00:19:59.480
+in exactly the same way no matter
+
+00:19:59.480 --> 00:20:01.760
+which direction the writing mode is going.
+
+00:20:01.760 --> 00:20:03.480
+If I am working in vertical writing mode,
+
+00:20:03.480 --> 00:20:05.220
+I often build the thing the right way up,
+
+00:20:05.220 --> 00:20:08.120
+because it saves you having
+your head on the side like this.
+
+00:20:08.120 --> 00:20:10.990
+And as long as you use
+those logical properties
+
+00:20:10.990 --> 00:20:13.890
+and values you can do that,
+you can just then tip it over.
+
+00:20:15.843 --> 00:20:17.630
+And so because we already
+understand the block
+
+00:20:17.630 --> 00:20:19.990
+and inline dimensions
+these names should start
+
+00:20:19.990 --> 00:20:23.140
+to make sense, the block
+size property is the size
+
+00:20:23.140 --> 00:20:24.100
+in the block dimension,
+
+00:20:24.100 --> 00:20:26.490
+which is the horizontal writing mode,
+
+00:20:26.490 --> 00:20:28.540
+in if you're in height.
+
+00:20:28.540 --> 00:20:30.840
+The inline size property is the
+size in the inline dimension
+
+00:20:30.840 --> 00:20:33.473
+which in a horizontal
+writing mode is width.
+
+00:20:35.410 --> 00:20:37.700
+If you turn the grid on
+its side using writing mode
+
+00:20:37.700 --> 00:20:39.970
+the block and inline dimensions change,
+
+00:20:39.970 --> 00:20:43.300
+and therefore block size maps to width
+
+00:20:43.300 --> 00:20:45.280
+and inline size to height.
+
+00:20:45.280 --> 00:20:47.210
+This is incredibly
+difficult to talk about.
+
+00:20:47.210 --> 00:20:50.233
+You see. (laughs)
+(audience laughing)
+
+00:20:52.160 --> 00:20:53.160
+And it gets worse.
+
+00:20:53.160 --> 00:20:56.480
+Because we have all these
+mappings for margin-block-start
+
+00:20:56.480 --> 00:20:59.580
+and margin-block-end defining
+the top and bottom margins
+
+00:20:59.580 --> 00:21:02.520
+if you're in a horizontal writing mode
+
+00:21:02.520 --> 00:21:05.150
+and then we will have margin-inline-start
+
+00:21:05.150 --> 00:21:09.350
+and margin-inline-end, would
+be the inline-start and end,
+
+00:21:09.350 --> 00:21:10.660
+so that would be left and right
+
+00:21:10.660 --> 00:21:12.530
+if you're in a horizontal writing mode.
+
+00:21:12.530 --> 00:21:16.240
+We have padding, and then
+we even have border radius,
+
+00:21:16.240 --> 00:21:19.144
+which are my absolute favorites.
+
+00:21:19.144 --> 00:21:20.477
+(audience members chuckling)
+
+00:21:20.477 --> 00:21:21.320
+(audience member speaking quietly)
+
+00:21:21.320 --> 00:21:23.860
+Because you have things
+like border top left radius,
+
+00:21:23.860 --> 00:21:26.680
+which is bad enough, so
+that is your top left.
+
+00:21:26.680 --> 00:21:29.620
+So in a horizontal writing
+mode of the left to right
+
+00:21:29.620 --> 00:21:31.150
+direction if you want that left corner
+
+00:21:31.150 --> 00:21:34.000
+you're going to get
+border-start-start-radius.
+
+00:21:34.000 --> 00:21:36.340
+Because it is the start of the inline
+
+00:21:36.340 --> 00:21:38.533
+and the start of the block dimension.
+
+00:21:39.570 --> 00:21:42.050
+Now, generally you probably
+won't be using those too often.
+
+00:21:42.050 --> 00:21:43.990
+We tend not to use the
+long hands of border radius
+
+00:21:43.990 --> 00:21:46.760
+all that often, but yes,
+they are my favorite
+
+00:21:46.760 --> 00:21:49.663
+for length if nothing else.
+
+00:21:51.000 --> 00:21:54.380
+But in terms of teaching
+and understanding CSS,
+
+00:21:54.380 --> 00:21:55.860
+know that we are moving
+
+00:21:55.860 --> 00:21:59.040
+to this flow-relative, logical world.
+
+00:21:59.040 --> 00:22:02.280
+Browser support for these
+mappings is getting very good.
+
+00:22:02.280 --> 00:22:04.070
+It'll be a while before
+we sort of feel happy
+
+00:22:04.070 --> 00:22:07.490
+to use them everywhere, but
+in terms of teaching CSS,
+
+00:22:07.490 --> 00:22:10.800
+in terms of teaching CSS,
+they're really really important
+
+00:22:10.800 --> 00:22:13.690
+because this is how the
+layout methods work.
+
+00:22:13.690 --> 00:22:17.510
+They expect we're working
+in this logical world.
+
+00:22:17.510 --> 00:22:19.750
+Grid and Flexbox make so much more sense
+
+00:22:19.750 --> 00:22:22.310
+when seen through a lens of writing modes.
+
+00:22:22.310 --> 00:22:24.410
+So once you start to
+think about start and end,
+
+00:22:24.410 --> 00:22:27.643
+block and inline, everything
+makes a lot more sense.
+
+00:22:28.890 --> 00:22:32.530
+Especially when you come
+to a key specification,
+
+00:22:32.530 --> 00:22:35.770
+which is part of working
+with Grid and Flexbox.
+
+00:22:35.770 --> 00:22:36.963
+Box alignment.
+
+00:22:38.118 --> 00:22:40.370
+In this specification
+awful lot of what we do
+
+00:22:40.370 --> 00:22:43.193
+in Grid and Flexbox is pulled together.
+
+00:22:44.050 --> 00:22:46.430
+Box alignment deals
+with obviously alignment
+
+00:22:46.430 --> 00:22:49.633
+and also space distribution between boxes.
+
+00:22:51.550 --> 00:22:53.783
+So alignment is defined for
+all of our layout methods.
+
+00:22:53.783 --> 00:22:56.210
+And for flex and for
+grid, but also for block
+
+00:22:56.210 --> 00:22:58.610
+and inline layout, which
+means that we can have
+
+00:22:58.610 --> 00:23:01.990
+this consistent alignment
+no matter what we do.
+
+00:23:01.990 --> 00:23:03.800
+Whichever method of display we're using,
+
+00:23:03.800 --> 00:23:06.150
+we should be able to have
+consistent alignment.
+
+00:23:07.360 --> 00:23:09.760
+And the reason that we needed
+to talk about writing modes
+
+00:23:09.760 --> 00:23:13.010
+before we talk about alignment
+is because everything
+
+00:23:13.010 --> 00:23:16.080
+we do in alignment worries
+about these dimensions,
+
+00:23:16.080 --> 00:23:17.677
+the block and inline and start and end
+
+00:23:17.677 --> 00:23:19.703
+are how we do alignment.
+
+00:23:21.540 --> 00:23:23.220
+So when we talk about
+alignment we need to talk
+
+00:23:23.220 --> 00:23:24.870
+about two things, we need to talk
+
+00:23:24.870 --> 00:23:27.440
+about the distribution
+of space between items
+
+00:23:27.440 --> 00:23:29.460
+in a particular formatting context
+
+00:23:29.460 --> 00:23:32.030
+and we need to talk about
+the alignment of items
+
+00:23:32.030 --> 00:23:34.730
+within the little area that they're in.
+
+00:23:34.730 --> 00:23:36.170
+So they're two different things
+
+00:23:36.170 --> 00:23:38.253
+that affect the alignment of content.
+
+00:23:39.880 --> 00:23:43.370
+Now the first, the distribution
+of space around elements.
+
+00:23:43.370 --> 00:23:46.160
+Now I think that all of
+alignment is much easier
+
+00:23:46.160 --> 00:23:49.270
+to teach people if you use
+grid layout as an example.
+
+00:23:49.270 --> 00:23:52.060
+Because in grid we always
+have the two dimensions.
+
+00:23:52.060 --> 00:23:54.600
+And from there you can
+explain how it differs
+
+00:23:54.600 --> 00:23:56.030
+in other things.
+
+00:23:56.030 --> 00:23:58.160
+So if we have a grid here
+with fixed size tracks,
+
+00:23:58.160 --> 00:23:59.920
+they're not large enough
+to fill the grid area,
+
+00:23:59.920 --> 00:24:01.960
+this orange box is the grid area.
+
+00:24:01.960 --> 00:24:04.680
+And that means that we've
+got some spare space
+
+00:24:04.680 --> 00:24:06.300
+to play with.
+
+00:24:06.300 --> 00:24:08.930
+Now the tracks are all
+aligned to start in their,
+
+00:24:08.930 --> 00:24:11.633
+in both dimensions, that's
+their initial values.
+
+00:24:13.090 --> 00:24:15.550
+So if I wanted to space things
+out in the inline dimension,
+
+00:24:15.550 --> 00:24:17.420
+I use justify-content.
+
+00:24:17.420 --> 00:24:20.420
+If you're in grid,
+justify, it's a bit like
+
+00:24:20.420 --> 00:24:22.730
+if you justify words in a line,
+
+00:24:22.730 --> 00:24:24.940
+so the justify properties always work
+
+00:24:24.940 --> 00:24:26.760
+in the inline dimension.
+
+00:24:26.760 --> 00:24:28.850
+If I wanted to space these
+out in the block dimension,
+
+00:24:28.850 --> 00:24:30.723
+I would use align-content.
+
+00:24:31.790 --> 00:24:34.230
+So we have justify-content, space-between,
+
+00:24:34.230 --> 00:24:36.990
+and I've got the FireFox grid
+inspector turned on there
+
+00:24:36.990 --> 00:24:40.320
+so you can kind of see
+the spaces stretching out
+
+00:24:40.320 --> 00:24:43.530
+as we give space between our grid tracks
+
+00:24:43.530 --> 00:24:44.993
+in the inline dimension.
+
+00:24:46.300 --> 00:24:49.010
+In the block dimension
+we'll use align-content,
+
+00:24:49.010 --> 00:24:51.110
+and that again, will
+be space distribution,
+
+00:24:51.110 --> 00:24:54.350
+but in the block dimension,
+and this time I've aligned
+
+00:24:54.350 --> 00:24:56.360
+the content to end, so
+all that spare space
+
+00:24:56.360 --> 00:24:59.270
+has been put before the
+tracks and the tracks
+
+00:24:59.270 --> 00:25:00.613
+are then at the bottom.
+
+00:25:02.150 --> 00:25:04.140
+Now Flexbox is a bit different to Grid,
+
+00:25:04.140 --> 00:25:06.710
+because not only have we got the block
+
+00:25:06.710 --> 00:25:08.220
+and inline dimensions going on,
+
+00:25:08.220 --> 00:25:09.910
+we can actually change the axis can't we?
+
+00:25:09.910 --> 00:25:11.677
+We can say we've got a main axis
+
+00:25:11.677 --> 00:25:13.230
+and a cross axis.
+
+00:25:13.230 --> 00:25:15.460
+So in Flexbox we justify on
+
+00:25:15.460 --> 00:25:18.610
+the main axis which by default will be row
+
+00:25:18.610 --> 00:25:19.810
+if you haven't done anything else,
+
+00:25:19.810 --> 00:25:21.700
+which then is the inline dimension.
+
+00:25:21.700 --> 00:25:23.630
+So we justify on the main axis
+
+00:25:23.630 --> 00:25:26.483
+and align on the cross axis.
+
+00:25:27.850 --> 00:25:29.960
+So in flex justify-content
+
+00:25:29.960 --> 00:25:32.700
+is your main axis space distribution.
+
+00:25:32.700 --> 00:25:35.510
+So here we can say
+justify-content flex-end
+
+00:25:35.510 --> 00:25:37.770
+and the spare space is
+put before the items
+
+00:25:37.770 --> 00:25:39.543
+and they all go to the end.
+
+00:25:40.420 --> 00:25:43.220
+Align-content is our cross
+axis space distribution
+
+00:25:43.220 --> 00:25:45.860
+between the flex lines so you
+need to have more than one
+
+00:25:45.860 --> 00:25:49.160
+flex line and you need
+to have some spare space,
+
+00:25:49.160 --> 00:25:52.080
+but then you can do
+align-content space-around
+
+00:25:52.080 --> 00:25:55.160
+and that's actually the
+Firefox flex inspector,
+
+00:25:55.160 --> 00:25:58.040
+which is pretty new, which
+gives you some information
+
+00:25:58.040 --> 00:26:01.290
+about your flex items their
+spacing and sizing and so on.
+
+00:26:01.290 --> 00:26:02.970
+If you haven't tried that
+out it's really worth
+
+00:26:02.970 --> 00:26:04.370
+playing around with if
+you're learning Flexbox
+
+00:26:04.370 --> 00:26:06.080
+or if you're teaching Flexbox
+
+00:26:06.080 --> 00:26:07.760
+to someone else to have that visual
+
+00:26:07.760 --> 00:26:09.453
+understanding of what's going on.
+
+00:26:10.980 --> 00:26:12.730
+And here is the question I am asked
+
+00:26:12.730 --> 00:26:14.760
+constantly and I have people reporting
+
+00:26:14.760 --> 00:26:16.957
+bugs to me with Flexbox and Grid saying,
+
+00:26:16.957 --> 00:26:19.130
+"This isn't working, my
+alignments not working."
+
+00:26:19.130 --> 00:26:21.230
+It's because they've
+not got any spare space.
+
+00:26:21.230 --> 00:26:23.670
+If you're using the
+content properties you need
+
+00:26:23.670 --> 00:26:25.530
+to have spare space to distribute.
+
+00:26:25.530 --> 00:26:27.640
+If you have a tightly
+packed grid container,
+
+00:26:27.640 --> 00:26:29.410
+a tightly packed flex container,
+
+00:26:29.410 --> 00:26:31.600
+if you don't have multiple flex lines,
+
+00:26:31.600 --> 00:26:33.317
+you're not gonna have
+any space to distribute,
+
+00:26:33.317 --> 00:26:35.540
+and so they're not going to do anything.
+
+00:26:35.540 --> 00:26:37.430
+This is very frequently reported to me.
+
+00:26:37.430 --> 00:26:39.990
+If you're teaching people Flexbox and Grid
+
+00:26:39.990 --> 00:26:41.717
+that's a good thing to point out.
+
+00:26:44.560 --> 00:26:47.010
+So then you have to align
+your items inside your area.
+
+00:26:47.010 --> 00:26:50.360
+Again, much easier to understand in grid.
+
+00:26:50.360 --> 00:26:52.590
+I've got grid items here
+they're all displayed
+
+00:26:52.590 --> 00:26:55.040
+within their area and they're stretched
+
+00:26:55.040 --> 00:26:56.810
+over different cells.
+
+00:26:56.810 --> 00:26:58.250
+The properties we need to use here are
+
+00:26:58.250 --> 00:27:01.010
+justify-self and align-self.
+
+00:27:01.010 --> 00:27:05.270
+Now the initial values for
+those properties are stretch
+
+00:27:05.270 --> 00:27:07.650
+which means that the
+thing that we tried to do
+
+00:27:07.650 --> 00:27:09.460
+for so long with floated layouts
+
+00:27:09.460 --> 00:27:13.290
+to have equal height columns
+is the default behavior
+
+00:27:13.290 --> 00:27:15.860
+of our new layout methods,
+which I kind of like.
+
+00:27:15.860 --> 00:27:17.100
+So it's saying, yes you've always wanted
+
+00:27:17.100 --> 00:27:19.430
+to do this, so here now you
+can just do it by default.
+
+00:27:19.430 --> 00:27:22.030
+You line things up they
+will stretch to full height.
+
+00:27:23.230 --> 00:27:25.170
+Now the only time that we
+don't stretch things is
+
+00:27:25.170 --> 00:27:26.790
+for items which have an aspect ratio.
+
+00:27:26.790 --> 00:27:30.100
+So if say you have an
+image as a grid item,
+
+00:27:30.100 --> 00:27:32.280
+it will be aligned to
+start rather than stretch
+
+00:27:32.280 --> 00:27:34.410
+because generally you
+don't want your images
+
+00:27:34.410 --> 00:27:35.670
+to be stretched.
+
+00:27:35.670 --> 00:27:36.760
+You certainly don't want that to happen
+
+00:27:36.760 --> 00:27:38.160
+if you weren't expecting it.
+
+00:27:39.370 --> 00:27:41.900
+So to align on the inline
+axis we again use the property
+
+00:27:41.900 --> 00:27:43.180
+which starts with justify.
+
+00:27:43.180 --> 00:27:45.010
+So justify-self end.
+
+00:27:45.010 --> 00:27:46.960
+On the first item aligns it to the end
+
+00:27:46.960 --> 00:27:48.137
+of the inline dimension.
+
+00:27:48.137 --> 00:27:51.010
+And on the block axis we're
+using the properties with align.
+
+00:27:51.010 --> 00:27:52.890
+So align-self end aligns it
+
+00:27:52.890 --> 00:27:54.653
+to the end on the block dimension.
+
+00:27:56.164 --> 00:27:57.950
+And we can set them all at once
+
+00:27:57.950 --> 00:28:00.090
+if we go to the grid container,
+
+00:28:00.090 --> 00:28:03.010
+we can say justify-items
+end and align-items end
+
+00:28:03.010 --> 00:28:05.393
+and they go to the end.
+
+00:28:06.870 --> 00:28:10.520
+Switch into Flexbox and
+we do not have a concept
+
+00:28:10.520 --> 00:28:12.503
+of justify-self on the main axis.
+
+00:28:13.340 --> 00:28:16.430
+The reason being that
+there's no area as in grid,
+
+00:28:16.430 --> 00:28:18.210
+we're dealing with all of the items sort
+
+00:28:18.210 --> 00:28:20.980
+of as a group rather than individually.
+
+00:28:20.980 --> 00:28:22.880
+So this is where we see
+
+00:28:22.880 --> 00:28:25.610
+that the specification is
+saying something different
+
+00:28:25.610 --> 00:28:27.109
+for a certain layout method.
+
+00:28:27.109 --> 00:28:28.260
+It's saying, well this layout method,
+
+00:28:28.260 --> 00:28:30.960
+you can't do both ways,
+like you can on grid.
+
+00:28:30.960 --> 00:28:33.283
+So here you can't use this property.
+
+00:28:34.170 --> 00:28:36.623
+So we can't align individual items.
+
+00:28:37.710 --> 00:28:40.250
+We can however, align
+them on the cross axis
+
+00:28:40.250 --> 00:28:42.130
+because you can move things up and down
+
+00:28:42.130 --> 00:28:44.000
+against each other on the cross axis
+
+00:28:44.000 --> 00:28:46.173
+if you've got extra space on that axis.
+
+00:28:46.173 --> 00:28:48.580
+Perhaps because you've got a
+height on the flex container
+
+00:28:48.580 --> 00:28:50.210
+or you've got some taller items
+
+00:28:50.210 --> 00:28:52.930
+in that container making it taller.
+
+00:28:52.930 --> 00:28:56.380
+So align-self will align a single item.
+
+00:28:56.380 --> 00:29:00.453
+Align-items on the parents
+will align them all.
+
+00:29:02.538 --> 00:29:04.690
+Now if you do need self alignment of items
+
+00:29:04.690 --> 00:29:07.810
+on the main axis, there is a way to do it.
+
+00:29:07.810 --> 00:29:09.860
+And it's in the spec.
+
+00:29:09.860 --> 00:29:13.760
+You can use auto margins
+to align a single item
+
+00:29:13.760 --> 00:29:17.363
+or group of items sorta separate
+them out from the others.
+
+00:29:18.870 --> 00:29:22.160
+Because auto margins
+absorb any available space
+
+00:29:22.160 --> 00:29:23.320
+in the dimension they are set in.
+
+00:29:23.320 --> 00:29:25.780
+It's why you can center a
+block with auto margins.
+
+00:29:25.780 --> 00:29:28.070
+You give it a margin left of
+auto, a margin right of auto,
+
+00:29:28.070 --> 00:29:29.770
+it pushes the block into the middle.
+
+00:29:29.770 --> 00:29:32.520
+We've all been centering our
+layouts like that forever.
+
+00:29:33.420 --> 00:29:35.370
+So if you apply an auto margin
+
+00:29:35.370 --> 00:29:37.390
+to a flex item it will take precedence
+
+00:29:37.390 --> 00:29:39.200
+over the justify-content alignment
+
+00:29:39.200 --> 00:29:42.070
+and kind of push the item over now.
+
+00:29:42.070 --> 00:29:45.700
+Now as we saw, this is
+described in the specification.
+
+00:29:45.700 --> 00:29:48.750
+It's not a hack, it's not making
+use of some weird behavior
+
+00:29:48.750 --> 00:29:50.973
+that someone noticed
+once on Stack Overflow.
+
+00:29:52.610 --> 00:29:54.530
+And this leads me to another thing
+
+00:29:54.530 --> 00:29:57.630
+about talking about this stuff.
+
+00:29:57.630 --> 00:30:00.840
+Let's stop calling
+things a trick or a hack
+
+00:30:00.840 --> 00:30:03.070
+when we are literally using CSS
+
+00:30:03.070 --> 00:30:06.150
+the way it has been designed.
+
+00:30:06.150 --> 00:30:08.520
+Because if we go around
+talking about this stuff as
+
+00:30:08.520 --> 00:30:10.880
+if it's weird and quirky
+then people assume
+
+00:30:10.880 --> 00:30:13.190
+the whole language is weird and quirky
+
+00:30:13.190 --> 00:30:15.060
+and that it's just a series of hacks.
+
+00:30:15.060 --> 00:30:16.890
+And yes, it kind of has been,
+
+00:30:16.890 --> 00:30:19.330
+but it doesn't need to be anymore.
+
+00:30:19.330 --> 00:30:20.610
+So when you're talking about things
+
+00:30:20.610 --> 00:30:23.930
+that exist in the spec, show
+people the specification.
+
+00:30:23.930 --> 00:30:25.840
+Say, "Here, this is a
+real way to do things.
+
+00:30:25.840 --> 00:30:28.737
+"This is how it's been designed."
+
+00:30:30.540 --> 00:30:33.050
+And while we're talking about design,
+
+00:30:33.050 --> 00:30:34.270
+there's some interesting things
+
+00:30:34.270 --> 00:30:36.050
+that you find that have kind of come out
+
+00:30:36.050 --> 00:30:37.530
+of CSS working group discussions.
+
+00:30:37.530 --> 00:30:38.620
+And some of these things are things
+
+00:30:38.620 --> 00:30:41.980
+that we spent an awful
+lot of time talking about.
+
+00:30:41.980 --> 00:30:44.180
+When we designed CSS, when we're creating
+
+00:30:44.180 --> 00:30:47.780
+this layout system, we
+want to prevent data loss.
+
+00:30:47.780 --> 00:30:48.697
+Right at the start I said,
+
+00:30:48.697 --> 00:30:50.777
+"You know, things don't
+overlap all over each other
+
+00:30:50.777 --> 00:30:51.667
+"when we lay things out in CSS."
+
+00:30:51.667 --> 00:30:54.550
+You know, we try very hard
+to keep your content visible
+
+00:30:54.550 --> 00:30:58.480
+on the page that's really
+important because actually
+
+00:30:58.480 --> 00:31:00.850
+if things go missing,
+it's hard to identify
+
+00:31:00.850 --> 00:31:02.250
+that something's gone missing.
+
+00:31:02.250 --> 00:31:04.730
+If the button on your form has ended up
+
+00:31:04.730 --> 00:31:06.940
+behind another element,
+you may not spot that.
+
+00:31:06.940 --> 00:31:09.678
+It's really hard to spot that
+something's just not there.
+
+00:31:09.678 --> 00:31:10.807
+And people are like, "How
+do I fill in this form?
+
+00:31:10.807 --> 00:31:12.270
+"There's no button."
+
+00:31:12.270 --> 00:31:14.430
+If it all just kind of overlays messily,
+
+00:31:14.430 --> 00:31:16.940
+you will probably see the messy overlay
+
+00:31:16.940 --> 00:31:19.050
+or at the very least your
+customers will contact you
+
+00:31:19.050 --> 00:31:20.727
+and say, "You know, I'm using this browser
+
+00:31:20.727 --> 00:31:21.880
+"and everything's all a mess."
+
+00:31:21.880 --> 00:31:23.460
+Now at least you can go and fix it then,
+
+00:31:23.460 --> 00:31:24.750
+but they probably won't identify
+
+00:31:24.750 --> 00:31:26.190
+that something has gone missing.
+
+00:31:26.190 --> 00:31:29.390
+So we tend to have visible
+overflow if we have to.
+
+00:31:29.390 --> 00:31:31.270
+We don't go around causing data loss
+
+00:31:31.270 --> 00:31:32.943
+and hiding your content.
+
+00:31:34.170 --> 00:31:37.320
+So alignment's a situation
+where you could get data loss.
+
+00:31:37.320 --> 00:31:40.330
+In some cases you could
+align an item in such a way
+
+00:31:40.330 --> 00:31:41.810
+that it kind of pushes part of it
+
+00:31:41.810 --> 00:31:43.737
+off the edge of the viewport for example,
+
+00:31:43.737 --> 00:31:46.460
+out of the sort of scrollable
+area that you're working in.
+
+00:31:46.460 --> 00:31:49.970
+And so here I've got a stack
+of flex items as column
+
+00:31:49.970 --> 00:31:51.200
+they've been aligned to center,
+
+00:31:51.200 --> 00:31:53.320
+one of them's huge and so if it's aligned
+
+00:31:53.320 --> 00:31:55.770
+to center it's gonna get pushed
+off the edge of the screen.
+
+00:31:55.770 --> 00:31:57.520
+You're not gonna be able
+to get to some of it.
+
+00:31:57.520 --> 00:32:00.453
+That would obviously be
+suboptimal most of the time.
+
+00:32:01.820 --> 00:32:05.650
+So we've got these alignment
+keywords, safe and unsafe.
+
+00:32:05.650 --> 00:32:09.270
+Use the unsafe keyword and
+CSS will honor your alignment,
+
+00:32:09.270 --> 00:32:10.830
+even if that means something vanishes.
+
+00:32:10.830 --> 00:32:13.080
+If you're it saying I
+want unsafe alignment,
+
+00:32:13.080 --> 00:32:15.337
+you're basically saying,
+just like with position,
+
+00:32:15.337 --> 00:32:16.787
+"I would like this, I would like this
+
+00:32:16.787 --> 00:32:17.920
+"to work the way I've asked for it."
+
+00:32:17.920 --> 00:32:19.820
+And it could be 'cause
+you've got some plans for it.
+
+00:32:19.820 --> 00:32:22.370
+You're using the fact that you can do that
+
+00:32:22.370 --> 00:32:24.430
+for some creative way or what have you.
+
+00:32:24.430 --> 00:32:27.080
+Now again, this isn't a hacky system.
+
+00:32:27.080 --> 00:32:30.263
+These things have been
+thought through and designed.
+
+00:32:32.930 --> 00:32:35.270
+And so then we have sizing.
+
+00:32:35.270 --> 00:32:37.750
+This is the specification
+until very recently was known
+
+00:32:37.750 --> 00:32:41.200
+as the CSS intrinsic and
+extrinsic sizing specification.
+
+00:32:41.200 --> 00:32:42.843
+I am not unhappy that I won't have to say
+
+00:32:42.843 --> 00:32:44.550
+that on stage so often because it's now
+
+00:32:44.550 --> 00:32:46.620
+being called box sizing.
+
+00:32:46.620 --> 00:32:49.133
+It defines how big
+things are in our layout.
+
+00:32:51.031 --> 00:32:53.550
+And you might have noticed
+that at no point so far,
+
+00:32:53.550 --> 00:32:55.310
+I've been talking about the box model.
+
+00:32:55.310 --> 00:32:57.010
+And this isn't because I don't think
+
+00:32:57.010 --> 00:32:58.890
+it's kind of totally unimportant,
+
+00:32:58.890 --> 00:33:02.080
+I think it's just far less
+important than it used to be.
+
+00:33:02.080 --> 00:33:04.490
+And I say that as someone
+who must have explained
+
+00:33:04.490 --> 00:33:07.070
+the box model in a different
+way at least a hundred times
+
+00:33:07.070 --> 00:33:09.320
+across all of the writing that I've done,
+
+00:33:09.320 --> 00:33:11.913
+all of them with badly drawn diagrams.
+
+00:33:13.480 --> 00:33:15.500
+But when we had to control the size
+
+00:33:15.500 --> 00:33:16.490
+of each item in our layout,
+
+00:33:16.490 --> 00:33:18.070
+when we had to actually figure out
+
+00:33:18.070 --> 00:33:19.980
+how big everything was the box model was
+
+00:33:19.980 --> 00:33:23.000
+really really important.
+
+00:33:23.000 --> 00:33:25.120
+And also because we all know that
+
+00:33:25.120 --> 00:33:27.640
+until very recently the
+size we gave our items
+
+00:33:27.640 --> 00:33:29.950
+wasn't even the width
+they took up on the screen
+
+00:33:29.950 --> 00:33:33.550
+once padding and borders and
+so on, was taken into account.
+
+00:33:33.550 --> 00:33:34.810
+And I think it's there that we need
+
+00:33:34.810 --> 00:33:36.893
+to introduce people to the box model.
+
+00:33:38.580 --> 00:33:40.950
+So this is kind of my quick
+guide to the box model
+
+00:33:40.950 --> 00:33:42.290
+with added dev tools because
+
+00:33:42.290 --> 00:33:44.730
+that's a really good way for
+you to see what's going on.
+
+00:33:44.730 --> 00:33:46.560
+Obviously everything in CSS is a box,
+
+00:33:46.560 --> 00:33:49.180
+but the block level box
+is a very specific thing.
+
+00:33:49.180 --> 00:33:50.987
+Expands to fill the inline direction
+
+00:33:50.987 --> 00:33:52.730
+and it grows in the block dimension
+
+00:33:52.730 --> 00:33:54.070
+to the size of the content.
+
+00:33:54.070 --> 00:33:57.093
+And we can give it a
+width and maybe a height.
+
+00:33:58.550 --> 00:34:00.333
+When we do, CSS has to decide what it is
+
+00:34:00.333 --> 00:34:02.560
+that we mean about that.
+
+00:34:02.560 --> 00:34:04.330
+It does that while taking
+into account all the
+
+00:34:04.330 --> 00:34:06.760
+different bits of the box.
+
+00:34:06.760 --> 00:34:07.787
+So the box has the content,
+
+00:34:07.787 --> 00:34:10.193
+and we refer to that as the content box.
+
+00:34:11.150 --> 00:34:12.180
+You might then give it a bit
+
+00:34:12.180 --> 00:34:14.110
+of padding if you do that it's added
+
+00:34:14.110 --> 00:34:16.770
+around the content and the
+edge of this is referred
+
+00:34:16.770 --> 00:34:18.393
+to as the padding box.
+
+00:34:19.890 --> 00:34:22.200
+The box might also have a visible border.
+
+00:34:22.200 --> 00:34:24.160
+If you do then the size of this border is
+
+00:34:24.160 --> 00:34:25.750
+added to the outside of the padding
+
+00:34:25.750 --> 00:34:28.203
+and this is the border box.
+
+00:34:30.155 --> 00:34:31.630
+And the box also might have a margin
+
+00:34:31.630 --> 00:34:33.950
+and that's then added to the outside
+
+00:34:33.950 --> 00:34:36.950
+of the border pushing things
+away that are outside the box.
+
+00:34:36.950 --> 00:34:39.163
+And that defines the margin box.
+
+00:34:41.460 --> 00:34:43.810
+So if your box has a width or height
+
+00:34:43.810 --> 00:34:45.870
+or has an inline size and a block size,
+
+00:34:45.870 --> 00:34:47.760
+what is that size?
+
+00:34:47.760 --> 00:34:50.410
+Now, that size by default is the size
+
+00:34:50.410 --> 00:34:52.550
+of the content box so that's the size
+
+00:34:52.550 --> 00:34:53.870
+of the box before you've added
+
+00:34:53.870 --> 00:34:56.033
+on your padding and your border.
+
+00:34:57.270 --> 00:35:00.390
+So the visible space
+it takes up is added on
+
+00:35:00.390 --> 00:35:01.730
+to the size that you've given it.
+
+00:35:01.730 --> 00:35:05.200
+Now I think a lot of people
+find that rather confusing.
+
+00:35:05.200 --> 00:35:06.780
+And so if you want the specified width
+
+00:35:06.780 --> 00:35:10.360
+to include padding and border
+set the box sizing property
+
+00:35:10.360 --> 00:35:12.250
+to border box and then the visible thing
+
+00:35:12.250 --> 00:35:14.570
+you can see, so everything
+other than the margin,
+
+00:35:14.570 --> 00:35:16.433
+that's the width you've set.
+
+00:35:17.970 --> 00:35:19.600
+And that's pretty much what people need
+
+00:35:19.600 --> 00:35:21.230
+to know about the box model.
+
+00:35:21.230 --> 00:35:23.570
+We've got keywords that allow us to toggle
+
+00:35:23.570 --> 00:35:27.240
+between the two different
+ways of deciding sizing.
+
+00:35:27.240 --> 00:35:30.440
+Now do you want your size to
+be the size of the content box?
+
+00:35:30.440 --> 00:35:32.240
+Do you want your size to be the size
+
+00:35:32.240 --> 00:35:35.610
+of the content plus the
+padding plus the border?
+
+00:35:35.610 --> 00:35:37.360
+We don't need to go into all the history
+
+00:35:37.360 --> 00:35:38.640
+at this point.
+
+00:35:38.640 --> 00:35:41.350
+This is what it is,
+here's how to change it.
+
+00:35:41.350 --> 00:35:42.650
+And then we can move on to far
+
+00:35:42.650 --> 00:35:45.263
+more useful things about sizing.
+
+00:35:46.110 --> 00:35:49.630
+Now how is sizing worked out across all
+
+00:35:49.630 --> 00:35:51.393
+of our new layout models?
+
+00:35:53.120 --> 00:35:57.500
+So in the past, everything
+was pretty much a percentage
+
+00:35:57.500 --> 00:35:59.000
+or a length.
+
+00:35:59.000 --> 00:36:01.160
+You've given your box a fixed size,
+
+00:36:01.160 --> 00:36:03.190
+and in which case that's
+the size it's going to get.
+
+00:36:03.190 --> 00:36:05.120
+Now, that's how we've been doing layout.
+
+00:36:05.120 --> 00:36:07.230
+We've been giving things a size
+
+00:36:07.230 --> 00:36:09.490
+so that they would all
+line up next to each other.
+
+00:36:09.490 --> 00:36:11.500
+We hope that that size doesn't add up
+
+00:36:11.500 --> 00:36:13.910
+to more than 100%, because
+if it does bad things start
+
+00:36:13.910 --> 00:36:15.950
+to happen, and as long as you know
+
+00:36:15.950 --> 00:36:17.160
+everything fits in the line,
+
+00:36:17.160 --> 00:36:20.610
+we kinda get something that
+looks like a kind of grid.
+
+00:36:20.610 --> 00:36:22.710
+Now having to specify
+everything in lengths
+
+00:36:22.710 --> 00:36:24.830
+and percentages and then doing the math
+
+00:36:24.830 --> 00:36:28.140
+to make them line up is
+really the way of the past.
+
+00:36:28.140 --> 00:36:31.020
+Because our new layout methods
+can do a lot of the work
+
+00:36:31.020 --> 00:36:33.690
+for us but to understand how they're doing
+
+00:36:33.690 --> 00:36:35.913
+that we need to understand a few concepts.
+
+00:36:37.920 --> 00:36:40.160
+And the important things to understand,
+
+00:36:40.160 --> 00:36:42.530
+is what is the minimum
+size of this content
+
+00:36:42.530 --> 00:36:45.800
+and what is the maximum
+size of this content?
+
+00:36:45.800 --> 00:36:48.420
+Because once we know
+those two things we're
+
+00:36:48.420 --> 00:36:50.370
+in a pretty good place
+to start understanding
+
+00:36:50.370 --> 00:36:51.590
+what the browser is doing
+
+00:36:51.590 --> 00:36:54.030
+when it works out the size
+of any individual thing
+
+00:36:54.030 --> 00:36:55.890
+in our layout.
+
+00:36:55.890 --> 00:36:57.390
+And we've got some keywords,
+
+00:36:57.390 --> 00:36:59.550
+which they allow us to
+actually size things
+
+00:36:59.550 --> 00:37:01.130
+in that minimum and maximum size
+
+00:37:01.130 --> 00:37:02.480
+so we can have a look at it.
+
+00:37:02.480 --> 00:37:04.680
+And so they're a really
+good place to start.
+
+00:37:05.740 --> 00:37:07.550
+If we have a two column grid,
+
+00:37:07.550 --> 00:37:09.920
+we've got our grid items there
+
+00:37:09.920 --> 00:37:13.370
+and the grid items contain
+variable amounts of text.
+
+00:37:13.370 --> 00:37:15.850
+So the first column is set to min content
+
+00:37:15.850 --> 00:37:18.200
+and the second to max content.
+
+00:37:18.200 --> 00:37:20.510
+Now you can see that the
+min content column has kind
+
+00:37:20.510 --> 00:37:21.610
+of got as small as it can
+
+00:37:21.610 --> 00:37:23.060
+without doing any overflows
+
+00:37:23.060 --> 00:37:25.910
+and so it's soft wrapping
+the items getting as small
+
+00:37:25.910 --> 00:37:27.583
+as it can do and then
+that's the size it gets to.
+
+00:37:27.583 --> 00:37:29.770
+That's its min content size.
+
+00:37:29.770 --> 00:37:31.590
+You can use those keywords if you want to
+
+00:37:31.590 --> 00:37:33.920
+to size your grid tracks.
+
+00:37:33.920 --> 00:37:36.750
+Now the second column has
+gone to max content size,
+
+00:37:36.750 --> 00:37:38.437
+which basically means that
+because you've got text in there
+
+00:37:38.437 --> 00:37:40.680
+it's sort of unraveled it's all gone,
+
+00:37:40.680 --> 00:37:42.430
+it's stretched out as long as it can.
+
+00:37:42.430 --> 00:37:44.160
+If you actually use max content
+
+00:37:44.160 --> 00:37:46.220
+in a grid layout like this,
+
+00:37:46.220 --> 00:37:47.550
+you could well cause an overflow.
+
+00:37:47.550 --> 00:37:49.010
+'Cause if you have a very very long bit
+
+00:37:49.010 --> 00:37:50.760
+of content in there
+it's just going to keep
+
+00:37:50.760 --> 00:37:53.250
+on going and end up poking out the box,
+
+00:37:53.250 --> 00:37:54.980
+poking out the side of the viewport.
+
+00:37:54.980 --> 00:37:56.020
+But that's important to know.
+
+00:37:56.020 --> 00:37:57.790
+Things have got a max content size
+
+00:37:57.790 --> 00:37:59.603
+which they can try to go to.
+
+00:38:02.365 --> 00:38:05.480
+And so any content based sizing is going
+
+00:38:05.480 --> 00:38:07.650
+to be working itself
+out based on these min
+
+00:38:07.650 --> 00:38:09.820
+and max content size.
+
+00:38:09.820 --> 00:38:12.480
+Working out how to
+distribute space based on how
+
+00:38:12.480 --> 00:38:15.523
+big and how small the content is.
+
+00:38:17.680 --> 00:38:19.320
+And sort of understand
+that, I think Flexbox
+
+00:38:19.320 --> 00:38:21.640
+is a really really good way to understand
+
+00:38:21.640 --> 00:38:22.760
+what's going on there.
+
+00:38:22.760 --> 00:38:26.490
+So if I've got three items
+in my flex container,
+
+00:38:26.490 --> 00:38:28.520
+now if we use the Flexbox initial values,
+
+00:38:28.520 --> 00:38:30.890
+they don't grow to fill the space there's
+
+00:38:30.890 --> 00:38:32.078
+enough room for them there,
+
+00:38:32.078 --> 00:38:34.470
+so they're all going to
+their max content size
+
+00:38:34.470 --> 00:38:36.460
+and they're stopping as soon
+as they've got to that size.
+
+00:38:36.460 --> 00:38:39.063
+They're not adding on any
+extra space that they need.
+
+00:38:40.200 --> 00:38:43.020
+Now if I give them flex auto,
+
+00:38:43.020 --> 00:38:45.080
+if you use flex auto things can grow
+
+00:38:45.080 --> 00:38:47.350
+and they can shrink from auto.
+
+00:38:47.350 --> 00:38:49.810
+So because they've all got an equal
+
+00:38:49.810 --> 00:38:52.520
+flex fire, they've all
+got essentially flex one,
+
+00:38:52.520 --> 00:38:55.200
+they can all grow at the same rate.
+
+00:38:55.200 --> 00:38:56.760
+Now it looks there like we've got
+
+00:38:56.760 --> 00:38:59.040
+three equally sized items,
+
+00:38:59.040 --> 00:39:00.470
+but that's only because they've got
+
+00:39:00.470 --> 00:39:03.280
+about the same amount of content.
+
+00:39:03.280 --> 00:39:06.090
+If we add more content to one
+of the items you can see that
+
+00:39:06.090 --> 00:39:08.542
+that item is getting more space assigned,
+
+00:39:08.542 --> 00:39:10.100
+it's taking up the space
+
+00:39:10.100 --> 00:39:12.760
+because it's max content size is very big.
+
+00:39:12.760 --> 00:39:14.810
+But then once it kind of
+gets to it all being full
+
+00:39:14.810 --> 00:39:17.290
+and it starts to wrap, it
+starts to lose the space
+
+00:39:17.290 --> 00:39:18.610
+from its max content size
+
+00:39:18.610 --> 00:39:20.260
+and the content starts to wrap.
+
+00:39:20.260 --> 00:39:21.920
+And you see the small items,
+
+00:39:21.920 --> 00:39:24.418
+they also start to wrap down
+to their min content size,
+
+00:39:24.418 --> 00:39:26.590
+but they'll not go smaller than that.
+
+00:39:26.590 --> 00:39:27.860
+If you ended up with too much stuff
+
+00:39:27.860 --> 00:39:29.920
+it would just overflow.
+
+00:39:29.920 --> 00:39:31.330
+Or if you had flex wrap set to wrap
+
+00:39:31.330 --> 00:39:33.450
+it would then start to wrap.
+
+00:39:33.450 --> 00:39:35.490
+So that's kinda, Flexbox
+is doing this thing
+
+00:39:35.490 --> 00:39:37.310
+of looking at the min
+and max content size.
+
+00:39:37.310 --> 00:39:39.820
+What it's not doing is
+looking at those things
+
+00:39:39.820 --> 00:39:42.350
+and saying well we need
+three equal size items
+
+00:39:42.350 --> 00:39:43.460
+and therefore we're gonna have lots
+
+00:39:43.460 --> 00:39:45.010
+of space around a small thing
+
+00:39:45.010 --> 00:39:48.210
+and push the big thing into a tiny box.
+
+00:39:48.210 --> 00:39:50.010
+If you actually do want that behavior
+
+00:39:50.010 --> 00:39:53.550
+and sometimes you do, then use flex one.
+
+00:39:53.550 --> 00:39:55.590
+That sets the flex basis to zero
+
+00:39:55.590 --> 00:39:58.000
+which basically says none of
+these things has got any size,
+
+00:39:58.000 --> 00:39:59.820
+share all the space out accordingly.
+
+00:39:59.820 --> 00:40:03.150
+You then get your three
+equally sized items.
+
+00:40:03.150 --> 00:40:07.250
+But the thing with Flexbox,
+it's kind of best used for stuff
+
+00:40:07.250 --> 00:40:09.460
+where you've got a bunch
+of things of odd sizes
+
+00:40:09.460 --> 00:40:11.760
+and you'd just like the
+browser to lay it out
+
+00:40:11.760 --> 00:40:14.110
+in the best way possible,
+not put big things
+
+00:40:14.110 --> 00:40:16.450
+in small boxes and small
+things in big boxes.
+
+00:40:16.450 --> 00:40:19.310
+Just have this kind of
+squishy flexible sizing
+
+00:40:19.310 --> 00:40:23.113
+and it does that very very
+well when used for that job.
+
+00:40:27.550 --> 00:40:31.410
+Now I've not talked yet
+really about browser support.
+
+00:40:31.410 --> 00:40:32.880
+Now pretty much everything
+I've talked about is
+
+00:40:32.880 --> 00:40:36.353
+available on at least one
+browser if not more than one.
+
+00:40:37.350 --> 00:40:41.100
+But I think as well as talking
+about how CSS is designed,
+
+00:40:41.100 --> 00:40:44.440
+and that it is a system,
+we need to really rethink
+
+00:40:44.440 --> 00:40:46.870
+how we talk about browser support
+
+00:40:46.870 --> 00:40:50.390
+and explain CSS separately
+from explaining you know,
+
+00:40:50.390 --> 00:40:52.950
+what is supported in what.
+
+00:40:52.950 --> 00:40:54.753
+And you might say, well what use is CSS
+
+00:40:54.753 --> 00:40:57.120
+that we actually can't use?
+
+00:40:57.120 --> 00:40:59.403
+But stay with me for a moment.
+
+00:41:01.000 --> 00:41:02.770
+If we treat this as a system,
+
+00:41:02.770 --> 00:41:04.540
+it's a system that's been designed.
+
+00:41:04.540 --> 00:41:07.180
+We then have software that
+implements this system.
+
+00:41:07.180 --> 00:41:09.390
+Now just like when you write
+a specification of a piece
+
+00:41:09.390 --> 00:41:11.530
+of software that you're building,
+
+00:41:11.530 --> 00:41:12.660
+sometimes you end up needing
+
+00:41:12.660 --> 00:41:14.760
+to release it without some of the features
+
+00:41:14.760 --> 00:41:17.290
+in your spec, because it's still useful
+
+00:41:17.290 --> 00:41:18.123
+even without those things,
+
+00:41:18.123 --> 00:41:21.010
+but it doesn't mean that
+those things don't exist
+
+00:41:21.010 --> 00:41:22.040
+or can't exist.
+
+00:41:22.040 --> 00:41:25.073
+and it's a kind of
+understandable state of affairs.
+
+00:41:26.010 --> 00:41:28.760
+If we talk about the fact that yes,
+
+00:41:28.760 --> 00:41:30.530
+there are browsers that don't support some
+
+00:41:30.530 --> 00:41:33.140
+of this stuff and yes
+it's probably coming.
+
+00:41:33.140 --> 00:41:34.380
+That's understandable.
+
+00:41:34.380 --> 00:41:37.610
+We don't have the problems
+that we had in the past
+
+00:41:37.610 --> 00:41:41.170
+where browsers had sort of
+implemented different things
+
+00:41:41.170 --> 00:41:43.050
+in wildly different ways.
+
+00:41:43.050 --> 00:41:45.600
+These days browsers do not want,
+
+00:41:45.600 --> 00:41:47.520
+they're not to be interrupt.
+
+00:41:47.520 --> 00:41:49.360
+Nobody does, no one in the
+CSS working group wants
+
+00:41:49.360 --> 00:41:51.950
+there not to be interrupt between browsers
+
+00:41:51.950 --> 00:41:53.620
+on any of these features.
+
+00:41:53.620 --> 00:41:56.140
+CSS is designed by a
+group of representatives
+
+00:41:56.140 --> 00:41:58.780
+from those engines and no browser wants
+
+00:41:58.780 --> 00:41:59.830
+to be doing something different
+
+00:41:59.830 --> 00:42:02.490
+to what other browsers are doing.
+
+00:42:02.490 --> 00:42:04.610
+And yes, sometimes one engine lags behind
+
+00:42:04.610 --> 00:42:05.950
+on one feature or another.
+
+00:42:05.950 --> 00:42:08.000
+And yes, there are sometimes
+bugs, you know who knew?
+
+00:42:08.000 --> 00:42:10.120
+Software gets bugs.
+
+00:42:10.120 --> 00:42:11.990
+Sometimes the browser's implemented a spec
+
+00:42:11.990 --> 00:42:14.680
+prior to some major change
+and it's having to refactor it
+
+00:42:14.680 --> 00:42:16.710
+as we're seeing with Firefox at the moment
+
+00:42:16.710 --> 00:42:19.430
+who are about to ship
+the updated scroll snap.
+
+00:42:19.430 --> 00:42:22.850
+When they implemented an
+earlier version of the spec.
+
+00:42:22.850 --> 00:42:25.110
+But none of this these days
+is due to browsers kind
+
+00:42:25.110 --> 00:42:27.740
+of fighting out over CSS features.
+
+00:42:27.740 --> 00:42:30.440
+It's due the fact that we do
+have this iterative thing going
+
+00:42:30.440 --> 00:42:33.300
+on where we're creating features.
+
+00:42:33.300 --> 00:42:35.400
+And these days we've
+even got feature queries,
+
+00:42:35.400 --> 00:42:38.067
+the ability to say, "Hey browser
+do you support this feature
+
+00:42:38.067 --> 00:42:41.080
+"before I try and use it or
+shall I do something else?"
+
+00:42:41.080 --> 00:42:43.550
+We can fork our code accordingly.
+
+00:42:43.550 --> 00:42:45.060
+Now so another part of this system
+
+00:42:45.060 --> 00:42:46.130
+is this conditional logic.
+
+00:42:46.130 --> 00:42:48.600
+We've got media queries,
+we've got feature queries,
+
+00:42:48.600 --> 00:42:50.950
+we can find out how big is this viewport?
+
+00:42:50.950 --> 00:42:52.950
+Is my user using a touchscreen?
+
+00:42:52.950 --> 00:42:54.340
+Does this browser support grid?
+
+00:42:54.340 --> 00:42:56.930
+We can ask these
+questions, get the answers,
+
+00:42:56.930 --> 00:43:00.483
+do something in our code to
+deal with it when we need to.
+
+00:43:04.280 --> 00:43:06.690
+And why is this important?
+
+00:43:06.690 --> 00:43:08.480
+Well as people who care about CSS
+
+00:43:08.480 --> 00:43:10.510
+and I imagine since you're
+sat in the CSS conference
+
+00:43:10.510 --> 00:43:13.590
+you do care to some degree about CSS,
+
+00:43:13.590 --> 00:43:15.730
+we need to stop talking
+about it as this weird
+
+00:43:15.730 --> 00:43:17.283
+and quirky thing.
+
+00:43:18.670 --> 00:43:20.360
+In this room and coming after me are some
+
+00:43:20.360 --> 00:43:22.330
+of the people who have done an amazing job
+
+00:43:22.330 --> 00:43:25.920
+of refactoring CSS, of creating a cohesive
+
+00:43:25.920 --> 00:43:28.140
+and a sensible layout
+system out of a language
+
+00:43:28.140 --> 00:43:31.150
+which is like no other because
+it serves an environment
+
+00:43:31.150 --> 00:43:33.900
+in fact, multiple environments,
+that are like no other.
+
+00:43:34.860 --> 00:43:36.680
+And just because it's
+designed for an environment
+
+00:43:36.680 --> 00:43:38.180
+that isn't like any other doesn't mean
+
+00:43:38.180 --> 00:43:41.670
+that we can't teach it in a
+robust and structured manner.
+
+00:43:41.670 --> 00:43:44.070
+We can give people the
+skills to use the CSS
+
+00:43:44.070 --> 00:43:47.170
+of today the CSS, the CSS
+that is coming tomorrow,
+
+00:43:47.170 --> 00:43:48.290
+and be able to learn to cope
+
+00:43:48.290 --> 00:43:51.253
+with the browsers of the
+past where that is necessary.
+
+00:43:52.410 --> 00:43:54.390
+Those of us whose teach
+CSS and that's whether
+
+00:43:54.390 --> 00:43:57.100
+that's within your team, answering
+questions, writing books,
+
+00:43:57.100 --> 00:43:59.010
+or articles, speaking at conferences.
+
+00:43:59.010 --> 00:44:02.130
+Let's change the way we're
+talking about the language.
+
+00:44:02.130 --> 00:44:05.230
+Don't burden beginners with our history.
+
+00:44:05.230 --> 00:44:07.190
+Let's keep the scars of the browser wars
+
+00:44:07.190 --> 00:44:10.070
+for our own reminiscing
+and keep moving forward
+
+00:44:10.070 --> 00:44:11.650
+refactoring the way that we talk
+
+00:44:11.650 --> 00:44:14.323
+about CSS thank you.
+
+00:44:14.323 --> 00:44:17.573
+(audience applauding)
+
+00:44:25.000 --> 00:44:26.710
+- All right, would you come sit over here?
+
+00:44:26.710 --> 00:44:28.460
+Quick announcement before
+we get started with the Q&amp;A,
+
+00:44:28.460 --> 00:44:29.900
+some people are sitting in the stairs,
+
+00:44:29.900 --> 00:44:32.180
+but there's still some seats
+in the middle and whatnot.
+
+00:44:32.180 --> 00:44:33.530
+Everybody make sure to squeeze in,
+
+00:44:33.530 --> 00:44:35.670
+nobody will bite, it is
+against the code of conduct,
+
+00:44:35.670 --> 00:44:36.503
+so that's fine.
+
+00:44:41.260 --> 00:44:42.693
+All right, Rachel, wonderful talk.
+
+00:44:42.693 --> 00:44:44.560
+That was a lot of fun.
+
+00:44:44.560 --> 00:44:47.900
+I have one quick compliment and question.
+
+00:44:47.900 --> 00:44:50.040
+I saw a bunch of synchronized
+tweets coming out
+
+00:44:50.040 --> 00:44:52.100
+from your account while you were talking.
+
+00:44:52.100 --> 00:44:53.150
+How did you do that?
+
+00:44:53.150 --> 00:44:54.040
+- They're just in buffer.
+
+00:44:54.040 --> 00:44:55.290
+I know my timings. (laughs)
+
+00:44:55.290 --> 00:44:58.030
+- Oh man, that is extremely impressive.
+
+00:44:58.030 --> 00:44:59.330
+That was very good.
+
+00:44:59.330 --> 00:45:00.420
+- It's very boring.
+
+00:45:00.420 --> 00:45:02.162
+(both laughing)
+
+00:45:02.162 --> 00:45:04.140
+- Still, it was nice to see it coming out.
+
+00:45:04.140 --> 00:45:07.710
+All right, first question,
+one from a Peter Coose.
+
+00:45:07.710 --> 00:45:10.640
+Is flow-relative stuff
+polyfillable via tools
+
+00:45:10.640 --> 00:45:12.723
+like PostCSS or anything like that?
+
+00:45:14.500 --> 00:45:15.450
+- I guess it is.
+
+00:45:15.450 --> 00:45:17.370
+And I think I have seen something.
+
+00:45:17.370 --> 00:45:19.220
+It's not something I've tried myself.
+
+00:45:20.340 --> 00:45:22.000
+I think I have seen someone doing that.
+
+00:45:22.000 --> 00:45:25.333
+I mean they are just mappings,
+so there's no reason why not.
+
+00:45:26.360 --> 00:45:30.470
+I probably wouldn't use them
+particularly at the moment.
+
+00:45:30.470 --> 00:45:33.470
+I think it's more
+interesting that we have them
+
+00:45:33.470 --> 00:45:35.040
+as a concept at the moment.
+
+00:45:35.040 --> 00:45:37.647
+I think probably, I think
+give us five, 10 years,
+
+00:45:37.647 --> 00:45:38.770
+I think that's probably the default.
+
+00:45:38.770 --> 00:45:40.580
+So we're probably use
+flow-relatives by default
+
+00:45:40.580 --> 00:45:43.380
+unless we want to use something physical
+
+00:45:43.380 --> 00:45:44.910
+for whatever reason.
+- Yeah.
+
+00:45:44.910 --> 00:45:46.010
+- I think it's probably
+a bit early at the moment
+
+00:45:46.010 --> 00:45:47.260
+to actually use 'em for everything.
+
+00:45:47.260 --> 00:45:48.093
+- Yeah.
+
+00:45:49.010 --> 00:45:50.080
+A question from my own heart too,
+
+00:45:50.080 --> 00:45:53.940
+because I went through
+learning how to do CSS layout
+
+00:45:53.940 --> 00:45:56.040
+back in the terrible days
+of float base layout.
+
+00:45:56.040 --> 00:45:58.707
+What are the most
+important things to unlearn
+
+00:45:58.707 --> 00:45:59.790
+from your own knowledge right now,
+
+00:45:59.790 --> 00:46:02.970
+to act well in today's
+modern CSS Layout world?
+
+00:46:02.970 --> 00:46:03.803
+- Sizing.
+
+00:46:05.090 --> 00:46:06.670
+Typically when people start to learn Grid
+
+00:46:06.670 --> 00:46:09.460
+or Flexbox they try and size
+everything in percentages.
+
+00:46:09.460 --> 00:46:11.120
+And don't look at everything else
+
+00:46:11.120 --> 00:46:12.750
+and then are confused
+by things which are kind
+
+00:46:12.750 --> 00:46:14.015
+of using content based sizing.
+
+00:46:14.015 --> 00:46:16.280
+So something like the FR unit in grid.
+
+00:46:16.280 --> 00:46:18.470
+Because everyone is so used to the fact
+
+00:46:18.470 --> 00:46:20.800
+they have to have control over sizing.
+
+00:46:20.800 --> 00:46:21.900
+And I think like with Flexbox,
+
+00:46:21.900 --> 00:46:23.410
+sometimes just letting it get on with it,
+
+00:46:23.410 --> 00:46:24.350
+letting it do its thing.
+
+00:46:24.350 --> 00:46:26.340
+You'll get a good layout.
+
+00:46:26.340 --> 00:46:27.560
+But we're not used to that.
+
+00:46:27.560 --> 00:46:29.240
+And I think that takes people a while.
+
+00:46:29.240 --> 00:46:32.090
+Interestingly, when I
+teach complete beginners,
+
+00:46:32.090 --> 00:46:35.120
+they get Grid and Flexbox
+really really quickly.
+
+00:46:35.120 --> 00:46:36.842
+When I teach people who've been doing CSS
+
+00:46:36.842 --> 00:46:37.717
+for 10 years, they're like,
+
+00:46:37.717 --> 00:46:38.897
+"Ahh! This is all terrible!
+
+00:46:38.897 --> 00:46:40.991
+"So much of it is all new,
+I don't understand any
+
+00:46:40.991 --> 00:46:42.210
+"of it at all."
+
+00:46:42.210 --> 00:46:44.140
+So yeah actually I think that what we have
+
+00:46:44.140 --> 00:46:46.390
+is very understandable,
+but we've got these layers
+
+00:46:46.390 --> 00:46:48.560
+and layers of history to break through.
+
+00:46:48.560 --> 00:46:50.390
+- It's so good to hear
+that that stuff is easy
+
+00:46:50.390 --> 00:46:52.290
+for new people to learn, that's great.
+
+00:46:54.410 --> 00:46:57.060
+Let's, here, bah bah bah.
+
+00:46:57.060 --> 00:46:59.470
+Quick question about viewport units.
+
+00:46:59.470 --> 00:47:01.530
+Currently the main ones
+we use are VW and VH,
+
+00:47:01.530 --> 00:47:03.750
+which are clearly not
+writing mode agnostic.
+
+00:47:03.750 --> 00:47:06.810
+Do we have any plans for
+writing mode relative
+
+00:47:06.810 --> 00:47:08.060
+versions of the viewport units?
+
+00:47:08.060 --> 00:47:09.510
+- I don't actually know.
+You might know, do you?
+
+00:47:09.510 --> 00:47:11.298
+- I do actually know.
+- You. (laughs)
+
+00:47:11.298 --> 00:47:13.230
+(audience laughing)
+
+00:47:13.230 --> 00:47:14.679
+- The VI and VB units do exist,
+
+00:47:14.679 --> 00:47:15.512
+- Of course, yes.
+- For viewport inline,
+
+00:47:15.512 --> 00:47:16.345
+- Yes they do.
+- And viewport block.
+
+00:47:16.345 --> 00:47:17.410
+Yeah.
+
+00:47:17.410 --> 00:47:19.500
+So those'll be around, you
+also have Vmin and Vmax
+
+00:47:19.500 --> 00:47:21.450
+if you just wants the
+smallest and largest ones.
+
+00:47:21.450 --> 00:47:23.020
+Those work everywhere.
+
+00:47:23.020 --> 00:47:24.910
+Uh, bah bah bah.
+
+00:47:24.910 --> 00:47:27.950
+So you've talked about
+teaching new layout modes
+
+00:47:27.950 --> 00:47:30.530
+and whatnot, so when we
+are teaching new people,
+
+00:47:30.530 --> 00:47:32.130
+what do you suggest a starting point is?
+
+00:47:32.130 --> 00:47:34.320
+Should we start with grid
+before we go into flow,
+
+00:47:34.320 --> 00:47:37.880
+or should we start with flow
+and then do larger things?
+
+00:47:37.880 --> 00:47:39.330
+- Absolutely start with flow.
+
+00:47:39.330 --> 00:47:41.100
+I think the order in which
+I've gone through things today
+
+00:47:41.100 --> 00:47:44.410
+is kind of where I am ending up reordering
+
+00:47:44.410 --> 00:47:46.313
+my own teaching of stuff.
+
+00:47:47.720 --> 00:47:50.430
+I have lots of spreadsheets
+of what has worked
+
+00:47:50.430 --> 00:47:52.860
+and what doesn't, for when
+I've been teaching people.
+
+00:47:52.860 --> 00:47:54.000
+All the questions that I get.
+
+00:47:54.000 --> 00:47:55.210
+And I'll be like, why are people asking me
+
+00:47:55.210 --> 00:47:56.290
+that question at that point?
+
+00:47:56.290 --> 00:47:59.030
+And then I kind of reorder
+stuff and try it again.
+
+00:47:59.030 --> 00:48:01.830
+And so yeah, I think that
+just starting from the fact
+
+00:48:01.830 --> 00:48:03.330
+that hey, we have layout here.
+
+00:48:04.460 --> 00:48:05.810
+And then what do you wanna change
+
+00:48:05.810 --> 00:48:07.840
+about that layout, rather
+than fighting against it.
+
+00:48:07.840 --> 00:48:08.673
+I think a lot of the time,
+particularly with grid,
+
+00:48:08.673 --> 00:48:11.380
+people are fighting
+against the order of things
+
+00:48:11.380 --> 00:48:13.540
+in the document.
+
+00:48:13.540 --> 00:48:15.000
+And realizing that actually you don't need
+
+00:48:15.000 --> 00:48:18.630
+to change very much and you get layout,
+
+00:48:18.630 --> 00:48:21.144
+I think is quite a nice way to work.
+
+00:48:21.144 --> 00:48:22.420
+- Okay.
+
+00:48:22.420 --> 00:48:23.763
+One final question then.
+
+00:48:24.850 --> 00:48:27.600
+While you rightly rail against talking
+
+00:48:27.600 --> 00:48:30.050
+about normal CSS as being cute hacks
+
+00:48:30.050 --> 00:48:32.940
+or anything like that,
+dealing with legacy browsers,
+
+00:48:32.940 --> 00:48:35.510
+we still do have to deal
+with a lot of hacks.
+
+00:48:35.510 --> 00:48:38.408
+So what's your like suggestion to help us
+
+00:48:38.408 --> 00:48:39.810
+to talk about that and help us to deal
+
+00:48:39.810 --> 00:48:42.250
+with the reality that we
+still have a lot of CSS hacks
+
+00:48:42.250 --> 00:48:43.300
+that we need to deal with?
+
+00:48:43.300 --> 00:48:44.663
+- I think when you're dealing with that
+
+00:48:44.663 --> 00:48:47.450
+from a basis of I understand CSS,
+
+00:48:47.450 --> 00:48:48.927
+I understand how things should work,
+
+00:48:48.927 --> 00:48:52.160
+and okay, the world isn't perfect.
+
+00:48:52.160 --> 00:48:55.680
+So from that starting
+point, what do I need to do
+
+00:48:55.680 --> 00:48:57.940
+to get something which
+works reasonably well
+
+00:48:57.940 --> 00:49:00.140
+in IE9 or whatever?
+
+00:49:00.140 --> 00:49:02.350
+So I have a product which
+fairly recently still
+
+00:49:02.350 --> 00:49:04.603
+supported IE9, so I know the pain.
+
+00:49:05.700 --> 00:49:07.250
+I certainly don't live in an ivory tower.
+
+00:49:07.250 --> 00:49:08.940
+I do real web development.
+
+00:49:08.940 --> 00:49:10.910
+So, but I think that if you're starting
+
+00:49:10.910 --> 00:49:13.830
+from a level of I understand
+how this should be,
+
+00:49:13.830 --> 00:49:15.780
+then, and particularly if
+you're working component
+
+00:49:15.780 --> 00:49:19.290
+by component actually fixing
+the things in older browsers
+
+00:49:19.290 --> 00:49:21.210
+becomes an awful lot less of a problem.
+
+00:49:21.210 --> 00:49:22.630
+What is difficult is
+when you don't understand
+
+00:49:22.630 --> 00:49:24.540
+what's going on, you're just
+kind of poking things around
+
+00:49:24.540 --> 00:49:26.660
+and hoping that it will work.
+
+00:49:26.660 --> 00:49:28.460
+That's not a good position to work from.
+
+00:49:28.460 --> 00:49:30.860
+But if you work from this
+is a sensible system,
+
+00:49:30.860 --> 00:49:32.560
+sometimes you need to do these things
+
+00:49:32.560 --> 00:49:34.320
+for these old browsers that haven't yeah,
+
+00:49:34.320 --> 00:49:35.850
+caught up with the times yet.
+
+00:49:35.850 --> 00:49:37.390
+That's easier to cope with I think.
+
+00:49:37.390 --> 00:49:39.653
+- All right, thank you very much Rachel.
+
+00:49:39.653 --> 00:49:42.903
+(audience applauding)
+

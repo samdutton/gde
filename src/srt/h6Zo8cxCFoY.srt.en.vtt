@@ -1,0 +1,520 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.620 --> 00:00:02.960 align:start position:0%
+ 
+welcome<00:00:01.620><c> everyone</c><00:00:01.920><c> in</c><00:00:02.220><c> this</c><00:00:02.669><c> short</c>
+
+00:00:02.960 --> 00:00:02.970 align:start position:0%
+welcome everyone in this short
+ 
+
+00:00:02.970 --> 00:00:04.789 align:start position:0%
+welcome everyone in this short
+screencast<00:00:03.149><c> I'm</c><00:00:03.780><c> gonna</c><00:00:03.959><c> show</c><00:00:04.170><c> you</c><00:00:04.230><c> about</c><00:00:04.470><c> a</c>
+
+00:00:04.789 --> 00:00:04.799 align:start position:0%
+screencast I'm gonna show you about a
+ 
+
+00:00:04.799 --> 00:00:07.039 align:start position:0%
+screencast I'm gonna show you about a
+sink<00:00:05.190><c> weight</c><00:00:05.490><c> which</c><00:00:06.029><c> recently</c><00:00:06.569><c> made</c><00:00:06.720><c> its</c><00:00:06.750><c> way</c>
+
+00:00:07.039 --> 00:00:07.049 align:start position:0%
+sink weight which recently made its way
+ 
+
+00:00:07.049 --> 00:00:09.650 align:start position:0%
+sink weight which recently made its way
+to<00:00:07.080><c> the</c><00:00:07.319><c> new</c><00:00:07.500><c> version</c><00:00:07.859><c> of</c><00:00:07.950><c> JavaScript</c><00:00:08.550><c> all</c><00:00:09.360><c> the</c>
+
+00:00:09.650 --> 00:00:09.660 align:start position:0%
+to the new version of JavaScript all the
+ 
+
+00:00:09.660 --> 00:00:11.240 align:start position:0%
+to the new version of JavaScript all the
+code<00:00:09.840><c> that</c><00:00:09.990><c> I'm</c><00:00:10.110><c> gonna</c><00:00:10.230><c> be</c><00:00:10.469><c> running</c><00:00:10.590><c> works</c>
+
+00:00:11.240 --> 00:00:11.250 align:start position:0%
+code that I'm gonna be running works
+ 
+
+00:00:11.250 --> 00:00:13.940 align:start position:0%
+code that I'm gonna be running works
+perfectly<00:00:11.759><c> on</c><00:00:11.969><c> Chrome</c><00:00:12.269><c> but</c><00:00:12.900><c> you</c><00:00:13.110><c> have</c><00:00:13.440><c> to</c><00:00:13.740><c> make</c>
+
+00:00:13.940 --> 00:00:13.950 align:start position:0%
+perfectly on Chrome but you have to make
+ 
+
+00:00:13.950 --> 00:00:16.160 align:start position:0%
+perfectly on Chrome but you have to make
+sure<00:00:13.980><c> to</c><00:00:14.219><c> run</c><00:00:14.639><c> this</c><00:00:14.820><c> using</c><00:00:15.120><c> a</c><00:00:15.179><c> transpiler</c><00:00:15.660><c> like</c>
+
+00:00:16.160 --> 00:00:16.170 align:start position:0%
+sure to run this using a transpiler like
+ 
+
+00:00:16.170 --> 00:00:18.050 align:start position:0%
+sure to run this using a transpiler like
+bubble<00:00:16.650><c> in</c><00:00:16.859><c> order</c><00:00:17.190><c> to</c><00:00:17.310><c> have</c><00:00:17.490><c> full</c><00:00:17.760><c> browser</c>
+
+00:00:18.050 --> 00:00:18.060 align:start position:0%
+bubble in order to have full browser
+ 
+
+00:00:18.060 --> 00:00:21.290 align:start position:0%
+bubble in order to have full browser
+support<00:00:18.600><c> so</c><00:00:19.350><c> let's</c><00:00:19.529><c> get</c><00:00:19.650><c> started</c><00:00:20.010><c> the</c><00:00:20.880><c> example</c>
+
+00:00:21.290 --> 00:00:21.300 align:start position:0%
+support so let's get started the example
+ 
+
+00:00:21.300 --> 00:00:23.599 align:start position:0%
+support so let's get started the example
+that<00:00:21.330><c> I'm</c><00:00:21.570><c> gonna</c><00:00:21.720><c> take</c><00:00:22.020><c> today</c><00:00:22.289><c> is</c><00:00:22.609><c> assuming</c>
+
+00:00:23.599 --> 00:00:23.609 align:start position:0%
+that I'm gonna take today is assuming
+ 
+
+00:00:23.609 --> 00:00:25.790 align:start position:0%
+that I'm gonna take today is assuming
+you're<00:00:23.699><c> gonna</c><00:00:23.850><c> make</c><00:00:24.090><c> a</c><00:00:24.119><c> function</c><00:00:24.750><c> for</c><00:00:25.109><c> our</c><00:00:25.380><c> API</c>
+
+00:00:25.790 --> 00:00:25.800 align:start position:0%
+you're gonna make a function for our API
+ 
+
+00:00:25.800 --> 00:00:28.250 align:start position:0%
+you're gonna make a function for our API
+and<00:00:26.519><c> this</c><00:00:26.730><c> function</c><00:00:27.090><c> for</c><00:00:27.240><c> our</c><00:00:27.269><c> API</c><00:00:27.689><c> expects</c>
+
+00:00:28.250 --> 00:00:28.260 align:start position:0%
+and this function for our API expects
+ 
+
+00:00:28.260 --> 00:00:31.550 align:start position:0%
+and this function for our API expects
+URL<00:00:28.680><c> and</c><00:00:28.980><c> we</c><00:00:29.789><c> want</c><00:00:29.970><c> to</c><00:00:30.029><c> be</c><00:00:30.119><c> able</c><00:00:30.240><c> to</c><00:00:30.359><c> use</c><00:00:30.599><c> it</c><00:00:30.869><c> by</c>
+
+00:00:31.550 --> 00:00:31.560 align:start position:0%
+URL and we want to be able to use it by
+ 
+
+00:00:31.560 --> 00:00:34.400 align:start position:0%
+URL and we want to be able to use it by
+doing<00:00:31.619><c> API</c><00:00:32.279><c> for</c><00:00:32.430><c> example</c><00:00:33.059><c> the</c><00:00:33.149><c> users</c><00:00:33.570><c> and</c><00:00:33.870><c> then</c>
+
+00:00:34.400 --> 00:00:34.410 align:start position:0%
+doing API for example the users and then
+ 
+
+00:00:34.410 --> 00:00:37.549 align:start position:0%
+doing API for example the users and then
+logging<00:00:35.040><c> this</c><00:00:35.219><c> to</c><00:00:35.520><c> the</c><00:00:35.610><c> console</c><00:00:35.940><c> so</c><00:00:36.780><c> let's</c><00:00:37.410><c> get</c>
+
+00:00:37.549 --> 00:00:37.559 align:start position:0%
+logging this to the console so let's get
+ 
+
+00:00:37.559 --> 00:00:41.000 align:start position:0%
+logging this to the console so let's get
+started<00:00:38.180><c> I'm</c><00:00:39.180><c> gonna</c><00:00:39.360><c> make</c><00:00:39.660><c> an</c><00:00:39.960><c> async</c><00:00:40.559><c> function</c>
+
+00:00:41.000 --> 00:00:41.010 align:start position:0%
+started I'm gonna make an async function
+ 
+
+00:00:41.010 --> 00:00:43.369 align:start position:0%
+started I'm gonna make an async function
+so<00:00:41.489><c> I'm</c><00:00:41.700><c> gonna</c><00:00:41.820><c> have</c><00:00:42.059><c> an</c><00:00:42.210><c> async</c><00:00:42.780><c> function</c><00:00:43.110><c> here</c>
+
+00:00:43.369 --> 00:00:43.379 align:start position:0%
+so I'm gonna have an async function here
+ 
+
+00:00:43.379 --> 00:00:45.799 align:start position:0%
+so I'm gonna have an async function here
+which<00:00:43.829><c> allows</c><00:00:44.190><c> me</c><00:00:44.399><c> to</c><00:00:44.430><c> use</c><00:00:44.579><c> the</c><00:00:44.879><c> await</c><00:00:45.270><c> keyword</c>
+
+00:00:45.799 --> 00:00:45.809 align:start position:0%
+which allows me to use the await keyword
+ 
+
+00:00:45.809 --> 00:00:48.110 align:start position:0%
+which allows me to use the await keyword
+inside<00:00:46.170><c> and</c><00:00:46.860><c> I'm</c><00:00:46.980><c> gonna</c><00:00:47.160><c> use</c><00:00:47.340><c> fetch</c><00:00:47.670><c> if</c><00:00:48.000><c> you</c>
+
+00:00:48.110 --> 00:00:48.120 align:start position:0%
+inside and I'm gonna use fetch if you
+ 
+
+00:00:48.120 --> 00:00:49.610 align:start position:0%
+inside and I'm gonna use fetch if you
+haven't<00:00:48.390><c> if</c><00:00:48.660><c> you</c><00:00:48.809><c> don't</c><00:00:48.989><c> know</c><00:00:49.050><c> about</c><00:00:49.170><c> fetch</c>
+
+00:00:49.610 --> 00:00:49.620 align:start position:0%
+haven't if you don't know about fetch
+ 
+
+00:00:49.620 --> 00:00:51.680 align:start position:0%
+haven't if you don't know about fetch
+make<00:00:49.950><c> sure</c><00:00:50.129><c> to</c><00:00:50.250><c> watch</c><00:00:50.399><c> my</c><00:00:50.640><c> previous</c><00:00:50.879><c> video</c><00:00:51.360><c> and</c>
+
+00:00:51.680 --> 00:00:51.690 align:start position:0%
+make sure to watch my previous video and
+ 
+
+00:00:51.690 --> 00:00:54.560 align:start position:0%
+make sure to watch my previous video and
+then<00:00:52.320><c> I'm</c><00:00:52.410><c> gonna</c><00:00:52.559><c> define</c><00:00:52.920><c> like</c><00:00:53.399><c> a</c><00:00:53.610><c> base</c><00:00:53.879><c> URL</c><00:00:54.180><c> so</c>
+
+00:00:54.560 --> 00:00:54.570 align:start position:0%
+then I'm gonna define like a base URL so
+ 
+
+00:00:54.570 --> 00:00:56.270 align:start position:0%
+then I'm gonna define like a base URL so
+I'm<00:00:54.629><c> gonna</c><00:00:54.809><c> say</c><00:00:55.020><c> this</c><00:00:55.170><c> is</c><00:00:55.230><c> the</c><00:00:55.440><c> base</c><00:00:55.620><c> URL</c><00:00:55.829><c> for</c>
+
+00:00:56.270 --> 00:00:56.280 align:start position:0%
+I'm gonna say this is the base URL for
+ 
+
+00:00:56.280 --> 00:00:58.490 align:start position:0%
+I'm gonna say this is the base URL for
+my<00:00:56.309><c> API</c><00:00:56.730><c> and</c><00:00:57.090><c> I'm</c><00:00:57.780><c> gonna</c><00:00:57.960><c> take</c><00:00:58.140><c> the</c><00:00:58.260><c> same</c>
+
+00:00:58.490 --> 00:00:58.500 align:start position:0%
+my API and I'm gonna take the same
+ 
+
+00:00:58.500 --> 00:01:01.430 align:start position:0%
+my API and I'm gonna take the same
+example<00:00:59.070><c> which</c><00:00:59.399><c> is</c><00:00:59.550><c> Jason</c><00:01:00.030><c> placeholder</c><00:01:00.660><c> but</c>
+
+00:01:01.430 --> 00:01:01.440 align:start position:0%
+example which is Jason placeholder but
+ 
+
+00:01:01.440 --> 00:01:04.490 align:start position:0%
+example which is Jason placeholder but
+of<00:01:01.620><c> course</c><00:01:01.859><c> without</c><00:01:02.070><c> the</c><00:01:02.219><c> users</c><00:01:03.170><c> so</c><00:01:04.170><c> that's</c>
+
+00:01:04.490 --> 00:01:04.500 align:start position:0%
+of course without the users so that's
+ 
+
+00:01:04.500 --> 00:01:06.830 align:start position:0%
+of course without the users so that's
+the<00:01:04.680><c> base</c><00:01:04.830><c> URL</c><00:01:05.070><c> and</c><00:01:05.640><c> I'm</c><00:01:05.880><c> gonna</c><00:01:06.030><c> fetch</c><00:01:06.390><c> base</c>
+
+00:01:06.830 --> 00:01:06.840 align:start position:0%
+the base URL and I'm gonna fetch base
+ 
+
+00:01:06.840 --> 00:01:10.340 align:start position:0%
+the base URL and I'm gonna fetch base
+URL<00:01:07.260><c> +</c><00:01:07.920><c> URL</c><00:01:08.310><c> or</c><00:01:08.850><c> the</c><00:01:09.049><c> endpoint</c><00:01:10.049><c> that</c><00:01:10.140><c> was</c>
+
+00:01:10.340 --> 00:01:10.350 align:start position:0%
+URL + URL or the endpoint that was
+ 
+
+00:01:10.350 --> 00:01:13.880 align:start position:0%
+URL + URL or the endpoint that was
+passed<00:01:10.619><c> here</c><00:01:10.890><c> and</c><00:01:11.299><c> no</c><00:01:12.299><c> because</c><00:01:12.750><c> of</c><00:01:12.900><c> because</c><00:01:13.860><c> of</c>
+
+00:01:13.880 --> 00:01:13.890 align:start position:0%
+passed here and no because of because of
+ 
+
+00:01:13.890 --> 00:01:16.929 align:start position:0%
+passed here and no because of because of
+async<00:01:14.369><c> await</c><00:01:14.460><c> I</c><00:01:14.880><c> could</c><00:01:15.150><c> basically</c><00:01:15.540><c> do</c><00:01:15.960><c> Const</c>
+
+00:01:16.929 --> 00:01:16.939 align:start position:0%
+async await I could basically do Const
+ 
+
+00:01:16.939 --> 00:01:22.070 align:start position:0%
+async await I could basically do Const
+response<00:01:18.080><c> equals</c><00:01:19.080><c> a</c><00:01:19.700><c> weight</c><00:01:20.700><c> fetch</c><00:01:21.240><c> so</c><00:01:21.869><c> rather</c>
+
+00:01:22.070 --> 00:01:22.080 align:start position:0%
+response equals a weight fetch so rather
+ 
+
+00:01:22.080 --> 00:01:24.440 align:start position:0%
+response equals a weight fetch so rather
+than<00:01:22.350><c> having</c><00:01:22.710><c> a</c><00:01:23.009><c> chaining</c><00:01:23.670><c> the</c><00:01:23.790><c> rather</c><00:01:24.210><c> than</c>
+
+00:01:24.440 --> 00:01:24.450 align:start position:0%
+than having a chaining the rather than
+ 
+
+00:01:24.450 --> 00:01:26.120 align:start position:0%
+than having a chaining the rather than
+resolving<00:01:24.810><c> the</c><00:01:25.110><c> promise</c><00:01:25.470><c> here</c><00:01:25.710><c> by</c><00:01:25.890><c> having</c>
+
+00:01:26.120 --> 00:01:26.130 align:start position:0%
+resolving the promise here by having
+ 
+
+00:01:26.130 --> 00:01:29.390 align:start position:0%
+resolving the promise here by having
+then<00:01:26.580><c> than</c><00:01:27.270><c> two</c><00:01:27.540><c> response</c><00:01:28.049><c> etc</c><00:01:28.740><c> you</c><00:01:29.250><c> can</c>
+
+00:01:29.390 --> 00:01:29.400 align:start position:0%
+then than two response etc you can
+ 
+
+00:01:29.400 --> 00:01:31.969 align:start position:0%
+then than two response etc you can
+actually<00:01:29.880><c> use</c><00:01:30.090><c> a</c><00:01:30.299><c> weight</c><00:01:30.659><c> and</c><00:01:31.020><c> then</c><00:01:31.560><c> extract</c>
+
+00:01:31.969 --> 00:01:31.979 align:start position:0%
+actually use a weight and then extract
+ 
+
+00:01:31.979 --> 00:01:34.490 align:start position:0%
+actually use a weight and then extract
+the<00:01:32.100><c> response</c><00:01:32.520><c> here</c><00:01:32.820><c> so</c><00:01:33.360><c> this</c><00:01:33.780><c> basically</c><00:01:34.229><c> you</c>
+
+00:01:34.490 --> 00:01:34.500 align:start position:0%
+the response here so this basically you
+ 
+
+00:01:34.500 --> 00:01:36.649 align:start position:0%
+the response here so this basically you
+can<00:01:34.650><c> think</c><00:01:34.860><c> about</c><00:01:34.950><c> it</c><00:01:35.220><c> wait</c><00:01:36.060><c> for</c><00:01:36.299><c> the</c><00:01:36.360><c> response</c>
+
+00:01:36.649 --> 00:01:36.659 align:start position:0%
+can think about it wait for the response
+ 
+
+00:01:36.659 --> 00:01:39.350 align:start position:0%
+can think about it wait for the response
+until<00:01:37.290><c> it</c><00:01:37.380><c> completes</c><00:01:37.890><c> and</c><00:01:38.250><c> then</c><00:01:38.490><c> extracted</c>
+
+00:01:39.350 --> 00:01:39.360 align:start position:0%
+until it completes and then extracted
+ 
+
+00:01:39.360 --> 00:01:42.649 align:start position:0%
+until it completes and then extracted
+here<00:01:39.720><c> and</c><00:01:39.960><c> then</c><00:01:40.890><c> once</c><00:01:41.310><c> again</c><00:01:41.490><c> we</c><00:01:42.000><c> need</c><00:01:42.299><c> because</c>
+
+00:01:42.649 --> 00:01:42.659 align:start position:0%
+here and then once again we need because
+ 
+
+00:01:42.659 --> 00:01:44.690 align:start position:0%
+here and then once again we need because
+we<00:01:42.869><c> need</c><00:01:42.990><c> to</c><00:01:43.079><c> convert</c><00:01:43.350><c> it</c><00:01:43.530><c> to</c><00:01:43.560><c> JSON</c><00:01:44.100><c> I</c><00:01:44.310><c> can</c><00:01:44.549><c> do</c>
+
+00:01:44.690 --> 00:01:44.700 align:start position:0%
+we need to convert it to JSON I can do
+ 
+
+00:01:44.700 --> 00:01:48.830 align:start position:0%
+we need to convert it to JSON I can do
+cons<00:01:45.090><c> data</c><00:01:45.600><c> equals</c><00:01:46.290><c> a</c><00:01:46.590><c> weight</c><00:01:47.299><c> response</c><00:01:48.299><c> dot</c>
+
+00:01:48.830 --> 00:01:48.840 align:start position:0%
+cons data equals a weight response dot
+ 
+
+00:01:48.840 --> 00:01:52.310 align:start position:0%
+cons data equals a weight response dot
+JSON<00:01:49.590><c> and</c><00:01:50.399><c> now</c><00:01:50.520><c> I</c><00:01:50.549><c> can</c><00:01:50.909><c> simply</c><00:01:51.329><c> return</c><00:01:51.600><c> data</c>
+
+00:01:52.310 --> 00:01:52.320 align:start position:0%
+JSON and now I can simply return data
+ 
+
+00:01:52.320 --> 00:01:54.679 align:start position:0%
+JSON and now I can simply return data
+and<00:01:53.220><c> let</c><00:01:53.340><c> me</c><00:01:53.430><c> show</c><00:01:53.549><c> you</c><00:01:53.610><c> how</c><00:01:53.820><c> cool</c><00:01:54.060><c> is</c><00:01:54.210><c> that</c><00:01:54.240><c> you</c>
+
+00:01:54.679 --> 00:01:54.689 align:start position:0%
+and let me show you how cool is that you
+ 
+
+00:01:54.689 --> 00:02:00.200 align:start position:0%
+and let me show you how cool is that you
+can<00:01:55.049><c> now</c><00:01:55.320><c> use</c><00:01:55.590><c> API</c><00:01:56.100><c> users</c><00:01:57.090><c> and</c><00:01:57.390><c> then</c><00:01:59.000><c> you</c><00:02:00.000><c> can</c>
+
+00:02:00.200 --> 00:02:00.210 align:start position:0%
+can now use API users and then you can
+ 
+
+00:02:00.210 --> 00:02:02.240 align:start position:0%
+can now use API users and then you can
+basically<00:02:00.450><c> simply</c><00:02:00.930><c> do</c><00:02:01.110><c> just</c><00:02:01.439><c> console.log</c>
+
+00:02:02.240 --> 00:02:02.250 align:start position:0%
+basically simply do just console.log
+ 
+
+00:02:02.250 --> 00:02:06.999 align:start position:0%
+basically simply do just console.log
+yes<00:02:03.119><c> let's</c><00:02:04.110><c> run</c><00:02:04.320><c> it</c><00:02:04.409><c> in</c><00:02:04.500><c> the</c><00:02:04.590><c> browser</c><00:02:04.680><c> and</c><00:02:05.810><c> and</c>
+
+00:02:06.999 --> 00:02:07.009 align:start position:0%
+yes let's run it in the browser and and
+ 
+
+00:02:07.009 --> 00:02:10.369 align:start position:0%
+yes let's run it in the browser and and
+yeah<00:02:08.009><c> it</c><00:02:08.280><c> works</c><00:02:08.550><c> so</c><00:02:09.479><c> here's</c><00:02:10.020><c> how</c><00:02:10.140><c> you</c><00:02:10.170><c> could</c>
+
+00:02:10.369 --> 00:02:10.379 align:start position:0%
+yeah it works so here's how you could
+ 
+
+00:02:10.379 --> 00:02:12.290 align:start position:0%
+yeah it works so here's how you could
+also<00:02:10.619><c> work</c><00:02:10.860><c> it</c><00:02:11.039><c> I</c><00:02:11.160><c> can</c><00:02:11.340><c> request</c><00:02:11.580><c> the</c><00:02:11.940><c> list</c><00:02:12.150><c> of</c>
+
+00:02:12.290 --> 00:02:12.300 align:start position:0%
+also work it I can request the list of
+ 
+
+00:02:12.300 --> 00:02:13.640 align:start position:0%
+also work it I can request the list of
+posts<00:02:13.110><c> and</c>
+
+00:02:13.640 --> 00:02:13.650 align:start position:0%
+posts and
+ 
+
+00:02:13.650 --> 00:02:18.259 align:start position:0%
+posts and
+I<00:02:13.680><c> can</c><00:02:13.920><c> also</c><00:02:14.159><c> do</c><00:02:14.400><c> console.log</c><00:02:15.209><c> and</c><00:02:16.970><c> it</c><00:02:17.970><c> works</c>
+
+00:02:18.259 --> 00:02:18.269 align:start position:0%
+I can also do console.log and it works
+ 
+
+00:02:18.269 --> 00:02:20.539 align:start position:0%
+I can also do console.log and it works
+if<00:02:18.810><c> you</c><00:02:19.409><c> are</c><00:02:19.439><c> confused</c><00:02:19.769><c> a</c><00:02:20.010><c> little</c><00:02:20.129><c> bit</c><00:02:20.340><c> about</c>
+
+00:02:20.539 --> 00:02:20.549 align:start position:0%
+if you are confused a little bit about
+ 
+
+00:02:20.549 --> 00:02:23.149 align:start position:0%
+if you are confused a little bit about
+the<00:02:20.700><c> syntax</c><00:02:20.939><c> that's</c><00:02:21.390><c> basically</c><00:02:21.810><c> because</c><00:02:22.799><c> you</c>
+
+00:02:23.149 --> 00:02:23.159 align:start position:0%
+the syntax that's basically because you
+ 
+
+00:02:23.159 --> 00:02:24.890 align:start position:0%
+the syntax that's basically because you
+can<00:02:23.340><c> basically</c><00:02:23.519><c> do</c><00:02:23.819><c> it</c><00:02:23.909><c> like</c><00:02:24.060><c> this</c><00:02:24.269><c> so</c><00:02:24.659><c> this</c>
+
+00:02:24.890 --> 00:02:24.900 align:start position:0%
+can basically do it like this so this
+ 
+
+00:02:24.900 --> 00:02:26.750 align:start position:0%
+can basically do it like this so this
+will<00:02:25.140><c> give</c><00:02:25.319><c> impact</c><00:02:25.739><c> the</c><00:02:25.890><c> response</c><00:02:26.340><c> or</c><00:02:26.640><c> the</c>
+
+00:02:26.750 --> 00:02:26.760 align:start position:0%
+will give impact the response or the
+ 
+
+00:02:26.760 --> 00:02:29.030 align:start position:0%
+will give impact the response or the
+data<00:02:27.090><c> and</c><00:02:27.569><c> then</c><00:02:27.750><c> I'm</c><00:02:27.840><c> gonna</c><00:02:27.989><c> pass</c><00:02:28.500><c> it</c><00:02:28.739><c> back</c>
+
+00:02:29.030 --> 00:02:29.040 align:start position:0%
+data and then I'm gonna pass it back
+ 
+
+00:02:29.040 --> 00:02:32.059 align:start position:0%
+data and then I'm gonna pass it back
+because<00:02:29.220><c> to</c><00:02:29.700><c> console.log</c><00:02:30.180><c> delete</c><00:02:30.599><c> data</c><00:02:31.069><c> but</c>
+
+00:02:32.059 --> 00:02:32.069 align:start position:0%
+because to console.log delete data but
+ 
+
+00:02:32.069 --> 00:02:33.440 align:start position:0%
+because to console.log delete data but
+since<00:02:32.310><c> I'm</c><00:02:32.459><c> calling</c><00:02:32.790><c> this</c><00:02:32.939><c> console</c><00:02:33.329><c> log</c>
+
+00:02:33.440 --> 00:02:33.450 align:start position:0%
+since I'm calling this console log
+ 
+
+00:02:33.450 --> 00:02:35.119 align:start position:0%
+since I'm calling this console log
+function<00:02:33.900><c> with</c><00:02:34.049><c> the</c><00:02:34.140><c> same</c><00:02:34.379><c> arguments</c><00:02:34.980><c> are</c>
+
+00:02:35.119 --> 00:02:35.129 align:start position:0%
+function with the same arguments are
+ 
+
+00:02:35.129 --> 00:02:37.009 align:start position:0%
+function with the same arguments are
+basically<00:02:35.549><c> zip</c><00:02:35.819><c> it</c><00:02:35.970><c> all</c><00:02:36.150><c> the</c><00:02:36.390><c> way</c><00:02:36.480><c> down</c><00:02:36.510><c> to</c>
+
+00:02:37.009 --> 00:02:37.019 align:start position:0%
+basically zip it all the way down to
+ 
+
+00:02:37.019 --> 00:02:40.399 align:start position:0%
+basically zip it all the way down to
+just<00:02:37.349><c> console</c><00:02:38.000><c> clock</c><00:02:39.000><c> so</c><00:02:39.959><c> that's</c><00:02:40.140><c> it</c><00:02:40.290><c> for</c>
+
+00:02:40.399 --> 00:02:40.409 align:start position:0%
+just console clock so that's it for
+ 
+
+00:02:40.409 --> 00:02:42.470 align:start position:0%
+just console clock so that's it for
+today<00:02:40.680><c> make</c><00:02:41.159><c> sure</c><00:02:41.189><c> to</c><00:02:41.430><c> subscribe</c><00:02:41.640><c> and</c><00:02:42.150><c> I'll</c><00:02:42.299><c> be</c>
+
+00:02:42.470 --> 00:02:42.480 align:start position:0%
+today make sure to subscribe and I'll be
+ 
+
+00:02:42.480 --> 00:02:44.839 align:start position:0%
+today make sure to subscribe and I'll be
+releasing<00:02:42.930><c> a</c><00:02:43.109><c> lot</c><00:02:43.260><c> of</c><00:02:43.349><c> new</c><00:02:43.530><c> videos</c><00:02:43.560><c> soon</c><00:02:44.159><c> thank</c>
+
+00:02:44.839 --> 00:02:44.849 align:start position:0%
+releasing a lot of new videos soon thank
+ 
+
+00:02:44.849 --> 00:02:45.050 align:start position:0%
+releasing a lot of new videos soon thank
+you
+
+00:02:45.050 --> 00:02:45.060 align:start position:0%
+you
+ 
+
+00:02:45.060 --> 00:03:00.570 align:start position:0%
+you
+[Music]
+
+00:03:00.570 --> 00:03:00.580 align:start position:0%
+ 
+ 
+
+00:03:00.580 --> 00:03:02.610 align:start position:0%
+ 
+Oh
+
