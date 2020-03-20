@@ -1,0 +1,257 @@
+1
+00:00:00,620 --> 00:00:02,970
+
+welcome everyone in this short
+
+2
+00:00:02,970 --> 00:00:04,799
+screencast I'm gonna show you about a
+
+3
+00:00:04,799 --> 00:00:07,049
+sink weight which recently made its way
+
+4
+00:00:07,049 --> 00:00:09,660
+to the new version of JavaScript all the
+
+5
+00:00:09,660 --> 00:00:11,250
+code that I'm gonna be running works
+
+6
+00:00:11,250 --> 00:00:13,950
+perfectly on Chrome but you have to make
+
+7
+00:00:13,950 --> 00:00:16,170
+sure to run this using a transpiler like
+
+8
+00:00:16,170 --> 00:00:18,060
+bubble in order to have full browser
+
+9
+00:00:18,060 --> 00:00:21,300
+support so let's get started the example
+
+10
+00:00:21,300 --> 00:00:23,609
+that I'm gonna take today is assuming
+
+11
+00:00:23,609 --> 00:00:25,800
+you're gonna make a function for our API
+
+12
+00:00:25,800 --> 00:00:28,260
+and this function for our API expects
+
+13
+00:00:28,260 --> 00:00:31,560
+URL and we want to be able to use it by
+
+14
+00:00:31,560 --> 00:00:34,410
+doing API for example the users and then
+
+15
+00:00:34,410 --> 00:00:37,559
+logging this to the console so let's get
+
+16
+00:00:37,559 --> 00:00:41,010
+started I'm gonna make an async function
+
+17
+00:00:41,010 --> 00:00:43,379
+so I'm gonna have an async function here
+
+18
+00:00:43,379 --> 00:00:45,809
+which allows me to use the await keyword
+
+19
+00:00:45,809 --> 00:00:48,120
+inside and I'm gonna use fetch if you
+
+20
+00:00:48,120 --> 00:00:49,620
+haven't if you don't know about fetch
+
+21
+00:00:49,620 --> 00:00:51,690
+make sure to watch my previous video and
+
+22
+00:00:51,690 --> 00:00:54,570
+then I'm gonna define like a base URL so
+
+23
+00:00:54,570 --> 00:00:56,280
+I'm gonna say this is the base URL for
+
+24
+00:00:56,280 --> 00:00:58,500
+my API and I'm gonna take the same
+
+25
+00:00:58,500 --> 00:01:01,440
+example which is Jason placeholder but
+
+26
+00:01:01,440 --> 00:01:04,500
+of course without the users so that's
+
+27
+00:01:04,500 --> 00:01:06,840
+the base URL and I'm gonna fetch base
+
+28
+00:01:06,840 --> 00:01:10,350
+URL + URL or the endpoint that was
+
+29
+00:01:10,350 --> 00:01:13,890
+passed here and no because of because of
+
+30
+00:01:13,890 --> 00:01:16,939
+async await I could basically do Const
+
+31
+00:01:16,939 --> 00:01:22,080
+response equals a weight fetch so rather
+
+32
+00:01:22,080 --> 00:01:24,450
+than having a chaining the rather than
+
+33
+00:01:24,450 --> 00:01:26,130
+resolving the promise here by having
+
+34
+00:01:26,130 --> 00:01:29,400
+then than two response etc you can
+
+35
+00:01:29,400 --> 00:01:31,979
+actually use a weight and then extract
+
+36
+00:01:31,979 --> 00:01:34,500
+the response here so this basically you
+
+37
+00:01:34,500 --> 00:01:36,659
+can think about it wait for the response
+
+38
+00:01:36,659 --> 00:01:39,360
+until it completes and then extracted
+
+39
+00:01:39,360 --> 00:01:42,659
+here and then once again we need because
+
+40
+00:01:42,659 --> 00:01:44,700
+we need to convert it to JSON I can do
+
+41
+00:01:44,700 --> 00:01:48,840
+cons data equals a weight response dot
+
+42
+00:01:48,840 --> 00:01:52,320
+JSON and now I can simply return data
+
+43
+00:01:52,320 --> 00:01:54,689
+and let me show you how cool is that you
+
+44
+00:01:54,689 --> 00:02:00,210
+can now use API users and then you can
+
+45
+00:02:00,210 --> 00:02:02,250
+basically simply do just console.log
+
+46
+00:02:02,250 --> 00:02:07,009
+yes let's run it in the browser and and
+
+47
+00:02:07,009 --> 00:02:10,379
+yeah it works so here's how you could
+
+48
+00:02:10,379 --> 00:02:12,300
+also work it I can request the list of
+
+49
+00:02:12,300 --> 00:02:13,650
+posts and
+
+50
+00:02:13,650 --> 00:02:18,269
+I can also do console.log and it works
+
+51
+00:02:18,269 --> 00:02:20,549
+if you are confused a little bit about
+
+52
+00:02:20,549 --> 00:02:23,159
+the syntax that's basically because you
+
+53
+00:02:23,159 --> 00:02:24,900
+can basically do it like this so this
+
+54
+00:02:24,900 --> 00:02:26,760
+will give impact the response or the
+
+55
+00:02:26,760 --> 00:02:29,040
+data and then I'm gonna pass it back
+
+56
+00:02:29,040 --> 00:02:32,069
+because to console.log delete data but
+
+57
+00:02:32,069 --> 00:02:33,450
+since I'm calling this console log
+
+58
+00:02:33,450 --> 00:02:35,129
+function with the same arguments are
+
+59
+00:02:35,129 --> 00:02:37,019
+basically zip it all the way down to
+
+60
+00:02:37,019 --> 00:02:40,409
+just console clock so that's it for
+
+61
+00:02:40,409 --> 00:02:42,480
+today make sure to subscribe and I'll be
+
+62
+00:02:42,480 --> 00:02:44,849
+releasing a lot of new videos soon thank
+
+63
+00:02:44,849 --> 00:02:45,060
+you
+
+64
+00:02:45,060 --> 00:03:00,570
+[Music]
+

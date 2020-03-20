@@ -1,10 +1,10 @@
-# Search and readable transcripts for JSConf videos
+# Search and readable transcripts for GDE videos
 
-This is a Node application that processes caption files from JSConf conference videos to enable search and create readable transcripts.
+This is a Node application that processes caption files from GDE conference videos to enable search and create readable transcripts.
 
 The code could easily be adapted to work with caption files from other playlists.
 
-Try it out at [samdutton.github.io/jsconf](https://samdutton.github.io/jsconf).
+Try it out at [samdutton.github.io/GDE](https://samdutton.github.io/GDE).
 
 ---
 
@@ -44,7 +44,7 @@ Check for errors in _error-log.txt_.
 
 ## Feedback, feature requests and bug reports
 
-- Please [file an issue](https://github.com/samdutton/jsconf/issues/new)
+- Please [file an issue](https://github.com/samdutton/GDE/issues/new)
 including input files where relevant.
 - See the [TODO](TODO) file for work in progress.
 

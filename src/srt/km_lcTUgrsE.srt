@@ -1,0 +1,457 @@
+1
+00:00:00,030 --> 00:00:01,770
+
+hey everyone in this video I'm gonna
+
+2
+00:00:01,770 --> 00:00:03,870
+talk to you about dynamic imports I'm
+
+3
+00:00:03,870 --> 00:00:06,089
+gonna show you a specific use case where
+
+4
+00:00:06,089 --> 00:00:08,010
+I've used dynamic imports on learn
+
+5
+00:00:08,010 --> 00:00:10,440
+JavaScript online on all lessons I want
+
+6
+00:00:10,440 --> 00:00:12,110
+to display a thumbs-up and thumbs-down
+
+7
+00:00:12,110 --> 00:00:14,519
+preview over here and then when you
+
+8
+00:00:14,519 --> 00:00:16,230
+click on it it opens an optional
+
+9
+00:00:16,230 --> 00:00:18,240
+feedback where you can send it so this
+
+10
+00:00:18,240 --> 00:00:20,039
+is both for negative reviews and also
+
+11
+00:00:20,039 --> 00:00:22,109
+positive reviews this is some
+
+12
+00:00:22,109 --> 00:00:23,580
+functionality that I'm not going to use
+
+13
+00:00:23,580 --> 00:00:25,560
+on every single page because if I go
+
+14
+00:00:25,560 --> 00:00:28,109
+back I will have the editor and I'll
+
+15
+00:00:28,109 --> 00:00:29,849
+have the challenge page and in a
+
+16
+00:00:29,849 --> 00:00:31,560
+challenge page I have the editor and
+
+17
+00:00:31,560 --> 00:00:33,540
+completely different functionality so
+
+18
+00:00:33,540 --> 00:00:34,800
+that's why it doesn't make sense to
+
+19
+00:00:34,800 --> 00:00:37,200
+always include this JavaScript section
+
+20
+00:00:37,200 --> 00:00:38,850
+that is responsible for the feedbacks
+
+21
+00:00:38,850 --> 00:00:41,520
+because then as I add more features to
+
+22
+00:00:41,520 --> 00:00:43,649
+this website the mores can become slower
+
+23
+00:00:43,649 --> 00:00:45,420
+and I definitely don't want it to become
+
+24
+00:00:45,420 --> 00:00:47,309
+slow so let's take a look at the code
+
+25
+00:00:47,309 --> 00:00:52,020
+here this is the code for the lesson
+
+26
+00:00:52,020 --> 00:00:54,270
+review it's not very fancy and it could
+
+27
+00:00:54,270 --> 00:00:56,489
+be much much better I'm not using any
+
+28
+00:00:56,489 --> 00:00:58,260
+framework over here so I just have a
+
+29
+00:00:58,260 --> 00:01:00,629
+string of the element that I'm
+
+30
+00:01:00,629 --> 00:01:02,969
+displaying and I've got a bunch of code
+
+31
+00:01:02,969 --> 00:01:06,180
+that actually makes it work and what I
+
+32
+00:01:06,180 --> 00:01:09,150
+do is that in the lesson so whenever I
+
+33
+00:01:09,150 --> 00:01:11,310
+know that this is a lesson I want to
+
+34
+00:01:11,310 --> 00:01:13,590
+dynamically import it so I want to only
+
+35
+00:01:13,590 --> 00:01:16,229
+import it when I know I will definitely
+
+36
+00:01:16,229 --> 00:01:19,020
+need it and rather than doing it as an
+
+37
+00:01:19,020 --> 00:01:21,210
+import at the top like this where you do
+
+38
+00:01:21,210 --> 00:01:23,939
+an import and then I don't have anything
+
+39
+00:01:23,939 --> 00:01:25,799
+exported from this module so I just
+
+40
+00:01:25,799 --> 00:01:29,040
+import the lesson reviewed ojs rather
+
+41
+00:01:29,040 --> 00:01:31,170
+than doing that and including the script
+
+42
+00:01:31,170 --> 00:01:34,950
+as a burden for every single page on my
+
+43
+00:01:34,950 --> 00:01:37,290
+website I will instead dynamically
+
+44
+00:01:37,290 --> 00:01:39,390
+import it and here's the syntax for it
+
+45
+00:01:39,390 --> 00:01:42,540
+it's simply an import using the
+
+46
+00:01:42,540 --> 00:01:44,880
+parentheses and this makes it a dynamic
+
+47
+00:01:44,880 --> 00:01:46,890
+import which you can call from anywhere
+
+48
+00:01:46,890 --> 00:01:49,320
+inside your code so you can even call it
+
+49
+00:01:49,320 --> 00:01:51,930
+inside an event listener or a fetch
+
+50
+00:01:51,930 --> 00:01:54,840
+callback and then you get the path to it
+
+51
+00:01:54,840 --> 00:01:59,189
+that's gonna be lesson review Dulce s
+
+52
+00:01:59,189 --> 00:02:01,560
+and this returns a promise so you can
+
+53
+00:02:01,560 --> 00:02:03,930
+resolve it and do something when it's
+
+54
+00:02:03,930 --> 00:02:05,909
+fulfilled and if you're exporting stuff
+
+55
+00:02:05,909 --> 00:02:07,619
+you can also access it under the module
+
+56
+00:02:07,619 --> 00:02:10,700
+if it was a default function then you
+
+57
+00:02:10,700 --> 00:02:13,379
+call it with module the default if it
+
+58
+00:02:13,379 --> 00:02:13,750
+was
+
+59
+00:02:13,750 --> 00:02:16,510
+action or if it was something else like
+
+60
+00:02:16,510 --> 00:02:18,850
+other method you can call it like this
+
+61
+00:02:18,850 --> 00:02:21,010
+but I'm not exporting anything so optic
+
+62
+00:02:21,010 --> 00:02:24,610
+I'll get rid of all of this and let's
+
+63
+00:02:24,610 --> 00:02:26,560
+take a look at browser support so
+
+64
+00:02:26,560 --> 00:02:28,180
+dynamic imports work on the following
+
+65
+00:02:28,180 --> 00:02:30,760
+browsers Firefox has it behind the flag
+
+66
+00:02:30,760 --> 00:02:33,700
+in the developer edition but you can
+
+67
+00:02:33,700 --> 00:02:35,320
+already use it because when you're using
+
+68
+00:02:35,320 --> 00:02:37,990
+webpack webpack makes sure that the
+
+69
+00:02:37,990 --> 00:02:39,310
+dynamic imports will work in all
+
+70
+00:02:39,310 --> 00:02:42,610
+browsers so that's pretty much it but if
+
+71
+00:02:42,610 --> 00:02:44,200
+you keep it as is once you build your
+
+72
+00:02:44,200 --> 00:02:46,840
+project you're going to get a zero ojs
+
+73
+00:02:46,840 --> 00:02:48,850
+or one dodgy s you will get the bundle
+
+74
+00:02:48,850 --> 00:02:51,010
+ID so instead you have to tell what Park
+
+75
+00:02:51,010 --> 00:02:53,620
+what's the name of this chunk you do
+
+76
+00:02:53,620 --> 00:02:55,180
+that with the web pack chunk named
+
+77
+00:02:55,180 --> 00:02:57,190
+comment so this is a special comment
+
+78
+00:02:57,190 --> 00:02:59,350
+that's read by a buck and then I'm gonna
+
+79
+00:02:59,350 --> 00:03:02,110
+say this is gonna be lesson review now
+
+80
+00:03:02,110 --> 00:03:03,640
+let's take a look at this if I go in the
+
+81
+00:03:03,640 --> 00:03:05,830
+browser this is the web version because
+
+82
+00:03:05,830 --> 00:03:07,510
+this is what I already did and I reload
+
+83
+00:03:07,510 --> 00:03:11,020
+the page and because we are on the
+
+84
+00:03:11,020 --> 00:03:14,260
+lesson page you will see over here that
+
+85
+00:03:14,260 --> 00:03:18,250
+I have the lesson review being loaded so
+
+86
+00:03:18,250 --> 00:03:20,080
+this is the dynamic import being loaded
+
+87
+00:03:20,080 --> 00:03:22,540
+so it only renders on pages where it's
+
+88
+00:03:22,540 --> 00:03:26,320
+needed which means if I go back I will
+
+89
+00:03:26,320 --> 00:03:30,430
+not find this lesson review anywhere in
+
+90
+00:03:30,430 --> 00:03:32,350
+this page just like any other
+
+91
+00:03:32,350 --> 00:03:34,150
+performance tip it doesn't mean all of
+
+92
+00:03:34,150 --> 00:03:35,769
+your inputs should be dynamic inputs
+
+93
+00:03:35,769 --> 00:03:37,780
+because that might slow things down you
+
+94
+00:03:37,780 --> 00:03:40,420
+have to measure and see if it has any
+
+95
+00:03:40,420 --> 00:03:42,790
+impact another thing you can do which
+
+96
+00:03:42,790 --> 00:03:44,650
+I've also been doing in this website in
+
+97
+00:03:44,650 --> 00:03:47,140
+some places but it requires a polyfill
+
+98
+00:03:47,140 --> 00:03:49,000
+to work on all browsers is to use the
+
+99
+00:03:49,000 --> 00:03:53,590
+request idle callback and then if you've
+
+100
+00:03:53,590 --> 00:03:56,230
+got a lot of work that you need to do
+
+101
+00:03:56,230 --> 00:03:58,840
+you can just delay this until the
+
+102
+00:03:58,840 --> 00:04:01,209
+browser has some idle time but don't
+
+103
+00:04:01,209 --> 00:04:03,310
+forget that you need a polyfill for that
+
+104
+00:04:03,310 --> 00:04:06,400
+at the time of recording so when used
+
+105
+00:04:06,400 --> 00:04:08,320
+properly dynamic imports can help you
+
+106
+00:04:08,320 --> 00:04:10,480
+ship and experience as fast as possible
+
+107
+00:04:10,480 --> 00:04:13,570
+and then dynamically import or lazy load
+
+108
+00:04:13,570 --> 00:04:15,160
+other functionality that you may not
+
+109
+00:04:15,160 --> 00:04:17,680
+need immediately and this also helps you
+
+110
+00:04:17,680 --> 00:04:20,560
+add more and more features without
+
+111
+00:04:20,560 --> 00:04:22,720
+really slowing down your web application
+
+112
+00:04:22,720 --> 00:04:24,880
+if you only import the ones that you
+
+113
+00:04:24,880 --> 00:04:26,710
+need I hope you enjoyed this quick tip
+
+114
+00:04:26,710 --> 00:04:27,240
+and I'll see
+

@@ -1,0 +1,1248 @@
+1
+00:00:00,080 --> 00:00:37,230
+and then hi and we are honored to invite 
+
+2
+00:00:37,230 --> 00:00:42,760
+this hymn called keila menezes [Applause]
+
+3
+00:00:42,760 --> 00:00:47,410
+[Music] and then
+
+4
+00:00:47,770 --> 00:01:40,320
+mom justin honey because it is am i am me and
+
+5
+00:01:40,320 --> 00:01:44,170
+and there and there
+
+6
+00:01:44,170 --> 00:01:54,780
+good thank you hi good afternoon so i will talk about
+
+7
+00:01:54,780 --> 00:02:02,220
+english feed yourself and iv my name is keila menezes fernandes this i work
+
+8
+00:02:02,220 --> 00:02:06,900
+as a software consultant at totvs worx plus google develop expert
+
+9
+00:02:06,900 --> 00:02:12,990
+in web technology and now also only volunteer at campinas front-end someone
+
+10
+00:02:12,990 --> 00:02:16,860
+here it was at the front campinas this past year
+
+11
+00:02:16,860 --> 00:02:24,300
+and then it sells a lot of masses, be sure to go next year.
+
+12
+00:02:24,300 --> 00:02:29,880
+generation with the intention of inserting people in technology is also
+
+13
+00:02:29,880 --> 00:02:34,740
+writing an introductory book to engler and I am also part of the team
+
+14
+00:02:34,740 --> 00:02:39,490
+corsas team which is a blog writes these things about web
+
+15
+00:02:39,490 --> 00:02:49,090
+it's good to seek instant age is very important for how we user is going
+
+16
+00:02:49,090 --> 00:02:56,780
+successfully interact with applications o and this whole ecosystem of frameworks
+
+17
+00:02:56,780 --> 00:03:03,650
+has helped us to create applications that are more interactive helped our
+
+18
+00:03:03,650 --> 00:03:07,040
+productivity with developer people creating kind of
+
+19
+00:03:07,040 --> 00:03:13,640
+application but at the same time has brought a lot to see network in the sense that the
+
+20
+00:03:13,640 --> 00:03:19,430
+applications have to load many things and can be slow so question
+
+21
+00:03:19,430 --> 00:03:24,800
+would we go back to vanilla ds at the same time we want to use all separate
+
+22
+00:03:24,800 --> 00:03:32,110
+sign up or provide and also follow the evolution of the web because
+
+23
+00:03:32,110 --> 00:03:36,350
+to keep your application more and more updated, but how will you do it?
+
+24
+00:03:36,350 --> 00:03:44,330
+this without throwing away everything we did six months ago and that implies us
+
+25
+00:03:44,330 --> 00:03:50,230
+maybe change our perspective a little bit if you ask you that that
+
+26
+00:03:50,230 --> 00:03:53,370
+they image represents
+
+27
+00:03:54,580 --> 00:03:59,250
+hi can come then
+
+28
+00:03:59,930 --> 00:04:07,010
+and the other person who has it exactly because we already have our
+
+29
+00:04:07,010 --> 00:04:11,390
+exposure company to think they are square because it's usually
+
+30
+00:04:11,390 --> 00:04:17,359
+representation of what we see, but it could be easy for a cube coming
+
+31
+00:04:17,359 --> 00:04:24,870
+seen from another perspective hi and then what would that be
+
+32
+00:04:25,340 --> 00:04:31,000
+is an image of a cube and two dimensions
+
+33
+00:04:32,560 --> 00:04:40,960
+hello good could also be the face of a quick logical test that we don't
+
+34
+00:04:40,960 --> 00:04:45,610
+would have stuck in three dimensions and we would get summer tesseract
+
+35
+00:04:45,610 --> 00:04:51,759
+well then the idea of ​​reuse it is not new in the 60s douglas
+
+36
+00:04:51,759 --> 00:04:55,900
+michael spoke about the idea of ​​creating components based on architecture
+
+37
+00:04:55,900 --> 00:05:01,500
+in components 50 years later brad for his ideas atomic design
+
+38
+00:05:01,500 --> 00:05:08,520
+hi and the idea is that we can create several different component elements
+
+39
+00:05:08,520 --> 00:05:14,010
+in different ways attendance of the framework keys for this but I don't
+
+40
+00:05:14,010 --> 00:05:19,220
+I see no problem we create I think this diversity is important but
+
+41
+00:05:19,220 --> 00:05:25,030
+consume in a single way hi and the one that sold the web component
+
+42
+00:05:25,030 --> 00:05:32,440
+that you can create reusable elements encapsulated in any
+
+43
+00:05:32,440 --> 00:05:39,370
+that is application and if you've stopped to analyze a
+
+44
+00:05:39,370 --> 00:05:44,830
+element that a priori in that standard perspective that we think the
+
+45
+00:05:44,830 --> 00:05:52,630
+input in the browser enabling us to gift in chrome you will see that in
+
+46
+00:05:52,630 --> 00:06:00,560
+true the input in capsule a div hi and there but ok for what we
+
+47
+00:06:00,560 --> 00:06:05,330
+will use the frameworks so right the documentation site hurts there
+
+48
+00:06:05,330 --> 00:06:12,889
+he thinks content is just a static part and he doesn't use igor he is all
+
+49
+00:06:12,889 --> 00:06:18,199
+static but for some parts that need more of these images to be
+
+50
+00:06:18,199 --> 00:06:23,380
+more dynamic has more interactivity they go contronics webb
+
+51
+00:06:23,380 --> 00:06:29,830
+hi what's up she sold her me what is she me the library from the angle you
+
+52
+00:06:29,830 --> 00:06:36,940
+manages to encapsulate component elements to wrap in web components with the idea of
+
+53
+00:06:36,940 --> 00:06:41,800
+you are able to use these components in whatever the
+
+54
+00:06:41,800 --> 00:06:47,930
+agnostic application the framework and for this presentation I will create a
+
+55
+00:06:47,930 --> 00:06:53,180
+a component that represents the comment that you can like it is
+
+56
+00:06:53,180 --> 00:07:00,319
+very simple has a text has an author of the amount likes and the heart icon
+
+57
+00:07:00,319 --> 00:07:03,740
+that you can click to like that comment you came from there
+
+58
+00:07:03,740 --> 00:07:11,430
+just comment it works that way okay
+
+59
+00:07:11,430 --> 00:07:15,810
+hi and then i have no challenge on twitter yesterday i don't know if you guys have seen it but it was
+
+60
+00:07:15,810 --> 00:07:20,430
+participate I still think that until her but two three o'clock in the afternoon I don't think
+
+61
+00:07:20,430 --> 00:07:26,490
+four more hours in the afternoon which is a challenge for what size you
+
+62
+00:07:26,490 --> 00:07:35,970
+imagine that this would be the component there using aave aave compressed and then I
+
+63
+00:07:35,970 --> 00:07:42,240
+I’m going to draw two people to retweet this one you’re in my
+
+64
+00:07:42,240 --> 00:07:50,310
+my twitch and you will compete for this complete course of the ultimate corsa tô de
+
+65
+00:07:50,310 --> 00:07:54,689
+bike that has these four young creed modes
+
+66
+00:07:54,689 --> 00:08:00,509
+the good is how it would be so i create a component i will want a component
+
+67
+00:08:00,509 --> 00:08:05,369
+igor basics so i will define a template will define the styles but
+
+68
+00:08:05,369 --> 00:08:13,019
+for me to create this component using the library it comes from i will define the
+
+69
+00:08:13,019 --> 00:08:17,849
+encapsulation of it will be tea dome type so I will have my simple that
+
+70
+00:08:17,849 --> 00:08:26,189
+represents the text the author the amount of e-liquid likes i have an event that
+
+71
+00:08:26,189 --> 00:08:32,819
+will change the value of my liquid so that component is the temple
+
+72
+00:08:32,819 --> 00:08:38,129
+it will display the text I will have the footer part that will have quantity
+
+73
+00:08:38,129 --> 00:08:44,310
+lakes my heart icon i can i'm going to set an event that is going to call the
+
+74
+00:08:44,310 --> 00:08:49,950
+hi toboggan and how this application swallows
+
+75
+00:08:49,950 --> 00:08:55,770
+it is not a common application so i will define this component in my
+
+76
+00:08:55,770 --> 00:09:00,960
+between the component so that it does not boot and as a normal component
+
+77
+00:09:00,960 --> 00:09:07,860
+which is commonly done, right and not a builder, I'm going to use this create
+
+78
+00:09:07,860 --> 00:09:13,890
+custom it lies that it is a function of the library and then I will define the editor
+
+79
+00:09:13,890 --> 00:09:17,820
+so that I have distances independent of this component and shoot
+
+80
+00:09:17,820 --> 00:09:23,970
+zana and joke cost it is i will use define which will be the selector o the tag
+
+81
+00:09:23,970 --> 00:09:27,390
+html that i'm going to use to use the components and other applications and i
+
+82
+00:09:27,390 --> 00:09:33,870
+need to create this put this ng-bootstrap method so that this application does not
+
+83
+00:09:33,870 --> 00:09:39,810
+to be initialized with common application is good to build i will bring a
+
+84
+00:09:39,810 --> 00:09:46,439
+I liked it there and obviously only that in the command of engebuild - prod I will add
+
+85
+00:09:46,439 --> 00:09:54,120
+this parameter out put hard noni for here do not put the régis in the games
+
+86
+00:09:54,120 --> 00:09:58,620
+chilled hi and then I'll get all those
+
+87
+00:09:58,620 --> 00:10:05,010
+chilled young people and I will pack them using nude so I will simply
+
+88
+00:10:05,010 --> 00:10:09,550
+generate in my folder is elements it ended with me dejas un
+
+89
+00:10:09,550 --> 00:10:16,510
+hi and to facilitate isolation of this component of fever she is mind me
+
+90
+00:10:16,510 --> 00:10:23,230
+set on my jason feet a teske right to make the bild is elements that then I
+
+91
+00:10:23,230 --> 00:10:29,440
+use these two these engebuild commands counted those parameters and the
+
+92
+00:10:29,440 --> 00:10:35,680
+that goes to tell all this in the only javscript already has to I can do that already
+
+93
+00:10:35,680 --> 00:10:40,269
+have to attack for that have to still x bill after that facilitates all this
+
+94
+00:10:40,269 --> 00:10:43,839
+work but I'm doing it manually that later I want to play with these
+
+95
+00:10:43,839 --> 00:10:50,740
+files that I'm going to package hi and to use it's like using
+
+96
+00:10:50,740 --> 00:10:58,430
+any common element, right, that uses html so set the properties
+
+97
+00:10:58,430 --> 00:11:03,700
+just demonstrate here how it would be
+
+98
+00:11:03,800 --> 00:11:12,399
+oh ok i have ok to see well no
+
+99
+00:11:12,440 --> 00:11:19,150
+well then i'm going to have to go html here
+
+100
+00:11:21,939 --> 00:11:27,669
+good so i'm importing that javascript is that i want two
+
+101
+00:11:27,669 --> 00:11:36,170
+I’m going to comment and we’ll see here so I have my
+
+102
+00:11:36,170 --> 00:11:40,570
+component to interact with it only what time the
+
+103
+00:11:40,570 --> 00:11:44,850
+size 177 baskets
+
+104
+00:11:44,980 --> 00:11:48,880
+and I didn't like it very much so I said like this let's think about other
+
+105
+00:11:48,880 --> 00:11:53,920
+options is because it happens because it
+
+106
+00:11:53,920 --> 00:12:00,130
+need to bring all the dependencies of the going there also has a sound file
+
+107
+00:12:00,130 --> 00:12:04,750
+s that is to make change detection hurt there so all of this is going
+
+108
+00:12:04,750 --> 00:12:10,750
+in my band or generated right, we are the minimum number of young people
+
+109
+00:12:10,750 --> 00:12:18,460
+cript only that doesn’t have the basics to load this component so this is the
+
+110
+00:12:18,460 --> 00:12:24,400
+The idea of ​​having only what is necessary to determine the parts of the application is not
+
+111
+00:12:24,400 --> 00:12:30,070
+something new, like going there he has the issue of modules that uses strategy
+
+112
+00:12:30,070 --> 00:12:35,170
+on-demand loading which are the lazy-load modules then for the pef to
+
+113
+00:12:35,170 --> 00:12:40,750
+a route I define that certain module that has all the components
+
+114
+00:12:40,750 --> 00:12:44,890
+all the elements that I need to load that route will only be
+
+115
+00:12:44,890 --> 00:12:53,129
+loaded start that ipef hi or else the change itself that had
+
+116
+00:12:53,129 --> 00:12:57,509
+in relation to the service and version of the classes we use so that we don’t have
+
+117
+00:12:57,509 --> 00:13:01,579
+logic directly related to visualization how to do here are http
+
+118
+00:13:01,579 --> 00:13:07,080
+so in this service, the service had to be defined in the modules
+
+119
+00:13:07,080 --> 00:13:12,240
+it's just that there has to be a change part of the same as you use that decorate
+
+120
+00:13:12,240 --> 00:13:17,790
+a class with a good injector at sign and you allow you to do three sheik at the level of
+
+121
+00:13:17,790 --> 00:13:21,420
+good provaider so these are several strategies to
+
+122
+00:13:21,420 --> 00:13:26,430
+we will even have a presentation here in the js building that will be a rescue that
+
+123
+00:13:26,430 --> 00:13:30,330
+are all thinking about treaties that we can do to carry only
+
+124
+00:13:30,330 --> 00:13:35,260
+with the necessary to determine the application parts right
+
+125
+00:13:35,260 --> 00:13:41,740
+hi and then live appears in this context a new rendering engine error
+
+126
+00:13:41,740 --> 00:13:47,950
+generalization moto windows is a software that will do all the drawing part
+
+127
+00:13:47,950 --> 00:13:51,940
+texts and images in the case of the web application we will usually have to have
+
+128
+00:13:51,940 --> 00:13:57,670
+my l with the css styles and then you say wow but again it will change because
+
+129
+00:13:57,670 --> 00:14:03,730
+i know people have a lot of trauma that came from ingrid s that changed and
+
+130
+00:14:03,730 --> 00:14:07,830
+I will have to present all applications I will have to throw everything away
+
+131
+00:14:07,830 --> 00:14:16,960
+google itself uses in 600 applications the latest version of the master that
+
+132
+00:14:16,960 --> 00:14:23,160
+it was hurting my jaw there so once we are going to enable hiv to be the default
+
+133
+00:14:23,160 --> 00:14:27,880
+how the application rendering engine is the same for all applications
+
+134
+00:14:27,880 --> 00:14:32,170
+have to change, have to pass all the tests so he has a concern
+
+135
+00:14:32,170 --> 00:14:38,540
+great with compatibility and hiv but mostly what the
+
+136
+00:14:38,540 --> 00:14:43,460
+today we will have a lecture of the heroes he will talk about hiv but
+
+137
+00:14:43,460 --> 00:14:49,610
+in detail I wanted to have today this is it here you can enable hiv is a
+
+138
+00:14:49,610 --> 00:14:55,490
+person opt in only i'm going to do something different so this here with a
+
+139
+00:14:55,490 --> 00:15:01,220
+experiment that I did for two weeks that the contribution of her mind
+
+140
+00:15:01,220 --> 00:15:04,960
+for the new live design
+
+141
+00:15:05,200 --> 00:15:14,020
+hi and how would it be if we had already integrated i've with her mind that in
+
+142
+00:15:14,020 --> 00:15:19,690
+truth are actually are you have igor components and encapsulated by web
+
+143
+00:15:19,690 --> 00:15:27,400
+component would be you could have a wii ng-component that you are would put your
+
+144
+00:15:27,400 --> 00:15:33,040
+component would define that I showed how it is today in the element only that it still doesn't
+
+145
+00:15:33,040 --> 00:15:40,150
+there is this was a suggestion that the hurting team brought her in india to check this
+
+146
+00:15:40,150 --> 00:15:47,050
+year because it swallows you a lot so the hurting team is to share with
+
+147
+00:15:47,050 --> 00:15:51,130
+community the ideas they are having so that we can achieve
+
+148
+00:15:51,130 --> 00:15:57,370
+contribute the feedback on it so I started from the following observation
+
+149
+00:15:57,370 --> 00:16:03,430
+today I raised some hypotheses I did my experiments and I'm going to share
+
+150
+00:16:03,430 --> 00:16:08,760
+analysis of this experiments with you throughout the entire code that I will show
+
+151
+00:16:08,760 --> 00:16:13,050
+here is in the middle ruby ​​kit is exactly the same my name is with two elles one
+
+152
+00:16:13,050 --> 00:16:16,850
+project in ai heaven on
+
+153
+00:16:18,060 --> 00:16:24,720
+hi and this is an implementation but I don't want you to get attached to
+
+154
+00:16:24,720 --> 00:16:34,350
+solution but to the problem how to create how to create web applications that are more
+
+155
+00:16:34,350 --> 00:16:36,980
+instant
+
+156
+00:16:37,139 --> 00:16:41,399
+is because it doesn’t matter we just understand why we’re doing it but why
+
+157
+00:16:41,399 --> 00:16:46,920
+we are doing this is a disruptive approach and we are at a conference
+
+158
+00:16:46,920 --> 00:16:52,980
+of technology this is technology this is to be supplementary
+
+159
+00:16:52,980 --> 00:16:56,730
+good so to start that that i'm going to do i'm going to do everything manually
+
+160
+00:16:56,730 --> 00:17:02,279
+because i don't have that ng-component iv yet so i'm going to create
+
+161
+00:17:02,279 --> 00:17:06,240
+a class that extended html it lies with all that textual properties
+
+162
+00:17:06,240 --> 00:17:11,939
+tolix liquid there i need to define the two methods observe is tribute i
+
+163
+00:17:11,939 --> 00:17:18,620
+callback tax for each of these attributes of mine and then I'm going to use
+
+164
+00:17:18,620 --> 00:17:24,949
+still to stick and deprived of the live even has a ceiling there in the methods
+
+165
+00:17:24,949 --> 00:17:30,480
+so I'm going to import the two methods the income ceiling is component if the part of
+
+166
+00:17:30,480 --> 00:17:34,799
+version eight ok i'm using one there and the ones to call it component income
+
+167
+00:17:34,799 --> 00:17:43,799
+only and for the ceiling of tec teens these tektites and then to render this
+
+168
+00:17:43,799 --> 00:17:47,320
+component and I just go to the constructor
+
+169
+00:17:47,320 --> 00:17:52,550
+of that because this class it two-component that will cover my
+
+170
+00:17:52,550 --> 00:17:56,540
+language component only for child component I will not create the way with
+
+171
+00:17:56,540 --> 00:18:02,360
+the pattern I will import I have dynamic import so I have there awaiting
+
+172
+00:18:02,360 --> 00:18:08,690
+import the file path and then the component network and return an instance of
+
+173
+00:18:08,690 --> 00:18:13,190
+my component i define the face and says why it will be stuck on that side
+
+174
+00:18:13,190 --> 00:18:17,780
+component and then I define all the properties and manually call the
+
+175
+00:18:17,780 --> 00:18:25,240
+detectchanges in my hi component and then in that one in my file that
+
+176
+00:18:25,240 --> 00:18:31,120
+I'm packing, it's generating bild, I'm not going to put the priest wires because
+
+177
+00:18:31,120 --> 00:18:35,680
+I don't want it I prefer it in this case it has the importing sony part I don't
+
+178
+00:18:35,680 --> 00:18:40,570
+I need this more with live because the change detection has totally changed the
+
+179
+00:18:40,570 --> 00:18:45,610
+how it will be done hi and then when it opened I will see that
+
+180
+00:18:45,610 --> 00:18:51,730
+in addition to all those already clips that generate in the application will have a separate one that I
+
+181
+00:18:51,730 --> 00:19:00,160
+read here comment component cause it's taking s5 s6 the javascript and here we go
+
+182
+00:19:00,160 --> 00:19:03,000
+see what happens here
+
+183
+00:19:04,150 --> 00:19:11,800
+well then there for this one I called there I saw lazy lazy eye I saw that I have and if
+
+184
+00:19:11,800 --> 00:19:17,170
+import dynamic I'm just going to define a button here on this button I'm
+
+185
+00:19:17,170 --> 00:19:20,290
+calling this function is from there i'm going to comedy that i put in this file
+
+186
+00:19:20,290 --> 00:19:23,320
+javascript to do what you want to trigger will hit some
+
+187
+00:19:23,320 --> 00:19:26,070
+properties and will give a service on my body
+
+188
+00:19:26,070 --> 00:19:33,320
+and I only have a button I don't have the distance here in this component's html
+
+189
+00:19:34,410 --> 00:19:41,610
+and then all right here he loaded my pack loaded that javascript just has
+
+190
+00:19:41,610 --> 00:19:47,040
+the function that makes you learn and there’s nothing else but when I click here
+
+191
+00:19:47,040 --> 00:19:53,060
+it will create a web component that capsules the component me there I saw
+
+192
+00:19:53,060 --> 00:19:59,000
+centralized with vivi and only then did he load javascript
+
+193
+00:19:59,000 --> 00:20:05,530
+o and attached the component cannot dynamically right
+
+194
+00:20:06,680 --> 00:20:12,309
+and there it is and how can he work
+
+195
+00:20:12,309 --> 00:20:18,370
+so I saw why it has the concept of locality today when a compilation
+
+196
+00:20:18,370 --> 00:20:23,500
+is done in the language he has to analyze all the dependencies he needs to have a
+
+197
+00:20:23,500 --> 00:20:29,919
+global knowledge of the application as a bird concept and this is going to change and this
+
+198
+00:20:29,919 --> 00:20:33,850
+implies what I'm going to be able to accomplish the fragile component talking about
+
+199
+00:20:33,850 --> 00:20:39,470
+much easier than what is done without live and the modules in English they
+
+200
+00:20:39,470 --> 00:20:45,680
+historically strip was the role and very important in the context of compiling
+
+201
+00:20:45,680 --> 00:20:51,020
+all the elements that we use parent directives for the components of a
+
+202
+00:20:51,020 --> 00:20:55,730
+and then for me written a lot of things if you start using swallow for the first
+
+203
+00:20:55,730 --> 00:21:01,880
+time is one of the most difficult concepts and is essential because an application is equal to
+
+204
+00:21:01,880 --> 00:21:07,340
+characterized by being modular but with this concept of live this form of
+
+205
+00:21:07,340 --> 00:21:13,010
+compilation you will not need to declare I had no module that does not
+
+206
+00:21:13,010 --> 00:21:17,000
+I liked it, there was no mode in that application, no mode.
+
+207
+00:21:17,000 --> 00:21:22,640
+my component no way the molds already so until they become obsolete
+
+208
+00:21:22,640 --> 00:21:29,720
+hi and then how do we do that he creates aesthetic definitions each with
+
+209
+00:21:29,720 --> 00:21:36,260
+each component each directive each country the injected ones will all have a file
+
+210
+00:21:36,260 --> 00:21:42,520
+typescript with definitions with pure rendering-related functions
+
+211
+00:21:42,520 --> 00:21:51,010
+creating all of these elements good so it creates a syntax tree
+
+212
+00:21:51,010 --> 00:21:58,180
+abstract that represents that static definition updating the tone today as it is
+
+213
+00:21:58,180 --> 00:22:04,420
+made without live we have the html template from the html temperature that is
+
+214
+00:22:04,420 --> 00:22:09,160
+depending on the color heitor creates all the metadata that represents that
+
+215
+00:22:09,160 --> 00:22:16,180
+component and there is an atomic unit that I roll interpreter that it will
+
+216
+00:22:16,180 --> 00:22:21,929
+be responsible for distancing my component for updating my component
+
+217
+00:22:21,929 --> 00:22:30,179
+and to add it in the gift and this is the code that has in the functions that everyone
+
+218
+00:22:30,179 --> 00:22:34,830
+English elements pass through the rendering process that mars out
+
+219
+00:22:34,830 --> 00:22:41,610
+I don't see this giant suite code so all the elements down by the same
+
+220
+00:22:41,610 --> 00:22:48,929
+execution path depending on 15 component case directive but for example
+
+221
+00:22:48,929 --> 00:22:53,249
+for this application I'm only using the component, but for the one from her
+
+222
+00:22:53,249 --> 00:22:56,440
+had to import all this all this code
+
+223
+00:22:56,440 --> 00:23:01,150
+and today how is it with hiv how would be the definition of that which component this
+
+224
+00:23:01,150 --> 00:23:06,550
+class it has the component type the selectors that represents that
+
+225
+00:23:06,550 --> 00:23:12,160
+component the milk time that a function and a factor that will be will be mine
+
+226
+00:23:12,160 --> 00:23:17,800
+entire component statically defined in that class definition is descriptive
+
+227
+00:23:17,800 --> 00:23:24,520
+and then I can update the gift incrementally is an html template
+
+228
+00:23:24,520 --> 00:23:28,630
+to present my component but I don't have the metadata anymore I don't need
+
+229
+00:23:28,630 --> 00:23:33,430
+plus that regular interpreting I only have the instructions these situations
+
+230
+00:23:33,430 --> 00:23:37,470
+static and the situation part updates the gift
+
+231
+00:23:37,470 --> 00:23:41,960
+hi and then we can do it I left it here in a much more efficient way
+
+232
+00:23:41,960 --> 00:23:47,760
+that I let us as we already know we don’t put in our
+
+233
+00:23:47,760 --> 00:23:52,200
+our band functions that are not used for example but with this
+
+234
+00:23:52,200 --> 00:23:56,490
+concept of the ipad location we will be able to make a concept at the
+
+235
+00:23:56,490 --> 00:24:01,380
+dependency i will show example have for example i have here mess with the
+
+236
+00:24:01,380 --> 00:24:05,340
+traditional I have this class that imports two functions just told me that
+
+237
+00:24:05,340 --> 00:24:09,780
+you said you had in my method i invoke samsung together i'm calling the
+
+238
+00:24:09,780 --> 00:24:15,450
+another one will not be in my pack now imagine that I have this more grandson who
+
+239
+00:24:15,450 --> 00:24:20,730
+is receive as a parameter exam candle that is a boolean and then I invoke you told me
+
+240
+00:24:20,730 --> 00:24:25,170
+that had more I'm just going to call a chance suffocation this future value
+
+241
+00:24:25,170 --> 00:24:30,570
+it's like saying that our question in my application I always focus on one
+
+242
+00:24:30,570 --> 00:24:35,790
+meter of passing false only that this sad analysis which is static it will
+
+243
+00:24:35,790 --> 00:24:39,570
+add all two functions from my pack one
+
+244
+00:24:39,570 --> 00:24:43,590
+good so for example here let's see how the function definition would be
+
+245
+00:24:43,590 --> 00:24:48,360
+template for this component the simple component that has an input name
+
+246
+00:24:48,360 --> 00:24:52,950
+that receives a good variable so this definition of that
+
+247
+00:24:52,950 --> 00:24:57,659
+component would have the template function of the code blocks one to create and
+
+248
+00:24:57,659 --> 00:25:01,980
+treatment then it uses this function of the start mind and another one to update
+
+249
+00:25:01,980 --> 00:25:06,720
+because the name can be variable, I also need to run the detection of
+
+250
+00:25:06,720 --> 00:25:13,350
+changes and you will be able to make you put a break point and you are
+
+251
+00:25:13,350 --> 00:25:17,639
+actually debugging how component change detection is done
+
+252
+00:25:17,639 --> 00:25:25,639
+used with live only let's say i invoke this component with the name
+
+253
+00:25:25,639 --> 00:25:29,639
+which is a value a fixed value the sherlock cases
+
+254
+00:25:29,639 --> 00:25:35,669
+and how would the template function of the definition of that component only have the
+
+255
+00:25:35,669 --> 00:25:39,470
+block to create and the sad thing here is done at the level of
+
+256
+00:25:39,470 --> 00:25:43,550
+dependency it will not add the block that updates because you said no
+
+257
+00:25:43,550 --> 00:25:49,480
+never changes an elementary
+
+258
+00:25:49,480 --> 00:25:56,530
+well then we know that the band is smaller and very efficient and all that
+
+259
+00:25:56,530 --> 00:26:01,600
+is being possible because of these static definitions that are created
+
+260
+00:26:01,600 --> 00:26:06,420
+to represent these elements good and is that I love you within that
+
+261
+00:26:06,420 --> 00:26:12,330
+monolith interpreter we saw that side function wanted to see you for
+
+262
+00:26:12,330 --> 00:26:15,260
+individual instructions
+
+263
+00:26:15,890 --> 00:26:23,030
+it is only here that first because I showed you that I generated
+
+264
+00:26:23,030 --> 00:26:30,980
+javscript of that mind of 177 cabaites the second gave 125k bytes and in
+
+265
+00:26:30,980 --> 00:26:38,150
+truth has a reduction of thirty percent that was I thought with import
+
+266
+00:26:38,150 --> 00:26:44,570
+dynamic was going to be less than with tactical import was the second hypothesis I made
+
+267
+00:26:44,570 --> 00:26:49,690
+the more I showed you here now good and if you compare the tchan that
+
+268
+00:26:49,690 --> 00:26:56,500
+that separate file he tried a job but compared to 125 below until
+
+269
+00:26:56,500 --> 00:26:59,470
+negligible value of it so if i think you will have to carry
+
+270
+00:26:59,470 --> 00:27:06,970
+regardless of whether you use the new component this 125 channels it happens
+
+271
+00:27:06,970 --> 00:27:13,260
+because why the trench that what happens to your foot that makes the normal sheik
+
+272
+00:27:13,260 --> 00:27:16,850
+with dynamic import it's not as efficient
+
+273
+00:27:16,850 --> 00:27:22,340
+hi and then i put a static matter so i'm importing my
+
+274
+00:27:22,340 --> 00:27:30,010
+fan i will eat or commit component hi and then i will not use the import
+
+275
+00:27:30,010 --> 00:27:33,840
+dynamic I will simply call the render
+
+276
+00:27:33,840 --> 00:27:40,280
+and then we'll see and how it would be here so I will have here the
+
+277
+00:27:40,280 --> 00:27:44,480
+even though it gives html only I will not be creating fly line I will
+
+278
+00:27:44,480 --> 00:27:47,679
+add it right here
+
+279
+00:27:48,820 --> 00:27:56,770
+and here I have these two components and the size of it gives 39 heads and
+
+280
+00:27:56,770 --> 00:28:04,390
+this is a seventy percent reduction compared to using the
+
+281
+00:28:04,390 --> 00:28:08,029
+dynamic sport to render the angry component
+
+282
+00:28:08,029 --> 00:28:13,099
+and we will compare then how it would be from the first is a strategy to the
+
+283
+00:28:13,099 --> 00:28:21,499
+second and the last first thing is mind 187 end up compressing 55 the bike with the
+
+284
+00:28:21,499 --> 00:28:28,639
+dynamic sport option 125 cabs compressed 43 below and have a sport
+
+285
+00:28:28,639 --> 00:28:34,389
+dynamic 39 and compressed
+
+286
+00:28:35,190 --> 00:28:46,040
+15 fights 15k bytes in 15 15 couples
+
+287
+00:28:46,040 --> 00:28:53,330
+yes it is and here I had all that manual work to create another
+
+288
+00:28:53,330 --> 00:28:59,470
+component in hand call the hiv to rendered have that are of changes
+
+289
+00:28:59,470 --> 00:29:05,030
+obviously the hurting team already has this vision that you will be able to create
+
+290
+00:29:05,030 --> 00:29:08,000
+of components using it but we don't have it ready
+
+291
+00:29:08,000 --> 00:29:12,920
+implementation was just for us to have an idea of ​​what will be possible to be done
+
+292
+00:29:12,920 --> 00:29:18,740
+that would be a suggestion and it was also from india confiding that it would be having a
+
+293
+00:29:18,740 --> 00:29:25,160
+new of the color heitor ng she is mind and this one of the color heitor set selector
+
+294
+00:29:25,160 --> 00:29:28,850
+plate the probable the dependents at the level of dependence because sometimes
+
+295
+00:29:28,850 --> 00:29:33,470
+you use an and if and you have a door in all your at sign swallows that
+
+296
+00:29:33,470 --> 00:29:38,270
+all the definitions you will define the dependencies right in your component
+
+297
+00:29:38,270 --> 00:29:45,670
+but this is still something that is being studied if it is going to be that way
+
+298
+00:29:45,670 --> 00:29:53,250
+is so wanted to bring this new person you have is how to carry
+
+299
+00:29:53,250 --> 00:29:59,090
+applications to take more instant be more efficient
+
+300
+00:29:59,090 --> 00:30:08,750
+and that's it you know we have created a lot for technology science has
+
+301
+00:30:08,750 --> 00:30:15,560
+evolved already form sensational and so it is a step but there is no right step
+
+302
+00:30:15,560 --> 00:30:21,050
+don't do it wrong because all the steps will take us are part of our
+
+303
+00:30:21,050 --> 00:30:24,860
+journey and I will take us to what we want to build knowledge
+
+304
+00:30:24,860 --> 00:30:29,570
+science if you notice everything we can connect a person today
+
+305
+00:30:29,570 --> 00:30:33,680
+from one point in the world to another point in the world we have an image of a
+
+306
+00:30:33,680 --> 00:30:38,340
+black hole o and all these are just tools
+
+307
+00:30:38,340 --> 00:30:44,289
+we should never put the tools above our principles
+
+308
+00:30:44,289 --> 00:30:50,169
+above what we really want to obtain and as technologies we are these
+
+309
+00:30:50,169 --> 00:30:55,360
+path recorders i really like when they say i'm an engineer who
+
+310
+00:30:55,360 --> 00:30:59,049
+we are engineers because we build things not physically
+
+311
+00:30:59,049 --> 00:31:05,519
+bridges the building used but we build this journey for knowledge
+
+312
+00:31:05,519 --> 00:31:15,260
+thank you [Applause]
+

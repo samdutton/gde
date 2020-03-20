@@ -1,0 +1,4453 @@
+1
+00:00:04,190 --> 00:00:06,390
+
+well I hope you've been having a good
+
+2
+00:00:06,390 --> 00:00:10,650
+conference so far and when I was asked
+
+3
+00:00:10,650 --> 00:00:12,780
+to speak here and I was going to speak
+
+4
+00:00:12,780 --> 00:00:14,400
+to their kind of main room and there's a
+
+5
+00:00:14,400 --> 00:00:16,080
+lot of you and I guess you all work in
+
+6
+00:00:16,080 --> 00:00:18,869
+different parts of the stack and I
+
+7
+00:00:18,869 --> 00:00:20,840
+thought what I would talk about is
+
+8
+00:00:20,840 --> 00:00:23,340
+really where we are as we head into the
+
+9
+00:00:23,340 --> 00:00:25,470
+last quarter 2018 as we look forward to
+
+10
+00:00:25,470 --> 00:00:28,740
+2019 where we are with CSS layout
+
+11
+00:00:28,740 --> 00:00:31,109
+because we've had some fairly big shifts
+
+12
+00:00:31,109 --> 00:00:33,660
+in that landscape over the last few
+
+13
+00:00:33,660 --> 00:00:36,490
+years
+
+14
+00:00:36,500 --> 00:00:40,379
+last year CSS was actually 20 years old
+
+15
+00:00:40,379 --> 00:00:42,780
+this makes me feel very old because I
+
+16
+00:00:42,780 --> 00:00:45,870
+remember when we didn't have CSS I am
+
+17
+00:00:45,870 --> 00:00:48,329
+someone who built websites with tables
+
+18
+00:00:48,329 --> 00:00:50,250
+for layout and I remember CSS coming
+
+19
+00:00:50,250 --> 00:00:51,930
+along and just for fonts and sort of
+
+20
+00:00:51,930 --> 00:00:53,129
+saying oh you know I'm not sure about
+
+21
+00:00:53,129 --> 00:00:56,699
+this not sure about this still so I've
+
+22
+00:00:56,699 --> 00:00:58,469
+kind of grown up with CSS and I've seen
+
+23
+00:00:58,469 --> 00:01:00,329
+what's happened you know how things have
+
+24
+00:01:00,329 --> 00:01:04,830
+progressed over time and at some point
+
+25
+00:01:04,830 --> 00:01:06,330
+you know we moved away from the whole
+
+26
+00:01:06,330 --> 00:01:08,159
+tables for layout thing and we started
+
+27
+00:01:08,159 --> 00:01:11,340
+doing stuff with CSS and doing scissors
+
+28
+00:01:11,340 --> 00:01:12,960
+fillet and all our websites got really
+
+29
+00:01:12,960 --> 00:01:15,210
+simple looking like our well this is the
+
+30
+00:01:15,210 --> 00:01:17,070
+web this is what the web looks like and
+
+31
+00:01:17,070 --> 00:01:20,250
+I think actually a lot of how we'd sew
+
+32
+00:01:20,250 --> 00:01:23,040
+things we say a web like actually stem
+
+33
+00:01:23,040 --> 00:01:25,500
+from a technical limitation the fact
+
+34
+00:01:25,500 --> 00:01:27,299
+that by using floats in absolute
+
+35
+00:01:27,299 --> 00:01:28,799
+positioning there's actually very
+
+36
+00:01:28,799 --> 00:01:30,659
+limited things that we can do and when
+
+37
+00:01:30,659 --> 00:01:32,070
+you look it at you what we've managed to
+
+38
+00:01:32,070 --> 00:01:35,250
+achieve by really hacking around with
+
+39
+00:01:35,250 --> 00:01:37,619
+floating things you know left and right
+
+40
+00:01:37,619 --> 00:01:39,390
+and making sure they're not too big and
+
+41
+00:01:39,390 --> 00:01:40,619
+that we don't end up with more than a
+
+42
+00:01:40,619 --> 00:01:42,119
+hundred percent because then all sorts
+
+43
+00:01:42,119 --> 00:01:44,030
+of weird things happen to our layout
+
+44
+00:01:44,030 --> 00:01:46,649
+everything that we've done so far on the
+
+45
+00:01:46,649 --> 00:01:48,509
+web to do layout has really been this
+
+46
+00:01:48,509 --> 00:01:52,140
+kind of series of hacks and for the
+
+47
+00:01:52,140 --> 00:01:54,119
+first time you know over the last couple
+
+48
+00:01:54,119 --> 00:01:55,590
+years with things like grids coming out
+
+49
+00:01:55,590 --> 00:01:57,810
+we've actually got what we could call a
+
+50
+00:01:57,810 --> 00:02:02,070
+true layout system for the web and that
+
+51
+00:02:02,070 --> 00:02:04,079
+makes a huge change to everything that
+
+52
+00:02:04,079 --> 00:02:08,879
+we're doing as when we think about this
+
+53
+00:02:08,879 --> 00:02:10,500
+system for layout I think most people
+
+54
+00:02:10,500 --> 00:02:11,879
+would probably think about things like
+
+55
+00:02:11,879 --> 00:02:13,440
+grid and flow
+
+56
+00:02:13,440 --> 00:02:15,840
+Xbox and that's really all based on top
+
+57
+00:02:15,840 --> 00:02:17,700
+of this idea of flow layout of normal
+
+58
+00:02:17,700 --> 00:02:20,040
+flow of the way that things just behave
+
+59
+00:02:20,040 --> 00:02:22,170
+by default we don't start doing any
+
+60
+00:02:22,170 --> 00:02:23,670
+layout and we've got things like
+
+61
+00:02:23,670 --> 00:02:25,200
+multiple column layout which I have to
+
+62
+00:02:25,200 --> 00:02:26,850
+mention because that's one of the specs
+
+63
+00:02:26,850 --> 00:02:29,520
+that I edit but that's a specification
+
+64
+00:02:29,520 --> 00:02:31,740
+that's there to do that kind of column
+
+65
+00:02:31,740 --> 00:02:33,960
+based layout so if there the big specs
+
+66
+00:02:33,960 --> 00:02:35,850
+they're the things that we would think
+
+67
+00:02:35,850 --> 00:02:37,590
+if someone said you know what is there
+
+68
+00:02:37,590 --> 00:02:39,570
+in CSS layout today you might think oh
+
+69
+00:02:39,570 --> 00:02:44,460
+well as CSS grid has a flexbox but those
+
+70
+00:02:44,460 --> 00:02:46,730
+things are held together by some other
+
+71
+00:02:46,730 --> 00:02:49,350
+specifications and they're really really
+
+72
+00:02:49,350 --> 00:02:52,440
+key to understanding the big specs that
+
+73
+00:02:52,440 --> 00:02:55,680
+we talked about we've got things like
+
+74
+00:02:55,680 --> 00:02:57,810
+writing modes which are really hard to
+
+75
+00:02:57,810 --> 00:02:59,250
+talk about and as you start thinking
+
+76
+00:02:59,250 --> 00:03:01,280
+about logical properties and values
+
+77
+00:03:01,280 --> 00:03:04,470
+we've got box alignment and we've got
+
+78
+00:03:04,470 --> 00:03:07,470
+CSS sizing intrinsic extrinsic sizing
+
+79
+00:03:07,470 --> 00:03:10,470
+which is really important now that we're
+
+80
+00:03:10,470 --> 00:03:12,810
+talking about layout that can kind of
+
+81
+00:03:12,810 --> 00:03:15,690
+work out its sizing itself you know
+
+82
+00:03:15,690 --> 00:03:17,610
+we're not taking control we're not
+
+83
+00:03:17,610 --> 00:03:19,410
+giving things a width and pushing them
+
+84
+00:03:19,410 --> 00:03:20,940
+around to make something that looks like
+
+85
+00:03:20,940 --> 00:03:22,650
+a grid we're actually letting the
+
+86
+00:03:22,650 --> 00:03:24,209
+browser kind of work out a lot of that
+
+87
+00:03:24,209 --> 00:03:26,550
+stuff for us so sizing becomes really
+
+88
+00:03:26,550 --> 00:03:32,160
+key and we also have these ways of
+
+89
+00:03:32,160 --> 00:03:34,770
+providing really great experiences to
+
+90
+00:03:34,770 --> 00:03:37,320
+our users whatever they're using to view
+
+91
+00:03:37,320 --> 00:03:41,520
+our websites because the web is kind of
+
+92
+00:03:41,520 --> 00:03:43,170
+exploded with all these different
+
+93
+00:03:43,170 --> 00:03:45,269
+devices you know I remember way back
+
+94
+00:03:45,269 --> 00:03:48,360
+when I started with the web and my first
+
+95
+00:03:48,360 --> 00:03:51,239
+computer had a 640 by 480 screen and
+
+96
+00:03:51,239 --> 00:03:54,810
+then I got a better screen that was you
+
+97
+00:03:54,810 --> 00:03:56,610
+know one or two four by seven six eight
+
+98
+00:03:56,610 --> 00:03:58,200
+and I felt marvelous you know it was
+
+99
+00:03:58,200 --> 00:04:00,239
+enormous and I couldn't wait for
+
+100
+00:04:00,239 --> 00:04:02,610
+everybody else to have as big a screen
+
+101
+00:04:02,610 --> 00:04:04,110
+as I had got you know what websites
+
+102
+00:04:04,110 --> 00:04:05,970
+could I create if I had all that screen
+
+103
+00:04:05,970 --> 00:04:08,430
+space to deal with and just as everyone
+
+104
+00:04:08,430 --> 00:04:10,820
+started to get these nice big screens
+
+105
+00:04:10,820 --> 00:04:15,780
+they also got phones and then suddenly
+
+106
+00:04:15,780 --> 00:04:17,310
+we were having to deal again with the
+
+107
+00:04:17,310 --> 00:04:19,470
+fact that some people had a very small
+
+108
+00:04:19,470 --> 00:04:20,700
+screen in front of them and now of
+
+109
+00:04:20,700 --> 00:04:21,870
+course we're getting webpage is
+
+110
+00:04:21,870 --> 00:04:25,470
+displayed on watches and it we can't
+
+111
+00:04:25,470 --> 00:04:26,610
+really sort of think well how are we
+
+112
+00:04:26,610 --> 00:04:27,300
+going to support
+
+113
+00:04:27,300 --> 00:04:29,520
+all of these different things we have to
+
+114
+00:04:29,520 --> 00:04:31,710
+develop in a way that is going to cope
+
+115
+00:04:31,710 --> 00:04:33,419
+with the fact that these exist and half
+
+116
+00:04:33,419 --> 00:04:34,500
+of them we don't really know what they
+
+117
+00:04:34,500 --> 00:04:36,870
+are and so we've got things like media
+
+118
+00:04:36,870 --> 00:04:38,550
+queries and then we've got feature
+
+119
+00:04:38,550 --> 00:04:41,669
+queries the ability to detect what says
+
+120
+00:04:41,669 --> 00:04:44,220
+CSS is available so these things are all
+
+121
+00:04:44,220 --> 00:04:47,220
+really important and then we can't
+
+122
+00:04:47,220 --> 00:04:48,449
+forget some of the other things that are
+
+123
+00:04:48,449 --> 00:04:50,789
+making their way into browsers we've got
+
+124
+00:04:50,789 --> 00:04:52,349
+CSS shapes taking us away from
+
+125
+00:04:52,349 --> 00:04:55,289
+everything looking like a little box got
+
+126
+00:04:55,289 --> 00:04:57,389
+transforms things like scroll snapping
+
+127
+00:04:57,389 --> 00:04:59,099
+and variable font and we're talking
+
+128
+00:04:59,099 --> 00:05:00,930
+about layout here but things like
+
+129
+00:05:00,930 --> 00:05:03,180
+variable fonts can have a huge impact on
+
+130
+00:05:03,180 --> 00:05:04,770
+our layouts you know been used
+
+131
+00:05:04,770 --> 00:05:11,190
+creatively and so in this talk I really
+
+132
+00:05:11,190 --> 00:05:13,759
+want to look at some of those
+
+133
+00:05:13,759 --> 00:05:15,569
+specifications that actually pull
+
+134
+00:05:15,569 --> 00:05:19,620
+together our big layout specs and you'll
+
+135
+00:05:19,620 --> 00:05:22,650
+see plenty of grid and flexbox code but
+
+136
+00:05:22,650 --> 00:05:24,120
+I think it's really important to look at
+
+137
+00:05:24,120 --> 00:05:25,770
+these things that pull these other specs
+
+138
+00:05:25,770 --> 00:05:27,810
+together because actually a lot of the
+
+139
+00:05:27,810 --> 00:05:29,520
+things that we think are confusing about
+
+140
+00:05:29,520 --> 00:05:32,610
+grid and flexbox for example and it's
+
+141
+00:05:32,610 --> 00:05:35,009
+sort of understood through things like
+
+142
+00:05:35,009 --> 00:05:38,880
+writing modes so let's have a look at
+
+143
+00:05:38,880 --> 00:05:41,520
+writing modes because it shouldn't
+
+144
+00:05:41,520 --> 00:05:44,909
+matter which way up your component is if
+
+145
+00:05:44,909 --> 00:05:46,740
+we've got a grid and we turn it on its
+
+146
+00:05:46,740 --> 00:05:48,659
+side like we're using a vertical writing
+
+147
+00:05:48,659 --> 00:05:50,250
+mode there's no reason why that grid
+
+148
+00:05:50,250 --> 00:05:51,870
+shouldn't behave in exactly the same way
+
+149
+00:05:51,870 --> 00:05:54,270
+you know tipped over on its side so
+
+150
+00:05:54,270 --> 00:05:56,340
+writing mode is actually a really good
+
+151
+00:05:56,340 --> 00:05:58,319
+place to begin an exploration of new
+
+152
+00:05:58,319 --> 00:06:00,629
+layout because even if you actually
+
+153
+00:06:00,629 --> 00:06:02,819
+never use a writing mode other than the
+
+154
+00:06:02,819 --> 00:06:05,639
+default understanding writing mode tells
+
+155
+00:06:05,639 --> 00:06:07,830
+you a lot about how grid and flexbox
+
+156
+00:06:07,830 --> 00:06:10,590
+actually work because these layout
+
+157
+00:06:10,590 --> 00:06:12,360
+methods have got writing mode support
+
+158
+00:06:12,360 --> 00:06:14,520
+bakes in because they've been developed
+
+159
+00:06:14,520 --> 00:06:16,229
+sort of since the point at which we
+
+160
+00:06:16,229 --> 00:06:17,940
+thought we'll hang on people actually
+
+161
+00:06:17,940 --> 00:06:20,190
+use vertical writing modes perhaps we
+
+162
+00:06:20,190 --> 00:06:21,539
+should have layout methods that cope
+
+163
+00:06:21,539 --> 00:06:26,219
+with that so a horizontal top to bottom
+
+164
+00:06:26,219 --> 00:06:28,919
+writing mode like English or Arabic you
+
+165
+00:06:28,919 --> 00:06:29,909
+know a left-to-right or right-to-left
+
+166
+00:06:29,909 --> 00:06:32,430
+language it doesn't matter which way the
+
+167
+00:06:32,430 --> 00:06:34,949
+text runs if it's horizontal then we
+
+168
+00:06:34,949 --> 00:06:36,810
+have an inline dimension which runs
+
+169
+00:06:36,810 --> 00:06:40,080
+horizontally the inline dimension that's
+
+170
+00:06:40,080 --> 00:06:41,129
+the way that your text
+
+171
+00:06:41,129 --> 00:06:42,959
+runs in the writing mode that you happen
+
+172
+00:06:42,959 --> 00:06:44,759
+to be using so if that's the in line
+
+173
+00:06:44,759 --> 00:06:47,550
+dimension then the block dimension is
+
+174
+00:06:47,550 --> 00:06:49,889
+the direction in which blocks layout
+
+175
+00:06:49,889 --> 00:06:54,209
+down the page in that writing mode so if
+
+176
+00:06:54,209 --> 00:06:56,550
+we take a vertical writing mode then the
+
+177
+00:06:56,550 --> 00:06:58,319
+in line dimension is running down the
+
+178
+00:06:58,319 --> 00:07:00,959
+page top to bottom so that because
+
+179
+00:07:00,959 --> 00:07:02,399
+that's the way that the sentence is flow
+
+180
+00:07:02,399 --> 00:07:05,099
+in that writing mode and the block
+
+181
+00:07:05,099 --> 00:07:06,779
+dimension is going to be running
+
+182
+00:07:06,779 --> 00:07:09,820
+horizontally
+
+183
+00:07:09,830 --> 00:07:12,269
+now you might use a writing mode to
+
+184
+00:07:12,269 --> 00:07:15,149
+typeset some text in that writing mode
+
+185
+00:07:15,149 --> 00:07:17,849
+but you could also use it creatively you
+
+186
+00:07:17,849 --> 00:07:20,789
+could it's quite common in in print to
+
+187
+00:07:20,789 --> 00:07:22,740
+see you know a headline running down the
+
+188
+00:07:22,740 --> 00:07:25,019
+side of the page or you can do that with
+
+189
+00:07:25,019 --> 00:07:27,360
+writing mode you can use writing modes
+
+190
+00:07:27,360 --> 00:07:33,089
+in a creative way and once you start to
+
+191
+00:07:33,089 --> 00:07:35,209
+work with those different writing modes
+
+192
+00:07:35,209 --> 00:07:38,189
+the fact that web design is essentially
+
+193
+00:07:38,189 --> 00:07:40,229
+tides the physical dimensions of our
+
+194
+00:07:40,229 --> 00:07:42,269
+screen starts to become a little bit
+
+195
+00:07:42,269 --> 00:07:46,199
+weird so I've got here a simple grid
+
+196
+00:07:46,199 --> 00:07:49,259
+layout now if I was to turn that into a
+
+197
+00:07:49,259 --> 00:07:52,050
+vertical writing mode what's going to
+
+198
+00:07:52,050 --> 00:07:54,149
+happen then is that the grid is kind of
+
+199
+00:07:54,149 --> 00:07:56,939
+gonna flip but the width that's applied
+
+200
+00:07:56,939 --> 00:07:58,800
+to it is going to remain relative to the
+
+201
+00:07:58,800 --> 00:08:00,779
+viewport it's not going to go with the
+
+202
+00:08:00,779 --> 00:08:03,599
+whole grid so what I can use is a
+
+203
+00:08:03,599 --> 00:08:05,999
+logical property a replacement for width
+
+204
+00:08:05,999 --> 00:08:10,139
+which is in line size so now the in line
+
+205
+00:08:10,139 --> 00:08:12,149
+size the size in the in line direction
+
+206
+00:08:12,149 --> 00:08:15,300
+is 500 pixels so the whole grid kind of
+
+207
+00:08:15,300 --> 00:08:17,369
+flips over on its side and it all kind
+
+208
+00:08:17,369 --> 00:08:19,050
+of remains relative to the flow
+
+209
+00:08:19,050 --> 00:08:21,899
+direction and that's what's really
+
+210
+00:08:21,899 --> 00:08:23,939
+important about these writing modes and
+
+211
+00:08:23,939 --> 00:08:25,619
+about logical properties is we've got
+
+212
+00:08:25,619 --> 00:08:28,589
+these mappings for things which are tied
+
+213
+00:08:28,589 --> 00:08:30,329
+to the physical dimensions of the screen
+
+214
+00:08:30,329 --> 00:08:33,419
+and tying them to make them kind of flow
+
+215
+00:08:33,419 --> 00:08:36,719
+relative there's a whole bunch of these
+
+216
+00:08:36,719 --> 00:08:38,699
+there's an entire spec full of them and
+
+217
+00:08:38,699 --> 00:08:40,409
+this spec is very readable because
+
+218
+00:08:40,409 --> 00:08:42,329
+essentially all it's doing is saying oh
+
+219
+00:08:42,329 --> 00:08:44,399
+well you know you've got these things
+
+220
+00:08:44,399 --> 00:08:46,110
+which are physical properties well here
+
+221
+00:08:46,110 --> 00:08:49,579
+is the equivalent as a logical property
+
+222
+00:08:49,579 --> 00:08:52,350
+it's all kind of coming into browsers
+
+223
+00:08:52,350 --> 00:08:54,900
+Firefox at the moment I think has the
+
+224
+00:08:54,900 --> 00:08:57,120
+support for logical properties and
+
+225
+00:08:57,120 --> 00:08:59,160
+values but they're being rolled out in
+
+226
+00:08:59,160 --> 00:09:00,480
+other browsers because once we're
+
+227
+00:09:00,480 --> 00:09:02,760
+dealing with different writing modes it
+
+228
+00:09:02,760 --> 00:09:04,560
+all just becomes very weird to be
+
+229
+00:09:04,560 --> 00:09:05,970
+dealing with width once you've tipped
+
+230
+00:09:05,970 --> 00:09:09,029
+something over on its side I've written
+
+231
+00:09:09,029 --> 00:09:11,070
+a bunch of stuff about this this article
+
+232
+00:09:11,070 --> 00:09:13,560
+has got a load of demos and things in
+
+233
+00:09:13,560 --> 00:09:15,480
+and the resources of this talk I'll give
+
+234
+00:09:15,480 --> 00:09:16,800
+you at the end a link to all of these
+
+235
+00:09:16,800 --> 00:09:18,120
+things but there's lots of demos you can
+
+236
+00:09:18,120 --> 00:09:20,190
+play around and if you use Firefox
+
+237
+00:09:20,190 --> 00:09:21,930
+they'll all work and you can see how
+
+238
+00:09:21,930 --> 00:09:23,700
+logical properties and values will work
+
+239
+00:09:23,700 --> 00:09:25,260
+but they're just mappings essentially
+
+240
+00:09:25,260 --> 00:09:27,450
+for things that we already have and in
+
+241
+00:09:27,450 --> 00:09:28,980
+reality you're gonna be using both
+
+242
+00:09:28,980 --> 00:09:30,420
+things because sometimes you do want
+
+243
+00:09:30,420 --> 00:09:32,460
+stuff tied to the dimensions of the
+
+244
+00:09:32,460 --> 00:09:33,930
+screen other times you want it to follow
+
+245
+00:09:33,930 --> 00:09:42,900
+the way the content is going so then we
+
+246
+00:09:42,900 --> 00:09:46,470
+have box alignment because once we
+
+247
+00:09:46,470 --> 00:09:49,200
+understand writing modes and realize
+
+248
+00:09:49,200 --> 00:09:51,000
+that our layouts are not pinned to the
+
+249
+00:09:51,000 --> 00:09:54,540
+top left of the screen then alignment
+
+250
+00:09:54,540 --> 00:09:58,020
+starts to make a lot more sense and the
+
+251
+00:09:58,020 --> 00:10:00,029
+thing with the alignment properties see
+
+252
+00:10:00,029 --> 00:10:02,130
+there's a bit of history there when we
+
+253
+00:10:02,130 --> 00:10:04,500
+first got flexbox we were all very
+
+254
+00:10:04,500 --> 00:10:06,300
+excited because suddenly we could
+
+255
+00:10:06,300 --> 00:10:08,790
+properly Center things both horizontally
+
+256
+00:10:08,790 --> 00:10:11,370
+and vertically here's like this spec it
+
+257
+00:10:11,370 --> 00:10:13,110
+appeared and that was the most important
+
+258
+00:10:13,110 --> 00:10:15,089
+thing about flexbox was the ability to
+
+259
+00:10:15,089 --> 00:10:17,520
+Center things we've been waiting a long
+
+260
+00:10:17,520 --> 00:10:20,400
+time for that it's fair so those
+
+261
+00:10:20,400 --> 00:10:22,080
+properties appeared in Flex box and what
+
+262
+00:10:22,080 --> 00:10:25,380
+happened was it's you know obvious so
+
+263
+00:10:25,380 --> 00:10:27,120
+they're actually gonna be more useful to
+
+264
+00:10:27,120 --> 00:10:29,339
+be used across other layout methods so
+
+265
+00:10:29,339 --> 00:10:30,510
+they've been removed from the flex box
+
+266
+00:10:30,510 --> 00:10:32,160
+spec and put into this box alignment
+
+267
+00:10:32,160 --> 00:10:33,660
+spec which means that we can use the
+
+268
+00:10:33,660 --> 00:10:35,610
+same alignment properties across any
+
+269
+00:10:35,610 --> 00:10:37,680
+layout methods and the one that really
+
+270
+00:10:37,680 --> 00:10:39,420
+comes to mind of course is grid layout
+
+271
+00:10:39,420 --> 00:10:41,100
+which is why if you know what about
+
+272
+00:10:41,100 --> 00:10:41,790
+flexbox
+
+273
+00:10:41,790 --> 00:10:43,290
+you start using grid and you're like oh
+
+274
+00:10:43,290 --> 00:10:44,850
+you know this is this is very similar a
+
+275
+00:10:44,850 --> 00:10:49,770
+lot of things work in the same way but
+
+276
+00:10:49,770 --> 00:10:51,240
+one of the things that people say
+
+277
+00:10:51,240 --> 00:10:53,010
+they're very confused about when they
+
+278
+00:10:53,010 --> 00:10:54,570
+look at the alignment properties in grid
+
+279
+00:10:54,570 --> 00:10:56,970
+and flexbox they say well when do I
+
+280
+00:10:56,970 --> 00:10:59,490
+align things and when do I justify them
+
+281
+00:10:59,490 --> 00:11:01,980
+we've got these sets of properties are
+
+282
+00:11:01,980 --> 00:11:03,660
+we aligning while we justifying which
+
+283
+00:11:03,660 --> 00:11:07,440
+access are we dealing with so we'll
+
+284
+00:11:07,440 --> 00:11:08,880
+start with grid
+
+285
+00:11:08,880 --> 00:11:10,920
+if you've ever found alignment confusing
+
+286
+00:11:10,920 --> 00:11:13,290
+and flexbox it is much easier to look at
+
+287
+00:11:13,290 --> 00:11:16,620
+grid first because with grid we always
+
+288
+00:11:16,620 --> 00:11:18,420
+have two axes and they kind of stay in
+
+289
+00:11:18,420 --> 00:11:20,340
+the same place so we can sort of work
+
+290
+00:11:20,340 --> 00:11:22,200
+out what the alignment does in grid
+
+291
+00:11:22,200 --> 00:11:25,560
+fairly easily so if your properties
+
+292
+00:11:25,560 --> 00:11:29,820
+begin with a line they work on the block
+
+293
+00:11:29,820 --> 00:11:31,890
+access it doesn't matter if your block
+
+294
+00:11:31,890 --> 00:11:34,020
+axis is like in English and is running
+
+295
+00:11:34,020 --> 00:11:36,090
+down the page or your block access is in
+
+296
+00:11:36,090 --> 00:11:37,590
+a vertical writing mode and so is
+
+297
+00:11:37,590 --> 00:11:40,470
+running across the page you align on the
+
+298
+00:11:40,470 --> 00:11:43,650
+block access and you justify therefore
+
+299
+00:11:43,650 --> 00:11:46,650
+on the inline axis now I remember that
+
+300
+00:11:46,650 --> 00:11:48,600
+because I think about text justification
+
+301
+00:11:48,600 --> 00:11:50,430
+if you're going to justify your text in
+
+302
+00:11:50,430 --> 00:11:53,910
+an editor then you'd be doing that along
+
+303
+00:11:53,910 --> 00:11:55,290
+the sentence that's the in line
+
+304
+00:11:55,290 --> 00:12:01,320
+direction so that's where we justify so
+
+305
+00:12:01,320 --> 00:12:02,970
+we can have a look at how that works in
+
+306
+00:12:02,970 --> 00:12:05,850
+grid so if we use a line self the
+
+307
+00:12:05,850 --> 00:12:07,320
+default is stretched so we get those
+
+308
+00:12:07,320 --> 00:12:09,510
+kind of full height columns if we align
+
+309
+00:12:09,510 --> 00:12:10,950
+self to start then on the block
+
+310
+00:12:10,950 --> 00:12:13,050
+Direction we go to the start to the
+
+311
+00:12:13,050 --> 00:12:16,290
+start edge there if we align self to the
+
+312
+00:12:16,290 --> 00:12:19,530
+end we're going to go to the end edge of
+
+313
+00:12:19,530 --> 00:12:22,380
+their axes and if we Center we get our
+
+314
+00:12:22,380 --> 00:12:23,700
+nice centering
+
+315
+00:12:23,700 --> 00:12:26,940
+so that's all on the block axis and so
+
+316
+00:12:26,940 --> 00:12:28,770
+then if we justify then we're dealing
+
+317
+00:12:28,770 --> 00:12:31,440
+with the inline axis so we justify self
+
+318
+00:12:31,440 --> 00:12:33,480
+Center and that other box goes right
+
+319
+00:12:33,480 --> 00:12:35,550
+into the middle and it's being centered
+
+320
+00:12:35,550 --> 00:12:38,370
+in that grid area that it's sat in and
+
+321
+00:12:38,370 --> 00:12:40,440
+if we justify self start then it goes to
+
+322
+00:12:40,440 --> 00:12:43,860
+the start now so then if we look at a
+
+323
+00:12:43,860 --> 00:12:46,050
+different writing mode if we go into a
+
+324
+00:12:46,050 --> 00:12:49,230
+writing mode vertical RL and I'm already
+
+325
+00:12:49,230 --> 00:12:51,330
+using in line size there so the box is
+
+326
+00:12:51,330 --> 00:12:53,310
+going to tip over you can see the
+
+327
+00:12:53,310 --> 00:12:55,560
+alignment properties work in exactly the
+
+328
+00:12:55,560 --> 00:12:57,000
+same way because we're still dealing
+
+329
+00:12:57,000 --> 00:13:01,380
+with the block and the inline access mam
+
+330
+00:13:01,380 --> 00:13:03,360
+really usefully if you're working with
+
+331
+00:13:03,360 --> 00:13:05,070
+grid layout you want to be using Firefox
+
+332
+00:13:05,070 --> 00:13:06,540
+and you want to use the good inspector
+
+333
+00:13:06,540 --> 00:13:09,840
+I'm inspecting my grid here and you can
+
+334
+00:13:09,840 --> 00:13:12,660
+see how all of the lines of the grid and
+
+335
+00:13:12,660 --> 00:13:14,910
+the tracks they're all apparent and you
+
+336
+00:13:14,910 --> 00:13:16,290
+can see them you can work out when
+
+337
+00:13:16,290 --> 00:13:17,730
+you're special needing alignment and
+
+338
+00:13:17,730 --> 00:13:19,110
+you're pushing things around inside that
+
+339
+00:13:19,110 --> 00:13:21,360
+box it's really handy to be able to see
+
+340
+00:13:21,360 --> 00:13:22,649
+what the grid area is
+
+341
+00:13:22,649 --> 00:13:24,449
+that you're aligning in and so
+
+342
+00:13:24,449 --> 00:13:25,860
+definitely even if you don't normally
+
+343
+00:13:25,860 --> 00:13:27,540
+use Firefox for development
+
+344
+00:13:27,540 --> 00:13:29,670
+you know chrome have gone down the lines
+
+345
+00:13:29,670 --> 00:13:31,379
+of giving us really great tools for
+
+346
+00:13:31,379 --> 00:13:33,509
+dealing with performance and so on
+
+347
+00:13:33,509 --> 00:13:35,579
+Firefox are putting a lot of work into
+
+348
+00:13:35,579 --> 00:13:37,889
+designer tools so things like the grid
+
+349
+00:13:37,889 --> 00:13:41,069
+inspector the CSS shapes editor or
+
+350
+00:13:41,069 --> 00:13:42,779
+really useful stuff if you're designing
+
+351
+00:13:42,779 --> 00:13:44,399
+for the web and you want to play around
+
+352
+00:13:44,399 --> 00:13:50,490
+in the browser so some other things you
+
+353
+00:13:50,490 --> 00:13:52,199
+might be working with and we have
+
+354
+00:13:52,199 --> 00:13:54,839
+languages which run right-to-left and
+
+355
+00:13:54,839 --> 00:13:56,730
+that affects things like grid layout and
+
+356
+00:13:56,730 --> 00:13:59,910
+alignment too if you're working in a
+
+357
+00:13:59,910 --> 00:14:01,800
+right to left language or for some
+
+358
+00:14:01,800 --> 00:14:03,480
+reason you've just changed the direction
+
+359
+00:14:03,480 --> 00:14:05,850
+which is pretty less likely and you're
+
+360
+00:14:05,850 --> 00:14:08,730
+then using you know justify items so
+
+361
+00:14:08,730 --> 00:14:10,860
+we've got just a fightin start if we're
+
+362
+00:14:10,860 --> 00:14:12,600
+working left to right the start is on
+
+363
+00:14:12,600 --> 00:14:14,730
+the left hand side if we change our
+
+364
+00:14:14,730 --> 00:14:17,040
+direction to right-to-left then start is
+
+365
+00:14:17,040 --> 00:14:19,529
+on the right hand side because it works
+
+366
+00:14:19,529 --> 00:14:21,540
+with the writing mode and the direction
+
+367
+00:14:21,540 --> 00:14:24,569
+of the text and flexbox is exactly the
+
+368
+00:14:24,569 --> 00:14:26,639
+same so then when we just fight items
+
+369
+00:14:26,639 --> 00:14:28,499
+end that actually goes to the left hand
+
+370
+00:14:28,499 --> 00:14:29,970
+side if we're in a right to left
+
+371
+00:14:29,970 --> 00:14:36,809
+language and to something else we might
+
+372
+00:14:36,809 --> 00:14:39,629
+want to align with grid and that's the
+
+373
+00:14:39,629 --> 00:14:42,569
+grid tracks themselves we tend to think
+
+374
+00:14:42,569 --> 00:14:44,339
+of grid layouts and we've got you know
+
+375
+00:14:44,339 --> 00:14:47,429
+the entire area is taken up by grid
+
+376
+00:14:47,429 --> 00:14:49,379
+tracks and they completely fill the grid
+
+377
+00:14:49,379 --> 00:14:51,839
+container but your tracks might not take
+
+378
+00:14:51,839 --> 00:14:54,300
+up all of the available space and in
+
+379
+00:14:54,300 --> 00:14:56,490
+that case you need to decide what to do
+
+380
+00:14:56,490 --> 00:14:58,740
+with the leftover space you've got some
+
+381
+00:14:58,740 --> 00:15:01,290
+grid tracks and then we've got a bit of
+
+382
+00:15:01,290 --> 00:15:04,040
+space left over here I've got some space
+
+383
+00:15:04,040 --> 00:15:06,540
+the grid tracks by default are aligned
+
+384
+00:15:06,540 --> 00:15:08,549
+to start in both the block and inline
+
+385
+00:15:08,549 --> 00:15:10,499
+dimension and we've got that bit of
+
+386
+00:15:10,499 --> 00:15:12,749
+space either side of them at the end of
+
+387
+00:15:12,749 --> 00:15:14,009
+the tracks and at the bottom of the
+
+388
+00:15:14,009 --> 00:15:15,779
+tracks there's a little bit of space
+
+389
+00:15:15,779 --> 00:15:20,069
+left over so we use a line content on
+
+390
+00:15:20,069 --> 00:15:22,559
+the block axis again to deal with that
+
+391
+00:15:22,559 --> 00:15:24,839
+space so if the tracks are moved to the
+
+392
+00:15:24,839 --> 00:15:26,399
+ends and the space is put at the
+
+393
+00:15:26,399 --> 00:15:28,889
+beginning the content properties are all
+
+394
+00:15:28,889 --> 00:15:31,740
+about space distribution and we can send
+
+395
+00:15:31,740 --> 00:15:34,679
+to them so when you're dealing with a
+
+396
+00:15:34,679 --> 00:15:36,420
+line content and justified
+
+397
+00:15:36,420 --> 00:15:38,130
+content what you're doing is you're
+
+398
+00:15:38,130 --> 00:15:39,990
+dealing with available space we've got
+
+399
+00:15:39,990 --> 00:15:42,240
+no available space nothing is actually
+
+400
+00:15:42,240 --> 00:15:43,649
+going to happen because there's nothing
+
+401
+00:15:43,649 --> 00:15:46,260
+to share out and so we get that sort of
+
+402
+00:15:46,260 --> 00:15:52,470
+proper centering of our tracks so if we
+
+403
+00:15:52,470 --> 00:15:54,750
+go to space between the tracks all kind
+
+404
+00:15:54,750 --> 00:15:56,639
+of blow apart and our gaps all get
+
+405
+00:15:56,639 --> 00:15:58,470
+bigger and if we look in the grid
+
+406
+00:15:58,470 --> 00:16:01,649
+inspector again you can see how those
+
+407
+00:16:01,649 --> 00:16:03,959
+tracks and the actual gaps in between
+
+408
+00:16:03,959 --> 00:16:07,620
+have spread out and also any items that
+
+409
+00:16:07,620 --> 00:16:10,350
+span over those tracks they also spread
+
+410
+00:16:10,350 --> 00:16:12,449
+out so this is something to be aware of
+
+411
+00:16:12,449 --> 00:16:14,250
+if you're spacing out tracks in grid
+
+412
+00:16:14,250 --> 00:16:15,930
+layout things are going to get bigger
+
+413
+00:16:15,930 --> 00:16:17,940
+than you expected and again you know
+
+414
+00:16:17,940 --> 00:16:20,279
+Firefox good inspector showing us what's
+
+415
+00:16:20,279 --> 00:16:22,260
+actually going on there and letting us
+
+416
+00:16:22,260 --> 00:16:28,470
+make decisions about our design so in
+
+417
+00:16:28,470 --> 00:16:30,420
+grid I think that those properties seem
+
+418
+00:16:30,420 --> 00:16:32,459
+fairly consistent you know once we
+
+419
+00:16:32,459 --> 00:16:33,750
+remember that we're working on the block
+
+420
+00:16:33,750 --> 00:16:35,519
+and the inline axis and which properties
+
+421
+00:16:35,519 --> 00:16:38,449
+are which it's fairly straightforward
+
+422
+00:16:38,449 --> 00:16:40,890
+flexbox is a little bit more complicated
+
+423
+00:16:40,890 --> 00:16:43,670
+because we can mess around with our flex
+
+424
+00:16:43,670 --> 00:16:47,250
+direction and so in Flex box it is much
+
+425
+00:16:47,250 --> 00:16:49,740
+easier to think about the main axis and
+
+426
+00:16:49,740 --> 00:16:53,220
+the cross axis and so the main axis is
+
+427
+00:16:53,220 --> 00:16:55,079
+the axis that you use when you set your
+
+428
+00:16:55,079 --> 00:16:57,240
+Flex direction if you say flex direction
+
+429
+00:16:57,240 --> 00:16:59,820
+row that's your main axis if you say
+
+430
+00:16:59,820 --> 00:17:01,800
+Flex Direction column that's your main
+
+431
+00:17:01,800 --> 00:17:04,829
+axis and a row will always be in the
+
+432
+00:17:04,829 --> 00:17:07,020
+inline direction in your writing mode so
+
+433
+00:17:07,020 --> 00:17:09,390
+a row in English is running horizontally
+
+434
+00:17:09,390 --> 00:17:12,540
+and a row in vertical writing mode is
+
+435
+00:17:12,540 --> 00:17:13,740
+going to be running up and down the page
+
+436
+00:17:13,740 --> 00:17:16,620
+on the cross axis we've got all three
+
+437
+00:17:16,620 --> 00:17:18,750
+properties we've got a line content if
+
+438
+00:17:18,750 --> 00:17:20,520
+we've got rapt flex items you've got a
+
+439
+00:17:20,520 --> 00:17:22,199
+line surfing the line items we'll have a
+
+440
+00:17:22,199 --> 00:17:24,600
+look at those on the main axis we've
+
+441
+00:17:24,600 --> 00:17:27,179
+only got justified content because in
+
+442
+00:17:27,179 --> 00:17:29,640
+Flex box were just stealing with space
+
+443
+00:17:29,640 --> 00:17:33,630
+distribution so if we look at Flex box
+
+444
+00:17:33,630 --> 00:17:36,390
+and we use justify content on the main
+
+445
+00:17:36,390 --> 00:17:39,900
+axis so here I'm working with a row and
+
+446
+00:17:39,900 --> 00:17:41,880
+I'm going to move all my items to the
+
+447
+00:17:41,880 --> 00:17:44,610
+end and the space goes before them and
+
+448
+00:17:44,610 --> 00:17:46,919
+if we do space between the space is
+
+449
+00:17:46,919 --> 00:17:48,990
+shared out in between the items and it's
+
+450
+00:17:48,990 --> 00:17:50,510
+nice and flexible
+
+451
+00:17:50,510 --> 00:17:54,060
+if we change the flex direction to
+
+452
+00:17:54,060 --> 00:17:56,070
+column I've got a height there so I've
+
+453
+00:17:56,070 --> 00:17:58,350
+got some extra space then it's working
+
+454
+00:17:58,350 --> 00:18:00,300
+exactly the same we were using justify
+
+455
+00:18:00,300 --> 00:18:02,280
+content in the direction of the Flex
+
+456
+00:18:02,280 --> 00:18:04,200
+direction and we've got this space and
+
+457
+00:18:04,200 --> 00:18:07,680
+we're spacing it out between and just as
+
+458
+00:18:07,680 --> 00:18:10,050
+with grid if we change our writing mode
+
+459
+00:18:10,050 --> 00:18:12,540
+it all just flips around and it all
+
+460
+00:18:12,540 --> 00:18:15,690
+behaves in exactly the same way because
+
+461
+00:18:15,690 --> 00:18:21,090
+we care about writing modes something to
+
+462
+00:18:21,090 --> 00:18:22,560
+note there's no so there's no justify
+
+463
+00:18:22,560 --> 00:18:24,570
+self or justify items in Flex box
+
+464
+00:18:24,570 --> 00:18:26,520
+because you're dealing with items as a
+
+465
+00:18:26,520 --> 00:18:28,740
+group on the main axis you're not
+
+466
+00:18:28,740 --> 00:18:33,520
+dealing with separate items in Flex box
+
+467
+00:18:33,530 --> 00:18:36,150
+but on the cross axis you can have
+
+468
+00:18:36,150 --> 00:18:38,580
+wrapped Flex items that wrap round and
+
+469
+00:18:38,580 --> 00:18:40,770
+if you have wrapped Flex items and
+
+470
+00:18:40,770 --> 00:18:42,810
+you've got some extra space then you've
+
+471
+00:18:42,810 --> 00:18:45,990
+got some space to distribute so on the
+
+472
+00:18:45,990 --> 00:18:48,990
+cross axis we can use the align content
+
+473
+00:18:48,990 --> 00:18:50,730
+property and it works exactly the same
+
+474
+00:18:50,730 --> 00:18:53,220
+as justify content if we've got some
+
+475
+00:18:53,220 --> 00:18:55,230
+spare space we can then use that
+
+476
+00:18:55,230 --> 00:18:57,930
+property to share out the space to move
+
+477
+00:18:57,930 --> 00:19:00,810
+the items around to Center them to give
+
+478
+00:19:00,810 --> 00:19:03,240
+them space between and once again it
+
+479
+00:19:03,240 --> 00:19:04,800
+behaves in exactly the same way if
+
+480
+00:19:04,800 --> 00:19:06,720
+you're working in a vertical writing
+
+481
+00:19:06,720 --> 00:19:09,930
+mode and so your columns are running
+
+482
+00:19:09,930 --> 00:19:16,410
+across the page now on the cross access
+
+483
+00:19:16,410 --> 00:19:18,570
+that's where you might want to align
+
+484
+00:19:18,570 --> 00:19:21,240
+your items against each other your Flex
+
+485
+00:19:21,240 --> 00:19:22,980
+container has a height of some sort
+
+486
+00:19:22,980 --> 00:19:24,630
+something is defining the height it
+
+487
+00:19:24,630 --> 00:19:26,430
+might be that as in this case the
+
+488
+00:19:26,430 --> 00:19:28,980
+tallest item is giving that liner height
+
+489
+00:19:28,980 --> 00:19:30,720
+or it could be that you've given the
+
+490
+00:19:30,720 --> 00:19:33,810
+Flex container a height itself so once
+
+491
+00:19:33,810 --> 00:19:35,580
+you've got a height you can then align
+
+492
+00:19:35,580 --> 00:19:38,460
+the items against each other so you can
+
+493
+00:19:38,460 --> 00:19:40,470
+align them to flex start so instead of
+
+494
+00:19:40,470 --> 00:19:41,880
+stretching to the height of the Flex
+
+495
+00:19:41,880 --> 00:19:44,160
+container they all hop up and go to the
+
+496
+00:19:44,160 --> 00:19:46,410
+start and if you line them to Flex end
+
+497
+00:19:46,410 --> 00:19:48,450
+as you can see we're working with a line
+
+498
+00:19:48,450 --> 00:19:50,700
+so we're working on the cross access and
+
+499
+00:19:50,700 --> 00:19:54,480
+dealing with our items if you change the
+
+500
+00:19:54,480 --> 00:19:56,640
+Flex direction to column then it works
+
+501
+00:19:56,640 --> 00:19:58,020
+in exactly the same way because our
+
+502
+00:19:58,020 --> 00:20:00,420
+cross access is now running across the
+
+503
+00:20:00,420 --> 00:20:02,670
+screen and so we can move our items
+
+504
+00:20:02,670 --> 00:20:03,810
+around on
+
+505
+00:20:03,810 --> 00:20:09,390
+it's access and this of course works in
+
+506
+00:20:09,390 --> 00:20:11,460
+exactly the same way we go there are
+
+507
+00:20:11,460 --> 00:20:14,220
+writing modes and we can switch it
+
+508
+00:20:14,220 --> 00:20:16,140
+around with writing modes and columns go
+
+509
+00:20:16,140 --> 00:20:17,850
+in the way that columns run in that
+
+510
+00:20:17,850 --> 00:20:19,590
+writing mode and it all works in the
+
+511
+00:20:19,590 --> 00:20:25,290
+same way so alignment is pretty neat
+
+512
+00:20:25,290 --> 00:20:27,150
+when I introduced the alignment spec I
+
+513
+00:20:27,150 --> 00:20:28,590
+said well the alignment properties were
+
+514
+00:20:28,590 --> 00:20:30,600
+taken out of the flexbox spec and they
+
+515
+00:20:30,600 --> 00:20:31,950
+were put into their own specs they could
+
+516
+00:20:31,950 --> 00:20:34,200
+be used by other layout methods now
+
+517
+00:20:34,200 --> 00:20:36,480
+they've got you know implementation in
+
+518
+00:20:36,480 --> 00:20:38,160
+grid so you can use those alignment
+
+519
+00:20:38,160 --> 00:20:40,710
+methods in grid layout they are also
+
+520
+00:20:40,710 --> 00:20:43,800
+specified for block layout and that
+
+521
+00:20:43,800 --> 00:20:46,200
+would mean that you could just have a
+
+522
+00:20:46,200 --> 00:20:48,450
+box inside another box and use the
+
+523
+00:20:48,450 --> 00:20:50,610
+alignment properties to Center it at the
+
+524
+00:20:50,610 --> 00:20:52,050
+moment there isn't any browser
+
+525
+00:20:52,050 --> 00:20:53,850
+implementation of that so if you have
+
+526
+00:20:53,850 --> 00:20:55,770
+you know one thing that you want to
+
+527
+00:20:55,770 --> 00:20:58,050
+Center inside another thing the best way
+
+528
+00:20:58,050 --> 00:20:59,850
+to do that at the moment is to turn the
+
+529
+00:20:59,850 --> 00:21:02,070
+outer into a Flex container and then you
+
+530
+00:21:02,070 --> 00:21:03,480
+can use the flex box properties to do
+
+531
+00:21:03,480 --> 00:21:04,800
+your proper vertical and horizontal
+
+532
+00:21:04,800 --> 00:21:08,040
+centering in the future we won't have to
+
+533
+00:21:08,040 --> 00:21:09,840
+make that step of also making the thing
+
+534
+00:21:09,840 --> 00:21:12,090
+a Flex container because we'll just be
+
+535
+00:21:12,090 --> 00:21:15,300
+able to do alignment on block layout and
+
+536
+00:21:15,300 --> 00:21:16,860
+but there's no real problem in making
+
+537
+00:21:16,860 --> 00:21:19,170
+containers flex containers it's just a
+
+538
+00:21:19,170 --> 00:21:20,790
+little bit weird that you have to do
+
+539
+00:21:20,790 --> 00:21:23,280
+that to make things Center at some point
+
+540
+00:21:23,280 --> 00:21:25,050
+in the future we'll get there we'll be
+
+541
+00:21:25,050 --> 00:21:29,850
+able to do that but so then we are
+
+542
+00:21:29,850 --> 00:21:34,230
+getting as part of box alignment in the
+
+543
+00:21:34,230 --> 00:21:36,000
+box alignment spec as well as all those
+
+544
+00:21:36,000 --> 00:21:37,590
+nice alignment properties getting moved
+
+545
+00:21:37,590 --> 00:21:41,430
+from flex box also the gap feature which
+
+546
+00:21:41,430 --> 00:21:43,800
+shows up in grids and in multi-core
+
+547
+00:21:43,800 --> 00:21:46,590
+that's also been moved into box
+
+548
+00:21:46,590 --> 00:21:49,110
+alignment so this idea of having gaps
+
+549
+00:21:49,110 --> 00:21:53,040
+gutters between items when the grid spec
+
+550
+00:21:53,040 --> 00:21:54,960
+first appeared it didn't have any idea
+
+551
+00:21:54,960 --> 00:21:56,250
+of gutters and this is something I
+
+552
+00:21:56,250 --> 00:21:58,230
+really pushed for that we should be able
+
+553
+00:21:58,230 --> 00:22:01,440
+to specify a gap between grid items
+
+554
+00:22:01,440 --> 00:22:02,940
+because that's a kind of normal thing
+
+555
+00:22:02,940 --> 00:22:06,990
+that you want to do in InDesign and so
+
+556
+00:22:06,990 --> 00:22:09,960
+we've now got a row gap column gap and
+
+557
+00:22:09,960 --> 00:22:12,240
+gap specified in the box alignment
+
+558
+00:22:12,240 --> 00:22:14,370
+property it box lament spec if you've
+
+559
+00:22:14,370 --> 00:22:16,440
+worked with grid layout you will know
+
+560
+00:22:16,440 --> 00:22:17,100
+that we have
+
+561
+00:22:17,100 --> 00:22:19,140
+weird gap grid row gap and grid column
+
+562
+00:22:19,140 --> 00:22:21,960
+gap kind of grid prefixed they've been
+
+563
+00:22:21,960 --> 00:22:24,390
+renamed as just column gap row gap and
+
+564
+00:22:24,390 --> 00:22:26,549
+gap but those pre fixed grid versions
+
+565
+00:22:26,549 --> 00:22:29,429
+will live forevermore as aliases because
+
+566
+00:22:29,429 --> 00:22:30,929
+they've been around already and people
+
+567
+00:22:30,929 --> 00:22:32,130
+have shipped things using them so you
+
+568
+00:22:32,130 --> 00:22:35,160
+don't need to worry about that it's kind
+
+569
+00:22:35,160 --> 00:22:36,330
+of for backwards compatibility reasons
+
+570
+00:22:36,330 --> 00:22:38,970
+we'll keep them but the nice thing about
+
+571
+00:22:38,970 --> 00:22:41,370
+those gap properties been part of box
+
+572
+00:22:41,370 --> 00:22:43,320
+alignment is that we will get them in
+
+573
+00:22:43,320 --> 00:22:47,669
+flex box now the only browser which has
+
+574
+00:22:47,669 --> 00:22:49,620
+started to implement the gap properties
+
+575
+00:22:49,620 --> 00:22:52,740
+for flex box is Firefox it's in Firefox
+
+576
+00:22:52,740 --> 00:22:55,020
+nightly at the moment I think it's going
+
+577
+00:22:55,020 --> 00:22:56,640
+into the next shipping release and
+
+578
+00:22:56,640 --> 00:22:58,440
+you'll then be able to do gaps between
+
+579
+00:22:58,440 --> 00:23:00,450
+your Flex items without having to do
+
+580
+00:23:00,450 --> 00:23:02,700
+monkey negative margins on the outside
+
+581
+00:23:02,700 --> 00:23:05,340
+and margins in between the items so
+
+582
+00:23:05,340 --> 00:23:07,380
+that's going to be really nice but it's
+
+583
+00:23:07,380 --> 00:23:09,690
+also a great example of how specs are
+
+584
+00:23:09,690 --> 00:23:12,000
+kind of evolving you know we're coming
+
+585
+00:23:12,000 --> 00:23:13,860
+up with some CSS in one specification
+
+586
+00:23:13,860 --> 00:23:16,799
+and then it's sort of making its way out
+
+587
+00:23:16,799 --> 00:23:18,780
+into other specs where it becomes
+
+588
+00:23:18,780 --> 00:23:21,030
+obvious that we need it that's kind of a
+
+589
+00:23:21,030 --> 00:23:22,710
+bit of process and things that are
+
+590
+00:23:22,710 --> 00:23:28,710
+happening and people ask me all the time
+
+591
+00:23:28,710 --> 00:23:32,010
+you know should I use grid or flexbox
+
+592
+00:23:32,010 --> 00:23:35,190
+and as you can see these things have so
+
+593
+00:23:35,190 --> 00:23:37,590
+many common features the answer really
+
+594
+00:23:37,590 --> 00:23:41,280
+is use both or either but use the one
+
+595
+00:23:41,280 --> 00:23:44,580
+that works best no one ever asks me
+
+596
+00:23:44,580 --> 00:23:46,200
+whether they should use font size or
+
+597
+00:23:46,200 --> 00:23:50,460
+color and it's kind of like that you
+
+598
+00:23:50,460 --> 00:23:52,590
+know use the layout method that works
+
+599
+00:23:52,590 --> 00:23:54,330
+we're not picking between bootstrap and
+
+600
+00:23:54,330 --> 00:23:57,600
+foundation here it's all just CSS so use
+
+601
+00:23:57,600 --> 00:23:59,730
+the use the method that works and the
+
+602
+00:23:59,730 --> 00:24:01,620
+best way to find out which method works
+
+603
+00:24:01,620 --> 00:24:03,179
+best for the components you're building
+
+604
+00:24:03,179 --> 00:24:05,400
+is just to build it you know build it
+
+605
+00:24:05,400 --> 00:24:07,159
+see oh actually this is really
+
+606
+00:24:07,159 --> 00:24:09,929
+2-dimensional so maybe it's not a Flex
+
+607
+00:24:09,929 --> 00:24:11,850
+component it's a grid component and it
+
+608
+00:24:11,850 --> 00:24:13,919
+doesn't matter what sort of component
+
+609
+00:24:13,919 --> 00:24:15,690
+you're building you can have grid
+
+610
+00:24:15,690 --> 00:24:17,400
+components that are tiny little things
+
+611
+00:24:17,400 --> 00:24:19,470
+if it's two-dimensional it's probably
+
+612
+00:24:19,470 --> 00:24:21,659
+grid if you just want something squishy
+
+613
+00:24:21,659 --> 00:24:24,630
+and flexible it's probably flexbox and
+
+614
+00:24:24,630 --> 00:24:26,340
+this cross over there but play around
+
+615
+00:24:26,340 --> 00:24:28,049
+because the more of this stuff that you
+
+616
+00:24:28,049 --> 00:24:30,390
+build the more buscar Vyas you look as
+
+617
+00:24:30,390 --> 00:24:30,809
+thing
+
+618
+00:24:30,809 --> 00:24:33,120
+design and say that's definitely grid or
+
+619
+00:24:33,120 --> 00:24:38,580
+that's definitely flexbox anomaly that
+
+620
+00:24:38,580 --> 00:24:41,759
+note sizing is another area where we've
+
+621
+00:24:41,759 --> 00:24:44,129
+gained this consistency between layout
+
+622
+00:24:44,129 --> 00:24:47,519
+methods but it really exposes the
+
+623
+00:24:47,519 --> 00:24:49,409
+difference in terms of how we've learned
+
+624
+00:24:49,409 --> 00:24:51,600
+to size things in the past because our
+
+625
+00:24:51,600 --> 00:24:54,299
+new layout methods are flexible we've
+
+626
+00:24:54,299 --> 00:24:56,039
+already seen how they distribute space
+
+627
+00:24:56,039 --> 00:24:58,740
+between items and they also can a
+
+628
+00:24:58,740 --> 00:25:04,080
+distribute space inside items so a lot
+
+629
+00:25:04,080 --> 00:25:06,360
+of demos out there for grid they give
+
+630
+00:25:06,360 --> 00:25:07,980
+you something like this and it looks
+
+631
+00:25:07,980 --> 00:25:10,860
+like the fr unit if you have three one
+
+632
+00:25:10,860 --> 00:25:13,379
+fr tracks you've got three equal width
+
+633
+00:25:13,379 --> 00:25:16,980
+tracks and that's not really quite what
+
+634
+00:25:16,980 --> 00:25:19,230
+you've got you've only got three equal
+
+635
+00:25:19,230 --> 00:25:21,210
+width tracks if you've got equal sized
+
+636
+00:25:21,210 --> 00:25:24,240
+items in those tracks if we put a very
+
+637
+00:25:24,240 --> 00:25:25,919
+long word that doesn't break into one of
+
+638
+00:25:25,919 --> 00:25:28,139
+our tracks then we don't have three
+
+639
+00:25:28,139 --> 00:25:31,049
+equal sized tracks at all and that's
+
+640
+00:25:31,049 --> 00:25:33,509
+because grid is sizing things based on
+
+641
+00:25:33,509 --> 00:25:35,879
+auto saying well what size is the thing
+
+642
+00:25:35,879 --> 00:25:37,950
+in this track and how much space have we
+
+643
+00:25:37,950 --> 00:25:40,649
+got left to distribute if you actually
+
+644
+00:25:40,649 --> 00:25:43,799
+want equal sized tracks then you're
+
+645
+00:25:43,799 --> 00:25:46,019
+going to need to use min Max and give
+
+646
+00:25:46,019 --> 00:25:48,389
+the minimum size zero so you're saying
+
+647
+00:25:48,389 --> 00:25:51,779
+this thing has no size and its maximum
+
+648
+00:25:51,779 --> 00:25:54,419
+is 1 fr and that will give you equal
+
+649
+00:25:54,419 --> 00:25:56,220
+sized tracks it may well cause overflows
+
+650
+00:25:56,220 --> 00:25:58,169
+and that's the thing about these new
+
+651
+00:25:58,169 --> 00:26:00,029
+layout methods they're trying not to
+
+652
+00:26:00,029 --> 00:26:02,610
+cause messy overflows they're trying to
+
+653
+00:26:02,610 --> 00:26:04,440
+take your content and display it in the
+
+654
+00:26:04,440 --> 00:26:07,110
+best way possible if you decide as the
+
+655
+00:26:07,110 --> 00:26:08,070
+web designer that you want to do
+
+656
+00:26:08,070 --> 00:26:09,929
+something different that's fine but by
+
+657
+00:26:09,929 --> 00:26:12,480
+default we're trying to display things
+
+658
+00:26:12,480 --> 00:26:13,830
+in a good way
+
+659
+00:26:13,830 --> 00:26:17,460
+and flexbox even more than that I think
+
+660
+00:26:17,460 --> 00:26:19,769
+flexbox really you know it's all about
+
+661
+00:26:19,769 --> 00:26:23,070
+I've got some stuff please just display
+
+662
+00:26:23,070 --> 00:26:25,919
+it in a reasonable manner don't overflow
+
+663
+00:26:25,919 --> 00:26:27,330
+it all over the place you know I don't
+
+664
+00:26:27,330 --> 00:26:30,090
+like poking out of the box and so if
+
+665
+00:26:30,090 --> 00:26:32,639
+your flex basis is Auto then growing
+
+666
+00:26:32,639 --> 00:26:36,119
+happens from auto the contents given a
+
+667
+00:26:36,119 --> 00:26:37,980
+size it's sort of its max content size
+
+668
+00:26:37,980 --> 00:26:39,629
+and then we work out you know whether we
+
+669
+00:26:39,629 --> 00:26:41,759
+need to take space away or add space to
+
+670
+00:26:41,759 --> 00:26:44,190
+let it fill the container and if you
+
+671
+00:26:44,190 --> 00:26:46,679
+don't want that you make your flex basis
+
+672
+00:26:46,679 --> 00:26:49,350
+zero if your flex basis is zero just
+
+673
+00:26:49,350 --> 00:26:51,899
+like in grid we're saying this thing has
+
+674
+00:26:51,899 --> 00:26:53,909
+got no size please share out all of the
+
+675
+00:26:53,909 --> 00:26:57,360
+space equally but flex box at heart is
+
+676
+00:26:57,360 --> 00:26:59,460
+kind of squishy and it's just for
+
+677
+00:26:59,460 --> 00:27:01,230
+putting the things into boxes and making
+
+678
+00:27:01,230 --> 00:27:03,059
+them sort of work out well and if you
+
+679
+00:27:03,059 --> 00:27:05,519
+are putting widths on all of your flex
+
+680
+00:27:05,519 --> 00:27:09,240
+items or specifying the Flex basis you
+
+681
+00:27:09,240 --> 00:27:11,610
+know as an absolute length to try and
+
+682
+00:27:11,610 --> 00:27:13,200
+make everything line up with something
+
+683
+00:27:13,200 --> 00:27:15,149
+else then it's quite likely that you
+
+684
+00:27:15,149 --> 00:27:17,190
+probably want grid which is that you
+
+685
+00:27:17,190 --> 00:27:18,539
+know that layout method that does line
+
+686
+00:27:18,539 --> 00:27:22,649
+things up with everything else I could
+
+687
+00:27:22,649 --> 00:27:24,269
+talk about sizing a lot to have entire
+
+688
+00:27:24,269 --> 00:27:26,159
+talk so I just talk about how big things
+
+689
+00:27:26,159 --> 00:27:27,990
+are and I've written up a lot of that
+
+690
+00:27:27,990 --> 00:27:29,669
+for Smashing Magazine
+
+691
+00:27:29,669 --> 00:27:32,070
+I think sizing is very very important to
+
+692
+00:27:32,070 --> 00:27:38,440
+understand to really use new layout well
+
+693
+00:27:38,450 --> 00:27:40,980
+and I think this sort of clever squishy
+
+694
+00:27:40,980 --> 00:27:43,830
+sizing of Flex books and grids it does
+
+695
+00:27:43,830 --> 00:27:46,700
+mean that we can get away with fewer
+
+696
+00:27:46,700 --> 00:27:51,299
+media queries it means that we can allow
+
+697
+00:27:51,299 --> 00:27:55,440
+grid and flexbox to squish and grow and
+
+698
+00:27:55,440 --> 00:27:58,139
+to distribute space inside the items to
+
+699
+00:27:58,139 --> 00:28:00,210
+distribute space in between the items
+
+700
+00:28:00,210 --> 00:28:01,860
+without having to add lots of
+
+701
+00:28:01,860 --> 00:28:05,549
+breakpoints but we can enhance that
+
+702
+00:28:05,549 --> 00:28:07,230
+layout with the use of major queries
+
+703
+00:28:07,230 --> 00:28:09,509
+quite often people seem to be very very
+
+704
+00:28:09,509 --> 00:28:11,549
+desperate not to use any media queries
+
+705
+00:28:11,549 --> 00:28:13,590
+and say no that they're still useful you
+
+706
+00:28:13,590 --> 00:28:15,149
+might not need as many you might not
+
+707
+00:28:15,149 --> 00:28:16,799
+need lots and lots of tiny breakpoints
+
+708
+00:28:16,799 --> 00:28:18,720
+but they can really help us enhance the
+
+709
+00:28:18,720 --> 00:28:21,360
+layout and and kind of accommodate all
+
+710
+00:28:21,360 --> 00:28:23,610
+of these different types of devices that
+
+711
+00:28:23,610 --> 00:28:26,129
+we have and we've actually got a new
+
+712
+00:28:26,129 --> 00:28:28,289
+media queries spec level for media
+
+713
+00:28:28,289 --> 00:28:30,149
+queries which brings us some new
+
+714
+00:28:30,149 --> 00:28:34,470
+functionality that we can use and we
+
+715
+00:28:34,470 --> 00:28:37,950
+have this idea of media features in the
+
+716
+00:28:37,950 --> 00:28:39,929
+older spec we should have had this idea
+
+717
+00:28:39,929 --> 00:28:41,639
+it's got a media types you kind of got
+
+718
+00:28:41,639 --> 00:28:43,620
+prints and and different kinds but
+
+719
+00:28:43,620 --> 00:28:46,080
+they're very very broad and actually you
+
+720
+00:28:46,080 --> 00:28:48,570
+don't really care what the thing is you
+
+721
+00:28:48,570 --> 00:28:50,970
+care what features it has because
+
+722
+00:28:50,970 --> 00:28:52,619
+there's quite a lot of crossover you
+
+723
+00:28:52,619 --> 00:28:54,269
+know people are viewing web pages on
+
+724
+00:28:54,269 --> 00:28:56,940
+essentially epub readers or on
+
+725
+00:28:56,940 --> 00:28:58,230
+televisions
+
+726
+00:28:58,230 --> 00:28:59,940
+or we've got laptops that have
+
+727
+00:28:59,940 --> 00:29:01,770
+touchscreens you know there are all
+
+728
+00:29:01,770 --> 00:29:03,300
+these different devices and they kind of
+
+729
+00:29:03,300 --> 00:29:06,210
+all cross over so it's a kind of bad
+
+730
+00:29:06,210 --> 00:29:07,800
+thing to be looking at well how big is
+
+731
+00:29:07,800 --> 00:29:09,420
+the screen oh it must be a touchscreen
+
+732
+00:29:09,420 --> 00:29:11,670
+because you know my laptop's got a
+
+733
+00:29:11,670 --> 00:29:14,250
+touchscreen it's not a phone so what
+
+734
+00:29:14,250 --> 00:29:15,300
+we're doing is we're saying we've got
+
+735
+00:29:15,300 --> 00:29:17,280
+these media features what features does
+
+736
+00:29:17,280 --> 00:29:21,450
+this environment have and one of those
+
+737
+00:29:21,450 --> 00:29:22,710
+media features which actually been
+
+738
+00:29:22,710 --> 00:29:24,390
+implemented in various browsers is to
+
+739
+00:29:24,390 --> 00:29:26,520
+detect the type of pointer the user has
+
+740
+00:29:26,520 --> 00:29:29,700
+because that's useful information has
+
+741
+00:29:29,700 --> 00:29:32,160
+someone got a fine pointer which is like
+
+742
+00:29:32,160 --> 00:29:34,260
+a mouse so you can click very accurately
+
+743
+00:29:34,260 --> 00:29:37,110
+on small things Oh have you got a coarse
+
+744
+00:29:37,110 --> 00:29:39,180
+pointer you're using your finger to
+
+745
+00:29:39,180 --> 00:29:42,030
+touch things and drag things around so
+
+746
+00:29:42,030 --> 00:29:43,860
+that's you know two different types of
+
+747
+00:29:43,860 --> 00:29:45,180
+ways of interacting with the content
+
+748
+00:29:45,180 --> 00:29:47,460
+that's a useful thing for us to be able
+
+749
+00:29:47,460 --> 00:29:50,610
+to detect you know have we got that
+
+750
+00:29:50,610 --> 00:29:54,180
+course pointer or a fine pointer so we
+
+751
+00:29:54,180 --> 00:29:56,430
+can work out how our user is interacting
+
+752
+00:29:56,430 --> 00:29:59,220
+with the application or site that we've
+
+753
+00:29:59,220 --> 00:30:00,990
+built and maybe change things perhaps
+
+754
+00:30:00,990 --> 00:30:03,000
+make the hit areas larger if we know
+
+755
+00:30:03,000 --> 00:30:09,930
+that someone is using a touchscreen and
+
+756
+00:30:09,930 --> 00:30:14,490
+along with media queries it's all very
+
+757
+00:30:14,490 --> 00:30:16,590
+well knowing that the user has a certain
+
+758
+00:30:16,590 --> 00:30:19,170
+type of device or how big that device is
+
+759
+00:30:19,170 --> 00:30:20,820
+or you know how they're interacting with
+
+760
+00:30:20,820 --> 00:30:24,680
+it that's a useful thing for us to know
+
+761
+00:30:24,680 --> 00:30:28,590
+but we also have this idea of well what
+
+762
+00:30:28,590 --> 00:30:31,860
+CSS has the user got you know if I do a
+
+763
+00:30:31,860 --> 00:30:33,900
+really fancy grid layout does the user
+
+764
+00:30:33,900 --> 00:30:36,030
+get that do they get something else we
+
+765
+00:30:36,030 --> 00:30:37,740
+never really know and we're never going
+
+766
+00:30:37,740 --> 00:30:40,260
+to know so what we need is a way for us
+
+767
+00:30:40,260 --> 00:30:43,890
+to ask the browser exactly what CSS it
+
+768
+00:30:43,890 --> 00:30:45,990
+supports and that's what feature queries
+
+769
+00:30:45,990 --> 00:30:48,870
+do they let us say hey web browser
+
+770
+00:30:48,870 --> 00:30:51,870
+do you support grid do you support
+
+771
+00:30:51,870 --> 00:30:54,480
+shapes do you support this fancy new CSS
+
+772
+00:30:54,480 --> 00:30:56,130
+that we haven't even thought of yet and
+
+773
+00:30:56,130 --> 00:30:58,560
+then if the browser does support it we
+
+774
+00:30:58,560 --> 00:31:00,660
+can use it and if it doesn't then the
+
+775
+00:31:00,660 --> 00:31:04,410
+fallback CSS will be used and they kind
+
+776
+00:31:04,410 --> 00:31:05,490
+of look like this they just look like a
+
+777
+00:31:05,490 --> 00:31:06,870
+media query except we're saying app
+
+778
+00:31:06,870 --> 00:31:09,540
+supports do you support and then
+
+779
+00:31:09,540 --> 00:31:11,580
+whatever you're looking for and propped
+
+780
+00:31:11,580 --> 00:31:13,380
+value.now which means that you can get
+
+781
+00:31:13,380 --> 00:31:16,560
+quite fine-grained if you know that you
+
+782
+00:31:16,560 --> 00:31:18,870
+know some feature of a specification
+
+783
+00:31:18,870 --> 00:31:20,910
+isn't supported you can just look for
+
+784
+00:31:20,910 --> 00:31:23,190
+that you could look for prefix things
+
+785
+00:31:23,190 --> 00:31:25,100
+you know the few that are still around
+
+786
+00:31:25,100 --> 00:31:27,780
+so you can find out whether the browser
+
+787
+00:31:27,780 --> 00:31:30,000
+supports something and then do something
+
+788
+00:31:30,000 --> 00:31:32,340
+because of that and that works really
+
+789
+00:31:32,340 --> 00:31:33,170
+well
+
+790
+00:31:33,170 --> 00:31:35,610
+because we've got really good support
+
+791
+00:31:35,610 --> 00:31:38,100
+now for feature queries everything all
+
+792
+00:31:38,100 --> 00:31:39,930
+the new browsers the browsers that you
+
+793
+00:31:39,930 --> 00:31:41,310
+are likely to come across that don't
+
+794
+00:31:41,310 --> 00:31:43,530
+support feature queries are your old
+
+795
+00:31:43,530 --> 00:31:45,960
+II's it doesn't really matter that old
+
+796
+00:31:45,960 --> 00:31:47,280
+ie doesn't support feature queries
+
+797
+00:31:47,280 --> 00:31:48,990
+because what you do is you use the way
+
+798
+00:31:48,990 --> 00:31:51,900
+that CSS works you write your old CSS
+
+799
+00:31:51,900 --> 00:31:53,850
+that works for any old browsers that
+
+800
+00:31:53,850 --> 00:31:55,860
+happen to come along any non supporting
+
+801
+00:31:55,860 --> 00:31:57,990
+browsers that show up then you have your
+
+802
+00:31:57,990 --> 00:32:00,510
+feature query and then inside there you
+
+803
+00:32:00,510 --> 00:32:02,490
+write your code that overwrites the kind
+
+804
+00:32:02,490 --> 00:32:04,050
+of old layout and adds all your fancy
+
+805
+00:32:04,050 --> 00:32:07,440
+new stuff that's kind of the way CSS
+
+806
+00:32:07,440 --> 00:32:08,850
+works and a browser that comes around
+
+807
+00:32:08,850 --> 00:32:10,350
+that doesn't understand feature queries
+
+808
+00:32:10,350 --> 00:32:12,360
+it's just gonna go I don't know what
+
+809
+00:32:12,360 --> 00:32:14,040
+that is and it can have it because
+
+810
+00:32:14,040 --> 00:32:16,800
+that's how CSS works it's this wonderful
+
+811
+00:32:16,800 --> 00:32:19,170
+language that just if a browser comes on
+
+812
+00:32:19,170 --> 00:32:20,880
+it doesn't understand some of CSS it
+
+813
+00:32:20,880 --> 00:32:23,430
+just totally ignores that stuff so you
+
+814
+00:32:23,430 --> 00:32:25,950
+can wrap up anything which might cause a
+
+815
+00:32:25,950 --> 00:32:28,170
+problem and for a browser that might get
+
+816
+00:32:28,170 --> 00:32:31,050
+bits of it but not say the grid code in
+
+817
+00:32:31,050 --> 00:32:33,630
+a feature query and sort of safely use
+
+818
+00:32:33,630 --> 00:32:36,930
+it anything new that comes along in CSS
+
+819
+00:32:36,930 --> 00:32:39,390
+from this point you can use a feature
+
+820
+00:32:39,390 --> 00:32:42,900
+query to detect support of and use it it
+
+821
+00:32:42,900 --> 00:32:45,390
+lets you sort of safely use things in
+
+822
+00:32:45,390 --> 00:32:47,730
+your CSS and try things out and enhance
+
+823
+00:32:47,730 --> 00:32:49,590
+your layouts for people who have support
+
+824
+00:32:49,590 --> 00:32:53,490
+for whatever comes along now this is a
+
+825
+00:32:53,490 --> 00:32:55,710
+useful article by Jen Simmons which
+
+826
+00:32:55,710 --> 00:32:57,000
+takes you through how to use feature
+
+827
+00:32:57,000 --> 00:32:58,800
+queries in exactly that way you know
+
+828
+00:32:58,800 --> 00:33:02,220
+layering on support for things that and
+
+829
+00:33:02,220 --> 00:33:04,590
+support in that case I think graders is
+
+830
+00:33:04,590 --> 00:33:07,800
+mostly what she's talking about because
+
+831
+00:33:07,800 --> 00:33:10,650
+the thing is you know we I think a lot
+
+832
+00:33:10,650 --> 00:33:12,000
+of us you know we're having to still
+
+833
+00:33:12,000 --> 00:33:14,820
+support old ie browsers and that's
+
+834
+00:33:14,820 --> 00:33:16,680
+probably the browsers that we all think
+
+835
+00:33:16,680 --> 00:33:18,710
+or you know I wish they would go away
+
+836
+00:33:18,710 --> 00:33:21,570
+but it's always been the case I remember
+
+837
+00:33:21,570 --> 00:33:23,550
+when Netscape 4 was the old browsers
+
+838
+00:33:23,550 --> 00:33:24,720
+that we all wished would go away and
+
+839
+00:33:24,720 --> 00:33:25,200
+then
+
+840
+00:33:25,200 --> 00:33:27,149
+I six was the old browser that we all
+
+841
+00:33:27,149 --> 00:33:29,039
+wished would go away you know this is
+
+842
+00:33:29,039 --> 00:33:30,600
+never going to change
+
+843
+00:33:30,600 --> 00:33:34,260
+although browsers are you know shipping
+
+844
+00:33:34,260 --> 00:33:37,860
+new releases faster than ever new CSS is
+
+845
+00:33:37,860 --> 00:33:40,919
+coming out faster than ever - and you're
+
+846
+00:33:40,919 --> 00:33:43,080
+never going to get a point where you
+
+847
+00:33:43,080 --> 00:33:45,120
+know new CSS features developed by the
+
+848
+00:33:45,120 --> 00:33:46,740
+CSS working group and overnight it
+
+849
+00:33:46,740 --> 00:33:48,840
+appears in everybody's browsers that's
+
+850
+00:33:48,840 --> 00:33:50,340
+just not going to happen
+
+851
+00:33:50,340 --> 00:33:53,100
+I mean increasingly we've got people you
+
+852
+00:33:53,100 --> 00:33:54,899
+know around the world who are using
+
+853
+00:33:54,899 --> 00:33:57,419
+mobile phones to access web content and
+
+854
+00:33:57,419 --> 00:33:58,740
+some of those are quite old they're
+
+855
+00:33:58,740 --> 00:34:01,019
+locked to older versions of browsers you
+
+856
+00:34:01,019 --> 00:34:03,059
+know we don't know what anyone's looking
+
+857
+00:34:03,059 --> 00:34:05,070
+at our sites with and we can't rely on
+
+858
+00:34:05,070 --> 00:34:06,750
+those fancy new features have been
+
+859
+00:34:06,750 --> 00:34:10,649
+available to them and so there's always
+
+860
+00:34:10,649 --> 00:34:12,480
+going to be browsers that don't support
+
+861
+00:34:12,480 --> 00:34:15,240
+something you want to use hopefully
+
+862
+00:34:15,240 --> 00:34:17,369
+those things will you know progress more
+
+863
+00:34:17,369 --> 00:34:19,320
+quickly most the time but it's always
+
+864
+00:34:19,320 --> 00:34:20,790
+gonna happen and you know here's a
+
+865
+00:34:20,790 --> 00:34:23,579
+feature that I'm sure fairly soon we're
+
+866
+00:34:23,579 --> 00:34:24,960
+going to be saying who you know this
+
+867
+00:34:24,960 --> 00:34:26,520
+this browser doesn't support this
+
+868
+00:34:26,520 --> 00:34:28,889
+feature and that's the subgrid feature
+
+869
+00:34:28,889 --> 00:34:34,319
+of CSS grid layout when we sort of
+
+870
+00:34:34,319 --> 00:34:38,069
+specified grid layout there was in the
+
+871
+00:34:38,069 --> 00:34:41,339
+level 1 spec this idea of sub grids and
+
+872
+00:34:41,339 --> 00:34:43,740
+the thing about sub grids you see with
+
+873
+00:34:43,740 --> 00:34:46,079
+grid layout and with flexbox it's only
+
+874
+00:34:46,079 --> 00:34:49,050
+the direct children of your grid
+
+875
+00:34:49,050 --> 00:34:51,960
+container that become grid items so if
+
+876
+00:34:51,960 --> 00:34:54,419
+we have a design like this this is the
+
+877
+00:34:54,419 --> 00:34:56,159
+sort of design that your designer brings
+
+878
+00:34:56,159 --> 00:34:59,280
+to you and they say look I've got these
+
+879
+00:34:59,280 --> 00:35:01,710
+three boxes and I want them you know on
+
+880
+00:35:01,710 --> 00:35:03,390
+them laid out like this yeah I go yep
+
+881
+00:35:03,390 --> 00:35:05,400
+and do that with grid layout that's a
+
+882
+00:35:05,400 --> 00:35:08,250
+really simple three column grid and put
+
+883
+00:35:08,250 --> 00:35:10,560
+the content in and it goes into the CMS
+
+884
+00:35:10,560 --> 00:35:14,040
+and then you end up with this because
+
+885
+00:35:14,040 --> 00:35:15,930
+the designer never gives you content
+
+886
+00:35:15,930 --> 00:35:17,369
+that like you know some of the headings
+
+887
+00:35:17,369 --> 00:35:19,170
+are taller and so on ask that's not what
+
+888
+00:35:19,170 --> 00:35:20,970
+you ever get it's always very neatly
+
+889
+00:35:20,970 --> 00:35:22,410
+lined up because it's got the same
+
+890
+00:35:22,410 --> 00:35:25,170
+amount of text and yet when things get
+
+891
+00:35:25,170 --> 00:35:27,240
+into the real world they don't line up
+
+892
+00:35:27,240 --> 00:35:29,250
+as neatly you have something about a
+
+893
+00:35:29,250 --> 00:35:31,470
+bigger font size or more content or
+
+894
+00:35:31,470 --> 00:35:33,599
+whatever is going on it's not going to
+
+895
+00:35:33,599 --> 00:35:35,880
+line up properly and that goes back to
+
+896
+00:35:35,880 --> 00:35:37,290
+the designer and they're like I wanted
+
+897
+00:35:37,290 --> 00:35:38,700
+those headings to line up
+
+898
+00:35:38,700 --> 00:35:40,799
+that's like go on off you go go and sort
+
+899
+00:35:40,799 --> 00:35:45,329
+it out and you can't because those cards
+
+900
+00:35:45,329 --> 00:35:47,220
+are all individual things while the
+
+901
+00:35:47,220 --> 00:35:49,109
+outer is all using grid layout in each
+
+902
+00:35:49,109 --> 00:35:50,790
+of the cards is it a nice column with
+
+903
+00:35:50,790 --> 00:35:53,190
+grid and we can make the internal as a
+
+904
+00:35:53,190 --> 00:35:54,780
+grid layout because we can make a grid
+
+905
+00:35:54,780 --> 00:35:59,190
+item a grid itself we still can't make
+
+906
+00:35:59,190 --> 00:36:00,480
+those things line up with each other
+
+907
+00:36:00,480 --> 00:36:02,250
+because they're independent they're
+
+908
+00:36:02,250 --> 00:36:04,109
+completely independent grids what we
+
+909
+00:36:04,109 --> 00:36:06,480
+actually want is to be able to say well
+
+910
+00:36:06,480 --> 00:36:09,329
+this three column grid thing has also
+
+911
+00:36:09,329 --> 00:36:12,059
+got three rows and the header of each
+
+912
+00:36:12,059 --> 00:36:14,160
+item goes into the first row and the
+
+913
+00:36:14,160 --> 00:36:15,630
+content goes into the next row and the
+
+914
+00:36:15,630 --> 00:36:16,950
+footer goes into the row after that
+
+915
+00:36:16,950 --> 00:36:18,809
+which means they can all line up with
+
+916
+00:36:18,809 --> 00:36:20,670
+each other now we can't do that at the
+
+917
+00:36:20,670 --> 00:36:23,339
+moment but sub grid which is in level
+
+918
+00:36:23,339 --> 00:36:25,710
+two will let us do that it will let us
+
+919
+00:36:25,710 --> 00:36:29,910
+say actually I would like this internal
+
+920
+00:36:29,910 --> 00:36:32,099
+card to use the grid that is defined on
+
+921
+00:36:32,099 --> 00:36:34,020
+the parent and that's going to be
+
+922
+00:36:34,020 --> 00:36:36,000
+incredibly powerful it will let us do
+
+923
+00:36:36,000 --> 00:36:37,799
+things like have you know a twelve
+
+924
+00:36:37,799 --> 00:36:40,109
+column grid system where things not only
+
+925
+00:36:40,109 --> 00:36:42,510
+the direct children sit on that grid but
+
+926
+00:36:42,510 --> 00:36:45,299
+things inside can also line up with the
+
+927
+00:36:45,299 --> 00:36:48,240
+same column tracks that's going to be
+
+928
+00:36:48,240 --> 00:36:50,099
+there for us to use of course it's
+
+929
+00:36:50,099 --> 00:36:51,990
+probably fairly unlikely it's all it's
+
+930
+00:36:51,990 --> 00:36:53,579
+going to appear in all browsers
+
+931
+00:36:53,579 --> 00:36:55,710
+immediately so again you know feature
+
+932
+00:36:55,710 --> 00:36:58,260
+queries will let us detect whether we've
+
+933
+00:36:58,260 --> 00:37:00,540
+got the sub grid value of grid template
+
+934
+00:37:00,540 --> 00:37:02,819
+columns and grid template rows and maybe
+
+935
+00:37:02,819 --> 00:37:04,950
+do something slightly different and if
+
+936
+00:37:04,950 --> 00:37:07,950
+we don't and you know the actually the
+
+937
+00:37:07,950 --> 00:37:09,569
+sub grid feature is kind of pretty much
+
+938
+00:37:09,569 --> 00:37:11,460
+finished in terms of the specification
+
+939
+00:37:11,460 --> 00:37:12,960
+so we're really just waiting now for
+
+940
+00:37:12,960 --> 00:37:15,000
+browsers to start implement it I really
+
+941
+00:37:15,000 --> 00:37:21,599
+hope that will happen soon so the thing
+
+942
+00:37:21,599 --> 00:37:23,250
+is all this is really positive I think
+
+943
+00:37:23,250 --> 00:37:25,230
+you know I'm very excited about all this
+
+944
+00:37:25,230 --> 00:37:27,630
+new layout stuff I hope you are too but
+
+945
+00:37:27,630 --> 00:37:32,220
+it does bring us new challenges we've
+
+946
+00:37:32,220 --> 00:37:35,400
+got all of this shiny new stuff and I
+
+947
+00:37:35,400 --> 00:37:37,319
+think we're only just learning how to
+
+948
+00:37:37,319 --> 00:37:38,540
+deal with some of the accessibility
+
+949
+00:37:38,540 --> 00:37:41,609
+implications that these new powers give
+
+950
+00:37:41,609 --> 00:37:46,859
+us flexbox and grid both allow for some
+
+951
+00:37:46,859 --> 00:37:50,010
+level of content reordering in flexbox
+
+952
+00:37:50,010 --> 00:37:51,420
+and in grid you can use the order
+
+953
+00:37:51,420 --> 00:37:52,390
+property to do
+
+954
+00:37:52,390 --> 00:37:55,269
+we reorder things in flexbox you can
+
+955
+00:37:55,269 --> 00:37:57,400
+change the Flex direction too you know
+
+956
+00:37:57,400 --> 00:38:00,489
+ro reverse or column reverse grids has
+
+957
+00:38:00,489 --> 00:38:02,019
+things like dense packing for auto
+
+958
+00:38:02,019 --> 00:38:03,279
+placement enough so you can then
+
+959
+00:38:03,279 --> 00:38:05,200
+position things on lines and so you
+
+960
+00:38:05,200 --> 00:38:07,989
+could very easily end up disconnecting
+
+961
+00:38:07,989 --> 00:38:11,230
+the visual display with the source as
+
+962
+00:38:11,230 --> 00:38:12,759
+someone for instance tabbing around the
+
+963
+00:38:12,759 --> 00:38:14,230
+document kind of ends up jumping all
+
+964
+00:38:14,230 --> 00:38:15,999
+over the place and that would be quite
+
+965
+00:38:15,999 --> 00:38:18,009
+unpleasant this is something that we
+
+966
+00:38:18,009 --> 00:38:19,930
+kind of need to figure out how we deal
+
+967
+00:38:19,930 --> 00:38:21,819
+with we don't really have a good answer
+
+968
+00:38:21,819 --> 00:38:24,970
+for that in CSS yet at you know I think
+
+969
+00:38:24,970 --> 00:38:26,140
+that at some point we're going to have
+
+970
+00:38:26,140 --> 00:38:29,259
+to work out how we can let a web design
+
+971
+00:38:29,259 --> 00:38:32,170
+to say I want the browser to follow the
+
+972
+00:38:32,170 --> 00:38:34,869
+visual layout and not follow the source
+
+973
+00:38:34,869 --> 00:38:37,509
+but at the moment anything tabbing
+
+974
+00:38:37,509 --> 00:38:39,130
+around anything reading out the content
+
+975
+00:38:39,130 --> 00:38:41,049
+is following the source and not the
+
+976
+00:38:41,049 --> 00:38:42,430
+visual display and it's really worth
+
+977
+00:38:42,430 --> 00:38:45,249
+remembering that a very simple test is
+
+978
+00:38:45,249 --> 00:38:46,749
+can you tab around can your keyboard
+
+979
+00:38:46,749 --> 00:38:48,249
+navigate around your site after you've
+
+980
+00:38:48,249 --> 00:38:50,019
+used grid if you can you're probably
+
+981
+00:38:50,019 --> 00:38:53,140
+okay but you know we've got new problems
+
+982
+00:38:53,140 --> 00:38:56,980
+new things to worry about and one of
+
+983
+00:38:56,980 --> 00:38:59,109
+these things came up fairly recently and
+
+984
+00:38:59,109 --> 00:39:01,299
+really this is a bug in browser
+
+985
+00:39:01,299 --> 00:39:03,609
+implementations we've got this very
+
+986
+00:39:03,609 --> 00:39:05,970
+interesting thing called display
+
+987
+00:39:05,970 --> 00:39:08,559
+contents interesting feature because it
+
+988
+00:39:08,559 --> 00:39:12,190
+lets us remove a box and visually from
+
+989
+00:39:12,190 --> 00:39:14,710
+the display so if for instance you've
+
+990
+00:39:14,710 --> 00:39:16,390
+got a bunch of list items they need to
+
+991
+00:39:16,390 --> 00:39:17,859
+have a ul and then you've got your
+
+992
+00:39:17,859 --> 00:39:20,980
+allies if you had a pair and sort of
+
+993
+00:39:20,980 --> 00:39:22,749
+grid structure going on you just wanted
+
+994
+00:39:22,749 --> 00:39:25,359
+those list items to sit on the grid you
+
+995
+00:39:25,359 --> 00:39:27,579
+can use display contents to visually
+
+996
+00:39:27,579 --> 00:39:31,239
+remove the UL and then leave the items
+
+997
+00:39:31,239 --> 00:39:33,549
+but semantically the UL should still be
+
+998
+00:39:33,549 --> 00:39:35,710
+there and anyone coming to the site you
+
+999
+00:39:35,710 --> 00:39:37,299
+know using a screen reader should know
+
+1000
+00:39:37,299 --> 00:39:40,359
+that that's a list so this is really
+
+1001
+00:39:40,359 --> 00:39:42,700
+kind of how this works I've got a grid
+
+1002
+00:39:42,700 --> 00:39:44,980
+here as we know direct children
+
+1003
+00:39:44,980 --> 00:39:47,230
+participate in grid layout the children
+
+1004
+00:39:47,230 --> 00:39:49,569
+of those items do not adding display
+
+1005
+00:39:49,569 --> 00:39:53,529
+content to the grid item removes the box
+
+1006
+00:39:53,529 --> 00:39:55,359
+of that item and anything about the Box
+
+1007
+00:39:55,359 --> 00:39:57,099
+the width the borders anything like that
+
+1008
+00:39:57,099 --> 00:39:59,140
+and the children can then participate in
+
+1009
+00:39:59,140 --> 00:40:02,859
+grid layout that's really neat as I say
+
+1010
+00:40:02,859 --> 00:40:04,720
+semantically it should still remain
+
+1011
+00:40:04,720 --> 00:40:06,099
+whatever the element was in the
+
+1012
+00:40:06,099 --> 00:40:08,319
+first place there is a book in all the
+
+1013
+00:40:08,319 --> 00:40:09,700
+browsers that have implemented that mean
+
+1014
+00:40:09,700 --> 00:40:11,650
+that actually semantically doesn't mean
+
+1015
+00:40:11,650 --> 00:40:13,989
+that they're also saying oh well you've
+
+1016
+00:40:13,989 --> 00:40:16,150
+removed that list you've removed that
+
+1017
+00:40:16,150 --> 00:40:17,470
+table structure and therefore you are
+
+1018
+00:40:17,470 --> 00:40:19,539
+now no longer a list or table that is a
+
+1019
+00:40:19,539 --> 00:40:21,309
+bug the spec says they shouldn't do it
+
+1020
+00:40:21,309 --> 00:40:24,609
+but they do it's getting fixed this post
+
+1021
+00:40:24,609 --> 00:40:26,380
+is a really good run down of what
+
+1022
+00:40:26,380 --> 00:40:29,200
+display contents is and the potential
+
+1023
+00:40:29,200 --> 00:40:32,019
+problems with it but the thing here
+
+1024
+00:40:32,019 --> 00:40:33,609
+really is just that we've got this new
+
+1025
+00:40:33,609 --> 00:40:36,039
+stuff and there are going to be new
+
+1026
+00:40:36,039 --> 00:40:38,829
+things that pop up and you might be the
+
+1027
+00:40:38,829 --> 00:40:40,420
+first person to encounter one of them
+
+1028
+00:40:40,420 --> 00:40:42,819
+because this stuff is so new and some of
+
+1029
+00:40:42,819 --> 00:40:44,739
+these problems might show up only in
+
+1030
+00:40:44,739 --> 00:40:47,380
+combination with other bits of CSS and
+
+1031
+00:40:47,380 --> 00:40:49,690
+so you know do be looking out for stuff
+
+1032
+00:40:49,690 --> 00:40:51,609
+and testing if you're using new stuff
+
+1033
+00:40:51,609 --> 00:40:54,670
+you know don't be so sure that people
+
+1034
+00:40:54,670 --> 00:40:57,519
+won't have introduced bugs like this you
+
+1035
+00:40:57,519 --> 00:40:59,440
+know when it was first mentioned to me I
+
+1036
+00:40:59,440 --> 00:41:01,119
+was like what but the spec doesn't say
+
+1037
+00:41:01,119 --> 00:41:08,680
+that but you know books happen and so
+
+1038
+00:41:08,680 --> 00:41:12,130
+we've got this yeah amazing new system
+
+1039
+00:41:12,130 --> 00:41:15,609
+for layout you know I'm it really is so
+
+1040
+00:41:15,609 --> 00:41:17,289
+fantastic how far things have come in
+
+1041
+00:41:17,289 --> 00:41:19,180
+the last few years and we're not
+
+1042
+00:41:19,180 --> 00:41:21,069
+stopping here to say you know we've got
+
+1043
+00:41:21,069 --> 00:41:23,710
+sub-grid coming along we're not stopping
+
+1044
+00:41:23,710 --> 00:41:26,739
+here and when you hit the edges when
+
+1045
+00:41:26,739 --> 00:41:28,150
+you're working with this stuff and
+
+1046
+00:41:28,150 --> 00:41:30,700
+you're like hang on why can't we do
+
+1047
+00:41:30,700 --> 00:41:34,869
+whatever then let us know because so
+
+1048
+00:41:34,869 --> 00:41:36,339
+much of what I've shown you today just
+
+1049
+00:41:36,339 --> 00:41:38,559
+comes from filling in the needs of
+
+1050
+00:41:38,559 --> 00:41:40,719
+people who've said why can't we do
+
+1051
+00:41:40,719 --> 00:41:44,289
+whatever well because no one specified
+
+1052
+00:41:44,289 --> 00:41:45,910
+that yet no one's implemented it no
+
+1053
+00:41:45,910 --> 00:41:48,549
+one's come up with it so as we're using
+
+1054
+00:41:48,549 --> 00:41:50,979
+this new stuff you know when you find
+
+1055
+00:41:50,979 --> 00:41:52,210
+the places where there are things that
+
+1056
+00:41:52,210 --> 00:41:55,989
+we can't yet do let us know and this is
+
+1057
+00:41:55,989 --> 00:41:57,400
+how you let the CSS working group know
+
+1058
+00:41:57,400 --> 00:42:01,119
+these are the issues on CSS specs now
+
+1059
+00:42:01,119 --> 00:42:04,299
+some of those look baffling even to me
+
+1060
+00:42:04,299 --> 00:42:06,160
+and I'm part of the CSS working group
+
+1061
+00:42:06,160 --> 00:42:08,049
+but a lot of them are very
+
+1062
+00:42:08,049 --> 00:42:09,369
+straightforward things that people are
+
+1063
+00:42:09,369 --> 00:42:12,369
+asking for and showing examples and in
+
+1064
+00:42:12,369 --> 00:42:14,170
+fact actually the more you can describe
+
+1065
+00:42:14,170 --> 00:42:16,329
+the use case the thing that you can't do
+
+1066
+00:42:16,329 --> 00:42:18,969
+the better because it turns out that
+
+1067
+00:42:18,969 --> 00:42:19,960
+developing CSS
+
+1068
+00:42:19,960 --> 00:42:22,510
+much like developing any product now if
+
+1069
+00:42:22,510 --> 00:42:24,550
+someone uses your product and they come
+
+1070
+00:42:24,550 --> 00:42:26,109
+along with a really good use case and
+
+1071
+00:42:26,109 --> 00:42:28,300
+say you know I need to do this thing and
+
+1072
+00:42:28,300 --> 00:42:30,250
+I can't do it because and I'm working
+
+1073
+00:42:30,250 --> 00:42:33,099
+round it by doing this then often it's
+
+1074
+00:42:33,099 --> 00:42:34,510
+really easy as a product developer to
+
+1075
+00:42:34,510 --> 00:42:35,920
+say oh yeah we could add that I could
+
+1076
+00:42:35,920 --> 00:42:37,510
+fix that for you and it's the same for
+
+1077
+00:42:37,510 --> 00:42:39,700
+CSS if someone comes along and says look
+
+1078
+00:42:39,700 --> 00:42:41,890
+this is something we can't do and we're
+
+1079
+00:42:41,890 --> 00:42:43,780
+having to do it with JavaScript and it
+
+1080
+00:42:43,780 --> 00:42:45,220
+makes it a bit slow and janky it'd be
+
+1081
+00:42:45,220 --> 00:42:47,530
+great if we have CSS way to do it that's
+
+1082
+00:42:47,530 --> 00:42:49,180
+actually something that may well get
+
+1083
+00:42:49,180 --> 00:42:52,869
+picked up and specified and implemented
+
+1084
+00:42:52,869 --> 00:42:55,570
+and because you know things are
+
+1085
+00:42:55,570 --> 00:42:57,099
+happening so much more quickly you know
+
+1086
+00:42:57,099 --> 00:42:58,060
+it's not going to happen for a product
+
+1087
+00:42:58,060 --> 00:42:59,740
+the project you need to work on tomorrow
+
+1088
+00:42:59,740 --> 00:43:02,290
+but it might be around you know next
+
+1089
+00:43:02,290 --> 00:43:04,900
+year you know do yourself a favor for
+
+1090
+00:43:04,900 --> 00:43:07,180
+your future self as it were and sort of
+
+1091
+00:43:07,180 --> 00:43:08,890
+talk to people and explain the things
+
+1092
+00:43:08,890 --> 00:43:11,530
+that you can't do because when we look
+
+1093
+00:43:11,530 --> 00:43:13,510
+at browsers now you know look at what's
+
+1094
+00:43:13,510 --> 00:43:15,190
+going in these the last releases of a
+
+1095
+00:43:15,190 --> 00:43:17,800
+few browsers Firefox 62 CSS shapes and
+
+1096
+00:43:17,800 --> 00:43:20,250
+the shape path editor variable fonts
+
+1097
+00:43:20,250 --> 00:43:23,170
+chrome 69 scroll snapping display
+
+1098
+00:43:23,170 --> 00:43:25,390
+cutouts for your notches and connect
+
+1099
+00:43:25,390 --> 00:43:28,869
+gradients an edge had variable fonts you
+
+1100
+00:43:28,869 --> 00:43:30,940
+know every time a browser release ships
+
+1101
+00:43:30,940 --> 00:43:32,680
+there is a whole bunch of new stuff
+
+1102
+00:43:32,680 --> 00:43:35,770
+isn't it it's a really really exciting
+
+1103
+00:43:35,770 --> 00:43:38,770
+time to be a web developer you know I've
+
+1104
+00:43:38,770 --> 00:43:40,540
+been doing this for 20 years but it's
+
+1105
+00:43:40,540 --> 00:43:42,730
+why I'm still excited about it you know
+
+1106
+00:43:42,730 --> 00:43:44,619
+why I haven't gone off to do something
+
+1107
+00:43:44,619 --> 00:43:47,140
+else and why I still want to participate
+
+1108
+00:43:47,140 --> 00:43:49,990
+and keep making it better and I really
+
+1109
+00:43:49,990 --> 00:43:52,450
+hope that you are all excited about it
+
+1110
+00:43:52,450 --> 00:43:55,960
+too and all of my code examples and the
+
+1111
+00:43:55,960 --> 00:43:57,849
+slides and so on and some resources are
+
+1112
+00:43:57,849 --> 00:43:59,800
+at that URL thank you for listening
+
+1113
+00:43:59,800 --> 00:44:01,380
+enjoy the rest of the conference
+

@@ -1,5 +1,5 @@
 {
-  "name": "jsconf-search",
+  "name": "GDE-search",
   "version": "1.0.0",
   "description": "Create readable transcripts from YouTube captions",
   "main": "index.js",
@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samdutton/jsconf.git"
+    "url": "git+https://github.com/samdutton/GDE.git"
   },
   "keywords": [
     "caption",
-    "JSConf",
+    "GDE",
     "SRT",
     "transcript",
     "VTT",
@@ -21,9 +21,9 @@
   "author": "open .",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samdutton/jsconf/issues"
+    "url": "https://github.com/samdutton/GDE/issues"
   },
-  "homepage": "https://github.com/samdutton/jsconf#readme",
+  "homepage": "https://github.com/samdutton/GDE#readme",
   "dependencies": {
     "eslint": "latest",
     "eslint-config-google": "latest",

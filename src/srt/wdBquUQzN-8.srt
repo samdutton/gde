@@ -1,0 +1,221 @@
+1
+00:00:00,030 --> 00:00:01,949
+
+here's a quick tip whenever you're
+
+2
+00:00:01,949 --> 00:00:03,959
+working with grid or flexbox
+
+3
+00:00:03,959 --> 00:00:05,670
+and you're not entirely sure why
+
+4
+00:00:05,670 --> 00:00:07,890
+something looks the way it does use
+
+5
+00:00:07,890 --> 00:00:10,320
+Firefox dev tools which has some amazing
+
+6
+00:00:10,320 --> 00:00:12,570
+layout dev tools let's take a look so
+
+7
+00:00:12,570 --> 00:00:14,190
+I'm here running Firefox developer
+
+8
+00:00:14,190 --> 00:00:16,260
+edition because I need to be on Firefox
+
+9
+00:00:16,260 --> 00:00:18,420
+65 if you're watching this video in the
+
+10
+00:00:18,420 --> 00:00:20,340
+future you will have access to these dev
+
+11
+00:00:20,340 --> 00:00:22,529
+tools as long as you're on Firefox 65
+
+12
+00:00:22,529 --> 00:00:24,990
+and above I'm over here on this website
+
+13
+00:00:24,990 --> 00:00:27,750
+grid by example and if you take a look
+
+14
+00:00:27,750 --> 00:00:29,429
+at this website you can see it the nav
+
+15
+00:00:29,429 --> 00:00:32,880
+bar over here is using a display flex in
+
+16
+00:00:32,880 --> 00:00:35,610
+fact you can see that from the dev tools
+
+17
+00:00:35,610 --> 00:00:37,410
+over here from the inspector panel
+
+18
+00:00:37,410 --> 00:00:40,020
+because we have this flex icon and now
+
+19
+00:00:40,020 --> 00:00:42,870
+as a Firefox 65 we can click on this or
+
+20
+00:00:42,870 --> 00:00:45,870
+you can simply go to the right and you
+
+21
+00:00:45,870 --> 00:00:47,489
+see this is a Flex container and then
+
+22
+00:00:47,489 --> 00:00:49,829
+you can toggle this or enable it and
+
+23
+00:00:49,829 --> 00:00:52,680
+this will show you an overview of this
+
+24
+00:00:52,680 --> 00:00:55,410
+Flex element alongside its Flex items
+
+25
+00:00:55,410 --> 00:00:57,329
+that's really useful if you're still
+
+26
+00:00:57,329 --> 00:00:59,280
+getting started with flex or if you're
+
+27
+00:00:59,280 --> 00:01:00,989
+not sure why something is behaving the
+
+28
+00:01:00,989 --> 00:01:02,789
+way it does and you can see here this is
+
+29
+00:01:02,789 --> 00:01:04,949
+a Flex container and these are the Flex
+
+30
+00:01:04,949 --> 00:01:07,380
+items over here not only that you can
+
+31
+00:01:07,380 --> 00:01:09,780
+also see from these boxes over here that
+
+32
+00:01:09,780 --> 00:01:12,030
+we are using justify content space
+
+33
+00:01:12,030 --> 00:01:14,130
+between so if you experiment with this
+
+34
+00:01:14,130 --> 00:01:16,860
+and use space around you will exactly
+
+35
+00:01:16,860 --> 00:01:18,570
+see where the space is being distributed
+
+36
+00:01:18,570 --> 00:01:22,200
+same thing if you do Center or flex and
+
+37
+00:01:22,200 --> 00:01:25,770
+or flexor and we've got the same helpers
+
+38
+00:01:25,770 --> 00:01:27,840
+for grid so if you scroll down a little
+
+39
+00:01:27,840 --> 00:01:29,970
+bit and if we take a look at the wrapper
+
+40
+00:01:29,970 --> 00:01:31,860
+over here we can see that it's using a
+
+41
+00:01:31,860 --> 00:01:34,290
+grid I can click on the grid and now I
+
+42
+00:01:34,290 --> 00:01:37,049
+can see the layout of the grid here on
+
+43
+00:01:37,049 --> 00:01:39,390
+the right and you can also see that on
+
+44
+00:01:39,390 --> 00:01:40,680
+the screen itself
+
+45
+00:01:40,680 --> 00:01:42,689
+this is the grid gap and these are the
+
+46
+00:01:42,689 --> 00:01:45,299
+grid cells you can also put the mouse on
+
+47
+00:01:45,299 --> 00:01:47,070
+top of them and you will see which grid
+
+48
+00:01:47,070 --> 00:01:50,490
+cell this is and if you're working with
+
+49
+00:01:50,490 --> 00:01:52,500
+multiple grids or maybe even massive
+
+50
+00:01:52,500 --> 00:01:54,329
+grids you can change the colors of this
+
+51
+00:01:54,329 --> 00:01:56,189
+indicator and that will make it clearer
+
+52
+00:01:56,189 --> 00:01:58,439
+for you to understand which one of these
+
+53
+00:01:58,439 --> 00:02:00,840
+grids this one is that's a nice tool
+
+54
+00:02:00,840 --> 00:02:02,850
+that I really like in Firefox give it a
+
+55
+00:02:02,850 --> 00:02:04,200
+try and let me know what you think and
+

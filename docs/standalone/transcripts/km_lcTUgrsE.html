@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!--
+Copyright 2019 Google LLC
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+  https://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="//google.com">
+  <meta name="description" content="GDE transcript">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>km_lcTUgrsE</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+
+<iframe id="youtube" src="https://www.youtube.com/embed/km_lcTUgrsE?enablejsapi=1"></iframe>
+
+<div id="container">
+
+<div id="options">
+  <div id="google-translate"></div>
+  <div>
+    <input type="checkbox" id="videoSticky" checked>
+    <label for="videoSticky">Video position sticky</label>
+  </div>
+  <div>
+    <input type="checkbox" id="captionScroll" checked>
+    <label for="captionScroll">Keep current caption visible</label>
+  </div>
+</div>
+
+<section>
+<p><span data-start="0.03" data-end="1.77">hey everyone in this video I'm gonna</span> <span data-start="1.77" data-end="3.87">talk to you about dynamic imports I'm</span> <span data-start="3.87" data-end="6.089">gonna show you a specific use case where</span> <span data-start="6.089" data-end="8.01">I've used dynamic imports on learn</span> <span data-start="8.01" data-end="10.44">JavaScript online on all lessons I want</span> <span data-start="10.44" data-end="12.11">to display a thumbs-up and thumbs-down</span> <span data-start="12.11" data-end="14.519">preview over here and then when you</span> <span data-start="14.519" data-end="16.23">click on it it opens an optional</span> <span data-start="16.23" data-end="18.24">feedback where you can send it so this</span> <span data-start="18.24" data-end="20.039">is both for negative reviews and also</span> <span data-start="20.039" data-end="22.109">positive reviews this is some</span> <span data-start="22.109" data-end="23.58">functionality that I'm not going to use</span> <span data-start="23.58" data-end="25.56">on every single page because if I go</span> <span data-start="25.56" data-end="28.109">back I will have the editor and I'll</span> <span data-start="28.109" data-end="29.849">have the challenge page and in a</span> <span data-start="29.849" data-end="31.56">challenge page I have the editor and</span> <span data-start="31.56" data-end="33.54">completely different functionality so</span> <span data-start="33.54" data-end="34.8">that's why it doesn't make sense to</span> <span data-start="34.8" data-end="37.2">always include this JavaScript section</span> <span data-start="37.2" data-end="38.85">that is responsible for the feedbacks</span> <span data-start="38.85" data-end="41.52">because then as I add more features to</span> <span data-start="41.52" data-end="43.649">this website the mores can become slower</span> <span data-start="43.649" data-end="45.42">and I definitely don't want it to become</span> <span data-start="45.42" data-end="47.309">slow so let's take a look at the code</span> <span data-start="47.309" data-end="52.02">here this is the code for the lesson</span> <span data-start="52.02" data-end="54.27">review it's not very fancy and it could</span> <span data-start="54.27" data-end="56.489">be much much better I'm not using any</span> <span data-start="56.489" data-end="58.26">framework over here so I just have a</span> <span data-start="58.26" data-end="60.629">string of the element that I'm</span> <span data-start="60.629" data-end="62.969">displaying and I've got a bunch of code</span> <span data-start="62.969" data-end="66.18">that actually makes it work and what I</span> <span data-start="66.18" data-end="69.15">do is that in the lesson so whenever I</span> <span data-start="69.15" data-end="71.31">know that this is a lesson I want to</span> <span data-start="71.31" data-end="73.59">dynamically import it so I want to only</span> <span data-start="73.59" data-end="76.229">import it when I know I will definitely</span> <span data-start="76.229" data-end="79.02">need it and rather than doing it as an</span> <span data-start="79.02" data-end="81.21">import at the top like this where you do</span> <span data-start="81.21" data-end="83.939">an import and then I don't have anything</span> <span data-start="83.939" data-end="85.799">exported from this module so I just</span> <span data-start="85.799" data-end="89.04">import the lesson reviewed ojs rather</span> <span data-start="89.04" data-end="91.17">than doing that and including the script</span> <span data-start="91.17" data-end="94.95">as a burden for every single page on my</span> <span data-start="94.95" data-end="97.29">website I will instead dynamically</span> <span data-start="97.29" data-end="99.39">import it and here's the syntax for it</span> <span data-start="99.39" data-end="102.54">it's simply an import using the</span> <span data-start="102.54" data-end="104.88">parentheses and this makes it a dynamic</span> <span data-start="104.88" data-end="106.89">import which you can call from anywhere</span> <span data-start="106.89" data-end="109.32">inside your code so you can even call it</span> <span data-start="109.32" data-end="111.93">inside an event listener or a fetch</span> <span data-start="111.93" data-end="114.84">callback and then you get the path to it</span> <span data-start="114.84" data-end="119.189">that's gonna be lesson review Dulce s</span> <span data-start="119.189" data-end="121.56">and this returns a promise so you can</span> <span data-start="121.56" data-end="123.93">resolve it and do something when it's</span> <span data-start="123.93" data-end="125.909">fulfilled and if you're exporting stuff</span> <span data-start="125.909" data-end="127.619">you can also access it under the module</span> <span data-start="127.619" data-end="130.7">if it was a default function then you</span> <span data-start="130.7" data-end="133.379">call it with module the default if it</span> <span data-start="133.379" data-end="133.75">was</span> <span data-start="133.75" data-end="136.51">action or if it was something else like</span> <span data-start="136.51" data-end="138.85">other method you can call it like this</span> <span data-start="138.85" data-end="141.01">but I'm not exporting anything so optic</span> </p>
+<p><span data-start="141.01" data-end="144.61">I'll get rid of all of this and let's</span> <span data-start="144.61" data-end="146.56">take a look at browser support so</span> <span data-start="146.56" data-end="148.18">dynamic imports work on the following</span> <span data-start="148.18" data-end="150.76">browsers Firefox has it behind the flag</span> <span data-start="150.76" data-end="153.7">in the developer edition but you can</span> <span data-start="153.7" data-end="155.32">already use it because when you're using</span> <span data-start="155.32" data-end="157.99">webpack webpack makes sure that the</span> <span data-start="157.99" data-end="159.31">dynamic imports will work in all</span> <span data-start="159.31" data-end="162.61">browsers so that's pretty much it but if</span> <span data-start="162.61" data-end="164.2">you keep it as is once you build your</span> <span data-start="164.2" data-end="166.84">project you're going to get a zero ojs</span> <span data-start="166.84" data-end="168.85">or one dodgy s you will get the bundle</span> </p>
+<p><span data-start="168.85" data-end="171.01">ID so instead you have to tell what Park</span> <span data-start="171.01" data-end="173.62">what's the name of this chunk you do</span> <span data-start="173.62" data-end="175.18">that with the web pack chunk named</span> <span data-start="175.18" data-end="177.19">comment so this is a special comment</span> <span data-start="177.19" data-end="179.35">that's read by a buck and then I'm gonna</span> <span data-start="179.35" data-end="182.11">say this is gonna be lesson review now</span> <span data-start="182.11" data-end="183.64">let's take a look at this if I go in the</span> <span data-start="183.64" data-end="185.83">browser this is the web version because</span> <span data-start="185.83" data-end="187.51">this is what I already did and I reload</span> <span data-start="187.51" data-end="191.02">the page and because we are on the</span> <span data-start="191.02" data-end="194.26">lesson page you will see over here that</span> </p>
+<p><span data-start="194.26" data-end="198.25">I have the lesson review being loaded so</span> <span data-start="198.25" data-end="200.08">this is the dynamic import being loaded</span> <span data-start="200.08" data-end="202.54">so it only renders on pages where it's</span> <span data-start="202.54" data-end="206.32">needed which means if I go back I will</span> <span data-start="206.32" data-end="210.43">not find this lesson review anywhere in</span> <span data-start="210.43" data-end="212.35">this page just like any other</span> <span data-start="212.35" data-end="214.15">performance tip it doesn't mean all of</span> <span data-start="214.15" data-end="215.769">your inputs should be dynamic inputs</span> <span data-start="215.769" data-end="217.78">because that might slow things down you</span> <span data-start="217.78" data-end="220.42">have to measure and see if it has any</span> <span data-start="220.42" data-end="222.79">impact another thing you can do which</span> </p>
+<p><span data-start="222.79" data-end="224.65">I've also been doing in this website in</span> <span data-start="224.65" data-end="227.14">some places but it requires a polyfill</span> <span data-start="227.14" data-end="229">to work on all browsers is to use the</span> <span data-start="229" data-end="233.59">request idle callback and then if you've</span> <span data-start="233.59" data-end="236.23">got a lot of work that you need to do</span> <span data-start="236.23" data-end="238.84">you can just delay this until the</span> <span data-start="238.84" data-end="241.209">browser has some idle time but don't</span> <span data-start="241.209" data-end="243.31">forget that you need a polyfill for that</span> <span data-start="243.31" data-end="246.4">at the time of recording so when used</span> <span data-start="246.4" data-end="248.32">properly dynamic imports can help you</span> <span data-start="248.32" data-end="250.48">ship and experience as fast as possible</span> <span data-start="250.48" data-end="253.57">and then dynamically import or lazy load</span> <span data-start="253.57" data-end="255.16">other functionality that you may not</span> <span data-start="255.16" data-end="257.68">need immediately and this also helps you</span> <span data-start="257.68" data-end="260.56">add more and more features without</span> <span data-start="260.56" data-end="262.72">really slowing down your web application</span> <span data-start="262.72" data-end="264.88">if you only import the ones that you</span> <span data-start="264.88" data-end="266.71">need I hope you enjoyed this quick tip</span> <span data-start="266.71" data-end="267.24">and I'll see</span> </p>
+</section>
+
+<!-- div#container ends -->
+</div>
+
+<img alt="The End" id="fin" src="../images/fin.jpg">
+
+<script>
+/*eslint-disable */
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google-translate');
+}
+/* eslint-enable */
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>

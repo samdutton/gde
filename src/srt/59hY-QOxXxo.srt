@@ -1,0 +1,3461 @@
+1
+00:00:00,030 --> 00:00:04,440
+
+hey hey hey everyone who EDA sorry for
+
+2
+00:00:04,440 --> 00:00:06,480
+my heart gee I live in a small town in
+
+3
+00:00:06,480 --> 00:00:12,200
+the North called Amsterdam you know and
+
+4
+00:00:12,200 --> 00:00:13,889
+today I want to talk to you about
+
+5
+00:00:13,889 --> 00:00:17,359
+progress pop-ups are we all developers
+
+6
+00:00:17,359 --> 00:00:20,760
+20% 30 40 yeah I think we're all
+
+7
+00:00:20,760 --> 00:00:21,960
+developers I'm gonna tell you a secret
+
+8
+00:00:21,960 --> 00:00:24,359
+and a little bit of a bad news when
+
+9
+00:00:24,359 --> 00:00:25,980
+we're building progressive web apps we
+
+10
+00:00:25,980 --> 00:00:28,830
+always forget about the users and for
+
+11
+00:00:28,830 --> 00:00:29,760
+some reason when you're building
+
+12
+00:00:29,760 --> 00:00:31,140
+progressive web apps it's always about
+
+13
+00:00:31,140 --> 00:00:33,690
+the technology but when we start talking
+
+14
+00:00:33,690 --> 00:00:36,360
+to users when you start showing them
+
+15
+00:00:36,360 --> 00:00:38,809
+native apps and progressive web apps
+
+16
+00:00:38,809 --> 00:00:40,620
+sometimes they can't tell the difference
+
+17
+00:00:40,620 --> 00:00:42,870
+if this is a native app or progressive
+
+18
+00:00:42,870 --> 00:00:45,270
+about but it's not because it's built in
+
+19
+00:00:45,270 --> 00:00:49,050
+react or view it's not because of web
+
+20
+00:00:49,050 --> 00:00:50,820
+components it's just because of the user
+
+21
+00:00:50,820 --> 00:00:52,829
+experience and the user interface and
+
+22
+00:00:52,829 --> 00:00:56,129
+also the real the reliability so today I
+
+23
+00:00:56,129 --> 00:00:57,510
+want to talk to you about progressive
+
+24
+00:00:57,510 --> 00:00:59,190
+web app from the user experience part
+
+25
+00:00:59,190 --> 00:01:01,859
+from the user interface part but I don't
+
+26
+00:01:01,859 --> 00:01:03,180
+want to talk about it I actually wanna
+
+27
+00:01:03,180 --> 00:01:07,490
+live code so let me put my screen and
+
+28
+00:01:07,490 --> 00:01:09,930
+you know the thing about live codes they
+
+29
+00:01:09,930 --> 00:01:15,479
+are quite dangerous especially with
+
+30
+00:01:15,479 --> 00:01:17,250
+pwace thank you we might need a new
+
+31
+00:01:17,250 --> 00:01:25,050
+domain
+
+32
+00:01:25,060 --> 00:01:28,219
+so because life codes are dangerous I
+
+33
+00:01:28,219 --> 00:01:29,899
+thought how can we make them even more
+
+34
+00:01:29,899 --> 00:01:33,219
+dangerous and I found an idea which is I
+
+35
+00:01:33,219 --> 00:01:35,569
+did not prepare for it I'm actually
+
+36
+00:01:35,569 --> 00:01:37,789
+gonna ask you for we're gonna do some
+
+37
+00:01:37,789 --> 00:01:40,069
+improv did anyone see the improv shows
+
+38
+00:01:40,069 --> 00:01:44,090
+sometime so an improv you basically ask
+
+39
+00:01:44,090 --> 00:01:45,829
+the audience for suggestions and you do
+
+40
+00:01:45,829 --> 00:01:51,109
+based on their suggestions so anyone
+
+41
+00:01:51,109 --> 00:01:54,500
+building a PWA yes what is that about if
+
+42
+00:01:54,500 --> 00:02:07,589
+you don't mind saying okay boring next
+
+43
+00:02:07,599 --> 00:02:10,549
+that's too matter if you do p.w about
+
+44
+00:02:10,549 --> 00:02:15,000
+pwace but I'll keep it in mind
+
+45
+00:02:15,010 --> 00:02:18,500
+other suggestions so technically an
+
+46
+00:02:18,500 --> 00:02:19,760
+improv you're supposed to take whatever
+
+47
+00:02:19,760 --> 00:02:22,780
+the audience says I'm violating it man
+
+48
+00:02:22,780 --> 00:02:31,849
+super exciting yeah okay anything else
+
+49
+00:02:31,849 --> 00:02:35,090
+no no I the thing is I want to combine
+
+50
+00:02:35,090 --> 00:02:39,319
+ideas that's it's not a no conference up
+
+51
+00:02:39,319 --> 00:02:44,510
+and digital dictionary all right how can
+
+52
+00:02:44,510 --> 00:02:49,250
+you combine all of these together any
+
+53
+00:02:49,250 --> 00:03:00,730
+more ideas so I like the unicycle one
+
+54
+00:03:00,730 --> 00:03:02,959
+okay we'll do something about unicycles
+
+55
+00:03:02,959 --> 00:03:04,880
+so based on my introduction I want to
+
+56
+00:03:04,880 --> 00:03:06,590
+tell you that a successful progressive
+
+57
+00:03:06,590 --> 00:03:10,389
+web app is not just about having scripts
+
+58
+00:03:10,389 --> 00:03:12,980
+like service worker and the web app
+
+59
+00:03:12,980 --> 00:03:14,930
+manifest but it's about when you meet
+
+60
+00:03:14,930 --> 00:03:17,239
+user expectations so I want to show you
+
+61
+00:03:17,239 --> 00:03:19,069
+this and I will actually take questions
+
+62
+00:03:19,069 --> 00:03:21,109
+while I do the live code so if you have
+
+63
+00:03:21,109 --> 00:03:23,450
+questions please go to slide odo just
+
+64
+00:03:23,450 --> 00:03:26,569
+another in the URL slash hashtag
+
+65
+00:03:26,569 --> 00:03:28,760
+questions and I'll have some of the
+
+66
+00:03:28,760 --> 00:03:33,350
+questions on my phone here if I forget
+
+67
+00:03:33,350 --> 00:03:35,690
+to take questions you can remind me
+
+68
+00:03:35,690 --> 00:03:38,000
+so we're gonna do something about
+
+69
+00:03:38,000 --> 00:03:46,240
+unicycle first these are the questions
+
+70
+00:03:46,250 --> 00:03:50,580
+so what we will have here is the setup
+
+71
+00:03:50,580 --> 00:03:53,580
+that I had I think you can't see
+
+72
+00:03:53,580 --> 00:04:03,810
+anything yet all right can you see my
+
+73
+00:04:03,810 --> 00:04:06,750
+screen yeah so we just have an
+
+74
+00:04:06,750 --> 00:04:09,090
+index.html SRC index of GS they're all
+
+75
+00:04:09,090 --> 00:04:11,670
+empty and we have a whopper
+
+76
+00:04:11,670 --> 00:04:13,560
+configuration it's pretty much very
+
+77
+00:04:13,560 --> 00:04:17,209
+basic and I'm gonna start with the index
+
+78
+00:04:17,209 --> 00:04:22,380
+and we need to just run webpack dev
+
+79
+00:04:22,380 --> 00:04:24,510
+server so we're on what pack dev server
+
+80
+00:04:24,510 --> 00:04:27,090
+and now we're up and running on
+
+81
+00:04:27,090 --> 00:04:29,640
+localhost 8080 and we're gonna start
+
+82
+00:04:29,640 --> 00:04:33,570
+building our app which is a do we do
+
+83
+00:04:33,570 --> 00:04:35,310
+people who unicycle have a different
+
+84
+00:04:35,310 --> 00:04:41,300
+weather no so we take the unicycle with
+
+85
+00:04:41,300 --> 00:04:43,650
+over other ideas someone said something
+
+86
+00:04:43,650 --> 00:04:50,730
+about tasks list yeah what was it okay
+
+87
+00:04:50,730 --> 00:04:55,890
+so we're fixing unicycle something so in
+
+88
+00:04:55,890 --> 00:04:58,580
+cycle return all right
+
+89
+00:04:58,580 --> 00:05:01,740
+I'm gonna start building this up and we
+
+90
+00:05:01,740 --> 00:05:03,630
+may use web components if we have time
+
+91
+00:05:03,630 --> 00:05:05,070
+later on but I'm gonna start with a
+
+92
+00:05:05,070 --> 00:05:06,990
+concept that you see a lot in native
+
+93
+00:05:06,990 --> 00:05:08,610
+apps and that's called the app shell
+
+94
+00:05:08,610 --> 00:05:12,030
+does anyone know what an app shell is so
+
+95
+00:05:12,030 --> 00:05:14,970
+10% the app shell is if you open any
+
+96
+00:05:14,970 --> 00:05:17,010
+native app like the Twitter app just
+
+97
+00:05:17,010 --> 00:05:19,560
+half a millisecond one millisecond
+
+98
+00:05:19,560 --> 00:05:21,450
+before you get the content you're gonna
+
+99
+00:05:21,450 --> 00:05:23,220
+have the app shell which is the
+
+100
+00:05:23,220 --> 00:05:25,590
+structure of the app without any content
+
+101
+00:05:25,590 --> 00:05:28,080
+without any data and this is something
+
+102
+00:05:28,080 --> 00:05:30,390
+users are used to a lot in native apps
+
+103
+00:05:30,390 --> 00:05:32,970
+because every single app has it on
+
+104
+00:05:32,970 --> 00:05:35,790
+Android and on iOS so even the camera
+
+105
+00:05:35,790 --> 00:05:38,430
+app if you open the camera up just the
+
+106
+00:05:38,430 --> 00:05:39,990
+split of a second before the camera
+
+107
+00:05:39,990 --> 00:05:42,050
+loads you're gonna have the app shop and
+
+108
+00:05:42,050 --> 00:05:45,230
+then the camera is just a blank black
+
+109
+00:05:45,230 --> 00:05:46,640
+three so let me show you what I mean by
+
+110
+00:05:46,640 --> 00:05:48,350
+that and let's start building our up
+
+111
+00:05:48,350 --> 00:05:52,010
+shell and I'm kind of doing server-side
+
+112
+00:05:52,010 --> 00:05:54,170
+rendering but just directly by inlining
+
+113
+00:05:54,170 --> 00:05:55,940
+the app shell because the absol is the
+
+114
+00:05:55,940 --> 00:05:57,560
+first thing you want to render on the
+
+115
+00:05:57,560 --> 00:05:58,880
+screen so I'm just gonna write the HTML
+
+116
+00:05:58,880 --> 00:06:02,270
+inside of here which may seem weird but
+
+117
+00:06:02,270 --> 00:06:03,740
+you're not writing everything just the
+
+118
+00:06:03,740 --> 00:06:06,260
+app shell so let's start with the header
+
+119
+00:06:06,260 --> 00:06:08,950
+Oh
+
+120
+00:06:08,960 --> 00:06:10,700
+first we'll need to add a script so we
+
+121
+00:06:10,700 --> 00:06:16,290
+can have a live reload this is gonna be
+
+122
+00:06:16,300 --> 00:06:21,230
+mind oh yes yeah now I have live reload
+
+123
+00:06:21,230 --> 00:06:23,270
+working let's start with the header and
+
+124
+00:06:23,270 --> 00:06:27,370
+then we will call it unicycle repair
+
+125
+00:06:27,370 --> 00:06:33,470
+then put that in each one and then we
+
+126
+00:06:33,470 --> 00:06:34,760
+basically have something that looks from
+
+127
+00:06:34,760 --> 00:06:36,230
+the 90s so let's go ahead and add some
+
+128
+00:06:36,230 --> 00:06:38,600
+inline stars I'm also in lining the
+
+129
+00:06:38,600 --> 00:06:40,850
+stars because you're giving full
+
+130
+00:06:40,850 --> 00:06:43,640
+priority to these HTML and CSS and
+
+131
+00:06:43,640 --> 00:06:46,070
+potentially JavaScript later on you want
+
+132
+00:06:46,070 --> 00:06:47,840
+the browser to render this first thing
+
+133
+00:06:47,840 --> 00:06:51,530
+so then we give this 90 just trying to
+
+134
+00:06:51,530 --> 00:06:55,310
+separate semantics from CSS and then we
+
+135
+00:06:55,310 --> 00:06:58,280
+say the header will have a certain
+
+136
+00:06:58,280 --> 00:07:01,130
+background color let's use a blue for
+
+137
+00:07:01,130 --> 00:07:04,160
+example and of course in my spare time I
+
+138
+00:07:04,160 --> 00:07:11,270
+memorize color numbers
+
+139
+00:07:11,280 --> 00:07:14,760
+and then we give it a color white oh but
+
+140
+00:07:14,760 --> 00:07:16,500
+I like to use CSS properties so let's
+
+141
+00:07:16,500 --> 00:07:18,290
+say this is gonna be the primary and
+
+142
+00:07:18,290 --> 00:07:21,150
+then we put it on the root the root is
+
+143
+00:07:21,150 --> 00:07:23,120
+basically the root of the document
+
+144
+00:07:23,120 --> 00:07:28,169
+most parent element I think and then we
+
+145
+00:07:28,169 --> 00:07:29,960
+need to remove the margin on the body
+
+146
+00:07:29,960 --> 00:07:35,880
+and then the h1 has a margin we can also
+
+147
+00:07:35,880 --> 00:07:38,940
+margin zero for fonts when building
+
+148
+00:07:38,940 --> 00:07:40,440
+progressive web apps you can if you
+
+149
+00:07:40,440 --> 00:07:41,910
+really care about performance and you
+
+150
+00:07:41,910 --> 00:07:43,200
+want to have something that looks like
+
+151
+00:07:43,200 --> 00:07:46,800
+native apps a lot of native apps use the
+
+152
+00:07:46,800 --> 00:07:49,290
+system font which is San Francisco on
+
+153
+00:07:49,290 --> 00:07:53,610
+iOS Roboto on Android etc you can now do
+
+154
+00:07:53,610 --> 00:07:58,470
+it as easy as system - UI a browser
+
+155
+00:07:58,470 --> 00:08:01,440
+support isn't great you can fall back to
+
+156
+00:08:01,440 --> 00:08:06,630
+all of this it's a lot yeah but it
+
+157
+00:08:06,630 --> 00:08:08,700
+basically tries every single font on
+
+158
+00:08:08,700 --> 00:08:13,620
+every on every operating system but
+
+159
+00:08:13,620 --> 00:08:15,810
+again you can replace all of this with
+
+160
+00:08:15,810 --> 00:08:18,180
+just system UI and I think browser
+
+161
+00:08:18,180 --> 00:08:21,270
+support for it is a 70% but if you wanna
+
+162
+00:08:21,270 --> 00:08:23,010
+have the best support keep it and then
+
+163
+00:08:23,010 --> 00:08:26,010
+start with system UI and now if I reload
+
+164
+00:08:26,010 --> 00:08:31,800
+the page and you inspect and go to the
+
+165
+00:08:31,800 --> 00:08:35,159
+rendered font it's an SF and s this is
+
+166
+00:08:35,159 --> 00:08:37,349
+San Francisco because I'm on a Mac if
+
+167
+00:08:37,349 --> 00:08:39,330
+you open the same website on an Android
+
+168
+00:08:39,330 --> 00:08:41,280
+it's gonna be Roboto and the nice thing
+
+169
+00:08:41,280 --> 00:08:42,990
+about it is you're not wasting resources
+
+170
+00:08:42,990 --> 00:08:44,670
+you're not getting anything from the
+
+171
+00:08:44,670 --> 00:08:48,920
+internet you could still use web fonts
+
+172
+00:08:48,920 --> 00:08:51,690
+this would only be for the app shell for
+
+173
+00:08:51,690 --> 00:08:53,460
+the system for everything that has to do
+
+174
+00:08:53,460 --> 00:08:55,530
+with the with your app but not the
+
+175
+00:08:55,530 --> 00:09:01,170
+content so I know it looks horrible but
+
+176
+00:09:01,170 --> 00:09:04,620
+give me some time we can also say that
+
+177
+00:09:04,620 --> 00:09:07,020
+the navbar will have a height of 60
+
+178
+00:09:07,020 --> 00:09:09,420
+pixels and then you can give that as a
+
+179
+00:09:09,420 --> 00:09:12,990
+height here and then we need to Center
+
+180
+00:09:12,990 --> 00:09:16,440
+things so display flex or grid there's
+
+181
+00:09:16,440 --> 00:09:19,020
+no I think place items Center but you
+
+182
+00:09:19,020 --> 00:09:21,630
+can do a line item center justify
+
+183
+00:09:21,630 --> 00:09:22,909
+contents
+
+184
+00:09:22,909 --> 00:09:27,199
+when it's all centered cool and now
+
+185
+00:09:27,199 --> 00:09:29,849
+technically this is an app shell maybe
+
+186
+00:09:29,849 --> 00:09:36,299
+we can also give a slight grave for for
+
+187
+00:09:36,299 --> 00:09:38,279
+the body but I want to take it a step
+
+188
+00:09:38,279 --> 00:09:41,609
+further and this step further is I like
+
+189
+00:09:41,609 --> 00:09:43,289
+to call it advanced app shell and this
+
+190
+00:09:43,289 --> 00:09:44,969
+is also something you see in native apps
+
+191
+00:09:44,969 --> 00:09:48,299
+which is a lot of the apps have a
+
+192
+00:09:48,299 --> 00:09:50,639
+navigation at the bottom it tabs
+
+193
+00:09:50,639 --> 00:09:53,249
+navigation does anyone know why it's at
+
+194
+00:09:53,249 --> 00:09:57,569
+the bottom yes I see a lot of this it's
+
+195
+00:09:57,569 --> 00:09:59,999
+because the thumb most people use the
+
+196
+00:09:59,999 --> 00:10:02,069
+app with their thumb so it's
+
+197
+00:10:02,069 --> 00:10:03,329
+conveniently positioned at the bottom
+
+198
+00:10:03,329 --> 00:10:05,009
+because you can easily navigate between
+
+199
+00:10:05,009 --> 00:10:06,869
+them so I want to do this
+
+200
+00:10:06,869 --> 00:10:09,779
+this tabs over here and I want to show
+
+201
+00:10:09,779 --> 00:10:11,939
+you hopefully you will learn a couple of
+
+202
+00:10:11,939 --> 00:10:14,309
+things from it because I think nowadays
+
+203
+00:10:14,309 --> 00:10:16,049
+is quite easy to make these tabs
+
+204
+00:10:16,049 --> 00:10:18,899
+if you focus a lot on the UX as well so
+
+205
+00:10:18,899 --> 00:10:22,049
+we can make it tabs and then those will
+
+206
+00:10:22,049 --> 00:10:25,769
+be links with a class top and inside of
+
+207
+00:10:25,769 --> 00:10:30,029
+it we will have a SVG icon so let's go
+
+208
+00:10:30,029 --> 00:10:33,899
+and find some icons from materials do
+
+209
+00:10:33,899 --> 00:10:42,070
+they have a unicycle like yeah
+
+210
+00:10:42,070 --> 00:10:44,900
+well yeah I don't think they have it's
+
+211
+00:10:44,900 --> 00:10:52,339
+like okay technically we're supposed to
+
+212
+00:10:52,339 --> 00:10:54,320
+get four different icons but I'm just
+
+213
+00:10:54,320 --> 00:10:56,170
+gonna use the same one to save up time
+
+214
+00:10:56,170 --> 00:10:58,640
+because we will have four pages at the
+
+215
+00:10:58,640 --> 00:11:01,570
+bottom so I'm gonna place this over here
+
+216
+00:11:01,570 --> 00:11:07,160
+I'm also in lining the SVG just for save
+
+217
+00:11:07,160 --> 00:11:11,589
+some time the P here and that's gonna be
+
+218
+00:11:11,589 --> 00:11:14,960
+tasks if we said we are repairing some
+
+219
+00:11:14,960 --> 00:11:17,480
+of the things and then I'm gonna
+
+220
+00:11:17,480 --> 00:11:20,210
+duplicate this a few more times because
+
+221
+00:11:20,210 --> 00:11:25,570
+we're gonna have several tabs okay and
+
+222
+00:11:25,570 --> 00:11:28,940
+this will be let's say help this will be
+
+223
+00:11:28,940 --> 00:11:35,390
+profiled and then stock we have the tabs
+
+224
+00:11:35,390 --> 00:11:38,529
+I know they look horrible we want to
+
+225
+00:11:38,529 --> 00:11:41,270
+position them at the bottom in a way
+
+226
+00:11:41,270 --> 00:11:43,310
+that they look like tops so let's go
+
+227
+00:11:43,310 --> 00:11:46,490
+ahead and make the tops give it a
+
+228
+00:11:46,490 --> 00:11:48,560
+display grid and then grid template
+
+229
+00:11:48,560 --> 00:11:51,020
+columns you can do one of our four times
+
+230
+00:11:51,020 --> 00:11:57,110
+or repeat for one of our and now let's
+
+231
+00:11:57,110 --> 00:12:01,140
+give it a background color of white oh
+
+232
+00:12:01,150 --> 00:12:06,310
+and position it at the bottom so fixed
+
+233
+00:12:06,310 --> 00:12:09,470
+bottom zero and now we need to give it a
+
+234
+00:12:09,470 --> 00:12:16,100
+left:0 right:0 it's getting there need
+
+235
+00:12:16,100 --> 00:12:17,959
+to remove the text decoration on the
+
+236
+00:12:17,959 --> 00:12:23,540
+link and basically place everything in
+
+237
+00:12:23,540 --> 00:12:28,910
+the center right and we still need ages
+
+238
+00:12:28,910 --> 00:12:33,650
+a long item center we have any questions
+
+239
+00:12:33,650 --> 00:12:37,040
+let's see what is it like to be a
+
+240
+00:12:37,040 --> 00:12:40,970
+Microsoft MVP let's talk after
+
+241
+00:12:40,970 --> 00:12:45,350
+oh I can tell you we get a free Visual
+
+242
+00:12:45,350 --> 00:12:58,550
+Studio code sorry I'll slide at those
+
+243
+00:12:58,550 --> 00:13:05,150
+slash hash tag questions so slide it
+
+244
+00:13:05,150 --> 00:13:08,030
+yeah it doesn't show here oh there are a
+
+245
+00:13:08,030 --> 00:13:11,230
+lot more questions I didn't see that
+
+246
+00:13:11,230 --> 00:13:14,270
+do we need web pack for this yes I am
+
+247
+00:13:14,270 --> 00:13:16,370
+using webpack it has a really small
+
+248
+00:13:16,370 --> 00:13:18,530
+configuration I wanted to do it with
+
+249
+00:13:18,530 --> 00:13:20,390
+parcel but I also want to use script
+
+250
+00:13:20,390 --> 00:13:22,850
+Idol and they don't support that yet
+
+251
+00:13:22,850 --> 00:13:26,900
+it's just a entry output but please
+
+252
+00:13:26,900 --> 00:13:29,300
+don't use this for production it's this
+
+253
+00:13:29,300 --> 00:13:33,810
+is horrible for production
+
+254
+00:13:33,820 --> 00:13:35,870
+what about user experience when it comes
+
+255
+00:13:35,870 --> 00:13:37,040
+to installing the app any
+
+256
+00:13:37,040 --> 00:13:38,360
+recommendations thank you we will
+
+257
+00:13:38,360 --> 00:13:40,220
+actually talk about this in a minute so
+
+258
+00:13:40,220 --> 00:13:42,230
+let me just figure out why this is not
+
+259
+00:13:42,230 --> 00:13:42,770
+working
+
+260
+00:13:42,770 --> 00:13:48,200
+let's give it also a height ABB's height
+
+261
+00:13:48,200 --> 00:13:55,910
+70 pixels so you might be wondering why
+
+262
+00:13:55,910 --> 00:13:58,400
+am i giving the height as a CSS
+
+263
+00:13:58,400 --> 00:13:59,690
+variables I want to show you that in a
+
+264
+00:13:59,690 --> 00:14:04,710
+minute
+
+265
+00:14:04,720 --> 00:14:14,880
+okay this P has a lot of margins
+
+266
+00:14:14,890 --> 00:14:17,310
+ooh I did forget something which is the
+
+267
+00:14:17,310 --> 00:14:20,080
+box-sizing border box that's one of the
+
+268
+00:14:20,080 --> 00:14:20,890
+annoying things when you start
+
+269
+00:14:20,890 --> 00:14:27,490
+completely from scratch so yeah no
+
+270
+00:14:27,490 --> 00:14:31,070
+difference but that's fine
+
+271
+00:14:31,080 --> 00:14:36,580
+it's planned okay this is our app so far
+
+272
+00:14:36,580 --> 00:14:38,860
+and then let's revert to color initial
+
+273
+00:14:38,860 --> 00:14:42,700
+and then one more thing on the on these
+
+274
+00:14:42,700 --> 00:14:44,710
+is by default we're going to give it an
+
+275
+00:14:44,710 --> 00:14:47,650
+opacity of 0.6 and only when the tab is
+
+276
+00:14:47,650 --> 00:14:50,740
+active then we give it an opacity of 1
+
+277
+00:14:50,740 --> 00:14:57,820
+and we can also transition this and now
+
+278
+00:14:57,820 --> 00:15:00,190
+we go down and only the first stop will
+
+279
+00:15:00,190 --> 00:15:04,690
+be active and now what we need to do
+
+280
+00:15:04,690 --> 00:15:07,750
+next is the screens so what will go
+
+281
+00:15:07,750 --> 00:15:09,610
+inside of it so let's go ahead and
+
+282
+00:15:09,610 --> 00:15:11,560
+create the main section which will have
+
+283
+00:15:11,560 --> 00:15:15,100
+the screens and then we will have a
+
+284
+00:15:15,100 --> 00:15:20,890
+screen x for let's say a B C D these are
+
+285
+00:15:20,890 --> 00:15:22,240
+the four screens that we're gonna have
+
+286
+00:15:22,240 --> 00:15:28,510
+and are you laughing at my code then
+
+287
+00:15:28,510 --> 00:15:31,540
+we're gonna put these screens next to
+
+288
+00:15:31,540 --> 00:15:33,510
+each other but every screen should be
+
+289
+00:15:33,510 --> 00:15:36,190
+full screen more or less so let's do
+
+290
+00:15:36,190 --> 00:15:39,090
+that with a screens
+
+291
+00:15:39,090 --> 00:15:42,790
+let's give it a height tough so what
+
+292
+00:15:42,790 --> 00:15:44,620
+would the height be here not a hundred
+
+293
+00:15:44,620 --> 00:15:49,960
+percent not a hundred VH so we will use
+
+294
+00:15:49,960 --> 00:15:55,030
+car with 100 V H minus the CSS variables
+
+295
+00:15:55,030 --> 00:16:00,250
+so the navbar height minus D bar tops
+
+296
+00:16:00,250 --> 00:16:02,980
+height and just so you see you may need
+
+297
+00:16:02,980 --> 00:16:04,230
+to close your eyes
+
+298
+00:16:04,230 --> 00:16:08,080
+yeah that's working you can only tell if
+
+299
+00:16:08,080 --> 00:16:10,690
+you do this like screw it up and then
+
+300
+00:16:10,690 --> 00:16:16,510
+yeah that's working now every screen has
+
+301
+00:16:16,510 --> 00:16:18,430
+to be full screen and inside of it so
+
+302
+00:16:18,430 --> 00:16:19,690
+this is where you can also do a display
+
+303
+00:16:19,690 --> 00:16:22,330
+grid and then grid template Collins
+
+304
+00:16:22,330 --> 00:16:25,270
+repeat for it's not gonna be one of our
+
+305
+00:16:25,270 --> 00:16:28,909
+but just show you what would it be
+
+306
+00:16:28,909 --> 00:16:33,539
+100 feet W and that's that's also
+
+307
+00:16:33,539 --> 00:16:38,189
+planned it's because you want to add the
+
+308
+00:16:38,189 --> 00:16:43,589
+overflow X scroll hopefully no it's
+
+309
+00:16:43,589 --> 00:16:47,219
+because the screen sorry
+
+310
+00:16:47,219 --> 00:16:51,589
+oh oh thank you
+
+311
+00:16:51,589 --> 00:16:54,149
+and now look look at it look how
+
+312
+00:16:54,149 --> 00:16:56,369
+beautiful it is you scroll you get to
+
+313
+00:16:56,369 --> 00:16:58,559
+the second page I know what you're
+
+314
+00:16:58,559 --> 00:17:02,609
+wondering what if you release mid yeah
+
+315
+00:17:02,609 --> 00:17:06,899
+it's it sucks how did I not think about
+
+316
+00:17:06,899 --> 00:17:15,059
+this how can we fix that so I was just
+
+317
+00:17:15,059 --> 00:17:16,500
+saying if somebody knows about this new
+
+318
+00:17:16,500 --> 00:17:20,429
+Web API and CSS property it's the over
+
+319
+00:17:20,429 --> 00:17:24,269
+it's the scrolls nav API so scrolls snap
+
+320
+00:17:24,269 --> 00:17:27,629
+type you're saying on the x-axis I want
+
+321
+00:17:27,629 --> 00:17:29,879
+to have scroll snapping which means if
+
+322
+00:17:29,879 --> 00:17:32,129
+you scroll and release it's gonna snap
+
+323
+00:17:32,129 --> 00:17:34,799
+to one of the pages so scroll snap type
+
+324
+00:17:34,799 --> 00:17:37,769
+on which acts and which axis X and it's
+
+325
+00:17:37,769 --> 00:17:41,129
+mandatory and then you have to say on
+
+326
+00:17:41,129 --> 00:17:44,190
+the children this no cause snap a line
+
+327
+00:17:44,190 --> 00:17:46,769
+will be start or Center there would be
+
+328
+00:17:46,769 --> 00:17:48,149
+no difference here because it's full
+
+329
+00:17:48,149 --> 00:17:50,490
+page and look at this let's enable
+
+330
+00:17:50,490 --> 00:17:54,929
+disable scroll release it's gonna snap
+
+331
+00:17:54,929 --> 00:17:58,950
+back to a scroll release it's gonna snap
+
+332
+00:17:58,950 --> 00:18:00,810
+back to
+
+333
+00:18:00,810 --> 00:18:06,619
+[Applause]
+
+334
+00:18:06,629 --> 00:18:16,850
+so
+
+335
+00:18:16,860 --> 00:18:21,179
+Wow very political question try to get
+
+336
+00:18:21,179 --> 00:18:26,610
+that at the end for these ones I would
+
+337
+00:18:26,610 --> 00:18:29,490
+recommend image to the ants like Claudia
+
+338
+00:18:29,490 --> 00:18:32,909
+nary so any suggestions for good tooling
+
+339
+00:18:32,909 --> 00:18:35,190
+to create for years all start up screen
+
+340
+00:18:35,190 --> 00:18:38,789
+images yeah I found it tool once for iOS
+
+341
+00:18:38,789 --> 00:18:40,679
+but I don't remember what it is sorry
+
+342
+00:18:40,679 --> 00:18:42,929
+but we can research it together if you
+
+343
+00:18:42,929 --> 00:18:50,130
+ask me later on all right
+
+344
+00:18:50,130 --> 00:18:55,590
+next what should we do next ok
+
+345
+00:18:55,590 --> 00:18:57,059
+so eventually this will be web
+
+346
+00:18:57,059 --> 00:18:58,830
+components hopefully we have time so
+
+347
+00:18:58,830 --> 00:19:01,830
+that's gonna be up tasks and then this
+
+348
+00:19:01,830 --> 00:19:05,340
+is gonna be up stock and then yeah same
+
+349
+00:19:05,340 --> 00:19:07,289
+for the rest and the next thing I want
+
+350
+00:19:07,289 --> 00:19:09,299
+to do is I want to tell the user hey
+
+351
+00:19:09,299 --> 00:19:11,159
+this is an app that you might need why
+
+352
+00:19:11,159 --> 00:19:12,659
+don't you add it to the home screen
+
+353
+00:19:12,659 --> 00:19:14,730
+but in a way that is not very annoying
+
+354
+00:19:14,730 --> 00:19:16,380
+we're not gonna have a pop-up nor a
+
+355
+00:19:16,380 --> 00:19:19,620
+toast it's gonna be quite smooth by
+
+356
+00:19:19,620 --> 00:19:22,350
+showing this I can over here so let's
+
+357
+00:19:22,350 --> 00:19:26,970
+copy it and then let's place it over
+
+358
+00:19:26,970 --> 00:19:30,600
+here give this an ID so Add to Home
+
+359
+00:19:30,600 --> 00:19:37,490
+screen a to HS and now it looks great
+
+360
+00:19:37,490 --> 00:19:42,510
+white and then position it on the right
+
+361
+00:19:42,510 --> 00:19:48,419
+so position:absolute right yeah it's
+
+362
+00:19:48,419 --> 00:19:50,539
+gonna be here but by default is gonna be
+
+363
+00:19:50,539 --> 00:19:52,950
+hidden so it's gonna be displaying on
+
+364
+00:19:52,950 --> 00:19:56,149
+only when we give it a class show then
+
+365
+00:19:56,149 --> 00:20:01,289
+we will show it to display block but
+
+366
+00:20:01,289 --> 00:20:03,240
+before we get to that you cannot ask the
+
+367
+00:20:03,240 --> 00:20:04,980
+user to install the app if you don't
+
+368
+00:20:04,980 --> 00:20:06,840
+have a service worker so we're gonna go
+
+369
+00:20:06,840 --> 00:20:08,730
+ahead and generate the service worker
+
+370
+00:20:08,730 --> 00:20:12,870
+and you need to install I am using word
+
+371
+00:20:12,870 --> 00:20:15,720
+workbook sorry web pack here so you need
+
+372
+00:20:15,720 --> 00:20:17,519
+to install the word box what pack
+
+373
+00:20:17,519 --> 00:20:20,100
+plug-in which I already installed to
+
+374
+00:20:20,100 --> 00:20:22,529
+avoid awkward internet issues so we just
+
+375
+00:20:22,529 --> 00:20:26,400
+require web pack work box
+
+376
+00:20:26,400 --> 00:20:31,559
+what PAC plugin yeah it exists and word
+
+377
+00:20:31,559 --> 00:20:33,620
+box is a library that helps you generate
+
+378
+00:20:33,620 --> 00:20:36,390
+serviceworker code so you can integrate
+
+379
+00:20:36,390 --> 00:20:38,040
+it with what park it becomes so much
+
+380
+00:20:38,040 --> 00:20:42,630
+easier and so we can read the plug-in
+
+381
+00:20:42,630 --> 00:20:46,860
+here which is work box plugin and we add
+
+382
+00:20:46,860 --> 00:20:53,430
+a new okay and under this object there's
+
+383
+00:20:53,430 --> 00:20:56,100
+the inject manifest plugin and it just
+
+384
+00:20:56,100 --> 00:20:59,220
+takes two options the source of the
+
+385
+00:20:59,220 --> 00:21:01,080
+service worker so you're gonna provide
+
+386
+00:21:01,080 --> 00:21:02,850
+it with a partial piece of service
+
+387
+00:21:02,850 --> 00:21:04,620
+worker it's gonna take it and it's gonna
+
+388
+00:21:04,620 --> 00:21:06,990
+generate a new one so that will be as
+
+389
+00:21:06,990 --> 00:21:10,230
+RCS wogs which we need to create and the
+
+390
+00:21:10,230 --> 00:21:16,410
+one it generates is swgs so we need to
+
+391
+00:21:16,410 --> 00:21:21,600
+create our SRC SW and we also need to
+
+392
+00:21:21,600 --> 00:21:29,010
+restart webpack okay and now we have to
+
+393
+00:21:29,010 --> 00:21:36,660
+import I was hoping you wouldn't notice
+
+394
+00:21:36,660 --> 00:21:41,760
+this we have to import the library from
+
+395
+00:21:41,760 --> 00:21:43,260
+city and this is changing in the next
+
+396
+00:21:43,260 --> 00:21:46,350
+version it it will be bundled in your
+
+397
+00:21:46,350 --> 00:21:47,610
+own repository but for now you have to
+
+398
+00:21:47,610 --> 00:21:49,710
+import it from CDN and what's annoying
+
+399
+00:21:49,710 --> 00:21:51,330
+is that you have to always manage the
+
+400
+00:21:51,330 --> 00:21:54,090
+versioning here and what you tell what
+
+401
+00:21:54,090 --> 00:21:57,120
+word box is simply you use the
+
+402
+00:21:57,120 --> 00:21:59,190
+pre-caching module and then you ask it
+
+403
+00:21:59,190 --> 00:22:04,230
+to free cash and route a certain
+
+404
+00:22:04,230 --> 00:22:05,520
+variable that will be dynamically
+
+405
+00:22:05,520 --> 00:22:08,390
+injected which is called Prakash
+
+406
+00:22:08,390 --> 00:22:11,280
+manifest so this variable will be
+
+407
+00:22:11,280 --> 00:22:12,690
+injected I will show you in a minute
+
+408
+00:22:12,690 --> 00:22:15,840
+this will be the list of the assets that
+
+409
+00:22:15,840 --> 00:22:17,730
+you have and this will instruct
+
+410
+00:22:17,730 --> 00:22:21,990
+workbooks to precache them when the
+
+411
+00:22:21,990 --> 00:22:23,640
+service worker gets installed so that if
+
+412
+00:22:23,640 --> 00:22:25,590
+we go offline the user can still get
+
+413
+00:22:25,590 --> 00:22:29,940
+access to the option so this is good for
+
+414
+00:22:29,940 --> 00:22:32,820
+now we need to register the service
+
+415
+00:22:32,820 --> 00:22:38,250
+worker so we can do that in index so if
+
+416
+00:22:38,250 --> 00:22:40,570
+exist a navigator just to make sure it
+
+417
+00:22:40,570 --> 00:22:44,740
+doesn't break on all older browsers and
+
+418
+00:22:44,740 --> 00:22:46,389
+then we give it the path of the Service
+
+419
+00:22:46,389 --> 00:22:48,639
+Worker this returns a promise so you can
+
+420
+00:22:48,639 --> 00:22:50,799
+dot then but I'm gonna assume that my
+
+421
+00:22:50,799 --> 00:22:52,330
+code is perfect and we don't need that
+
+422
+00:22:52,330 --> 00:23:01,809
+and now we have to go fullscreen let's
+
+423
+00:23:01,809 --> 00:23:05,639
+see yeah you start seeing these these
+
+424
+00:23:05,639 --> 00:23:07,929
+logs from work box they only run on
+
+425
+00:23:07,929 --> 00:23:10,419
+localhost and they tell you what's going
+
+426
+00:23:10,419 --> 00:23:17,019
+on you can also go to application you
+
+427
+00:23:17,019 --> 00:23:18,850
+will see a service worker is now
+
+428
+00:23:18,850 --> 00:23:23,559
+installed this one here as wjs this
+
+429
+00:23:23,559 --> 00:23:28,120
+shouldn't have been clicked and if you
+
+430
+00:23:28,120 --> 00:23:31,029
+go to the car storage we have the web
+
+431
+00:23:31,029 --> 00:23:33,700
+box work box Prakash there is Prakash in
+
+432
+00:23:33,700 --> 00:23:37,000
+this file now there's a bit of magic
+
+433
+00:23:37,000 --> 00:23:40,419
+let's go back and cancel and run NPM MPX
+
+434
+00:23:40,419 --> 00:23:43,690
+web pack and if you look at the distal
+
+435
+00:23:43,690 --> 00:23:48,250
+der we have this swgs let's take a look
+
+436
+00:23:48,250 --> 00:23:56,830
+at it colleges this yep and it's
+
+437
+00:23:56,830 --> 00:23:59,799
+basically the same as our code oh we
+
+438
+00:23:59,799 --> 00:24:02,289
+don't really need to import it it's
+
+439
+00:24:02,289 --> 00:24:07,389
+imported here so let's go back always
+
+440
+00:24:07,389 --> 00:24:09,039
+nice to figure this out during the live
+
+441
+00:24:09,039 --> 00:24:16,330
+code so let's run it again and in the
+
+442
+00:24:16,330 --> 00:24:18,580
+serviceworker code they import the
+
+443
+00:24:18,580 --> 00:24:20,289
+library for us and they import this file
+
+444
+00:24:20,289 --> 00:24:21,669
+which we'll take a look at in a minute
+
+445
+00:24:21,669 --> 00:24:24,039
+and this is the code we wrote and pay
+
+446
+00:24:24,039 --> 00:24:25,629
+attention to this self underscore
+
+447
+00:24:25,629 --> 00:24:27,429
+Prakash manifest because this is coming
+
+448
+00:24:27,429 --> 00:24:28,620
+from
+
+449
+00:24:28,620 --> 00:24:33,250
+Prakash manifest the father was
+
+450
+00:24:33,250 --> 00:24:35,080
+automatically generated by word box and
+
+451
+00:24:35,080 --> 00:24:37,690
+this basically contains your assets but
+
+452
+00:24:37,690 --> 00:24:39,759
+it also has a plus with it which is the
+
+453
+00:24:39,759 --> 00:24:41,830
+revision and this allows word perks to
+
+454
+00:24:41,830 --> 00:24:44,019
+be way more efficient than us writing
+
+455
+00:24:44,019 --> 00:24:45,879
+the code manually because it only
+
+456
+00:24:45,879 --> 00:24:48,140
+updates the assets that have changed and
+
+457
+00:24:48,140 --> 00:24:49,910
+can know if it changed based on the
+
+458
+00:24:49,910 --> 00:24:52,280
+revision so this is why a lot of people
+
+459
+00:24:52,280 --> 00:24:54,350
+recommend using a tool not writing
+
+460
+00:24:54,350 --> 00:24:56,270
+service circle yourself because it's
+
+461
+00:24:56,270 --> 00:24:58,970
+just very efficient to the cache if you
+
+462
+00:24:58,970 --> 00:25:01,370
+were to write it yourself you will have
+
+463
+00:25:01,370 --> 00:25:03,500
+to clear the cache add a new one every
+
+464
+00:25:03,500 --> 00:25:06,080
+time and it's gonna be slow from a
+
+465
+00:25:06,080 --> 00:25:08,810
+natural perspective also consume a lot
+
+466
+00:25:08,810 --> 00:25:13,550
+of data so let's go back to our backup
+
+467
+00:25:13,550 --> 00:25:21,320
+server and I also want to mention
+
+468
+00:25:21,320 --> 00:25:24,050
+something that in this life code we are
+
+469
+00:25:24,050 --> 00:25:26,120
+not going to handle the update of the
+
+470
+00:25:26,120 --> 00:25:28,790
+app so just like if you're on the store
+
+471
+00:25:28,790 --> 00:25:30,140
+you need to tell the user there's a new
+
+472
+00:25:30,140 --> 00:25:32,600
+version allow them to update so I have
+
+473
+00:25:32,600 --> 00:25:34,220
+to do it from dev tools this is of
+
+474
+00:25:34,220 --> 00:25:37,280
+course not for production and update
+
+475
+00:25:37,280 --> 00:25:38,720
+takes around 20 minutes so I cannot
+
+476
+00:25:38,720 --> 00:25:40,670
+cover it in the store but every time I
+
+477
+00:25:40,670 --> 00:25:42,710
+make a change to the server server it
+
+478
+00:25:42,710 --> 00:25:44,900
+will only update to the new one when you
+
+479
+00:25:44,900 --> 00:25:47,120
+click skip waiting of course for dev
+
+480
+00:25:47,120 --> 00:25:49,220
+tools you can click update on reload and
+
+481
+00:25:49,220 --> 00:25:50,720
+it's always showing in the fresher one
+
+482
+00:25:50,720 --> 00:25:52,610
+but this is only for development this is
+
+483
+00:25:52,610 --> 00:25:55,880
+not how we do it for end-users so now
+
+484
+00:25:55,880 --> 00:25:58,880
+let's get this checked and let's go to
+
+485
+00:25:58,880 --> 00:26:01,040
+the cache we have all of these files
+
+486
+00:26:01,040 --> 00:26:06,340
+cached which means now if we go offline
+
+487
+00:26:06,340 --> 00:26:09,710
+so go offline will it work
+
+488
+00:26:09,710 --> 00:26:14,520
+I hope so
+
+489
+00:26:14,530 --> 00:26:18,890
+it works so this is our app shell and it
+
+490
+00:26:18,890 --> 00:26:21,290
+still works offline why because even
+
+491
+00:26:21,290 --> 00:26:23,120
+though the network request fails it's
+
+492
+00:26:23,120 --> 00:26:24,800
+actually getting them from the cache and
+
+493
+00:26:24,800 --> 00:26:27,860
+this couch is APR this couch is actually
+
+494
+00:26:27,860 --> 00:26:29,170
+something you can access from the
+
+495
+00:26:29,170 --> 00:26:34,160
+windows hope you have this caches API so
+
+496
+00:26:34,160 --> 00:26:36,230
+if you know the name of the cache which
+
+497
+00:26:36,230 --> 00:26:44,640
+is work okay it's a lot can we copy it
+
+498
+00:26:44,650 --> 00:26:52,940
+works we can go to the console and then
+
+499
+00:26:52,940 --> 00:26:55,850
+cache is not open but this is going to
+
+500
+00:26:55,850 --> 00:26:58,540
+return a promise so you can wait and
+
+501
+00:26:58,540 --> 00:27:05,420
+then cash and then you can cache that
+
+502
+00:27:05,420 --> 00:27:16,860
+get if you get the index.html
+
+503
+00:27:16,870 --> 00:27:20,510
+at the match if is we're looking for all
+
+504
+00:27:20,510 --> 00:27:22,400
+oh yeah good point
+
+505
+00:27:22,400 --> 00:27:25,250
+it's the match sorry so gosh that much
+
+506
+00:27:25,250 --> 00:27:27,740
+and then index.html and it's going to
+
+507
+00:27:27,740 --> 00:27:31,460
+return a promise so wait it answers
+
+508
+00:27:31,460 --> 00:27:39,890
+response with the typo and you will get
+
+509
+00:27:39,890 --> 00:27:41,300
+a response the reason why I didn't get a
+
+510
+00:27:41,300 --> 00:27:42,650
+response is because I have to type all
+
+511
+00:27:42,650 --> 00:27:44,780
+of this but I'm gonna avoid it what I
+
+512
+00:27:44,780 --> 00:27:46,550
+was just showing you is that these
+
+513
+00:27:46,550 --> 00:27:48,110
+caches you can access them from the
+
+514
+00:27:48,110 --> 00:27:52,040
+window scope if necessary now let's go
+
+515
+00:27:52,040 --> 00:27:56,780
+to the next step and what we're gonna do
+
+516
+00:27:56,780 --> 00:27:59,750
+now is add the manifest if you want to
+
+517
+00:27:59,750 --> 00:28:01,640
+allow users to add your app to the home
+
+518
+00:28:01,640 --> 00:28:03,770
+screen you have to have an app manifest
+
+519
+00:28:03,770 --> 00:28:07,790
+and I already generated one before the
+
+520
+00:28:07,790 --> 00:28:08,960
+talk because I'm not gonna waste your
+
+521
+00:28:08,960 --> 00:28:12,410
+time writing all of this so what did we
+
+522
+00:28:12,410 --> 00:28:15,980
+call it in cycle repair and then you
+
+523
+00:28:15,980 --> 00:28:17,420
+have to give it the theme color the
+
+524
+00:28:17,420 --> 00:28:20,030
+icons I'm just using one of the icons
+
+525
+00:28:20,030 --> 00:28:21,650
+for my project so please don't use them
+
+526
+00:28:21,650 --> 00:28:23,830
+in your code
+
+527
+00:28:23,830 --> 00:28:25,720
+the background-color stand alone will
+
+528
+00:28:25,720 --> 00:28:27,790
+hide the browser UI and what is the
+
+529
+00:28:27,790 --> 00:28:30,250
+start here now you just need to link
+
+530
+00:28:30,250 --> 00:28:38,340
+this in the index as a rel manifest and
+
+531
+00:28:38,340 --> 00:28:42,940
+then manifest at JSON and you can test
+
+532
+00:28:42,940 --> 00:28:45,070
+that in dev tools which is very
+
+533
+00:28:45,070 --> 00:28:46,990
+convenient just go to the application
+
+534
+00:28:46,990 --> 00:28:57,440
+tab but we need to go online again
+
+535
+00:28:57,450 --> 00:29:00,570
+alright and you can see all of this here
+
+536
+00:29:00,570 --> 00:29:03,930
+these icons are just random icons and
+
+537
+00:29:03,930 --> 00:29:07,660
+now we're ready to ask the user to add
+
+538
+00:29:07,660 --> 00:29:09,670
+the app to the home screen so the way
+
+539
+00:29:09,670 --> 00:29:12,790
+you do that is by listening to an event
+
+540
+00:29:12,790 --> 00:29:18,700
+called yes someone who sing it if it was
+
+541
+00:29:18,700 --> 00:29:21,430
+correct before install prompt and this
+
+542
+00:29:21,430 --> 00:29:24,910
+gives you an event object do recommend
+
+543
+00:29:24,910 --> 00:29:26,890
+to prevent default on it because older
+
+544
+00:29:26,890 --> 00:29:28,690
+versions of Chrome were showing the mini
+
+545
+00:29:28,690 --> 00:29:30,130
+bar at the bottom which is annoying
+
+546
+00:29:30,130 --> 00:29:31,900
+especially if you have a top bar and
+
+547
+00:29:31,900 --> 00:29:34,360
+this doesn't show it but now this event
+
+548
+00:29:34,360 --> 00:29:36,280
+object you can call prompt on it
+
+549
+00:29:36,280 --> 00:29:38,830
+whenever you're ready so first what
+
+550
+00:29:38,830 --> 00:29:40,420
+we're gonna do is we're gonna say the
+
+551
+00:29:40,420 --> 00:29:41,380
+add to homescreen
+
+552
+00:29:41,380 --> 00:29:47,140
+element let's show it so we give it a
+
+553
+00:29:47,140 --> 00:29:51,070
+class show and then this add to
+
+554
+00:29:51,070 --> 00:29:53,430
+homescreen when the user clicks on it
+
+555
+00:29:53,430 --> 00:29:57,370
+what will we do we will call event dot
+
+556
+00:29:57,370 --> 00:30:04,720
+prompt and then this this is blocking
+
+557
+00:30:04,720 --> 00:30:07,210
+until the user says ok or cancel and
+
+558
+00:30:07,210 --> 00:30:08,770
+then you will have the user choice
+
+559
+00:30:08,770 --> 00:30:11,560
+promise which gives you the result and
+
+560
+00:30:11,560 --> 00:30:14,440
+this will be either dismissed or
+
+561
+00:30:14,440 --> 00:30:19,930
+accepted under result that outcome so we
+
+562
+00:30:19,930 --> 00:30:25,270
+can cancel out resulted outcome and what
+
+563
+00:30:25,270 --> 00:30:27,160
+I recommend for you is to always send
+
+564
+00:30:27,160 --> 00:30:29,410
+this to analytics because you want to
+
+565
+00:30:29,410 --> 00:30:31,390
+understand what kind of users what kind
+
+566
+00:30:31,390 --> 00:30:33,010
+of devices are accepting or rejecting
+
+567
+00:30:33,010 --> 00:30:35,750
+the prompt
+
+568
+00:30:35,750 --> 00:30:41,190
+will it work yeah so first this is only
+
+569
+00:30:41,190 --> 00:30:43,170
+showing up on browsers that support it
+
+570
+00:30:43,170 --> 00:30:46,429
+which is now I think Chrome edge and
+
+571
+00:30:46,429 --> 00:30:49,080
+Firefox but not sure which one is a dis
+
+572
+00:30:49,080 --> 00:30:51,179
+table or not this table but it only
+
+573
+00:30:51,179 --> 00:30:53,730
+shows up when the event fires and the
+
+574
+00:30:53,730 --> 00:30:55,260
+event will not fire if the user already
+
+575
+00:30:55,260 --> 00:30:57,540
+added the app to the home screen or if
+
+576
+00:30:57,540 --> 00:30:59,429
+it's the first second that the users on
+
+577
+00:30:59,429 --> 00:31:01,440
+your domain because it doesn't make
+
+578
+00:31:01,440 --> 00:31:04,200
+sense to add a website you just saw the
+
+579
+00:31:04,200 --> 00:31:05,700
+browser will wait a few seconds and
+
+580
+00:31:05,700 --> 00:31:08,610
+probably adjust your interaction so now
+
+581
+00:31:08,610 --> 00:31:09,840
+what you can do is you can click on it
+
+582
+00:31:09,840 --> 00:31:13,290
+and this is supposedly for mobile but it
+
+583
+00:31:13,290 --> 00:31:15,030
+also works on desktop if you look over
+
+584
+00:31:15,030 --> 00:31:15,360
+there
+
+585
+00:31:15,360 --> 00:31:23,640
+I'm gonna cancel it do it again okay
+
+586
+00:31:23,640 --> 00:31:25,380
+click it click on it and then you get
+
+587
+00:31:25,380 --> 00:31:33,610
+unicycle repeat repeat
+
+588
+00:31:33,620 --> 00:31:37,740
+yeah that was an accident as well you
+
+589
+00:31:37,740 --> 00:31:40,020
+install it and now you have an app
+
+590
+00:31:40,020 --> 00:31:41,970
+without dev tools of course and you have
+
+591
+00:31:41,970 --> 00:31:44,340
+it as an app over here and this theme
+
+592
+00:31:44,340 --> 00:31:46,740
+color is not because I have dark themes
+
+593
+00:31:46,740 --> 00:31:51,090
+because I specified it as 2 to 2 again
+
+594
+00:31:51,090 --> 00:31:52,770
+this is supposed to be for mobile I will
+
+595
+00:31:52,770 --> 00:31:54,600
+actually deploy this right now so you
+
+596
+00:31:54,600 --> 00:31:58,450
+can try it there'll be quite interesting
+
+597
+00:31:58,460 --> 00:32:03,270
+let's go back let's build for production
+
+598
+00:32:03,270 --> 00:32:09,360
+so MPX for park - P and deploy the dist
+
+599
+00:32:09,360 --> 00:32:24,540
+folder nice a worse domain name ever but
+
+600
+00:32:24,540 --> 00:32:31,620
+it's HTTP superficial flock if you want
+
+601
+00:32:31,620 --> 00:32:36,870
+to try this on your phone yeah it's this
+
+602
+00:32:36,870 --> 00:32:39,060
+domain make sure to have HTTPS a few
+
+603
+00:32:39,060 --> 00:32:40,770
+minutes HTTP this domain doesn't
+
+604
+00:32:40,770 --> 00:32:42,270
+redirect and you cannot get the
+
+605
+00:32:42,270 --> 00:32:44,610
+serviceworker to work so then you cannot
+
+606
+00:32:44,610 --> 00:32:47,160
+get the out to homescreen to work okay
+
+607
+00:32:47,160 --> 00:33:00,330
+let's get some questions
+
+608
+00:33:00,340 --> 00:33:02,899
+how much money can you ask for this app
+
+609
+00:33:02,899 --> 00:33:10,100
+you think how do you implement native
+
+610
+00:33:10,100 --> 00:33:12,289
+components such as sliders or motion
+
+611
+00:33:12,289 --> 00:33:15,769
+gestures such as a shake I think you
+
+612
+00:33:15,769 --> 00:33:17,809
+will need JavaScript for the shake I
+
+613
+00:33:17,809 --> 00:33:19,600
+don't know if we have access to the
+
+614
+00:33:19,600 --> 00:33:23,899
+accelerometer for it yeah that's a great
+
+615
+00:33:23,899 --> 00:33:25,730
+website where you can see also browser
+
+616
+00:33:25,730 --> 00:33:29,570
+support for it native components sliders
+
+617
+00:33:29,570 --> 00:33:31,190
+I think there is a slider component
+
+618
+00:33:31,190 --> 00:33:48,180
+input type range let's see
+
+619
+00:33:48,190 --> 00:33:53,200
+yeah you can use this one and it works
+
+620
+00:33:53,200 --> 00:33:55,100
+someone asked about Visual Studio
+
+621
+00:33:55,100 --> 00:33:57,020
+extensions they're not a lot it's just
+
+622
+00:33:57,020 --> 00:34:00,770
+prettier and peacock and lit and these
+
+623
+00:34:00,770 --> 00:34:03,140
+ones someone else a important question
+
+624
+00:34:03,140 --> 00:34:05,030
+which is how do you deal with is
+
+625
+00:34:05,030 --> 00:34:08,419
+dropping upstate when switching apps is
+
+626
+00:34:08,419 --> 00:34:11,450
+this still happening I think it was
+
+627
+00:34:11,450 --> 00:34:14,960
+fixed in the last iOS version the main
+
+628
+00:34:14,960 --> 00:34:16,760
+problem with the IRS now is that if you
+
+629
+00:34:16,760 --> 00:34:19,580
+have authentication and the user adds
+
+630
+00:34:19,580 --> 00:34:21,560
+the app to the home screen this app on
+
+631
+00:34:21,560 --> 00:34:22,639
+the home screen has a completely
+
+632
+00:34:22,639 --> 00:34:24,590
+different state than Safari so you're
+
+633
+00:34:24,590 --> 00:34:25,970
+not logged into Facebook you're not
+
+634
+00:34:25,970 --> 00:34:27,889
+logged into github in that case I
+
+635
+00:34:27,889 --> 00:34:30,080
+generally just don't recommend pushing
+
+636
+00:34:30,080 --> 00:34:32,870
+out to home screen for iOS users just
+
+637
+00:34:32,870 --> 00:34:34,940
+keep them in the browser and it works
+
+638
+00:34:34,940 --> 00:34:37,879
+fine and for Android you can do it and
+
+639
+00:34:37,879 --> 00:34:39,470
+that's what I'm personally using and it
+
+640
+00:34:39,470 --> 00:34:48,590
+works fine yes now we have more time to
+
+641
+00:34:48,590 --> 00:34:51,530
+do little element things so the reason
+
+642
+00:34:51,530 --> 00:34:53,570
+why I like to use little iment is just
+
+643
+00:34:53,570 --> 00:34:59,900
+because it's very very tiny ish so we're
+
+644
+00:34:59,900 --> 00:35:01,520
+gonna create a new files only 6
+
+645
+00:35:01,520 --> 00:35:04,630
+kilobytes gzipped so we'll create the
+
+646
+00:35:04,630 --> 00:35:12,220
+was the first page called app tasks and
+
+647
+00:35:12,220 --> 00:35:15,800
+then we will create this app tasks page
+
+648
+00:35:15,800 --> 00:35:19,070
+which extends from the lead element and
+
+649
+00:35:19,070 --> 00:35:21,170
+then you have a render function and then
+
+650
+00:35:21,170 --> 00:35:28,280
+we just say it works even though it
+
+651
+00:35:28,280 --> 00:35:31,610
+won't and then you need to register it
+
+652
+00:35:31,610 --> 00:35:33,710
+so custom elements that define and then
+
+653
+00:35:33,710 --> 00:35:35,930
+that's gonna be after tasks with the
+
+654
+00:35:35,930 --> 00:35:38,450
+definitional class of tasks and you need
+
+655
+00:35:38,450 --> 00:35:46,010
+to import this part so we import it here
+
+656
+00:35:46,020 --> 00:35:49,590
+and there is something I'd like to do in
+
+657
+00:35:49,590 --> 00:35:51,750
+most of my apps the modern ones this
+
+658
+00:35:51,750 --> 00:35:53,640
+script tag here which is at the bottom I
+
+659
+00:35:53,640 --> 00:35:55,710
+like to move it in the head which is
+
+660
+00:35:55,710 --> 00:35:59,910
+super scary because if you just make it
+
+661
+00:35:59,910 --> 00:36:02,280
+type equals module or if you make it a
+
+662
+00:36:02,280 --> 00:36:07,590
+Singh then it also acts like a preload
+
+663
+00:36:07,590 --> 00:36:09,600
+header at the same time you're telling
+
+664
+00:36:09,600 --> 00:36:11,430
+the browser about it but it also doesn't
+
+665
+00:36:11,430 --> 00:36:12,840
+block rendering so the browser can
+
+666
+00:36:12,840 --> 00:36:15,420
+continue with the HTML so it's just like
+
+667
+00:36:15,420 --> 00:36:16,890
+doing a script at the bottom and having
+
+668
+00:36:16,890 --> 00:36:18,660
+a preload at the top I know this is a
+
+669
+00:36:18,660 --> 00:36:20,250
+hundred percent correct for type equals
+
+670
+00:36:20,250 --> 00:36:22,560
+module I just cannot remember for async
+
+671
+00:36:22,560 --> 00:36:31,150
+can anyone confirm it is most likely yes
+
+672
+00:36:31,160 --> 00:36:33,510
+yeah in that case we'd have to use defer
+
+673
+00:36:33,510 --> 00:36:36,870
+to guarantee the order all right now
+
+674
+00:36:36,870 --> 00:36:48,580
+let's go back here and we need to serve
+
+675
+00:36:48,590 --> 00:36:54,020
+and it does not work Oh
+
+676
+00:36:54,030 --> 00:36:56,280
+because we are running on the older
+
+677
+00:36:56,280 --> 00:36:58,080
+version of the service worker so I
+
+678
+00:36:58,080 --> 00:37:02,340
+technically have to go here and then we
+
+679
+00:37:02,340 --> 00:37:04,050
+have out it ok so the reason why I
+
+680
+00:37:04,050 --> 00:37:05,430
+didn't work the first time is because I
+
+681
+00:37:05,430 --> 00:37:06,930
+was seeing the older version of the app
+
+682
+00:37:06,930 --> 00:37:08,910
+and I had to reload to see the new one
+
+683
+00:37:08,910 --> 00:37:10,560
+but this is the same thing with native
+
+684
+00:37:10,560 --> 00:37:12,060
+apps when you open a native app on your
+
+685
+00:37:12,060 --> 00:37:14,910
+phone it could be not the latest one you
+
+686
+00:37:14,910 --> 00:37:16,410
+would have to go to the store check if
+
+687
+00:37:16,410 --> 00:37:18,930
+there's a new one and update you can
+
+688
+00:37:18,930 --> 00:37:21,240
+kind of do the same with progressive web
+
+689
+00:37:21,240 --> 00:37:23,910
+apps but yeah unfortunately it's a
+
+690
+00:37:23,910 --> 00:37:25,230
+little bit outside of the scope for now
+
+691
+00:37:25,230 --> 00:37:29,580
+but what we want to do here is oh yeah I
+
+692
+00:37:29,580 --> 00:37:31,290
+still need to fix this because if you
+
+693
+00:37:31,290 --> 00:37:32,820
+click on the stalk it just reloads the
+
+694
+00:37:32,820 --> 00:37:36,600
+page so this is also part of the app
+
+695
+00:37:36,600 --> 00:37:38,250
+shop so then it has to go in the
+
+696
+00:37:38,250 --> 00:37:41,310
+index.html as inline JavaScript and that
+
+697
+00:37:41,310 --> 00:37:44,070
+may also sound look weird but you're
+
+698
+00:37:44,070 --> 00:37:46,200
+basically giving full priority to the
+
+699
+00:37:46,200 --> 00:37:48,660
+script and it's gonna be very minimal so
+
+700
+00:37:48,660 --> 00:37:52,080
+you say I'm gonna find all of the tabs
+
+701
+00:37:52,080 --> 00:37:55,470
+and then for every tab
+
+702
+00:37:55,470 --> 00:37:57,640
+is anyone using addeventlistener
+
+703
+00:37:57,640 --> 00:38:00,770
+nowadays
+
+704
+00:38:00,780 --> 00:38:05,560
+yes I keep hearing about react should
+
+705
+00:38:05,560 --> 00:38:10,060
+try it one day and then when you click
+
+706
+00:38:10,060 --> 00:38:17,030
+on the tab you will we will try to find
+
+707
+00:38:17,040 --> 00:38:19,660
+the previous tab that was active and
+
+708
+00:38:19,660 --> 00:38:21,900
+then we removed the active from it and
+
+709
+00:38:21,900 --> 00:38:24,430
+then we find the one that was clicked
+
+710
+00:38:24,430 --> 00:38:28,900
+and then we give it a last list of
+
+711
+00:38:28,900 --> 00:38:33,030
+active and finally even prevent default
+
+712
+00:38:33,030 --> 00:38:37,200
+now reload let's see if it works
+
+713
+00:38:37,200 --> 00:38:41,920
+click yeah this one is active and it's
+
+714
+00:38:41,920 --> 00:38:44,050
+not changing pages but there is
+
+715
+00:38:44,050 --> 00:38:45,790
+something really important when I talk
+
+716
+00:38:45,790 --> 00:38:49,390
+to you about this is not ok when we talk
+
+717
+00:38:49,390 --> 00:38:51,310
+about user experience see this empty gap
+
+718
+00:38:51,310 --> 00:38:53,710
+here this is super frustrating for users
+
+719
+00:38:53,710 --> 00:38:56,110
+so when building native like progressive
+
+720
+00:38:56,110 --> 00:38:57,760
+web apps you want to really focus on
+
+721
+00:38:57,760 --> 00:39:00,310
+these small details and then this should
+
+722
+00:39:00,310 --> 00:39:01,900
+be hundred percent there should be no
+
+723
+00:39:01,900 --> 00:39:04,770
+empty spots at the top or at the bottom
+
+724
+00:39:04,770 --> 00:39:12,640
+so I had a margin in there I think yeah
+
+725
+00:39:12,640 --> 00:39:15,370
+a padding through with a padding top we
+
+726
+00:39:15,370 --> 00:39:18,940
+can put it on the a element and it's a
+
+727
+00:39:18,940 --> 00:39:20,860
+really simple fix if it works but yeah
+
+728
+00:39:20,860 --> 00:39:22,840
+that's really important here and you
+
+729
+00:39:22,840 --> 00:39:24,370
+also want to give feedback that has been
+
+730
+00:39:24,370 --> 00:39:27,250
+clicked potentially a ripple effect but
+
+731
+00:39:27,250 --> 00:39:29,290
+I only have six more minutes so I don't
+
+732
+00:39:29,290 --> 00:39:33,250
+think we're gonna make it you can also
+
+733
+00:39:33,250 --> 00:39:35,020
+make it such that when you click on one
+
+734
+00:39:35,020 --> 00:39:37,660
+of these pages it Scrolls to the second
+
+735
+00:39:37,660 --> 00:39:40,420
+page of course but I'm gonna skip that
+
+736
+00:39:40,420 --> 00:39:41,500
+because you know how it works
+
+737
+00:39:41,500 --> 00:39:47,260
+and next I'm gonna create the second
+
+738
+00:39:47,260 --> 00:39:50,560
+element which is what was the second
+
+739
+00:39:50,560 --> 00:39:54,700
+element called app stock so we duplicate
+
+740
+00:39:54,700 --> 00:40:01,480
+this call it app stock
+
+741
+00:40:01,490 --> 00:40:09,330
+and this is gonna be I'm gonna assume
+
+742
+00:40:09,330 --> 00:40:13,130
+there's a method here that says like
+
+743
+00:40:13,130 --> 00:40:16,740
+activate or so something a custom method
+
+744
+00:40:16,740 --> 00:40:18,900
+that you want to call when this page has
+
+745
+00:40:18,900 --> 00:40:20,760
+rendered you can do it with first up
+
+746
+00:40:20,760 --> 00:40:22,560
+updated but I just want to show you
+
+747
+00:40:22,560 --> 00:40:24,150
+something that has to do with
+
+748
+00:40:24,150 --> 00:40:26,640
+performance and web components so I'm
+
+749
+00:40:26,640 --> 00:40:28,020
+just gonna say console the debug
+
+750
+00:40:28,020 --> 00:40:33,930
+activate was hold and go back to the
+
+751
+00:40:33,930 --> 00:40:41,940
+index import this to app stock reload
+
+752
+00:40:41,940 --> 00:40:44,580
+the page we're gonna have up stock it
+
+753
+00:40:44,580 --> 00:40:47,610
+works and the nice thing about our
+
+754
+00:40:47,610 --> 00:40:49,470
+components is that they are just HTML
+
+755
+00:40:49,470 --> 00:40:52,350
+elements with their own properties and
+
+756
+00:40:52,350 --> 00:40:54,660
+methods so if you find the app stock you
+
+757
+00:40:54,660 --> 00:40:56,730
+can call activate on it which is my own
+
+758
+00:40:56,730 --> 00:41:00,350
+custom method and that works great
+
+759
+00:41:00,350 --> 00:41:04,080
+activate was called until you decide you
+
+760
+00:41:04,080 --> 00:41:05,910
+start having a lot of components and you
+
+761
+00:41:05,910 --> 00:41:08,460
+want to lazy load them but thankfully
+
+762
+00:41:08,460 --> 00:41:11,340
+it's very easy you just import as a
+
+763
+00:41:11,340 --> 00:41:14,790
+function this is a browser feature you
+
+764
+00:41:14,790 --> 00:41:16,560
+can use it in all browsers but if you
+
+765
+00:41:16,560 --> 00:41:18,210
+have what park or parcel it takes care
+
+766
+00:41:18,210 --> 00:41:20,700
+of Polly filling it there may be one
+
+767
+00:41:20,700 --> 00:41:22,680
+browser missing it I'm missing from it
+
+768
+00:41:22,680 --> 00:41:26,190
+yet you just import it and then you can
+
+769
+00:41:26,190 --> 00:41:28,980
+have a promise when it actually loads
+
+770
+00:41:28,980 --> 00:41:33,030
+and it works but this is gonna break now
+
+771
+00:41:33,030 --> 00:41:35,280
+because at the moment this is running
+
+772
+00:41:35,280 --> 00:41:39,570
+app stock doesn't exist so you can do it
+
+773
+00:41:39,570 --> 00:41:41,640
+in multiple ways you can you can do it
+
+774
+00:41:41,640 --> 00:41:43,680
+with the dog down here I just want to
+
+775
+00:41:43,680 --> 00:41:45,360
+show you another method with custom
+
+776
+00:41:45,360 --> 00:41:47,210
+elements because other code grows
+
+777
+00:41:47,210 --> 00:41:49,830
+sometimes you don't have access to this
+
+778
+00:41:49,830 --> 00:41:52,020
+import and the right file what you can
+
+779
+00:41:52,020 --> 00:41:53,490
+do is you can use this window that
+
+780
+00:41:53,490 --> 00:41:58,890
+custom elements dot anyone guess it yes
+
+781
+00:41:58,890 --> 00:41:59,710
+yes
+
+782
+00:41:59,710 --> 00:42:02,560
+one defined and you give it the name of
+
+783
+00:42:02,560 --> 00:42:04,270
+the app stock and this is basically
+
+784
+00:42:04,270 --> 00:42:06,250
+returning a promise that will only
+
+785
+00:42:06,250 --> 00:42:08,080
+resolve when the browser has the
+
+786
+00:42:08,080 --> 00:42:11,440
+definition for app stock and then yeah
+
+787
+00:42:11,440 --> 00:42:15,790
+one defined then it's kind of safe to
+
+788
+00:42:15,790 --> 00:42:17,140
+call it I say it's kind of safe because
+
+789
+00:42:17,140 --> 00:42:19,840
+it may still not be in the Dom but here
+
+790
+00:42:19,840 --> 00:42:21,280
+I know that it's always gonna be in the
+
+791
+00:42:21,280 --> 00:42:24,730
+DOM and then reload and then activate
+
+792
+00:42:24,730 --> 00:42:27,490
+was called and I think what I did here
+
+793
+00:42:27,490 --> 00:42:30,490
+is the main page is the one the user is
+
+794
+00:42:30,490 --> 00:42:32,680
+gonna see immediately so I loaded this
+
+795
+00:42:32,680 --> 00:42:35,530
+as a normal import but this one it's a
+
+796
+00:42:35,530 --> 00:42:37,900
+secondary pager so then I lazy loaded it
+
+797
+00:42:37,900 --> 00:42:39,940
+because you want to give you want to
+
+798
+00:42:39,940 --> 00:42:42,100
+make this load as far this as fast as
+
+799
+00:42:42,100 --> 00:42:44,590
+possible and then lazy load all the
+
+800
+00:42:44,590 --> 00:42:50,260
+other pages oh that was technically oh
+
+801
+00:42:50,260 --> 00:42:55,510
+I'm gonna build and take some more
+
+802
+00:42:55,510 --> 00:42:58,430
+questions
+
+803
+00:42:58,440 --> 00:43:01,180
+I'm gonna build to a new domain just
+
+804
+00:43:01,180 --> 00:43:05,620
+easier for me flash it squirrel don't
+
+805
+00:43:05,620 --> 00:43:11,690
+forget the HTTP if you wanna try this
+
+806
+00:43:11,700 --> 00:43:20,590
+and
+
+807
+00:43:20,600 --> 00:43:22,400
+you please check in the project to
+
+808
+00:43:22,400 --> 00:43:25,430
+public repository yes I will do that and
+
+809
+00:43:25,430 --> 00:43:29,210
+I will tweet it afterwards so put it on
+
+810
+00:43:29,210 --> 00:43:33,110
+github then tweet it do you know why
+
+811
+00:43:33,110 --> 00:43:38,030
+people say and then I'll tweet it they
+
+812
+00:43:38,030 --> 00:43:39,860
+just want more followers I don't know
+
+813
+00:43:39,860 --> 00:43:51,500
+why they do that how to handle up
+
+814
+00:43:51,500 --> 00:43:53,210
+updates from the serviceworker cache is
+
+815
+00:43:53,210 --> 00:43:55,610
+everything I wish I can answer that in
+
+816
+00:43:55,610 --> 00:43:57,530
+one minute but it's really a bit more
+
+817
+00:43:57,530 --> 00:44:01,510
+complicated but what I did here is I
+
+818
+00:44:01,510 --> 00:44:05,060
+gave a full talk of about this topic not
+
+819
+00:44:05,060 --> 00:44:07,010
+as a life coach just a full talk so I do
+
+820
+00:44:07,010 --> 00:44:08,630
+recommend that you watch it if you're
+
+821
+00:44:08,630 --> 00:44:10,460
+interested in this and I also mention
+
+822
+00:44:10,460 --> 00:44:13,010
+the update quickly you can check out my
+
+823
+00:44:13,010 --> 00:44:17,840
+website and my Twitter what else
+
+824
+00:44:17,840 --> 00:44:23,520
+what about ie is that a serious question
+
+825
+00:44:23,530 --> 00:44:26,300
+well not serious because you can you can
+
+826
+00:44:26,300 --> 00:44:28,250
+still support ie with the script type
+
+827
+00:44:28,250 --> 00:44:33,120
+module let's let me show you quickly I
+
+828
+00:44:33,130 --> 00:44:35,150
+know it's not a serious question but
+
+829
+00:44:35,150 --> 00:44:38,180
+it's good to bring it up when you have a
+
+830
+00:44:38,180 --> 00:44:43,490
+script script async
+
+831
+00:44:43,490 --> 00:44:46,550
+sorry script type module this will only
+
+832
+00:44:46,550 --> 00:44:48,260
+run on modern browsers it will be
+
+833
+00:44:48,260 --> 00:44:51,740
+ignored by Internet Explorer so you can
+
+834
+00:44:51,740 --> 00:44:53,630
+ship modern JavaScript here and then for
+
+835
+00:44:53,630 --> 00:44:55,720
+all browsers you can have a script that
+
+836
+00:44:55,720 --> 00:44:59,330
+has a no module attribute which is on
+
+837
+00:44:59,330 --> 00:45:01,820
+purpose ignored by modern browsers and
+
+838
+00:45:01,820 --> 00:45:03,650
+then what you can do here you can do
+
+839
+00:45:03,650 --> 00:45:06,710
+main - legacy is and for this uShip
+
+840
+00:45:06,710 --> 00:45:10,550
+polyphase you you bubble or babel it and
+
+841
+00:45:10,550 --> 00:45:13,520
+then this works for JavaScript for CSS I
+
+842
+00:45:13,520 --> 00:45:15,110
+have no idea how you can make this play
+
+843
+00:45:15,110 --> 00:45:19,580
+grid work on ie and for the final
+
+844
+00:45:19,580 --> 00:45:23,720
+questions how does it compare to
+
+845
+00:45:23,720 --> 00:45:27,570
+automatic splash screens Android house
+
+846
+00:45:27,570 --> 00:45:30,070
+the question implies that they get
+
+847
+00:45:30,070 --> 00:45:31,840
+generated automatically by Android to be
+
+848
+00:45:31,840 --> 00:45:45,740
+honest I'm not aware of that are they
+
+849
+00:45:45,750 --> 00:45:48,550
+okay because if you try this up you will
+
+850
+00:45:48,550 --> 00:46:07,749
+have a splash screen as well
+
+851
+00:46:07,759 --> 00:46:10,009
+so let me see if I open like the Twitter
+
+852
+00:46:10,009 --> 00:46:12,859
+app so you have the splash screen and
+
+853
+00:46:12,859 --> 00:46:14,150
+then you have the app shell even on
+
+854
+00:46:14,150 --> 00:46:15,890
+native apps so it's basically doing the
+
+855
+00:46:15,890 --> 00:46:18,859
+same thing I think also for iOS but I'm
+
+856
+00:46:18,859 --> 00:46:23,089
+not a hundred percent sure oh yeah money
+
+857
+00:46:23,089 --> 00:46:29,089
+yeah okay and scroll stop support this
+
+858
+00:46:29,089 --> 00:46:31,219
+from IE 10 not bad yes but it has a
+
+859
+00:46:31,219 --> 00:46:33,229
+different syntax it's using an older
+
+860
+00:46:33,229 --> 00:46:37,609
+version that you can also use how
+
+861
+00:46:37,609 --> 00:46:39,829
+maintainable is PWA like this can use
+
+862
+00:46:39,829 --> 00:46:42,859
+dependency bots not sure what the
+
+863
+00:46:42,859 --> 00:46:44,209
+question is about but I guess I'll just
+
+864
+00:46:44,209 --> 00:46:46,009
+take the other questions afterwards
+
+865
+00:46:46,009 --> 00:46:48,460
+thank you very much for having me and
+

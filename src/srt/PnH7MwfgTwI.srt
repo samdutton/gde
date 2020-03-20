@@ -1,0 +1,3549 @@
+1
+00:00:02,490 --> 00:00:05,100
+
+so good evening thanks for remaining
+
+2
+00:00:05,100 --> 00:00:06,540
+that's that's great as a good
+
+3
+00:00:06,540 --> 00:00:09,150
+achievement for me so tonight I would
+
+4
+00:00:09,150 --> 00:00:11,969
+like to to share my experience because
+
+5
+00:00:11,969 --> 00:00:13,469
+the reason that let's say like in
+
+6
+00:00:13,469 --> 00:00:15,660
+microservices a lot of literature
+
+7
+00:00:15,660 --> 00:00:19,109
+literature and a lot of information how
+
+8
+00:00:19,109 --> 00:00:22,080
+to deal with microphone tense and
+
+9
+00:00:22,080 --> 00:00:23,369
+therefore what I'm trying to do is I
+
+10
+00:00:23,369 --> 00:00:25,560
+mean this mission to share as much as
+
+11
+00:00:25,560 --> 00:00:28,259
+possible what we are doing why we take
+
+12
+00:00:28,259 --> 00:00:30,300
+we took a certain path in our company
+
+13
+00:00:30,300 --> 00:00:31,970
+and and so forth
+
+14
+00:00:31,970 --> 00:00:34,680
+okay so Who am I my name is Luca I'm a
+
+15
+00:00:34,680 --> 00:00:37,680
+VP of architecture at the zone I'm a
+
+16
+00:00:37,680 --> 00:00:39,720
+Google developer expert and running the
+
+17
+00:00:39,720 --> 00:00:43,290
+loaded on the JavaScript community so
+
+18
+00:00:43,290 --> 00:00:46,020
+let's start from the beginning okay I
+
+19
+00:00:46,020 --> 00:00:48,870
+think many of you or at least this is my
+
+20
+00:00:48,870 --> 00:00:54,180
+experience started with in a startup or
+
+21
+00:00:54,180 --> 00:00:56,790
+a new project greenfield project to work
+
+22
+00:00:56,790 --> 00:00:59,430
+on something with the hard deadline or
+
+23
+00:00:59,430 --> 00:01:02,070
+you need deliver as fast as you can so
+
+24
+00:01:02,070 --> 00:01:05,760
+in our case we had like roughly the
+
+25
+00:01:05,760 --> 00:01:08,100
+beginning seven people to aggregate six
+
+26
+00:01:08,100 --> 00:01:10,950
+different companies that were and
+
+27
+00:01:10,950 --> 00:01:13,259
+developing not only the backend layer
+
+28
+00:01:13,259 --> 00:01:17,280
+but also the front-end layer that was a
+
+29
+00:01:17,280 --> 00:01:19,619
+single page application a big classic
+
+30
+00:01:19,619 --> 00:01:21,960
+and it has to work there is a nice
+
+31
+00:01:21,960 --> 00:01:23,939
+requirement has to work not only on web
+
+32
+00:01:23,939 --> 00:01:26,340
+and mobile but also on around 14
+
+33
+00:01:26,340 --> 00:01:28,350
+different TV devices so set the boxes
+
+34
+00:01:28,350 --> 00:01:32,549
+console web mobile all that and that is
+
+35
+00:01:32,549 --> 00:01:34,259
+for me where we're usually developers
+
+36
+00:01:34,259 --> 00:01:35,670
+shines because there are a lot of
+
+37
+00:01:35,670 --> 00:01:37,140
+strings and we're not used anymore
+
+38
+00:01:37,140 --> 00:01:38,700
+because we have this amazing quad-core
+
+39
+00:01:38,700 --> 00:01:40,679
+the computers that are rendering
+
+40
+00:01:40,679 --> 00:01:42,899
+everything instead on TVs is pretty
+
+41
+00:01:42,899 --> 00:01:45,539
+funny so on the back end what we have
+
+42
+00:01:45,539 --> 00:01:49,710
+done is creating object model it we
+
+43
+00:01:49,710 --> 00:01:52,619
+decided to have just moon would be for
+
+44
+00:01:52,619 --> 00:01:56,130
+the back end and we wear like roughly
+
+45
+00:01:56,130 --> 00:01:59,549
+internally not many people we work with
+
+46
+00:01:59,549 --> 00:02:02,240
+some for parties it was a an interesting
+
+47
+00:02:02,240 --> 00:02:07,289
+journey and then we launched the the
+
+48
+00:02:07,289 --> 00:02:08,610
+service that I will tell you in a moment
+
+49
+00:02:08,610 --> 00:02:12,240
+what it is and suddenly we start using
+
+50
+00:02:12,240 --> 00:02:15,090
+to have success and it was like a very
+
+51
+00:02:15,090 --> 00:02:15,989
+nice feeling
+
+52
+00:02:15,989 --> 00:02:18,150
+the problem was there was a month after
+
+53
+00:02:18,150 --> 00:02:19,709
+the release so we didn't expect that
+
+54
+00:02:19,709 --> 00:02:23,400
+much success and obviously a lot of us
+
+55
+00:02:23,400 --> 00:02:26,159
+we're thinking okay well so now what do
+
+56
+00:02:26,159 --> 00:02:28,500
+we do because we started to see some
+
+57
+00:02:28,500 --> 00:02:30,450
+challenges how to scale the part we
+
+58
+00:02:30,450 --> 00:02:33,090
+started to use we use AWS for we're an
+
+59
+00:02:33,090 --> 00:02:34,769
+AWS shop so we are using heavily that
+
+60
+00:02:34,769 --> 00:02:37,200
+part and it was pretty nice so I
+
+61
+00:02:37,200 --> 00:02:39,090
+convinced the the pistas to do an
+
+62
+00:02:39,090 --> 00:02:41,389
+investment and work with micro services
+
+63
+00:02:41,389 --> 00:02:44,489
+because obviously there is a way we can
+
+64
+00:02:44,489 --> 00:02:47,219
+scale the company there is a way that we
+
+65
+00:02:47,219 --> 00:02:49,439
+can they've identified the bonded
+
+66
+00:02:49,439 --> 00:02:51,689
+context around our our domain we can
+
+67
+00:02:51,689 --> 00:02:53,010
+start to work with domain driven design
+
+68
+00:02:53,010 --> 00:02:56,459
+we start to identify what are let's say
+
+69
+00:02:56,459 --> 00:02:58,379
+the best practices definitely there is
+
+70
+00:02:58,379 --> 00:03:00,540
+some overhead but overall if you want to
+
+71
+00:03:00,540 --> 00:03:02,879
+scale a business that a solution that
+
+72
+00:03:02,879 --> 00:03:06,209
+was pallet the reality though is what do
+
+73
+00:03:06,209 --> 00:03:09,030
+you do own from them and that was a
+
+74
+00:03:09,030 --> 00:03:11,939
+question that I had in my career several
+
+75
+00:03:11,939 --> 00:03:14,189
+times because at that stage you know it
+
+76
+00:03:14,189 --> 00:03:16,919
+was pretty obvious that at some point we
+
+77
+00:03:16,919 --> 00:03:18,629
+were scaling but scaling like
+
+78
+00:03:18,629 --> 00:03:19,469
+blitzscaling
+
+79
+00:03:19,469 --> 00:03:22,139
+and it's it's not an easy thing because
+
+80
+00:03:22,139 --> 00:03:24,359
+on front-end usually you don't speak
+
+81
+00:03:24,359 --> 00:03:26,159
+much about architecture usually you
+
+82
+00:03:26,159 --> 00:03:29,639
+steal the wisdom from from the past so
+
+83
+00:03:29,639 --> 00:03:32,970
+you look at I don't know MV IDC I you
+
+84
+00:03:32,970 --> 00:03:34,560
+look from different type of
+
+85
+00:03:34,560 --> 00:03:36,269
+architectures but in reality no one is
+
+86
+00:03:36,269 --> 00:03:38,129
+talking about scale because now is
+
+87
+00:03:38,129 --> 00:03:40,709
+becoming more complex that system so can
+
+88
+00:03:40,709 --> 00:03:42,209
+we do something that was my question at
+
+89
+00:03:42,209 --> 00:03:47,939
+the beginning so I think we can it's not
+
+90
+00:03:47,939 --> 00:03:51,120
+perfect but it's it's a trade of name 40
+
+91
+00:03:51,120 --> 00:03:53,040
+usually says that the reason to the
+
+92
+00:03:53,040 --> 00:03:55,109
+perfect architecture there are only the
+
+93
+00:03:55,109 --> 00:03:56,909
+last worst one and I fully agree with
+
+94
+00:03:56,909 --> 00:03:58,680
+this because in reality is always a
+
+95
+00:03:58,680 --> 00:04:00,060
+trade off is based on the context where
+
+96
+00:04:00,060 --> 00:04:02,400
+you operate is based on the skills of
+
+97
+00:04:02,400 --> 00:04:03,810
+your people is based on several things
+
+98
+00:04:03,810 --> 00:04:06,120
+that are outside the technical part and
+
+99
+00:04:06,120 --> 00:04:07,859
+often we don't take in consideration the
+
+100
+00:04:07,859 --> 00:04:10,229
+part as architects as ly developer tech
+
+101
+00:04:10,229 --> 00:04:12,419
+leads this is very important because if
+
+102
+00:04:12,419 --> 00:04:15,239
+you ignore the company structure you
+
+103
+00:04:15,239 --> 00:04:17,759
+don't try to change that it could bite
+
+104
+00:04:17,759 --> 00:04:21,060
+yourself in in a few months and that
+
+105
+00:04:21,060 --> 00:04:23,190
+that was a huge problem so what we came
+
+106
+00:04:23,190 --> 00:04:25,650
+about was this architecture that was the
+
+107
+00:04:25,650 --> 00:04:28,289
+beginning and now we move to this so
+
+108
+00:04:28,289 --> 00:04:29,639
+what we started to do is
+
+109
+00:04:29,639 --> 00:04:32,969
+okay so let's think about what are the
+
+110
+00:04:32,969 --> 00:04:34,469
+principle of micro-services so we would
+
+111
+00:04:34,469 --> 00:04:36,900
+like to have independent releases we
+
+112
+00:04:36,900 --> 00:04:39,599
+would like to have decisions that are
+
+113
+00:04:39,599 --> 00:04:41,969
+made domain by the main pieces the main
+
+114
+00:04:41,969 --> 00:04:43,860
+business domain I don't want to have any
+
+115
+00:04:43,860 --> 00:04:46,050
+more attack lead that is imposing the
+
+116
+00:04:46,050 --> 00:04:47,580
+decision at first is the beginner
+
+117
+00:04:47,580 --> 00:04:49,979
+project and for the next foreseeable
+
+118
+00:04:49,979 --> 00:04:52,229
+future maintaining the same the same
+
+119
+00:04:52,229 --> 00:04:53,969
+thing that is something that honestly
+
+120
+00:04:53,969 --> 00:04:56,099
+when I was a developer and the tech lead
+
+121
+00:04:56,099 --> 00:04:59,520
+I didn't like much but I do understand
+
+122
+00:04:59,520 --> 00:05:00,990
+why I was like that and the investment
+
+123
+00:05:00,990 --> 00:05:02,520
+for the company wasn't always there
+
+124
+00:05:02,520 --> 00:05:03,900
+because obviously if you ask to the
+
+125
+00:05:03,900 --> 00:05:05,669
+company I need to write an application
+
+126
+00:05:05,669 --> 00:05:08,039
+that is I don't know 10 years old it
+
+127
+00:05:08,039 --> 00:05:09,389
+takes a lot of effort a lot of
+
+128
+00:05:09,389 --> 00:05:10,860
+development and you cannot really do
+
+129
+00:05:10,860 --> 00:05:13,680
+that but with that potentially we can do
+
+130
+00:05:13,680 --> 00:05:16,289
+that potentially we can start to do what
+
+131
+00:05:16,289 --> 00:05:18,029
+we are used to do on on the micro
+
+132
+00:05:18,029 --> 00:05:19,979
+services so applying strangle pattern on
+
+133
+00:05:19,979 --> 00:05:21,569
+the old application and that's more or
+
+134
+00:05:21,569 --> 00:05:22,770
+less what we have done and that will
+
+135
+00:05:22,770 --> 00:05:26,759
+guide you to the journey one piece that
+
+136
+00:05:26,759 --> 00:05:29,069
+is very important for me is the routing
+
+137
+00:05:29,069 --> 00:05:31,740
+part so one thing that we need to nail
+
+138
+00:05:31,740 --> 00:05:34,199
+almost upfront is how do you route
+
+139
+00:05:34,199 --> 00:05:35,759
+between microphone tents and there are
+
+140
+00:05:35,759 --> 00:05:38,069
+several ways I will I will show you what
+
+141
+00:05:38,069 --> 00:05:40,050
+we are doing on our side but as I wrote
+
+142
+00:05:40,050 --> 00:05:41,819
+here you can you can do that on the edge
+
+143
+00:05:41,819 --> 00:05:43,139
+you can do on server side you can do
+
+144
+00:05:43,139 --> 00:05:44,819
+client side there are plenty of
+
+145
+00:05:44,819 --> 00:05:48,509
+possibilities so let's try to define
+
+146
+00:05:48,509 --> 00:05:50,159
+what is a microphone tense because there
+
+147
+00:05:50,159 --> 00:05:52,319
+are many information out there so for me
+
+148
+00:05:52,319 --> 00:05:54,330
+microphone 10 is the representation of a
+
+149
+00:05:54,330 --> 00:05:56,639
+business subdomain and that is very
+
+150
+00:05:56,639 --> 00:05:58,349
+important so we start from from domain
+
+151
+00:05:58,349 --> 00:06:00,449
+driven design they allow independent
+
+152
+00:06:00,449 --> 00:06:01,860
+implementation with same or different
+
+153
+00:06:01,860 --> 00:06:03,810
+technology finally they should avoid
+
+154
+00:06:03,810 --> 00:06:05,969
+should avoid sharing logic I know that
+
+155
+00:06:05,969 --> 00:06:07,169
+is very controversial controversial
+
+156
+00:06:07,169 --> 00:06:08,550
+because we learn something different
+
+157
+00:06:08,550 --> 00:06:11,099
+abstraction and that fix but it's not
+
+158
+00:06:11,099 --> 00:06:14,430
+always the case and finally are owned by
+
+159
+00:06:14,430 --> 00:06:16,469
+a single team so those for me are the
+
+160
+00:06:16,469 --> 00:06:19,889
+key characteristics that are important
+
+161
+00:06:19,889 --> 00:06:22,469
+for 4 micron deaths because having those
+
+162
+00:06:22,469 --> 00:06:25,439
+characteristics allows you to work
+
+163
+00:06:25,439 --> 00:06:27,930
+independently to take local decision
+
+164
+00:06:27,930 --> 00:06:29,909
+over global decision and obviously yes
+
+165
+00:06:29,909 --> 00:06:32,129
+there are let's say some coordination
+
+166
+00:06:32,129 --> 00:06:33,659
+between teams there are community of
+
+167
+00:06:33,659 --> 00:06:35,520
+practices there are several things that
+
+168
+00:06:35,520 --> 00:06:38,459
+are happening outside your team but the
+
+169
+00:06:38,459 --> 00:06:41,219
+reality is no one better than you that
+
+170
+00:06:41,219 --> 00:06:42,599
+you're working that domain can take a
+
+171
+00:06:42,599 --> 00:06:43,440
+decision
+
+172
+00:06:43,440 --> 00:06:45,030
+than anyone else because in reality
+
+173
+00:06:45,030 --> 00:06:48,090
+certain decision you shouldn't get just
+
+174
+00:06:48,090 --> 00:06:51,150
+a one decision that fit them all you
+
+175
+00:06:51,150 --> 00:06:52,680
+need to find the right decision for your
+
+176
+00:06:52,680 --> 00:06:55,320
+business MA and that's why we work with
+
+177
+00:06:55,320 --> 00:06:58,320
+that the other thing is scaling on front
+
+178
+00:06:58,320 --> 00:07:00,540
+m is not a technical problem it's a
+
+179
+00:07:00,540 --> 00:07:02,400
+social problem because the reality think
+
+180
+00:07:02,400 --> 00:07:04,620
+about that if you produce past material
+
+181
+00:07:04,620 --> 00:07:06,390
+time some static files you have to see
+
+182
+00:07:06,390 --> 00:07:08,100
+the end that is absorbing that the heat
+
+183
+00:07:08,100 --> 00:07:11,280
+but the reality is when you are scaling
+
+184
+00:07:11,280 --> 00:07:14,370
+the person for the people factor human
+
+185
+00:07:14,370 --> 00:07:17,070
+being factor is very very important way
+
+186
+00:07:17,070 --> 00:07:18,390
+more important infrastructure for us
+
+187
+00:07:18,390 --> 00:07:20,820
+princess our infrastructure for front
+
+188
+00:07:20,820 --> 00:07:22,560
+end is pretty basic so we have like a
+
+189
+00:07:22,560 --> 00:07:24,300
+cloud form distribution we have an s3
+
+190
+00:07:24,300 --> 00:07:26,040
+bucket and we store everything there and
+
+191
+00:07:26,040 --> 00:07:27,960
+we have a lambda the edge in front and
+
+192
+00:07:27,960 --> 00:07:30,780
+we see later on the Y but the reality is
+
+193
+00:07:30,780 --> 00:07:34,560
+is the how I can have in our case a lot
+
+194
+00:07:34,560 --> 00:07:37,020
+of their centers and work with all those
+
+195
+00:07:37,020 --> 00:07:40,680
+people and accordingly and not blocking
+
+196
+00:07:40,680 --> 00:07:42,150
+each of them because the communication
+
+197
+00:07:42,150 --> 00:07:45,150
+over ad is always a pain if you remember
+
+198
+00:07:45,150 --> 00:07:46,710
+of if you are a developer I remember
+
+199
+00:07:46,710 --> 00:07:48,270
+when I was a developer having external
+
+200
+00:07:48,270 --> 00:07:49,110
+dependencies
+
+201
+00:07:49,110 --> 00:07:52,890
+it was super frustrating and I struggled
+
+202
+00:07:52,890 --> 00:07:54,360
+to who to finish my sprint every time
+
+203
+00:07:54,360 --> 00:07:56,940
+because you really need to nail the part
+
+204
+00:07:56,940 --> 00:07:58,230
+you need to wait for another team and
+
+205
+00:07:58,230 --> 00:07:59,970
+maybe obviously for that team is not a
+
+206
+00:07:59,970 --> 00:08:01,560
+priority that what what you're asking
+
+207
+00:08:01,560 --> 00:08:02,880
+for and so on and so forth
+
+208
+00:08:02,880 --> 00:08:06,030
+so we would like to have like a speed of
+
+209
+00:08:06,030 --> 00:08:07,380
+delivery we would like to have an
+
+210
+00:08:07,380 --> 00:08:09,930
+implement an independent permutation and
+
+211
+00:08:09,930 --> 00:08:12,660
+and that we want we would try to avoid
+
+212
+00:08:12,660 --> 00:08:14,160
+sharing logic that is something that
+
+213
+00:08:14,160 --> 00:08:17,310
+will come back later so there are
+
+214
+00:08:17,310 --> 00:08:20,460
+several there are several companies that
+
+215
+00:08:20,460 --> 00:08:23,460
+are embracing microphone plans it's not
+
+216
+00:08:23,460 --> 00:08:25,890
+just us and there are way more than that
+
+217
+00:08:25,890 --> 00:08:27,780
+New Relic is another one we will talk
+
+218
+00:08:27,780 --> 00:08:30,060
+about observability so it's good to
+
+219
+00:08:30,060 --> 00:08:33,240
+mention that each of them have their own
+
+220
+00:08:33,240 --> 00:08:37,530
+way to implement that now in this talk I
+
+221
+00:08:37,530 --> 00:08:39,570
+would like to cover what we have done
+
+222
+00:08:39,570 --> 00:08:41,729
+because obviously is the part that can
+
+223
+00:08:41,729 --> 00:08:43,800
+go deeper and share the challenges and
+
+224
+00:08:43,800 --> 00:08:47,700
+everything but I'm writing a lot around
+
+225
+00:08:47,700 --> 00:08:49,650
+the different microphone dense
+
+226
+00:08:49,650 --> 00:08:52,320
+architecture so feel free to check on on
+
+227
+00:08:52,320 --> 00:08:55,080
+my Twitter account my my updates so here
+
+228
+00:08:55,080 --> 00:08:57,920
+what we have is I will skip for a moment
+
+229
+00:08:57,920 --> 00:09:01,340
+but let's think about the open table
+
+230
+00:09:01,340 --> 00:09:03,050
+open table is a very interesting use
+
+231
+00:09:03,050 --> 00:09:06,520
+case here in London that was the DX team
+
+232
+00:09:06,520 --> 00:09:08,840
+that created what they call open
+
+233
+00:09:08,840 --> 00:09:10,910
+component that is a framework that
+
+234
+00:09:10,910 --> 00:09:14,060
+allows you to compose on the fly your
+
+235
+00:09:14,060 --> 00:09:16,370
+microphone dance at the server level and
+
+236
+00:09:16,370 --> 00:09:20,270
+serve and basically serve them like a
+
+237
+00:09:20,270 --> 00:09:22,430
+normal page at the CDN level so you
+
+238
+00:09:22,430 --> 00:09:24,710
+basically heat the city and absorb all
+
+239
+00:09:24,710 --> 00:09:26,930
+the traffic and what they do is they
+
+240
+00:09:26,930 --> 00:09:28,130
+have a registry like a docker registry
+
+241
+00:09:28,130 --> 00:09:30,170
+or NPM with all the micro front-ends and
+
+242
+00:09:30,170 --> 00:09:32,870
+everyone can from any different location
+
+243
+00:09:32,870 --> 00:09:33,920
+they have a fair amount of wealth
+
+244
+00:09:33,920 --> 00:09:36,590
+freedom centers one in Australia one in
+
+245
+00:09:36,590 --> 00:09:38,540
+San Francisco and one in London but I
+
+246
+00:09:38,540 --> 00:09:42,800
+could be wrong and they are if there is
+
+247
+00:09:42,800 --> 00:09:44,690
+a component that is interesting for you
+
+248
+00:09:44,690 --> 00:09:46,100
+or if there is a part of the application
+
+249
+00:09:46,100 --> 00:09:48,050
+that could be oh so more complex than
+
+250
+00:09:48,050 --> 00:09:49,870
+just the component it could be like I
+
+251
+00:09:49,870 --> 00:09:52,670
+don't know something that isn't present
+
+252
+00:09:52,670 --> 00:09:54,170
+in the page this prominent is at the
+
+253
+00:09:54,170 --> 00:09:56,210
+page you can you can take that from from
+
+254
+00:09:56,210 --> 00:09:57,650
+the library and then merge everything
+
+255
+00:09:57,650 --> 00:10:01,370
+and then you can ship it it's pretty
+
+256
+00:10:01,370 --> 00:10:03,260
+pretty powerful they created they made a
+
+257
+00:10:03,260 --> 00:10:05,300
+lot of investment around the developer
+
+258
+00:10:05,300 --> 00:10:09,830
+experience CLI and they let's say
+
+259
+00:10:09,830 --> 00:10:11,360
+developer experience in general the the
+
+260
+00:10:11,360 --> 00:10:15,530
+the CI the CD and so on and that was one
+
+261
+00:10:15,530 --> 00:10:17,270
+thing and as far as they know who sees a
+
+262
+00:10:17,270 --> 00:10:18,740
+we have a sky scanner here I know that
+
+263
+00:10:18,740 --> 00:10:21,650
+is also embraced by sky scanner yes it's
+
+264
+00:10:21,650 --> 00:10:25,820
+confirmed so well not with the nice face
+
+265
+00:10:25,820 --> 00:10:28,550
+but it's nice interest rate interface
+
+266
+00:10:28,550 --> 00:10:30,200
+framework is another one that salons
+
+267
+00:10:30,200 --> 00:10:32,030
+random was one of the first that I saw
+
+268
+00:10:32,030 --> 00:10:33,560
+not talking about microphone tanks but
+
+269
+00:10:33,560 --> 00:10:35,300
+I'm embracing that the logic at the
+
+270
+00:10:35,300 --> 00:10:39,080
+beginning they had what they call is
+
+271
+00:10:39,080 --> 00:10:41,180
+called Taylor GS and basically they do
+
+272
+00:10:41,180 --> 00:10:44,810
+also for them these let's say fact that
+
+273
+00:10:44,810 --> 00:10:46,670
+they assemble the microphone dance on
+
+274
+00:10:46,670 --> 00:10:48,620
+the server side and then they are serve
+
+275
+00:10:48,620 --> 00:10:50,660
+with them obviously they have a
+
+276
+00:10:50,660 --> 00:10:51,890
+different challenge because they have
+
+277
+00:10:51,890 --> 00:10:53,150
+personalization and other things that
+
+278
+00:10:53,150 --> 00:10:54,020
+they cannot be cached
+
+279
+00:10:54,020 --> 00:10:57,470
+but recently they move away from that
+
+280
+00:10:57,470 --> 00:10:59,990
+pattern because they were assembling a
+
+281
+00:10:59,990 --> 00:11:03,050
+HTML fragment and now they decided to go
+
+282
+00:11:03,050 --> 00:11:05,420
+last purest and they decide to go with
+
+283
+00:11:05,420 --> 00:11:07,220
+react and they create a library of react
+
+284
+00:11:07,220 --> 00:11:10,430
+component graph QL and basically there
+
+285
+00:11:10,430 --> 00:11:11,360
+is an API
+
+286
+00:11:11,360 --> 00:11:13,339
+is describing how to compose the the
+
+287
+00:11:13,339 --> 00:11:14,839
+page and they serve through decision
+
+288
+00:11:14,839 --> 00:11:17,899
+again I know another another way to
+
+289
+00:11:17,899 --> 00:11:20,959
+manage that then there is exciting clued
+
+290
+00:11:20,959 --> 00:11:23,749
+that is running on on the edge so CDN
+
+291
+00:11:23,749 --> 00:11:26,360
+and the interesting part there is a
+
+292
+00:11:26,360 --> 00:11:29,569
+language that is was let's say they
+
+293
+00:11:29,569 --> 00:11:33,829
+tried to be a standard with w3c and and
+
+294
+00:11:33,829 --> 00:11:36,829
+it was proposed by Akamai so currently
+
+295
+00:11:36,829 --> 00:11:38,449
+the main issue that you have with the
+
+296
+00:11:38,449 --> 00:11:40,129
+outside included is the fact that not
+
+297
+00:11:40,129 --> 00:11:42,410
+all the city ends are using that and
+
+298
+00:11:42,410 --> 00:11:44,899
+therefore if you if you try to have a
+
+299
+00:11:44,899 --> 00:11:47,299
+multi skin a multi CDN strategy or you
+
+300
+00:11:47,299 --> 00:11:48,739
+want to migrate from one city and to
+
+301
+00:11:48,739 --> 00:11:49,730
+another one you need to pay attention
+
+302
+00:11:49,730 --> 00:11:51,739
+that you don't that you have all the
+
+303
+00:11:51,739 --> 00:11:53,269
+function either you are looking for so
+
+304
+00:11:53,269 --> 00:11:54,980
+it's another interesting one finally
+
+305
+00:11:54,980 --> 00:11:58,879
+Spotify so if I had is using iframes I
+
+306
+00:11:58,879 --> 00:12:01,040
+know that probably many of you are
+
+307
+00:12:01,040 --> 00:12:03,100
+laughing but for the desktop application
+
+308
+00:12:03,100 --> 00:12:05,209
+so they move away from that
+
+309
+00:12:05,209 --> 00:12:06,970
+implementation on the web because it was
+
+310
+00:12:06,970 --> 00:12:09,470
+definitely not optimized at all but if
+
+311
+00:12:09,470 --> 00:12:10,819
+you check inside your desktop
+
+312
+00:12:10,819 --> 00:12:12,949
+application I like to decompose things
+
+313
+00:12:12,949 --> 00:12:15,259
+so you can see that they created some
+
+314
+00:12:15,259 --> 00:12:17,509
+spae files that are basically zip file
+
+315
+00:12:17,509 --> 00:12:19,730
+or renaming as s.p.a and inside there
+
+316
+00:12:19,730 --> 00:12:23,660
+you have like HTML page with JavaScript
+
+317
+00:12:23,660 --> 00:12:26,209
+and the bundled and CSS that's a very
+
+318
+00:12:26,209 --> 00:12:28,339
+simple web works and is also used by
+
+319
+00:12:28,339 --> 00:12:31,160
+ASAP they release a framework or widget
+
+320
+00:12:31,160 --> 00:12:33,019
+framework that does basically they
+
+321
+00:12:33,019 --> 00:12:34,160
+compose that thing but if you think
+
+322
+00:12:34,160 --> 00:12:37,040
+about that before you laugh again 4sp
+
+323
+00:12:37,040 --> 00:12:39,350
+makes a lot of sense because they are in
+
+324
+00:12:39,350 --> 00:12:41,239
+control which browser the user can use
+
+325
+00:12:41,239 --> 00:12:43,399
+produces b2b platform so they can really
+
+326
+00:12:43,399 --> 00:12:45,829
+say listen you know what this one is
+
+327
+00:12:45,829 --> 00:12:48,860
+going to work XYZ so as you can see
+
+328
+00:12:48,860 --> 00:12:51,350
+there are there are several thing so
+
+329
+00:12:51,350 --> 00:12:53,809
+let's see the what we have done so first
+
+330
+00:12:53,809 --> 00:12:56,869
+of all how many of you knows the zone ok
+
+331
+00:12:56,869 --> 00:12:58,970
+feel them so currently imagine this
+
+332
+00:12:58,970 --> 00:13:00,860
+platform that is an OTT platform similar
+
+333
+00:13:00,860 --> 00:13:02,839
+to Netflix but for sports and we do
+
+334
+00:13:02,839 --> 00:13:06,679
+mainly live sports with 9 in currently
+
+335
+00:13:06,679 --> 00:13:08,929
+in nine countries on roughly 30
+
+336
+00:13:08,929 --> 00:13:12,949
+different devices nowadays and it's
+
+337
+00:13:12,949 --> 00:13:14,089
+interesting because obviously you have
+
+338
+00:13:14,089 --> 00:13:15,739
+all the problems of scalability you have
+
+339
+00:13:15,739 --> 00:13:18,799
+all the problems of the Champions League
+
+340
+00:13:18,799 --> 00:13:20,419
+final is starting so a millions of users
+
+341
+00:13:20,419 --> 00:13:24,070
+joining the platform happy days
+
+342
+00:13:24,070 --> 00:13:26,470
+the reality is also very interesting
+
+343
+00:13:26,470 --> 00:13:28,600
+from the human part so how do you scale
+
+344
+00:13:28,600 --> 00:13:32,260
+300 engineers all over the all over the
+
+345
+00:13:32,260 --> 00:13:35,470
+Europe so at the beginning I remember I
+
+346
+00:13:35,470 --> 00:13:37,510
+was the second person that was the joy
+
+347
+00:13:37,510 --> 00:13:40,510
+in the zone in the tech side because the
+
+348
+00:13:40,510 --> 00:13:42,310
+at beginning they were using third-party
+
+349
+00:13:42,310 --> 00:13:45,820
+companies and they that was the the city
+
+350
+00:13:45,820 --> 00:13:48,190
+was talking with me I said listen every
+
+351
+00:13:48,190 --> 00:13:49,600
+time that you design something please
+
+352
+00:13:49,600 --> 00:13:51,100
+take in consideration also the human
+
+353
+00:13:51,100 --> 00:13:52,960
+part is not just the technology part
+
+354
+00:13:52,960 --> 00:13:54,940
+because it definitely is important but
+
+355
+00:13:54,940 --> 00:13:56,290
+we are going to have hundreds of people
+
+356
+00:13:56,290 --> 00:13:58,270
+and now you can imagine how much I was
+
+357
+00:13:58,270 --> 00:14:00,430
+laughing when I was the second one and
+
+358
+00:14:00,430 --> 00:14:02,320
+it was looking to the guy close to me
+
+359
+00:14:02,320 --> 00:14:04,540
+that was the first so it was pretty
+
+360
+00:14:04,540 --> 00:14:08,740
+interesting so what we have done we
+
+361
+00:14:08,740 --> 00:14:12,670
+started to have let's say quite a few
+
+362
+00:14:12,670 --> 00:14:15,540
+teams so fast forward a few years from
+
+363
+00:14:15,540 --> 00:14:19,690
+2016 now we are from 50 that we started
+
+364
+00:14:19,690 --> 00:14:23,860
+we are roughly 3,000 and all over the
+
+365
+00:14:23,860 --> 00:14:25,690
+world not only on tech obviously but
+
+366
+00:14:25,690 --> 00:14:28,690
+that is how we let's say divide the our
+
+367
+00:14:28,690 --> 00:14:31,060
+our strategy and as you can see there
+
+368
+00:14:31,060 --> 00:14:32,590
+are tons of teams and here there are
+
+369
+00:14:32,590 --> 00:14:34,480
+missing some obviously I try to get
+
+370
+00:14:34,480 --> 00:14:36,490
+let's say the most prominent one but
+
+371
+00:14:36,490 --> 00:14:38,680
+sometimes our cross-functional teams
+
+372
+00:14:38,680 --> 00:14:40,840
+sometimes are not because the problem is
+
+373
+00:14:40,840 --> 00:14:42,690
+if you have a cross-functional team and
+
+374
+00:14:42,690 --> 00:14:45,280
+you are designing API with one platform
+
+375
+00:14:45,280 --> 00:14:46,930
+or the other platform start to complain
+
+376
+00:14:46,930 --> 00:14:49,390
+so you need to abstract that part and
+
+377
+00:14:49,390 --> 00:14:52,690
+say ok so politic wise we need to define
+
+378
+00:14:52,690 --> 00:14:55,120
+an API that is so we have a team that is
+
+379
+00:14:55,120 --> 00:14:56,410
+just to be beckoned and team the
+
+380
+00:14:56,410 --> 00:14:58,030
+multiple teams that we front-end and
+
+381
+00:14:58,030 --> 00:15:00,100
+consume in the API it depends from the
+
+382
+00:15:00,100 --> 00:15:01,840
+complexity of the domain but there are
+
+383
+00:15:01,840 --> 00:15:04,180
+some things like for instance the sports
+
+384
+00:15:04,180 --> 00:15:05,530
+data team that is doing an to end
+
+385
+00:15:05,530 --> 00:15:07,600
+everything so when you see something on
+
+386
+00:15:07,600 --> 00:15:09,580
+on top of the video player that is the
+
+387
+00:15:09,580 --> 00:15:11,380
+sports data team that create a component
+
+388
+00:15:11,380 --> 00:15:14,080
+on the UI that is ingesting some
+
+389
+00:15:14,080 --> 00:15:15,940
+real-time data and this show being
+
+390
+00:15:15,940 --> 00:15:18,010
+inside the straw bar of the video player
+
+391
+00:15:18,010 --> 00:15:20,650
+or other parts of the video so it is
+
+392
+00:15:20,650 --> 00:15:24,040
+very and I think that is also one of our
+
+393
+00:15:24,040 --> 00:15:26,500
+strengths we didn't at the beginning we
+
+394
+00:15:26,500 --> 00:15:28,960
+were very fragmented we didn't think ok
+
+395
+00:15:28,960 --> 00:15:31,750
+so now we have like a bit of I don't
+
+396
+00:15:31,750 --> 00:15:33,790
+know authentication and authorization in
+
+397
+00:15:33,790 --> 00:15:35,650
+London and the beta in in Amsterdam and
+
+398
+00:15:35,650 --> 00:15:36,339
+then we
+
+399
+00:15:36,339 --> 00:15:39,519
+a bit of TVs in London and another bit
+
+400
+00:15:39,519 --> 00:15:42,670
+we have in Katowice in Poland
+
+401
+00:15:42,670 --> 00:15:44,980
+I was painful at the beginning and when
+
+402
+00:15:44,980 --> 00:15:46,750
+I thought okay now we are going to scale
+
+403
+00:15:46,750 --> 00:15:48,970
+but we're going to scale hard so we
+
+404
+00:15:48,970 --> 00:15:50,320
+ramped up like a tough centre in
+
+405
+00:15:50,320 --> 00:15:52,089
+Amsterdam from 0 to 140 people in the
+
+406
+00:15:52,089 --> 00:15:55,779
+month it could be a problem because
+
+407
+00:15:55,779 --> 00:15:58,120
+again it's a social problem is more than
+
+408
+00:15:58,120 --> 00:16:01,269
+tactical problem so what I did at the
+
+409
+00:16:01,269 --> 00:16:04,029
+time I stopped everyone including CTO
+
+410
+00:16:04,029 --> 00:16:05,769
+and they said listen I think here we are
+
+411
+00:16:05,769 --> 00:16:07,089
+doing something wrong because we are
+
+412
+00:16:07,089 --> 00:16:08,860
+designing our architecture based on our
+
+413
+00:16:08,860 --> 00:16:10,810
+teams where they are located my reality
+
+414
+00:16:10,810 --> 00:16:12,850
+what we should do is the other thing so
+
+415
+00:16:12,850 --> 00:16:14,649
+the other way around because if you know
+
+416
+00:16:14,649 --> 00:16:16,209
+the combo is low that is basically
+
+417
+00:16:16,209 --> 00:16:18,730
+stating that you design your
+
+418
+00:16:18,730 --> 00:16:20,350
+architecture based on on the company
+
+419
+00:16:20,350 --> 00:16:22,569
+structure you have the inverse caucus
+
+420
+00:16:22,569 --> 00:16:24,130
+maneuver that is doing the opposite so
+
+421
+00:16:24,130 --> 00:16:25,449
+you create the architecture and you
+
+422
+00:16:25,449 --> 00:16:28,420
+structure your team based on the on the
+
+423
+00:16:28,420 --> 00:16:29,740
+architecture and this is exactly what we
+
+424
+00:16:29,740 --> 00:16:33,399
+have done and so far is is a pretty good
+
+425
+00:16:33,399 --> 00:16:35,170
+success that will show you later on a
+
+426
+00:16:35,170 --> 00:16:38,170
+few other hints on on the round that ok
+
+427
+00:16:38,170 --> 00:16:40,720
+so what we have done as you have seen in
+
+428
+00:16:40,720 --> 00:16:45,339
+the previous slide we have created
+
+429
+00:16:45,339 --> 00:16:46,209
+something that's called the bootstrap
+
+430
+00:16:46,209 --> 00:16:48,550
+that is not the framework just as free
+
+431
+00:16:48,550 --> 00:16:50,579
+or not nothing to do with that ok so
+
+432
+00:16:50,579 --> 00:16:52,690
+absolutely nothing it was just because
+
+433
+00:16:52,690 --> 00:16:55,829
+it's the first thing that you load and
+
+434
+00:16:55,829 --> 00:17:00,370
+what we identify look at data looking
+
+435
+00:17:00,370 --> 00:17:02,260
+talking with our domain expert and
+
+436
+00:17:02,260 --> 00:17:04,209
+trying to understand how to split this
+
+437
+00:17:04,209 --> 00:17:07,209
+monolith was understanding the user
+
+438
+00:17:07,209 --> 00:17:09,699
+journey understanding how the user were
+
+439
+00:17:09,699 --> 00:17:12,610
+consuming our platform and then suddenly
+
+440
+00:17:12,610 --> 00:17:14,409
+we discover that we have like quite a
+
+441
+00:17:14,409 --> 00:17:15,939
+lot of people that were going to landing
+
+442
+00:17:15,939 --> 00:17:18,069
+pages and then there was a drop of
+
+443
+00:17:18,069 --> 00:17:19,750
+people were going to authentication they
+
+444
+00:17:19,750 --> 00:17:21,069
+arrived to the payment they didn't like
+
+445
+00:17:21,069 --> 00:17:22,390
+the payment methods that were there and
+
+446
+00:17:22,390 --> 00:17:24,809
+then they never finalized the sign up
+
+447
+00:17:24,809 --> 00:17:27,159
+the other thing that we notice is when a
+
+448
+00:17:27,159 --> 00:17:29,140
+user is signed up they will never logout
+
+449
+00:17:29,140 --> 00:17:32,230
+they always remain there so all the code
+
+450
+00:17:32,230 --> 00:17:34,510
+related on the authentication the SDK
+
+451
+00:17:34,510 --> 00:17:37,419
+for credit card all the other things are
+
+452
+00:17:37,419 --> 00:17:39,490
+not useful you wind unload at the moment
+
+453
+00:17:39,490 --> 00:17:42,159
+but at at the time but it wasn't useful
+
+454
+00:17:42,159 --> 00:17:44,350
+at all so we know that we we had to
+
+455
+00:17:44,350 --> 00:17:47,470
+figure out something so what we did is
+
+456
+00:17:47,470 --> 00:17:49,070
+ok so we can
+
+457
+00:17:49,070 --> 00:17:50,810
+lies our applications vertically so we
+
+458
+00:17:50,810 --> 00:17:52,730
+can start to say okay we have like a
+
+459
+00:17:52,730 --> 00:17:54,770
+landing page proxy that is loading
+
+460
+00:17:54,770 --> 00:17:57,410
+landing page because we have roughly
+
+461
+00:17:57,410 --> 00:17:59,060
+hundreds of landing page that are
+
+462
+00:17:59,060 --> 00:18:01,910
+dependent from country depends from the
+
+463
+00:18:01,910 --> 00:18:05,210
+device depends from the campaign and so
+
+464
+00:18:05,210 --> 00:18:07,040
+on so we need something that is
+
+465
+00:18:07,040 --> 00:18:10,010
+orchestrating a bit then we need an
+
+466
+00:18:10,010 --> 00:18:11,720
+authentication bit that contains signing
+
+467
+00:18:11,720 --> 00:18:14,390
+sign up that contains the retrieve email
+
+468
+00:18:14,390 --> 00:18:17,300
+password then we have another part that
+
+469
+00:18:17,300 --> 00:18:19,370
+is the core part for the zone is the
+
+470
+00:18:19,370 --> 00:18:21,110
+discovery part so I want a catalog I
+
+471
+00:18:21,110 --> 00:18:23,000
+want to the best video player for life
+
+472
+00:18:23,000 --> 00:18:26,000
+possible I won't watch my content at any
+
+473
+00:18:26,000 --> 00:18:28,460
+time I want to watch in any device now
+
+474
+00:18:28,460 --> 00:18:30,500
+we have the customer support part and
+
+475
+00:18:30,500 --> 00:18:32,090
+finally we have my account those are the
+
+476
+00:18:32,090 --> 00:18:34,130
+things that we saw we bucket eyes let's
+
+477
+00:18:34,130 --> 00:18:35,600
+say our user journey and we found those
+
+478
+00:18:35,600 --> 00:18:39,320
+as prominent microphone tents so we
+
+479
+00:18:39,320 --> 00:18:41,450
+decided to go with this so we decided to
+
+480
+00:18:41,450 --> 00:18:44,210
+take our application split it but there
+
+481
+00:18:44,210 --> 00:18:46,340
+was a missing thing how do we move from
+
+482
+00:18:46,340 --> 00:18:47,720
+landing pages to authentication
+
+483
+00:18:47,720 --> 00:18:51,230
+that was the big question okay so we
+
+484
+00:18:51,230 --> 00:18:54,110
+came up with this idea of bootstrap that
+
+485
+00:18:54,110 --> 00:18:56,680
+basically what it does is a a nutshell
+
+486
+00:18:56,680 --> 00:18:59,600
+ok so it's like a container that is the
+
+487
+00:18:59,600 --> 00:19:01,400
+first Finity load and it will always be
+
+488
+00:19:01,400 --> 00:19:03,260
+there for you the moment that you type
+
+489
+00:19:03,260 --> 00:19:04,790
+the zone.com or you go to add to the
+
+490
+00:19:04,790 --> 00:19:08,450
+application it's always there we will
+
+491
+00:19:08,450 --> 00:19:10,370
+see later on what it does but at the
+
+492
+00:19:10,370 --> 00:19:11,900
+moment the key thing is that the
+
+493
+00:19:11,900 --> 00:19:13,970
+bootstrap is orchestrating this
+
+494
+00:19:13,970 --> 00:19:15,800
+microphone dance and is the one that is
+
+495
+00:19:15,800 --> 00:19:19,220
+loading or unloading the landing page
+
+496
+00:19:19,220 --> 00:19:22,690
+and move to authentication or vice versa
+
+497
+00:19:22,690 --> 00:19:25,820
+so we we created some routes so the
+
+498
+00:19:25,820 --> 00:19:27,950
+first thing is each microphone then has
+
+499
+00:19:27,950 --> 00:19:30,200
+to represent a subdomain matching the
+
+500
+00:19:30,200 --> 00:19:32,750
+business structure so currently what we
+
+501
+00:19:32,750 --> 00:19:35,600
+have done is we already have the product
+
+502
+00:19:35,600 --> 00:19:38,390
+eminent was almost let's say dividing in
+
+503
+00:19:38,390 --> 00:19:39,950
+the way that we divided them the
+
+504
+00:19:39,950 --> 00:19:42,410
+application but we force certain things
+
+505
+00:19:42,410 --> 00:19:44,120
+and currently is working very well
+
+506
+00:19:44,120 --> 00:19:45,590
+because they have their dedicated team
+
+507
+00:19:45,590 --> 00:19:47,420
+depends from the device but they all
+
+508
+00:19:47,420 --> 00:19:49,580
+speak the same o pictus language that
+
+509
+00:19:49,580 --> 00:19:52,310
+was the goal then we wanted to have
+
+510
+00:19:52,310 --> 00:19:54,260
+technology framework agnostic microphone
+
+511
+00:19:54,260 --> 00:19:56,840
+that and I know that a lot of people say
+
+512
+00:19:56,840 --> 00:19:59,180
+ok about do you share some some
+
+513
+00:19:59,180 --> 00:20:01,550
+libraries do you if they share component
+
+514
+00:20:01,550 --> 00:20:02,450
+stuff like that
+
+515
+00:20:02,450 --> 00:20:04,280
+so at the beginning we were very very
+
+516
+00:20:04,280 --> 00:20:06,920
+pleased no we didn't share anything so
+
+517
+00:20:06,920 --> 00:20:09,290
+you have like because of what we have
+
+518
+00:20:09,290 --> 00:20:11,030
+seen so for landing page we just have
+
+519
+00:20:11,030 --> 00:20:15,260
+and react with a static HTML because we
+
+520
+00:20:15,260 --> 00:20:18,770
+compile that sorry we render at compile
+
+521
+00:20:18,770 --> 00:20:21,460
+time and we serve static page for
+
+522
+00:20:21,460 --> 00:20:23,270
+authentication we have a single page
+
+523
+00:20:23,270 --> 00:20:24,590
+application that was made with direct
+
+524
+00:20:24,590 --> 00:20:26,060
+but the reality is when you are in
+
+525
+00:20:26,060 --> 00:20:29,470
+you're in as we saw before so therefore
+
+526
+00:20:29,470 --> 00:20:32,150
+when you load the the main thing the
+
+527
+00:20:32,150 --> 00:20:34,070
+core domain of the zone you just load
+
+528
+00:20:34,070 --> 00:20:37,160
+once and that's it also on TV the
+
+529
+00:20:37,160 --> 00:20:40,010
+performances are improving so we move
+
+530
+00:20:40,010 --> 00:20:41,930
+from in certain device from a startup of
+
+531
+00:20:41,930 --> 00:20:44,120
+the application of 40 seconds to in very
+
+532
+00:20:44,120 --> 00:20:47,210
+old devices to less than 20 so those
+
+533
+00:20:47,210 --> 00:20:49,700
+kind of things discuss of logic we're
+
+534
+00:20:49,700 --> 00:20:52,000
+not only dedicated for web but also
+
+535
+00:20:52,000 --> 00:20:55,120
+because for us is very important TVs and
+
+536
+00:20:55,120 --> 00:20:57,320
+we want to provide the possibility to
+
+537
+00:20:57,320 --> 00:20:59,060
+pick your technology so there was an
+
+538
+00:20:59,060 --> 00:21:00,770
+interesting use case landing page guys
+
+539
+00:21:00,770 --> 00:21:02,210
+that they saw their rack books and they
+
+540
+00:21:02,210 --> 00:21:03,860
+wanted to try the trying production
+
+541
+00:21:03,860 --> 00:21:05,990
+didn't say anyone to anyone this thing
+
+542
+00:21:05,990 --> 00:21:08,270
+was working no problem at all
+
+543
+00:21:08,270 --> 00:21:10,970
+it was pretty simple pretty quick in one
+
+544
+00:21:10,970 --> 00:21:13,460
+sprint they replaced what they wanted to
+
+545
+00:21:13,460 --> 00:21:15,440
+to test the pudding production was
+
+546
+00:21:15,440 --> 00:21:17,390
+working hit by minutes of user done and
+
+547
+00:21:17,390 --> 00:21:20,920
+then they share their let's say
+
+548
+00:21:20,920 --> 00:21:22,790
+information they shared what they have
+
+549
+00:21:22,790 --> 00:21:24,410
+learned from that that was pretty
+
+550
+00:21:24,410 --> 00:21:26,420
+interesting use case then the other
+
+551
+00:21:26,420 --> 00:21:27,740
+thing is I want to have a microphone on
+
+552
+00:21:27,740 --> 00:21:29,720
+these autonomous I don't want to deploy
+
+553
+00:21:29,720 --> 00:21:32,590
+them the authentication mic from time
+
+554
+00:21:32,590 --> 00:21:35,570
+coordinating that with the discovery I
+
+555
+00:21:35,570 --> 00:21:37,400
+want that they can deploy just one of
+
+556
+00:21:37,400 --> 00:21:39,110
+that because that's the whole point
+
+557
+00:21:39,110 --> 00:21:41,960
+if I can do that and they need to make
+
+558
+00:21:41,960 --> 00:21:46,640
+some some say strong decisions therefore
+
+559
+00:21:46,640 --> 00:21:50,690
+no code sorry no obstructions as poor as
+
+560
+00:21:50,690 --> 00:21:53,110
+much as possible I can I can do that
+
+561
+00:21:53,110 --> 00:21:56,000
+then inside the microphone thank the
+
+562
+00:21:56,000 --> 00:21:58,100
+team can share components code size and
+
+563
+00:21:58,100 --> 00:22:00,260
+so on that is another thing that we we
+
+564
+00:22:00,260 --> 00:22:03,350
+we assess we create independent building
+
+565
+00:22:03,350 --> 00:22:05,900
+system now I know that a lot of people
+
+566
+00:22:05,900 --> 00:22:08,030
+would think ok but why you don't provide
+
+567
+00:22:08,030 --> 00:22:10,100
+that we provide the basics so we have
+
+568
+00:22:10,100 --> 00:22:12,380
+like a drone that is running but what is
+
+569
+00:22:12,380 --> 00:22:14,420
+inside a container that is running on
+
+570
+00:22:14,420 --> 00:22:16,070
+drone is up to the team to the size
+
+571
+00:22:16,070 --> 00:22:17,780
+because they can have optimization that
+
+572
+00:22:17,780 --> 00:22:21,020
+other teams shouldn't shouldn't have or
+
+573
+00:22:21,020 --> 00:22:23,000
+they want to translate certain things
+
+574
+00:22:23,000 --> 00:22:23,900
+that don't have so they have like
+
+575
+00:22:23,900 --> 00:22:27,560
+several plugins for roll-up and flora
+
+576
+00:22:27,560 --> 00:22:30,260
+for web puck and they can use them share
+
+577
+00:22:30,260 --> 00:22:31,520
+between teams it's not a problem at all
+
+578
+00:22:31,520 --> 00:22:33,620
+but that's that's how it works you have
+
+579
+00:22:33,620 --> 00:22:35,630
+an important thing for me is when you
+
+580
+00:22:35,630 --> 00:22:37,760
+have a booster uploaded you always load
+
+581
+00:22:37,760 --> 00:22:39,590
+one Mike from 10 per time you will never
+
+582
+00:22:39,590 --> 00:22:41,150
+compose anything on the client side you
+
+583
+00:22:41,150 --> 00:22:43,100
+always load a single page application or
+
+584
+00:22:43,100 --> 00:22:45,650
+a single page because in that case it
+
+585
+00:22:45,650 --> 00:22:47,810
+means that you're using the they let's
+
+586
+00:22:47,810 --> 00:22:50,000
+say the Holy Trinity of JavaScript so
+
+587
+00:22:50,000 --> 00:22:52,970
+use HTML uses as huge JavaScript and you
+
+588
+00:22:52,970 --> 00:22:54,230
+don't have to compose an if you don't
+
+589
+00:22:54,230 --> 00:22:55,730
+have to remember with if you if there is
+
+590
+00:22:55,730 --> 00:22:58,190
+a new tool that you wanted to use you
+
+591
+00:22:58,190 --> 00:22:59,690
+will be able to and you can also split
+
+592
+00:22:59,690 --> 00:23:01,760
+wewe happen at some point it happens at
+
+593
+00:23:01,760 --> 00:23:02,840
+some time that the complexity of a
+
+594
+00:23:02,840 --> 00:23:05,240
+domain became too big on the back on the
+
+595
+00:23:05,240 --> 00:23:06,650
+front end so we started to split the
+
+596
+00:23:06,650 --> 00:23:08,540
+domain in moving too much 1/10 and now
+
+597
+00:23:08,540 --> 00:23:12,170
+is this working like a charm so as I
+
+598
+00:23:12,170 --> 00:23:14,480
+said the microphone tent for us is the
+
+599
+00:23:14,480 --> 00:23:17,390
+Holy Trinity of fronting an index.html a
+
+600
+00:23:17,390 --> 00:23:19,820
+JavaScript file for the application a
+
+601
+00:23:19,820 --> 00:23:23,270
+vendor JavaScript that has a high TTL on
+
+602
+00:23:23,270 --> 00:23:25,340
+oncidium and the stasi SS or wherever
+
+603
+00:23:25,340 --> 00:23:27,590
+the team decide whether that is how we
+
+604
+00:23:27,590 --> 00:23:31,370
+work so when you type the zoom comm what
+
+605
+00:23:31,370 --> 00:23:33,050
+happens is that you load the bootstrap
+
+606
+00:23:33,050 --> 00:23:35,540
+and immediately and is the the part that
+
+607
+00:23:35,540 --> 00:23:36,950
+is doing the logic and what is
+
+608
+00:23:36,950 --> 00:23:38,960
+responsible for is doing an application
+
+609
+00:23:38,960 --> 00:23:41,420
+startup that is basically a set of
+
+610
+00:23:41,420 --> 00:23:43,010
+course to understand if you are
+
+611
+00:23:43,010 --> 00:23:44,930
+authenticated not only authenticated in
+
+612
+00:23:44,930 --> 00:23:46,700
+which country you are and other settings
+
+613
+00:23:46,700 --> 00:23:49,430
+like feature toggles and so on it's
+
+614
+00:23:49,430 --> 00:23:51,170
+abstracting input up to operation
+
+615
+00:23:51,170 --> 00:23:53,810
+therefore web storage and I know that
+
+616
+00:23:53,810 --> 00:23:55,910
+you say it but it's a pretty standard
+
+617
+00:23:55,910 --> 00:23:58,280
+yes unfortunately not on all the TVs so
+
+618
+00:23:58,280 --> 00:23:59,630
+instead of having microphone tanks then
+
+619
+00:23:59,630 --> 00:24:02,690
+knows about it's single TV that they are
+
+620
+00:24:02,690 --> 00:24:03,620
+running I can have
+
+621
+00:24:03,620 --> 00:24:05,000
+agnostic microphone tans that are
+
+622
+00:24:05,000 --> 00:24:07,820
+running in any device potentially
+
+623
+00:24:07,820 --> 00:24:09,260
+depends from the performance is
+
+624
+00:24:09,260 --> 00:24:12,290
+obviously and and bootstrap is taking
+
+625
+00:24:12,290 --> 00:24:13,790
+hear about the abstraction layer so you
+
+626
+00:24:13,790 --> 00:24:17,090
+just expose an API to say save save or
+
+627
+00:24:17,090 --> 00:24:20,000
+get so that is routing between
+
+628
+00:24:20,000 --> 00:24:21,560
+microphone tanks that we saw before and
+
+629
+00:24:21,560 --> 00:24:23,930
+it's sharing configuration across modem
+
+630
+00:24:23,930 --> 00:24:26,240
+microphone dance so imagine that I'm not
+
+631
+00:24:26,240 --> 00:24:28,550
+only ticketed I go to the authentication
+
+632
+00:24:28,550 --> 00:24:29,510
+microphone that
+
+633
+00:24:29,510 --> 00:24:35,420
+perform let's say the signing and I
+
+634
+00:24:35,420 --> 00:24:37,220
+receive a token and then I pass that to
+
+635
+00:24:37,220 --> 00:24:38,690
+the booster up the booster store on the
+
+636
+00:24:38,690 --> 00:24:41,000
+local storage and the next microphone 10
+
+637
+00:24:41,000 --> 00:24:43,760
+that is loaded will can will retrieve
+
+638
+00:24:43,760 --> 00:24:46,880
+that the J double D token from the from
+
+639
+00:24:46,880 --> 00:24:48,770
+the bootstrap and validate if you still
+
+640
+00:24:48,770 --> 00:24:49,160
+valid
+
+641
+00:24:49,160 --> 00:24:50,900
+they still valid we will go ahead and
+
+642
+00:24:50,900 --> 00:24:52,940
+show otherwise we kick out the user to
+
+643
+00:24:52,940 --> 00:24:57,950
+another page now what is the booster op
+
+644
+00:24:57,950 --> 00:25:00,020
+in reality it's just a JavaScript file
+
+645
+00:25:00,020 --> 00:25:02,030
+vanilla JavaScript nothing crazy and
+
+646
+00:25:02,030 --> 00:25:04,370
+very light it's loaded at the beginning
+
+647
+00:25:04,370 --> 00:25:07,760
+is always there and expose a set of
+
+648
+00:25:07,760 --> 00:25:09,860
+api's that are used for a microphone
+
+649
+00:25:09,860 --> 00:25:11,570
+tense for sort of thing could be life
+
+650
+00:25:11,570 --> 00:25:14,690
+cycle it could be lets say in
+
+651
+00:25:14,690 --> 00:25:18,020
+communication for i/o and operation so
+
+652
+00:25:18,020 --> 00:25:20,030
+imagine that for instance one question
+
+653
+00:25:20,030 --> 00:25:21,590
+usually have these stages or how about
+
+654
+00:25:21,590 --> 00:25:23,360
+how do you load them the microphone pan
+
+655
+00:25:23,360 --> 00:25:28,910
+and so we thought what is the most basic
+
+656
+00:25:28,910 --> 00:25:32,420
+way to load some HTML you can use the
+
+657
+00:25:32,420 --> 00:25:34,670
+URL yeah but we need we should need to
+
+658
+00:25:34,670 --> 00:25:36,860
+replicate all the logic of each single
+
+659
+00:25:36,860 --> 00:25:40,910
+microphone tan or HTML in reality is XML
+
+660
+00:25:40,910 --> 00:25:44,090
+so we can parse it so let's parse it
+
+661
+00:25:44,090 --> 00:25:46,610
+so we basically talk in the HTML that
+
+662
+00:25:46,610 --> 00:25:49,180
+are the tags that we are interested and
+
+663
+00:25:49,180 --> 00:25:53,870
+the bootstrap is loading and what it
+
+664
+00:25:53,870 --> 00:25:55,760
+does is appending inside itself the
+
+665
+00:25:55,760 --> 00:25:58,540
+different elements that's what it does
+
+666
+00:25:58,540 --> 00:26:00,800
+the interesting bit of this this there
+
+667
+00:26:00,800 --> 00:26:02,270
+are several frameworks out there that
+
+668
+00:26:02,270 --> 00:26:04,760
+are starting as a starting point of a
+
+669
+00:26:04,760 --> 00:26:05,720
+microphone and this is just JavaScript
+
+670
+00:26:05,720 --> 00:26:08,090
+but there is a strong reason why we pick
+
+671
+00:26:08,090 --> 00:26:11,300
+this because we care to provide an
+
+672
+00:26:11,300 --> 00:26:12,890
+immediate feedback to the user so what
+
+673
+00:26:12,890 --> 00:26:14,720
+we can do here and certain micron Dells
+
+674
+00:26:14,720 --> 00:26:18,500
+are doing are compiling at runtime a
+
+675
+00:26:18,500 --> 00:26:20,270
+skeleton that is served immediately the
+
+676
+00:26:20,270 --> 00:26:22,070
+moment that we download the HTML the
+
+677
+00:26:22,070 --> 00:26:23,840
+user has immediate feedback and then
+
+678
+00:26:23,840 --> 00:26:25,610
+they start to load in background all the
+
+679
+00:26:25,610 --> 00:26:26,810
+JavaScript all the other stuff and that
+
+680
+00:26:26,810 --> 00:26:35,000
+is working on TV as well as web so ok so
+
+681
+00:26:35,000 --> 00:26:39,560
+as I said the boost exposes some methods
+
+682
+00:26:39,560 --> 00:26:42,170
+the lifecycle methods so it's not final
+
+683
+00:26:42,170 --> 00:26:43,040
+microphone then when
+
+684
+00:26:43,040 --> 00:26:45,200
+is finished to load and when he's
+
+685
+00:26:45,200 --> 00:26:48,230
+finished to when it is about to unload
+
+686
+00:26:48,230 --> 00:26:52,870
+and we can use that for cleaning out the
+
+687
+00:26:52,870 --> 00:26:56,180
+pointers so in that case the interesting
+
+688
+00:26:56,180 --> 00:26:59,060
+bit we did there is we take the keys of
+
+689
+00:26:59,060 --> 00:27:00,980
+in the bootstrap we take the keys of
+
+690
+00:27:00,980 --> 00:27:02,030
+what we have at the beginning of the
+
+691
+00:27:02,030 --> 00:27:03,170
+application because we loaded just the
+
+692
+00:27:03,170 --> 00:27:04,940
+booze drug and every time that Theresa
+
+693
+00:27:04,940 --> 00:27:06,350
+Macken from 10 this is a pending inside
+
+694
+00:27:06,350 --> 00:27:09,050
+the bootstrap we retrieve we scan or the
+
+695
+00:27:09,050 --> 00:27:11,720
+the Dom nodes and JavaScript inside the
+
+696
+00:27:11,720 --> 00:27:13,460
+window and we take like just the keys
+
+697
+00:27:13,460 --> 00:27:16,010
+inside the memory and then when we
+
+698
+00:27:16,010 --> 00:27:17,840
+unload the macro from 10 we just remove
+
+699
+00:27:17,840 --> 00:27:19,160
+all the things so it's always clean
+
+700
+00:27:19,160 --> 00:27:21,590
+obviously there is for a moment between
+
+701
+00:27:21,590 --> 00:27:22,940
+in transition between my two front ends
+
+702
+00:27:22,940 --> 00:27:25,160
+there is a moment where there is a bit
+
+703
+00:27:25,160 --> 00:27:29,420
+of let's say memory overlap but usually
+
+704
+00:27:29,420 --> 00:27:30,950
+it doesn't hurt and not it doesn't hurt
+
+705
+00:27:30,950 --> 00:27:32,960
+even on TV that usually you have like
+
+706
+00:27:32,960 --> 00:27:35,780
+strong goes through your memory and then
+
+707
+00:27:35,780 --> 00:27:37,420
+you have local storage and another stuff
+
+708
+00:27:37,420 --> 00:27:40,460
+ok so apart from microphone times we
+
+709
+00:27:40,460 --> 00:27:42,350
+have also distinction of components so I
+
+710
+00:27:42,350 --> 00:27:43,790
+said the microphone dance is a business
+
+711
+00:27:43,790 --> 00:27:46,280
+representation Bob we use components we
+
+712
+00:27:46,280 --> 00:27:47,870
+have some area of the application that
+
+713
+00:27:47,870 --> 00:27:49,610
+are really complex video player for us
+
+714
+00:27:49,610 --> 00:27:52,370
+having and if you're familiar with video
+
+715
+00:27:52,370 --> 00:27:54,620
+players usually all the open source that
+
+716
+00:27:54,620 --> 00:27:57,350
+you find a commercial licenses are
+
+717
+00:27:57,350 --> 00:28:00,260
+mainly focus on beauty but we are a live
+
+718
+00:28:00,260 --> 00:28:02,330
+company and the eristic soph the video
+
+719
+00:28:02,330 --> 00:28:03,800
+player for life is completely different
+
+720
+00:28:03,800 --> 00:28:06,080
+so we had to spin up a team dedicated to
+
+721
+00:28:06,080 --> 00:28:07,880
+that in order to build our own video
+
+722
+00:28:07,880 --> 00:28:13,040
+player for all the devices and trust me
+
+723
+00:28:13,040 --> 00:28:16,070
+it wasn't easy at all because also many
+
+724
+00:28:16,070 --> 00:28:17,630
+that we are using inference one that I
+
+725
+00:28:17,630 --> 00:28:20,090
+remember is Shaq player soccer player is
+
+726
+00:28:20,090 --> 00:28:23,840
+a maintained by Google as openSUSE video
+
+727
+00:28:23,840 --> 00:28:25,970
+player and we change the eristic of
+
+728
+00:28:25,970 --> 00:28:27,470
+their or that because it wasn't good
+
+729
+00:28:27,470 --> 00:28:29,750
+enough so those are the challenge that
+
+730
+00:28:29,750 --> 00:28:31,940
+we have so that team what it does is
+
+731
+00:28:31,940 --> 00:28:33,440
+exporting a component like you have like
+
+732
+00:28:33,440 --> 00:28:36,380
+a components library and these embedded
+
+733
+00:28:36,380 --> 00:28:38,540
+inside the microphone hands like you
+
+734
+00:28:38,540 --> 00:28:40,280
+always work you don't have to compose
+
+735
+00:28:40,280 --> 00:28:41,510
+anything around time you don't have to
+
+736
+00:28:41,510 --> 00:28:42,050
+reinvent the wheel
+
+737
+00:28:42,050 --> 00:28:45,350
+you just have a library on NPM and you
+
+738
+00:28:45,350 --> 00:28:47,540
+just use it simple like that obviously
+
+739
+00:28:47,540 --> 00:28:49,700
+you need to define the contract first so
+
+740
+00:28:49,700 --> 00:28:51,740
+we always if we have some parts that are
+
+741
+00:28:51,740 --> 00:28:54,050
+shared we we gather with the teams and
+
+742
+00:28:54,050 --> 00:28:55,880
+the architects and we try to figure out
+
+743
+00:28:55,880 --> 00:28:56,840
+what are they
+
+744
+00:28:56,840 --> 00:28:58,370
+guys that we need in order to manage the
+
+745
+00:28:58,370 --> 00:29:00,710
+model there but when we define that they
+
+746
+00:29:00,710 --> 00:29:01,940
+can work in parallel and it's not a
+
+747
+00:29:01,940 --> 00:29:03,669
+problem
+
+748
+00:29:03,669 --> 00:29:06,289
+the other interesting beat that I
+
+749
+00:29:06,289 --> 00:29:08,390
+decided to add is the cannery release
+
+750
+00:29:08,390 --> 00:29:11,210
+thing so they caught the company ask me
+
+751
+00:29:11,210 --> 00:29:15,260
+can we have a way to in general not wait
+
+752
+00:29:15,260 --> 00:29:17,029
+for building all the microphone pans and
+
+753
+00:29:17,029 --> 00:29:19,549
+deploy them and there at the beginning
+
+754
+00:29:19,549 --> 00:29:20,840
+was a bit puzzled because I said yes
+
+755
+00:29:20,840 --> 00:29:22,309
+more micro-services this is no problem
+
+756
+00:29:22,309 --> 00:29:24,890
+at home from 10:00 what we have so
+
+757
+00:29:24,890 --> 00:29:26,809
+because our architecture was very simple
+
+758
+00:29:26,809 --> 00:29:29,779
+crowd from and that's free I thought ok
+
+759
+00:29:29,779 --> 00:29:32,149
+let's write lambda the edge now at the
+
+760
+00:29:32,149 --> 00:29:34,250
+edge if you're not familiar it can be
+
+761
+00:29:34,250 --> 00:29:36,200
+triggering in four stages when there is
+
+762
+00:29:36,200 --> 00:29:37,520
+a viewer request
+
+763
+00:29:37,520 --> 00:29:39,500
+origin request origin response and
+
+764
+00:29:39,500 --> 00:29:41,960
+viewer response and what it does is you
+
+765
+00:29:41,960 --> 00:29:43,880
+can add logic on the edge so you don't
+
+766
+00:29:43,880 --> 00:29:49,220
+hit you say you hit the closest the AWS
+
+767
+00:29:49,220 --> 00:29:52,760
+death center sorry the data center where
+
+768
+00:29:52,760 --> 00:29:55,640
+the the request is coming from and in
+
+769
+00:29:55,640 --> 00:29:57,049
+that case you can orchestrate sort of
+
+770
+00:29:57,049 --> 00:30:00,399
+things so what we have done basically is
+
+771
+00:30:00,399 --> 00:30:03,140
+deciding in so we started to say ok we
+
+772
+00:30:03,140 --> 00:30:04,970
+want to deploy in a specific country on
+
+773
+00:30:04,970 --> 00:30:07,669
+a specific browser or device and we want
+
+774
+00:30:07,669 --> 00:30:09,799
+to deploy that and every time there is
+
+775
+00:30:09,799 --> 00:30:12,590
+another request boom it goes to 1.0 so
+
+776
+00:30:12,590 --> 00:30:15,799
+that allows us to do many and
+
+777
+00:30:15,799 --> 00:30:18,110
+incremental deployment per day then
+
+778
+00:30:18,110 --> 00:30:19,669
+before it was a nightmare in particular
+
+779
+00:30:19,669 --> 00:30:22,460
+for TV so the other guys thing is we can
+
+780
+00:30:22,460 --> 00:30:24,559
+we decide to go a very deep granularity
+
+781
+00:30:24,559 --> 00:30:27,649
+so country and browser because this
+
+782
+00:30:27,649 --> 00:30:29,480
+depends from the browser what kind of
+
+783
+00:30:29,480 --> 00:30:31,700
+video player you need to use and that
+
+784
+00:30:31,700 --> 00:30:34,429
+was pretty interesting because I have
+
+785
+00:30:34,429 --> 00:30:36,020
+like if search on YouTube there is a
+
+786
+00:30:36,020 --> 00:30:38,149
+talk that I did that bring vent about
+
+787
+00:30:38,149 --> 00:30:42,289
+this with a SS I was an interesting
+
+788
+00:30:42,289 --> 00:30:44,870
+topic we also managed to do SEO through
+
+789
+00:30:44,870 --> 00:30:47,899
+that so we can redirect the crawler to
+
+790
+00:30:47,899 --> 00:30:50,090
+specific pages that are dedicated only
+
+791
+00:30:50,090 --> 00:30:53,480
+for crawlers and surprise surprise we
+
+792
+00:30:53,480 --> 00:30:55,279
+discover that also Amazon is doing that
+
+793
+00:30:55,279 --> 00:30:57,740
+with amplify they are doing when you
+
+794
+00:30:57,740 --> 00:30:59,390
+deploy something on amplified they're
+
+795
+00:30:59,390 --> 00:31:01,220
+switching the the things to letters was
+
+796
+00:31:01,220 --> 00:31:03,559
+a pretty pretty nice understanding that
+
+797
+00:31:03,559 --> 00:31:05,870
+we were on the right track ok so as I
+
+798
+00:31:05,870 --> 00:31:09,020
+said the dissolve structure on the DDD
+
+799
+00:31:09,020 --> 00:31:10,160
+part
+
+800
+00:31:10,160 --> 00:31:11,900
+something like that so we try to take
+
+801
+00:31:11,900 --> 00:31:13,580
+all out all the things that you have
+
+802
+00:31:13,580 --> 00:31:16,550
+seen so far and and map our teams in
+
+803
+00:31:16,550 --> 00:31:21,170
+this way so we define following Vedic or
+
+804
+00:31:21,170 --> 00:31:22,790
+domain the generic anime and the core
+
+805
+00:31:22,790 --> 00:31:26,030
+and support enemy and we map our teams
+
+806
+00:31:26,030 --> 00:31:28,570
+in that our company in this way and that
+
+807
+00:31:28,570 --> 00:31:31,280
+than what we have done is saying okay
+
+808
+00:31:31,280 --> 00:31:31,850
+perfect
+
+809
+00:31:31,850 --> 00:31:34,520
+where is the core team where it's based
+
+810
+00:31:34,520 --> 00:31:38,120
+but London we have like all the the POS
+
+811
+00:31:38,120 --> 00:31:40,460
+and all the marketing people so probably
+
+812
+00:31:40,460 --> 00:31:42,020
+we need to Twitter it fast on this
+
+813
+00:31:42,020 --> 00:31:43,600
+because this is our core business
+
+814
+00:31:43,600 --> 00:31:46,010
+generic is Amsterdam so we have all the
+
+815
+00:31:46,010 --> 00:31:47,660
+payments guys that are managing my
+
+816
+00:31:47,660 --> 00:31:49,100
+account help onboard in front and
+
+817
+00:31:49,100 --> 00:31:51,440
+back-end or the partnership and
+
+818
+00:31:51,440 --> 00:31:55,790
+everything and basically the person that
+
+819
+00:31:55,790 --> 00:31:59,570
+is far from you is like a couple of a
+
+820
+00:31:59,570 --> 00:32:01,490
+couple of steps so it's pretty good
+
+821
+00:32:01,490 --> 00:32:02,780
+because then there is
+
+822
+00:32:02,780 --> 00:32:04,220
+cross-contamination between Megami
+
+823
+00:32:04,220 --> 00:32:06,050
+between the center but it was pretty
+
+824
+00:32:06,050 --> 00:32:07,970
+good course reporting in Katowice
+
+825
+00:32:07,970 --> 00:32:10,490
+because we have a lot of TVs and we
+
+826
+00:32:10,490 --> 00:32:12,980
+found a little pretty nice place there
+
+827
+00:32:12,980 --> 00:32:14,780
+and also for mobile native teams we have
+
+828
+00:32:14,780 --> 00:32:16,280
+also some back-end stuff but we are
+
+829
+00:32:16,280 --> 00:32:19,280
+moving to London now we have a global
+
+830
+00:32:19,280 --> 00:32:22,190
+team is my team DX so developer
+
+831
+00:32:22,190 --> 00:32:24,410
+experience cloud Engineering's travel
+
+832
+00:32:24,410 --> 00:32:26,000
+engineers and s eries and though
+
+833
+00:32:26,000 --> 00:32:27,710
+together basically we are supporting
+
+834
+00:32:27,710 --> 00:32:31,610
+those things okay so what we achieved so
+
+835
+00:32:31,610 --> 00:32:35,000
+first of all when we were scaling up one
+
+836
+00:32:35,000 --> 00:32:36,650
+day I arrived to the office and they
+
+837
+00:32:36,650 --> 00:32:41,150
+have like five new teams that that join
+
+838
+00:32:41,150 --> 00:32:44,030
+in in London and in basically they were
+
+839
+00:32:44,030 --> 00:32:46,430
+working on the same project in influence
+
+840
+00:32:46,430 --> 00:32:49,310
+the the nice thing was they were capable
+
+841
+00:32:49,310 --> 00:32:51,530
+after because they have the freedom to
+
+842
+00:32:51,530 --> 00:32:53,090
+take certain decision and who use the
+
+843
+00:32:53,090 --> 00:32:55,780
+technology they want they were able to
+
+844
+00:32:55,780 --> 00:32:58,690
+let's say do in the first print already
+
+845
+00:32:58,690 --> 00:33:00,740
+provide some some value for the company
+
+846
+00:33:00,740 --> 00:33:02,420
+and deliver something because the all
+
+847
+00:33:02,420 --> 00:33:04,010
+the automation was sorted out and they
+
+848
+00:33:04,010 --> 00:33:06,730
+started to have the first part on the UI
+
+849
+00:33:06,730 --> 00:33:10,460
+now we have over 300 techies 350 attacks
+
+850
+00:33:10,460 --> 00:33:13,060
+that are working on the same platform
+
+851
+00:33:13,060 --> 00:33:15,500
+there are obviously some part that our
+
+852
+00:33:15,500 --> 00:33:16,670
+back-end some part that our front-end
+
+853
+00:33:16,670 --> 00:33:18,090
+but
+
+854
+00:33:18,090 --> 00:33:19,950
+and some part of the coffee some part of
+
+855
+00:33:19,950 --> 00:33:22,080
+the layer that is heat by by the users
+
+856
+00:33:22,080 --> 00:33:25,830
+and so forth but it is really difficult
+
+857
+00:33:25,830 --> 00:33:27,390
+arriving to that in one year and a half
+
+858
+00:33:27,390 --> 00:33:29,970
+and having those guys that are creating
+
+859
+00:33:29,970 --> 00:33:32,070
+value for the company not for also for
+
+860
+00:33:32,070 --> 00:33:33,630
+the scalability issues and the
+
+861
+00:33:33,630 --> 00:33:35,850
+challenges that we have but also because
+
+862
+00:33:35,850 --> 00:33:38,700
+those people that's the first time that
+
+863
+00:33:38,700 --> 00:33:40,500
+they they work together and really
+
+864
+00:33:40,500 --> 00:33:42,299
+namsun we have 24 different countries
+
+865
+00:33:42,299 --> 00:33:44,370
+there so there is a huge diversity and
+
+866
+00:33:44,370 --> 00:33:45,860
+is not easy at all
+
+867
+00:33:45,860 --> 00:33:49,080
+but we were able to make the work
+
+868
+00:33:49,080 --> 00:33:50,490
+the other interesting thing with the
+
+869
+00:33:50,490 --> 00:33:53,309
+risk our releases so it's like two years
+
+870
+00:33:53,309 --> 00:33:55,559
+that we don't have an s-1 incident we do
+
+871
+00:33:55,559 --> 00:33:56,970
+multiple release per day I remember at
+
+872
+00:33:56,970 --> 00:33:59,279
+the beginning we did in the first week
+
+873
+00:33:59,279 --> 00:34:03,600
+26 release of the video player and we
+
+874
+00:34:03,600 --> 00:34:05,610
+were literally switching turning on
+
+875
+00:34:05,610 --> 00:34:07,980
+turning off the different part or so
+
+876
+00:34:07,980 --> 00:34:10,050
+which browser in which country where we
+
+877
+00:34:10,050 --> 00:34:11,700
+wanted to test it and we were testing in
+
+878
+00:34:11,700 --> 00:34:13,950
+real time in production then go back if
+
+879
+00:34:13,950 --> 00:34:18,030
+you didn't work and then we doubling our
+
+880
+00:34:18,030 --> 00:34:19,679
+user base every year so at the beginning
+
+881
+00:34:19,679 --> 00:34:22,859
+you know when you have like few users is
+
+882
+00:34:22,859 --> 00:34:24,119
+one thing when you start to add millions
+
+883
+00:34:24,119 --> 00:34:25,740
+and millions starting became more
+
+884
+00:34:25,740 --> 00:34:29,429
+complex that's it for me I know that you
+
+885
+00:34:29,429 --> 00:34:31,200
+maybe you have several questions so I
+
+886
+00:34:31,200 --> 00:34:37,570
+left some time for that
+
+887
+00:34:37,580 --> 00:34:47,250
+you
+

@@ -135,7 +135,7 @@ function addCaptionSpanHandlers() {
       // Will not work until user has manually initiated playback.
       player.playVideo();
       const state = {type: 'caption', v: currentVideo, t: start};
-      const title = `JSConf: ${currentVideo}, ${start}`;
+      const title = `GDE: ${currentVideo}, ${start}`;
       const url = `${baseUrl}?v=${currentVideo}&t=${start}`;
       history.pushState(state, title, url);
       document.title = title;
@@ -322,7 +322,7 @@ function handleQueryInput() {
     const title = `Query: ${value}`;
     const url = `${baseUrl}?q=${value}`;
     history.pushState(state, title, url);
-    document.title = `JSConf: ${value}`;
+    document.title = `GDE: ${value}`;
     // debounce text entry
     clearTimeout(timeout);
     timeout = setTimeout(() => {
