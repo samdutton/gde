@@ -89,7 +89,7 @@ const argv = require('yargs')
   // Create index page linking to HTML output, []()i.e. transcript 'pages'.
   .describe('c', `Create index page linking to standalone transcripts, ` +
     `default is ${CREATE_STANDALONE_HOMEPAGE}`)
-  .describe('d', 'Create document for caption data for third party indexing')
+  .describe('d', 'Create document for caption data (for third party indexing)')
   .describe('i', `Input directory, default is ${SRT_DIR}`)
   .describe('l', 'Validate HTML output')
   .describe('o', `Output directory, default is ${APP_DIR}`)
